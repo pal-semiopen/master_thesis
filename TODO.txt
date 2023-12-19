@@ -1,3 +1,9 @@
 ・bibtexを整える
 ・DEDUCTIVE SYSTEMS AND CATEGORIES IN LINGUISTICS by Lambek を引用に入れる
 ・COALGEBRAS AND CARTESIAN CATEGORIES by Thomas Fox を引用に入れる
+
+
+・（緊急）prop3.4.3の(i)(a)に誤りがあるので修正。
+・（緊急）§3.4に単位対象がターミナルになることが含まれていない。書く。
+・（緊急）thm6.1.1の条件を書き換える：「全てのグラフを持てばΛ(R)=C」
+・（緊急）証明の体裁を整える

@@ -1,0 +1,50 @@
+This is upBibTeX, Version 0.99d-j0.36-u1.29 (utf8.euc) (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: master_thesis.aux
+The style file: amsalpha.bst
+Database file #1: Bibliography_Master_Thesis.bib
+Warning--missing pages in huot2019universal
+Warning--missing pages in maclane1963natural
+You've used 5 entries,
+            2624 wiz_defined-function locations,
+            596 strings with 5087 characters,
+and the built_in function-call counts, 1712 in all, are:
+= -- 156
+> -- 62
+< -- 3
++ -- 18
+- -- 18
+* -- 152
+:= -- 283
+add.period$ -- 5
+call.type$ -- 5
+change.case$ -- 27
+chr.to.int$ -- 5
+cite$ -- 7
+duplicate$ -- 73
+empty$ -- 137
+format.name$ -- 26
+if$ -- 336
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 10
+newline$ -- 25
+num.names$ -- 15
+pop$ -- 28
+preamble$ -- 1
+purify$ -- 32
+quote$ -- 0
+skip$ -- 50
+stack$ -- 0
+substring$ -- 97
+swap$ -- 7
+text.length$ -- 3
+text.prefix$ -- 3
+top$ -- 0
+type$ -- 40
+warning$ -- 2
+while$ -- 17
+width$ -- 7
+write$ -- 61
+is.kanji.str$ -- 0
+(There were 2 warnings)

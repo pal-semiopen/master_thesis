@@ -1303,34 +1303,37 @@ $\Lambda\-$constructionを考えたもともとの動機は、\CC $\C$に対し�
 
 \subsection{The Category of monomorphisms}
 
-\paragraph{thm 6.1.1 :  $\Lambda[\C^{\mono}]\simeq \C$ }\ \par
-包含函手$i_{\C}:\C^{\mono}\to\C$から、$\Lambda$の普遍性によりのびる函手$\bar{i_{\C}}:\Lambda[\C^{\mono}]\to\C$はisoである。\\
+\paragraph{thm 6.1.1 :  $\Lambda[\R]\simeq \C$ }\ \par
+$\C$を\CC とし、$\R$を$\C$の\subRC で$\C$の全てのグラフを含むものとする。\\
+このとき、$\Lambda[\R]\simeq \C$である。\\
+包含函手$i:\R\to\C$から、$\Lambda$の普遍性によりのびる函手$\bar{i}:\Lambda[\R]\to\C$はisoである。\\
+
 
 (proof)\\
-\newcommand{\cL}{\mathcal{L}}
-簡単のため、$\cL:=\Lambda[\C^{\mono}]$と置く。\\
-$\bar{i_{\C}}$がbijective on objectsであることは、$i_{\C}$がそうであることと$\bar{i_{\C}}$の定義から明らか。\\
-あとは$\bar{i_{\C}}$がfully-faithfulであることを示せばよい。\\
+\newcommand{\cL}{\Lambda}
+簡単のため、$\cL:=\Lambda[\R]$と置く。\\
+$\bar{i}$がbijective on objectsであることは、$i$がそうであることと$\bar{i}$の定義から明らか。\\
+あとは$\bar{i}$がfully-faithfulであることを示せばよい。\\
 $X,Y\in\C$を取る。\\
-$(\bar{i_{\C}})_{X,Y}:\cL(X,Y)\to\C(X,Y)$の逆写像$\psi:\C(X,Y)\to\cL(X,Y)$を構成する。\\
+$(\bar{i})_{X,Y}:\cL(X,Y)\to\C(X,Y)$の逆写像$\psi:\C(X,Y)\to\cL(X,Y)$を構成する。\\
 $\psi(f):=[X, (id_X,f)]$と置く。これが逆であることを示す。\\
 
-(i)$\psi\comp(\bar{i_{\C}})_{X,Y} = id$であること：
+(i)$\psi\comp(\bar{i})_{X,Y} = id$であること：
 $f:X\to Y \ \mathrm{in}\ \C$を取り固定する。
 
 \begin{align*}
-  & (\bar{i_{\C}})_{X,Y}(\psi(f))\\
-=\ & (\bar{i_{\C}})_{X,Y}([X, (id_X,f)])\\
+  & (\bar{i})_{X,Y}(\psi(f))\\
+=\ & (\bar{i})_{X,Y}([X, (id_X,f)])\\
 =\ & (id_X, f)\comp \pi_Y\\
 =\ & f\\
 \end{align*}
 
-(ii)$(\bar{i_{\C}})_{X,Y} \comp\psi = id$であること：
+(ii)$(\bar{i})_{X,Y} \comp\psi = id$であること：
 $[A,f]:X\to Y \ \mathrm{in}\ \cL$を取り固定する。
 
 \begin{align*}
-  & \psi((\bar{i_{\C}})_{X,Y}([A,f]))\\
-=\ & \psi((\bar{i_{\C}})_{X,Y}([A,f]))\\
+  & \psi((\bar{i})_{X,Y}([A,f]))\\
+=\ & \psi((\bar{i})_{X,Y}([A,f]))\\
 =\ & \psi(f\comp \pi_Y)\\
 =\ & [X, (id_X, f\comp \pi_Y)]\\
 =\ & [X\times A, (id_X, f\comp \pi_Y)\comp((id_X, f\comp\pi_A)\times Y)] \ \ \ (\text{by prop 4.2.3})\\
@@ -1339,6 +1342,11 @@ $[A,f]:X\to Y \ \mathrm{in}\ \cL$を取り固定する。
 =\ & [X\times A, \Delta_X \comp(X\times f)]\\
 =\ & [A,f]\ \ \ (\text{by prop 4.3.3})
 \end{align*}
+
+
+\paragraph{cor 6.1.2 :  $\Lambda[\C^{\mono}]\simeq \C$ }\ \par
+$\C$を\CC とする。\\
+このとき、包含函手$i_{\C}:\C^{\mono}\to\C$から、$\Lambda$の普遍性によりのびる函手$\bar{i_{\C}}:\Lambda[\C^{\mono}]\to\C$はisoである。\\
 
 
 \section{Reference}

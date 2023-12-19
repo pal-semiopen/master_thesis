@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  27 NOV 2023 23:03
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  14 DEC 2023 15:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -839,56 +839,13 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
 \tf@toc=\write6
 \openout6 = `master_thesis.toc'.
 
- [2] Excluding 'comment' comment.
-
-LaTeX Warning: Citation `maclane1963natural' on page 3 undefined on input line 
-289.
-
-
-LaTeX Warning: Citation `Pet02' on page 3 undefined on input line 300.
-
-[3]
-
-LaTeX Warning: Citation `HT12' on page 4 undefined on input line 334.
-
-
-LaTeX Warning: Citation `HT12' on page 4 undefined on input line 334.
-
-
-LaTeX Warning: Citation `huot2019universal' on page 4 undefined on input line 3
-34.
-
-
-LaTeX Warning: Citation `huot2019universal' on page 4 undefined on input line 3
-35.
-
-
-LaTeX Warning: Citation `HT12' on page 4 undefined on input line 339.
-
-
-LaTeX Warning: Citation `tennent1990semantical' on page 4 undefined on input li
-ne 339.
-
-[4] [5]
-
-LaTeX Warning: Citation `Pet02' on page 6 undefined on input line 395.
-
-[6] [7] Excluding 'comment' comment.
+ [2] Excluding 'comment' comment. [3] [4] [5] [6] [7]
+Excluding 'comment' comment.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 544.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 544.
-
-
-LaTeX Warning: Citation `HT12' on page 8 undefined on input line 577.
-
-
-LaTeX Warning: Citation `HT12' on page 8 undefined on input line 578.
-
-
-LaTeX Warning: Citation `HT12' on page 8 undefined on input line 581.
-
-[8] Excluding 'comment' comment.
+ [8] Excluding 'comment' comment.
 Overfull \hbox (0.152pt too wide) in paragraph at lines 613--615
 []\JY1/mc/m/n/10 以下 、 $\OMS/cmsy/m/n/10 B\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 M
 \OT1/cmr/m/n/10 )$ \JY1/mc/m/n/10 を定義する 。 $\OMS/cmsy/m/n/10 B\OT1/cmr/m/n
@@ -945,28 +902,33 @@ Overfull \hbox (86.49446pt too wide) detected at line 1268
 []
  []
 
-[20] [21]
-No file master_thesis.bbl.
-[22] (./master_thesis.aux)
+[20] [21] (./master_thesis.bbl
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 11.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 16.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 20.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 24.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 28.
+) [22] (./master_thesis.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `master_thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 55B84AE522685848DEA43AE53AE7B5BB;2294.
  ) 
 Here is how much of TeX's memory you used:
- 26052 strings out of 474925
- 507546 string characters out of 5765769
+ 26067 strings out of 474925
+ 507788 string characters out of 5765769
  1958403 words of memory out of 5000000
- 47811 multiletter control sequences out of 15000+600000
+ 47823 multiletter control sequences out of 15000+600000
  617972 words of font info for 134 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  98i,20n,107p,908b,1075s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master_thesis.dvi (22 pages, 295920 bytes).
+Output written on master_thesis.dvi (22 pages, 299220 bytes).

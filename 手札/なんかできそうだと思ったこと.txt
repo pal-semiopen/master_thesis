@@ -1,0 +1,4 @@
+・全ての射がmonoである関連圏Rに対し、H_R:R→Λ(R)は忠実かつ対象上本質的に全単射？
+・多様体のembeddingの圏ってRelevance categoryじゃね？Λ使おう
+    →Mfdになりました
+・Tennent categoryってRelevance categoryじゃね？Λ使おう
