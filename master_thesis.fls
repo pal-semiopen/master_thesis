@@ -392,6 +392,8 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm
 INPUT ./graphics/delta_comp_x_tens_f.png
 INPUT ./graphics/delta_comp_x_tens_f.png
 INPUT extractbb -B cropbox -O graphics/delta_comp_x_tens_f.png
+INPUT ./graphics/delta_comp_x_tens_f.png
+INPUT ./graphics/delta_comp_x_tens_f.png
 INPUT ./master_thesis.bbl
 INPUT ./master_thesis.bbl
 INPUT master_thesis.bbl

@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  20 DEC 2023 22:22
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  20 DEC 2023 22:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -868,39 +868,41 @@ LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
 (Font)              No change on input line 848.
 File: graphics/delta_comp_x_tens_f.png Graphic file (type bmp)
 <graphics/delta_comp_x_tens_f.png>
+File: graphics/delta_comp_x_tens_f.png Graphic file (type bmp)
+<graphics/delta_comp_x_tens_f.png>
  [13]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 928.
+(Font)              No change on input line 929.
 
-Overfull \hbox (2.79457pt too wide) detected at line 956
+Overfull \hbox (2.79457pt too wide) detected at line 957
+[]
+ []
+
+[14]
+Overfull \hbox (45.79054pt too wide) detected at line 998
 []
  []
 
 
-Overfull \hbox (45.79054pt too wide) detected at line 997
+Overfull \hbox (25.27919pt too wide) detected at line 1005
 []
  []
 
-
-Overfull \hbox (25.27919pt too wide) detected at line 1004
-[]
- []
-
-[14] [15]
+[15]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1063.
+(Font)              No change on input line 1064.
  [16]
-Overfull \hbox (27.91685pt too wide) detected at line 1159
+Overfull \hbox (27.91685pt too wide) detected at line 1160
 []
  []
 
 [17]
-Overfull \hbox (156.603pt too wide) detected at line 1207
+Overfull \hbox (156.603pt too wide) detected at line 1208
 []
  []
 
 [18] Excluding 'comment' comment. [19]
-Overfull \hbox (86.49446pt too wide) detected at line 1327
+Overfull \hbox (86.49446pt too wide) detected at line 1328
 []
  []
 
@@ -929,10 +931,10 @@ Package rerunfilecheck Info: File `master_thesis.out' has not changed.
 Here is how much of TeX's memory you used:
  26172 strings out of 474925
  509732 string characters out of 5765769
- 1962403 words of memory out of 5000000
+ 1959403 words of memory out of 5000000
  47915 multiletter control sequences out of 15000+600000
  617972 words of font info for 134 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  98i,20n,107p,908b,1075s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master_thesis.dvi (23 pages, 306496 bytes).
+Output written on master_thesis.dvi (23 pages, 306592 bytes).
