@@ -8,6 +8,7 @@
 \usepackage{amsfonts}
 \usepackage{comment}
 \usepackage{mathrsfs} %\mathscrの使用
+\usepackage[dvipdfmx]{graphicx} %\includegraphics[options]{name}の使用
 \geometry{a4paper}
 
 %\usepackage[frenchb]{babel}
@@ -346,9 +347,11 @@ $L(\Set^{\mono})$については\cite{HT12}のThm4.4に類似物の言及があ�
 する。
 
 
+\subsection{記法}
+本論文では簡明さのために、圏の射の合成の記号として$\comp$を用いる。
+$f\comp g := g\o f$である。すなわち、この記法では射の合成を図式を読む順番と同じ順番で書くことになる。
 
-
-
+古くは情報系の文脈では合成を$f;g$と書く文献もあるとされる(\cite{barr1990category})が、数学では大変分かりにくくなるためこれを避ける。
 
 \newpage
 
@@ -391,12 +394,25 @@ $L(\Set^{\mono})$については\cite{HT12}のThm4.4に類似物の言及があ�
 
 
 \section{\RC}
-introductionで述べたように、\RC とは対称モノイド圏$\R$に「対角射」$\set{\Delta_X:X\to X\tensor X}_{X\in\R}$を付加した構造である。\RC は対応$\R(Z,X)\times\R(Z,Y)\to\R(Z,X\tensor Y);(f,g)\mapsto \Delta_Z\comp(f\tensor g)$を伴うから、\RC は対称モノイド圏$\R$に自然変換$\set{\R(-,X)\times\R(-,Y)\to\R(-,X\tensor Y)}_{X,Y\in\R}$を付加した構造を持つ。逆に、よい自然変換$\set{\phi_{X,Y}:\R(-,X)\times\R(-,Y)\to\R(-,X\tensor Y)}_{X,Y\in\R}$があれば対角射$\Delta_X:=\phi_{X,X,X}(id_X,id_X):X\to X\tensor X$が得られるので、\RC は対称モノイド圏$\R$に自然変換$\set{\R(-,X)\times\R(-,Y)\to\R(-,X\tensor Y)}_{X,Y\in\R}$を付加した構造に他ならないと言える。\CC は対称モノイド圏$\C$によい自然同型$\set{\C(-,X)\times\C(-,Y)\simeq\C(-,X\tensor Y)}_{X,Y\in\C}$を付加した構造であったから、\RC はlax-\CC とも呼ぶべきものである。
-\RC は{\cite{Pet02}}で定義されたのが初出である。
+introductionで述べたように、\RC とは対称モノイド圏$\R$に「対角射」$\set{\Delta_X:X\to X\tensor X}_{X\in\R}$を付加した構造である。
+\RC は対応$\R(Z,X)\times\R(Z,Y)\to\R(Z,X\tensor Y);(f,g)\mapsto \Delta_Z\comp(f\tensor g)$を伴うから、
+\RC は対称モノイド圏$\R$に自然変換$\set{\R(-,X)\times\R(-,Y)\to\R(-,X\tensor Y)}_{X,Y\in\R}$を付加した構造を持つ。
+逆に、よい自然変換$\set{\phi_{X,Y}:\R(-,X)\times\R(-,Y)\to\R(-,X\tensor Y)}_{X,Y\in\R}$があれば
+対角射$\Delta_X:=\phi_{X,X,X}(id_X,id_X):X\to X\tensor X$が得られるので、
+\RC は対称モノイド圏$\R$に自然変換$\set{\R(-,X)\times\R(-,Y)\to\R(-,X\tensor Y)}_{X,Y\in\R}$を付加した構造に他ならないと言える。
+\CC は対称モノイド圏$\C$によい自然同型$\set{\C(-,X)\times\C(-,Y)\simeq\C(-,X\tensor Y)}_{X,Y\in\C}$を付加した構造であったから、
+\RC はlax-\CC とも呼ぶべきものである。
+\RC は{\cite{Pet02}}でsubstructural categoriesの一つとして定義されたのが初出と思われる。
 
 %\subsection{\RC の定義}
 \paragraph{Definition \arabic{section}.1：\RC}\ \\
-\RC とは、\SMC $\M = (\underline{\M},\tensor, I, \alpha, \lambda, \rho, \gamma)$ と自然変換$\Delta:Id_{\M}\to \lambda x.(x\tensor x)$ の組$(\M, \Delta)$であって、$\Delta$がモノイド自然変換で結合的かつ可換であるようなものである。ただし、自然変換$\Delta$がモノイド自然変換で結合的かつ可換であるとは、以下の４つの図式を可換にすることである。
+\RC とは、
+\SMC $\underline{\R} = (\underline{\underline{\R}},\tensor, I, \alpha, \lambda, \rho, \gamma)$ と
+自然変換$\Delta_X:X\to X\tensor X$ の組$(\R, \Delta)$であって、
+$\Delta$がモノイド自然変換で結合的かつ可換であるようなものである。
+ただし、自然変換$\Delta$がモノイド自然変換で結合的かつ可換であるとは、
+以下の４つの図式を可換にすることである。
+（煩雑さを避けるため、結合律の同型$\alpha$によって結ばれる対象同士は記号の濫用によって同一視している）
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJYXFx0ZW5zb3IgWSJdLFsyLDAsIlhcXHRlbnNvciBYIFxcdGVuc29yIFlcXHRlbnNvciBZIl0sWzAsMiwiWFxcdGVuc29yIFkiXSxbMiwyLCJYXFx0ZW5zb3IgWSBcXHRlbnNvciBYXFx0ZW5zb3IgWSJdLFswLDEsIlxcRGVsdGFfe1hcXHRlbnNvciBZfSJdLFswLDIsIj0iLDJdLFsyLDMsIlxcRGVsdGFfe1h9XFx0ZW5zb3JcXERlbHRhX3tZfSIsMl0sWzEsMywiWFxcdGVuc29yXFxnYW1tYV97WCxZfVxcdGVuc29yIFkiXV0=
 \[\begin{tikzcd}
 	{X\tensor Y} && {X\tensor X \tensor Y\tensor Y} \\
@@ -440,11 +456,11 @@ introductionで述べたように、\RC とは対称モノイド圏$\R$に「対
 	\arrow["{id_{X\tensor X}}", from=1-3, to=3-3]
 \end{tikzcd}\]
 
+関連圏を定義したので関連函手を定義する。関連函手は関連圏の間の強対称モノイド函手で対角射を保つものである。
 
 \paragraph{Definition \arabic{section}.2：\Rf}\ \\
-$\M,\N$を\RC とする。
-\Rf とは、強対称モノイド函手 $F:\M\to\N$ であって、対角射を保つもののこと。
-ただし、対角射を保つとは、下の図式を可換にすること。
+$\R_1,\R_2$を\RC とする。
+\Rf とは、強対称モノイド函手 $F:\R_1\to\R_2$ であって、下の図式を可換にするもののこと。
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJGKFgpIl0sWzIsMCwiRihYXFx0ZW5zb3IgWCkiXSxbMCwyLCJGKFgpIl0sWzIsMiwiRihYKSBcXHRlbnNvciBGKFgpIl0sWzAsMSwiRihcXERlbHRhX3tYfSkiXSxbMCwyLCI9IiwyXSxbMiwzLCJcXERlbHRhX3tGKFgpfSIsMl0sWzEsMywiaWRfe1hcXHRlbnNvciBYfSJdXQ==
 \[\begin{tikzcd}
 	{F(X)} && {F(X\tensor X)} \\
@@ -459,16 +475,21 @@ $\M,\N$を\RC とする。
 
 
 %\subsection{Examples of \RC}
-集合と単射の圏$\Set^{\mono}$は素朴な方法で\RC とみなせるのであった。この事実は次の２つから従うことだと理解できる。まず、全ての\CC は素朴な方法で\RC とみなせる。また、\CC のモノ射は直積で閉じているので、モノ射の全体は「\subRC 」 になる。
+集合と単射の圏$\Set^{\mono}$は素朴な方法で\RC とみなせるのであった。
+この事実は次の２つから従うことだと理解できる。
+まず、全ての\CC は素朴な方法で\RC とみなせる。
+また、\CC のモノ射は直積で閉じていて対角射はモノ射なので、モノ射の全体は「\subRC 」 になる。
 
 \paragraph{Example \arabic{section}.3：\CC}\ \\
 全ての\CC は素朴な方法で\RC とみなせる。特に、$\Set$は\RC である。%また全てのbounded semi-lattice も\RC である。
 
 
 \paragraph{Definition \arabic{section}.4：\subRC}\ \\
-$\M=(\underline{\M},\Delta)$を\RC とする。
-$\M$の\subRC とは、$\underline{\M}$のモノイド部分圏$\underline{\N}\subset \underline{\M}$であって、任意の$\underline{\N}$の対象$X$に対し$\Delta_X$が$\underline{\N}$の射であるようなもののことである。
+$\R=(\underline{\R},\Delta)$を\RC とする。
+$\R$の\subRC とは、$\underline{\R}$のモノイド部分圏$\underline{\N}\subset \underline{\R}$であって、
+任意の$\underline{\N}$の対象$X$に対し$\underline{\R}$の射$\Delta_X$が$\underline{\N}$の射であるようなもののことである。
 
+関連部分圏は自然な方法で関連圏とみなせる。
 
 
 
@@ -478,16 +499,23 @@ $\M$の\subRC とは、$\underline{\M}$のモノイド部分圏$\underline{\N}\s
 特に、$\Set^{\mono}$は\RC である。\\
 %また、bounded semi-lattice の 分裂モノ射の全体を取ることで、離散\RC が得られる。離散対称モノイド圏とは即ち可換モノイドであるが、このモノイドが関連圏の構造を持つことは冪等であることを意味する。つまり、この操作はbounded semilatticeから順序を忘れて冪等可換モノイドをつくる操作と解釈できる。
 
-分裂モノ射の例は、特に$\C$として有界半束をその順序構造でデカルト圏と見なしたものを考えると面白い。$\C$の分裂モノ射は恒等射しかないので、分裂モノ射の全体は離散圏に関連圏の構造を入れたものになる。離散対称モノイド圏とは即ち可換モノイドであるが、このモノイドが関連圏の構造を持つことは冪等であることを意味する。つまり、この操作はbounded semilatticeから順序を忘れて冪等可換モノイドをつくる操作と解釈できる。
+分裂モノ射の例は、特に$\C$として有界半束をその順序構造でデカルト圏と見なしたものを考えると面白い。
+$\C$の分裂モノ射は恒等射しかないので、分裂モノ射の全体は離散圏に関連圏の構造を入れたものになる。
+離散対称モノイド圏とは即ち可換モノイドであるが、このモノイドが関連圏の構造を持つことは冪等であることを意味する。
+つまり、この操作はbounded semilatticeから順序を忘れて冪等可換モノイドをつくる操作と解釈できる。
 
+モノ射の成す\subRC の類似例として、可微分多様体の圏の全ての埋め込みの成す部分圏なども関連部分圏である。
 
 %(式とDiagram と String Diagramを書く)
 
 
 \newpage
 \section{構成 \texorpdfstring{$\Lambda$}{Lambda}}
-本節では構成 $\Lambda$の定義を述べる。以下、$\M=(\M,\tensor,I,\alpha,\lambda,\rho,\gamma,\Delta)$を\DMC とする。これから本節全体を通して、デカルト圏$\Lambda(\M)$を定義する。
-圏$\Lambda(\M)$を定義した後に $\Lambda(\M)$が持つ素朴なモノイド構造がデカルト積を与えることを示す。圏$\Lambda(\M)$を構成するに当たって、まず双圏様の中間構造 $\calLambda(\M)$を構成し、その後 $\Lambda(\M)$を作る。
+本節では構成 $\Lambda$の定義を述べる。$\Lambda$は、与えられた\RC から\CC を構成する普遍的な操作である。
+以下、$\R=(\R,\tensor,I,\alpha,\lambda,\rho,\gamma,\Delta)$を\RC とする。
+これから本節全体を通して、デカルト圏$\Lambda(\R)$を定義する。
+圏$\Lambda(\R)$を定義した後に $\Lambda(\R)$が持つ素朴なモノイド構造がデカルト積を与えることを示す。
+圏$\Lambda(\R)$を構成するに当たって、まず双圏様の中間構造 $\calLambda(\R)$を構成し、その後 $\Lambda(\R)$を作る。
 
 \begin{comment}
     
@@ -548,7 +576,10 @@ end{comment}
 本論文では、与えられた\RC がどのような\CC のよい\subRC として構成されるのかを調べる。
 
 
-そのために注目したい\RC の例は\CC のモノ射達が成す\subRC である。\CC $\C$ に対し、その全てのモノ射の成す部分圏 $\C^{\mono}$は\subRC であった。この$\C^{\mono}$をよい\subRC として持つ\CC は$\C$である。そこで構成$\Lambda$を、$\C^{\mono}$に$\Lambda$を施したとき$\C$が復元されるように作る。
+そのために注目したい\RC の例は\CC のモノ射達が成す\subRC である。
+\CC $\C$ に対し、その全てのモノ射の成す部分圏 $\C^{\mono}$は\subRC であった。
+この$\C^{\mono}$をよい\subRC として持つ\CC は$\C$である。
+そこで構成$\Lambda$を、$\C^{\mono}$に$\Lambda$を施したとき$\C$が復元されるように作る。
 
 まず、$\C$と$\C^{\mono}$の対象は同じであるから、$\Lambda[\C^{\mono}]$の対象は$\C^{\mono}$の対象と定義すればよい。次に射の定義を考える。
 \CC における「グラフ」は全てモノ射であったことに注目する。
@@ -571,7 +602,11 @@ end{comment}
 このような同値関係は実際$\C^{\mono}$の構造のみから得られる。
 %容易ではないが、再び\cite{HT12}がヒントを与えてくれた。
 本節では、その構成の詳細を記述する。
-本節では、上記第二案の構成の詳細及びwell-defined性の証明を述べる。\S\arabic{section}.2 で構成の第一段階として双圏様の中間構造を定義し、\S\arabic{section}.3 でその商として$\Lambda[\M]$を定義し、そのwell-defined性を証明する。\S\arabic{section}.4では構成した圏$\Lambda[\M]$が\CC になっていることを証明する。
+
+本節では、上記第二案の構成の詳細及びwell-defined性の証明を述べる。
+\S\arabic{section}.2 で構成の第一段階として双圏様の中間構造を定義し、
+\S\arabic{section}.3 でその商として$\Lambda[\M]$を定義し、そのwell-defined性を証明する。
+\S\arabic{section}.4では構成した圏$\Lambda[\M]$が\CC になっていることを証明する。
 
 %一点注意しておく。
 本稿における$\Lambda$の構成は、\cite{HT12}の構成が大きなヒントになっているが、重大な違いがある。
@@ -584,17 +619,16 @@ end{comment}
 
 
 
+\subsection{中間構造 \texorpdfstring{$\calLambda(\R)$}{Lambda(R)}の構成}
+本\S \arabic{section}.\arabic{subsection} 節では、圏$\Lambda(\R)$を定義する前準備として、中間構造$\calLambda(\R)$を構成する。
 
-\subsection{中間構造 \texorpdfstring{$\calLambda(\M)$}{Lambda(M)}の構成}
-本\S \arabic{section}.2 節では、圏$\Lambda(\M)$を定義する前準備として、中間構造$\calLambda(\M)$を構成する。
-
-$\calLambda(\M)$は、双圏に似た次の４つの構造を持っている：\\
-(1)対象、あるいは0-cellの集まり $\Ob{\calLambda(\M)}$\\
-(2)各対象$X,Y$毎の圏$\calLambda(\M)(X,Y)$\\ 
-($\calLambda(\M)(X,Y)$の対象を1-射と、射を2-射と呼ぶ。)\\
-(3)各1-射$v:X\to Y, w:Y\to Z$毎の合成1-射$v\comp w:X\to Z$\\
-(4)各対象$X$毎の恒等1-射$id_X:X\to X$\\
-しかしながら、$\calLambda(\M)$は2-射の間の水平合成を持たないため、双圏にはならない。
+$\calLambda(\R)$は、双圏に似た次の４つの構造を持っている：\\
+(1)対象、あるいは0-cellの集まり $\Ob{\calLambda(\R)}$\\
+(2)$\calLambda(\R)$の各対象$\bar{X},\bar{Y}$毎の圏$\calLambda(\R)(\bar{X},\bar{Y})$\\ 
+($\calLambda(\R)(\bar{X},\bar{Y})$の対象を1-射と、射を2-射と呼ぶ。)\\
+(3)各1-射$v:\bar{X}\to\bar{Y}, w:\bar{Y}\to\bar{Z}$毎の合成1-射$v\comp w:\bar{X}\to\bar{Z}$\\
+(4)$\calLambda(\R)$各対象$\bar{X}$毎の恒等1-射$id_{\bar{X}}:\bar{X}\to\bar{X}$\\
+しかしながら、$\calLambda(\R)$は2-射の間の水平合成を持たないため、双圏にはならない。
 
 
 \begin{comment}
@@ -607,23 +641,30 @@ $\calLambda(\M)$は、双圏に似た次の４つの構造を持っている：\
 連結成分を取る操作に関するwell-definednessが非自明な部分は次節\S \arabic{section}.3 に回し、本節では中間構造$\calLambda(\M)(X,Y)$を定義する。\\
 \end{comment}
 
+$\calLambda(\R)$は$\Lambda(\R)$の定義に用いる。
+$\calLambda(\R)$の対象は$\Lambda(\R)$の対象に対応し、$\calLambda(\R)$の1-射の同値類が$\Lambda(\R)$の射に対応する。
+$\calLambda(\R)$の2-射は、$\calLambda(\R)$の1-射から$\Lambda(\R)$の射をつくるための同値関係として機能する。
 
 
+以下、$\calLambda(\R)$を定義する。
+$\calLambda(\R)$の対象は$\R$の対象とする。
+ただし、可読性のために、各$\R$の対象$X$に対し、それに対応する$\calLambda(\R)$における対象を$\bar{X}$と書くことにする。
+即ち、$\Ob{\calLambda(\R)}:=\set{\bar{X} | X\in\R}$である。
+はじめに、各対象 $\bar{X},\bar{Y}\in\Ob{\calLambda(\R)}$毎に圏 $\calLambda(\R)(\bar{X},\bar{Y})$を定義する。
 
-以下、$\calLambda(\M)$を定義する。$\calLambda(\M)$の対象は$\M$の対象とする。
-はじめに、各対象 $X,Y\in\Ob{\calLambda(\M)}$毎に圏 $\calLambda(\M)(X,Y)$を定義する。
+\paragraph{Definition \arabic{section}.\arabic{subsection}.1：\texorpdfstring{$\calLambda(\R)$}{Lambda(R)}の1-射}\ \\
+$X,Y\in\R$とする。
+$\calLambda(\R)$の$\bar{X}$から$\bar{Y}$への1-射とは、
+$A\in\R$と$\R$の射$f:X\to A\tensor Y$ の組$(A,f)$のことである。
 
-\paragraph{Definition \arabic{section}.2.1：\texorpdfstring{$\calLambda(\M)$}{Lambda(M)}の1-射}\ \\
-$X,Y\in\M$とする。
-$\calLambda(\M)$の$X$から$Y$への1-射とは、
-$A\in\M$と$\M$の射$f:X\to A\tensor Y$ の組$(A,f)$のことである。
+このように定めた$\calLambda(\R)$の1-射、その同値類が$\Lambda(\R)$の射となる。
+同値関係として「有限個の2-射で結ばれていること」を用いる。その2-射は下記のとおり定義する。
 
-
-\paragraph{Definition \arabic{section}.2.2： $\calLambda(\M)$の2-射}\ \\
-$X,Y\in\M$とし、
-$(A,f), (B,g)$を$X$から$Y$への$\calLambda(\M)$の1-射とする。
-$\calLambda(\M)$の$(A,f)$から$(B,g)$への2-射とは、
-$\M$の射$k:A\tensor Y \to B\tensor Y$ であって下の図式の三角形及び四角形を可換にするもののことである。
+\paragraph{Definition \arabic{section}.\arabic{subsection}.2： $\calLambda(\R)$の2-射}\ \\
+$X,Y\in\R$とし、
+$(A,f), (B,g)$を$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射とする。
+$\calLambda(\R)$の$(A,f)$から$(B,g)$への2-射とは、
+$\R$の射$k:A\tensor Y \to B\tensor Y$ であって下の図式の三角形及び四角形を可換にするもののことである。
 
 % https://q.uiver.app/?q=WzAsNSxbMCwxLCJYIl0sWzIsMCwiQVxcdGVuc29yIFkiXSxbMiwyLCJCXFx0ZW5zb3IgWSJdLFs0LDAsIkFcXHRlbnNvciBZXFx0ZW5zb3IgWSJdLFs0LDIsIkJcXHRlbnNvciBZXFx0ZW5zb3IgWSJdLFswLDEsImYiXSxbMCwyLCJnIiwyXSxbMSwzLCJBXFx0ZW5zb3JcXERlbHRhX1kiXSxbMiw0LCJCXFx0ZW5zb3JcXERlbHRhX1kiLDJdLFszLDQsImtcXHRlbnNvciBZIl0sWzEsMiwiayJdXQ==
 \[\begin{tikzcd}
@@ -641,14 +682,14 @@ $\M$の射$k:A\tensor Y \to B\tensor Y$ であって下の図式の三角形及�
 2-射の例を２つ挙げておく。
 
 
-\paragraph{Proposition \arabic{section}.2.3： 自明な 2-射 }\ \\
-$B,X,Y\in\M$とし、
-$(A,f)$を$X$から$Y$への$\calLambda(\M)$の1-射、
-$a:A \to B$を$\M$の射とする。
+\paragraph{Proposition \arabic{section}.\arabic{subsection}.3： 自明な 2-射 }\ \\
+$B,X,Y\in\R$とし、
+$(A,f)$を$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射、
+$a:A \to B$を$\R$の射とする。
 このとき、\\
 (1)$g:=f\comp(a\tensor Y)$とおくと、
-$(B,g)$は$X$から$Y$への$\calLambda(\M)$の1-射である。\\
-(2)$\M$の射$k:=(a\tensor Y)$は$\calLambda(\M)$の 2-射 $k:(A,f)\to(B,g)$を与える。\\
+$(B,g)$は$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射である。\\
+(2)$\R$の射$k:=(a\tensor Y)$は$\calLambda(\R)$の 2-射 $k:(A,f)\to(B,g)$を与える。\\
 
 \begin{proof}
     (1)定義より従う。\\
@@ -669,13 +710,13 @@ $(B,g)$は$X$から$Y$への$\calLambda(\M)$の1-射である。\\
 
 
 
-\paragraph{Proposition \arabic{section}.2.4：\ 対角射は 2-射である }\ \\
-$X,Y\in\M$とし、
-$(A,f)$を$X$から$Y$への$\calLambda(\M)$の1-射とする。
+\paragraph{Proposition \arabic{section}.\arabic{subsection}.4：\ 対角射は 2-射である }\ \\
+$X,Y\in\R$とし、
+$(A,f)$を$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射とする。
 このとき、\\
 (1)$g:=f\comp(A\tensor\Delta_Y)$とおくと、
-$(A\tensor Y,g)$は$X$から$Y$への$\calLambda(\M)$の1-射 である。\\
-(2)$\M$の射$k:=A\tensor\Delta_Y$は$\calLambda(\M)$の 2-射 $k:(A,f)\to(A\tensor Y,g)$を与える。\\
+$(A\tensor Y,g)$は$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射 である。\\
+(2)$\R$の射$k:=A\tensor\Delta_Y$は$\calLambda(\R)$の 2-射 $k:(A,f)\to(A\tensor Y,g)$を与える。\\
 
 \begin{proof}
     (1)定義より従う。\\
@@ -694,32 +735,34 @@ $(A\tensor Y,g)$は$X$から$Y$への$\calLambda(\M)$の1-射 である。\\
     \end{tikzcd}\]
 \end{proof}
 
-\paragraph{Definition \arabic{section}.2.5: local category of $\calLambda(\M)$}\ \\
-各$X,Y\in\M$に対し、圏$\calLambda(\M)(X,Y)$を以下のように定める：
-対象は$X$から$Y$への1-射, 射はその間の2-射とし、
-2-射 同士の(垂直)合成、及び恒等2-射は素直に定義する。
+\paragraph{Definition \arabic{section}.\arabic{subsection}.5: local category of $\calLambda(\M)$}\ \\
+各$X,Y\in\R$に対し、圏$\calLambda(\R)(\bar{X},\bar{Y})$を以下のように定める：
+対象は$\bar{X}$から$\bar{Y}$への1-射, 射はその間の2-射とし、
+2-射同士の(垂直)合成、及び恒等2-射は素直に定義する。
 これらはwell-definedで、圏の公理を満たす。\\
 
 
-以上で圏$\calLambda(\M)(X,Y)$が定義された。本小節の残りで1-射の合成と2-射の左whiskeringを定義し、中間構造$\calLambda(\M)$の定義を終える。
+以上で圏$\calLambda(\R)(\bar{X},\bar{Y})$が定義された。
+本小節の残りで1-射の合成と2-射の左whiskeringを定義し、中間構造$\calLambda(\R)$の定義を終える。
 
-\paragraph{Definition \arabic{section}.2.6: 1-射の合成}\ \\
-$X,Y,Z\in\M$とし、$(A,f)$を$X$から$Y$への、$(B,g)$を$Y$から$Z$への$\calLambda(\M)$の1-射とする。
-$X$から$Z$への$\calLambda(\M)$の1-射$(A,f)\comp(B,g)$を $(A\tensor B, h)$と定める。ただし$\M$の射$h:X\to A\tensor B\tensor Z$は次の列の合成で定める：
+\paragraph{Definition \arabic{section}.\arabic{subsection}.6: 1-射の合成}\ \\
+$X,Y,Z\in\R$とし、$(A,f)$を$\bar{X}$から$\bar{Y}$への、$(B,g)$を$\bar{Y}$から$\bar{Z}$への$\calLambda(\R)$の1-射とする。
+$\bar{X}$から$\bar{Z}$への$\calLambda(\R)$の1-射$(A,f)\comp(B,g)$を $(A\tensor B, h)$と定める。
+ただし$\R$の射$h:X\to A\tensor B\tensor Z$は次の列の合成で定める：
 % https://q.uiver.app/?q=WzAsMyxbMSwwLCJBXFx0ZW5zb3IgWSJdLFszLDAsIkFcXHRlbnNvciBCXFx0ZW5zb3IgWiJdLFswLDAsIlgiXSxbMCwxLCJBXFx0ZW5zb3IgZyJdLFsyLDAsImYiXV0=
 \[\begin{tikzcd}
 	X & {A\tensor Y} && {A\tensor B\tensor Z.}
 	\arrow["{A\tensor g}", from=1-2, to=1-4]
 	\arrow["f", from=1-1, to=1-2]
 \end{tikzcd}\]
-この合成は明らかに結合律を満たす。
+この合成は結合律を満たす。
 
 %(String Diagramも描く)
 
-\paragraph{Proposition \arabic{section}.2.7: 2-射の左whiskering}\ \\
-$X,Y,Z\in\M$とし、$(A,f)$を$X$から$Y$への、$(B_1,g_1),(B_2,g_2)$を$Y$から$Z$への$\calLambda(\M)$の1-射とする。
-$k:(B_1,g_1)\to (B_2,g_2)$を$\calLambda(\M)$の2-射とする。
-このとき、$\M$の射$f*k:A\tensor B_1\tensor Z$を$f*k:=A\tensor k$で定めると、これは$\calLambda(\M)$の2-射 $f*k:(A,f)\comp(B_1,g_1)\to (A,f)\comp(B_2,g_2)$を与える。\\
+\paragraph{Proposition \arabic{section}.\arabic{subsection}.7: 2-射の左whiskering}\ \\
+$X,Y,Z\in\R$とし、$(A,f)$を$\bar{X}$から$\bar{Y}$への、$(B_1,g_1),(B_2,g_2)$を$\bar{Y}$から$\bar{Z}$への$\calLambda(\R)$の1-射とする。
+$k:(B_1,g_1)\to (B_2,g_2)$を$\calLambda(\R)$の2-射とする。
+このとき、$\R$の射$f*k:A\tensor B_1\tensor Z\to A\tensor B_2\tensor Z$を$f*k:=A\tensor k$で定めると、これは$\calLambda(\R)$の2-射 $f*k:(A,f)\comp(B_1,g_1)\to (A,f)\comp(B_2,g_2)$を与える。\\
 
 \begin{proof}
     %(proof)\\% of 2-射であること)\\
@@ -753,39 +796,44 @@ $k:(B_1,g_1)\to (B_2,g_2)$を$\calLambda(\M)$の2-射とする。
     この図式に$A\tensor -$を施せば、求める図式の可換性を得る。\\
 \end{proof}
 
-以上で中間構造$\calLambda(\M)$の定義が完了した。次節で圏 $\Lambda(\M)$を定義し、次々節でそのデカルト構造を示す。
+以上で中間構造$\calLambda(\R)$の定義が完了した。次節で圏 $\Lambda(\M)$を定義し、次々節でそのデカルト構造を示す。
 
 
-\subsection{圏\texorpdfstring{$\Lambda(\M)$}{Lambda(M)}の構成}
-本節では圏$\Lambda(\M)$の定義を完成する。
-まず前述の通り$\Lambda(\M)$の射を$\calLambda(\M)$の1-射の同値類として定義する。次に合成を$\calLambda(\M)$から誘導されるものとして定義するが、これのwell-defined性は非自明であるから、これを示す。
+\subsection{圏\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}の構成}
+本節では圏$\Lambda(\R)$の定義を完成する。
+まず前述の通り$\Lambda(\R)$の射を$\calLambda(\R)$の1-射の同値類として定義する。
+次に合成を$\calLambda(\R)$の1-射の合成から誘導されるものとして定義するが、これのwell-defined性は非自明であるから、これを示す。
 
-\paragraph{Definition \arabic{section}.3.1：\ $\Lambda(\M)$の対象}\ \\
-$\Ob{\Lambda(\M)}:= \Ob{\M}$とする。
+\paragraph{Definition \arabic{section}.\arabic{subsection}.1：\ $\Lambda(\R)$の対象}\ \\
+$\Ob{\Lambda(\R)}:= \Ob{\calLambda(\R)} (=\Ob{\R})$とする。
 
-\paragraph{Definition \arabic{section}.3.2：\ $\Lambda(\M)$の射}\ \\
-$\Lambda(\M)(X,Y):=\calLambda(\M)(X,Y)/\sim$とする。
-ただし$\sim$は$\calLambda(\M)(X,Y)$上の関係「２射で繋がれている」が生成する同値関係。即ち、$\Lambda(\M)(X,Y)$は$\calLambda(\M)(X,Y)$の連結成分全体の集合である。\\
+\paragraph{Definition \arabic{section}.\arabic{subsection}.2：\ $\Lambda(\R)$の射}\ \\
+$\Lambda(\R)(\bar{X},\bar{Y}):=\calLambda(\R)(\bar{X},\bar{Y})/\sim$とする。
+ただし$\sim$は$\calLambda(\R)(\bar{X},\bar{Y})$上の二項関係「２射で繋がれている」が生成する同値関係。
+即ち、$\Lambda(\R)(\bar{X},\bar{Y})$は$\calLambda(\R)(\bar{X},\bar{Y})$の連結成分全体の集合である。\\
 
 
-これからこの商集合の上に合成が誘導されることを示す(lem\arabic{section}.3.4)。
-そのために、先に必要な技術的な補題(lem\arabic{section}.3.3)を示しておく。
+これからこの商集合の上に合成が誘導されることを示す(lem\arabic{section}.\arabic{subsection}.4)。
+そのために、先に必要な技術的な補題(lem\arabic{section}.\arabic{subsection}.3)を示しておく。
 
-lemma \arabic{section}.3.3は次のような意味を持つ補題と解釈できる。
-前述のとおり、$\Lambda[\Set^{\mono}]$の射は$\Set^{\mono}$の射をグラフとするようなものである。一方で、$\Set^{\mono}$の射はそれ自体素朴に$\Lambda[\Set^{\mono}]$の射だとみなせるべきである。即ち、単射写像$f:X\to Y$に対して、$f$自身を$\Lambda[\Set^{\mono}]$に埋め込んだ射$[1,f]$と$f$のグラフ$[X,(id_X,f)]$は、($\Lambda[\Set^{\mono}]$の射として)同一であるべきだ。lem4.3.3はまさしくこれを主張するものである。
+lemma \arabic{section}.\arabic{subsection}.3は次のような意味を持つ補題と解釈できる。
+前述のとおり、$\Lambda[\Set^{\mono}]$の射は$\Set^{\mono}$の射をグラフとするようなものである。
+一方で、$\Set^{\mono}$の射はそれ自体素朴に$\Lambda[\Set^{\mono}]$の射だとみなせるべきである。
+即ち、単射写像$f:X\to Y$に対して、$f$自身を$\Lambda[\Set^{\mono}]$に埋め込んだ射$[1,f]$と$f$のグラフ$[X,(id_X,f)]$は、
+($\Lambda[\Set^{\mono}]$の射として)同一であるべきだ。lem\arabic{section}.\arabic{subsection}.3はまさしくこれを主張するものである。
 
-\paragraph{Lemma \arabic{section}.3.3：\ $\M$の射のグラフは$\Lambda(\M)$ではもとの $\M$の射と同じ}\ \\
-$(A,f):X \to Y \rmin\calLambda(\M)$ に対し、
+\paragraph{Lemma \arabic{section}.3.3：\ $\R$の射のグラフは$\Lambda(\R)$ではもとの $\R$の射と同じ}\ \\
+$(A,f):\bar{X} \to \bar{Y} \rmin\calLambda(\R)$ に対し、
 $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
-% https://q.uiver.app/?q=WzAsMixbMCwwLCJbWCJdLFsyLDAsIkFcXHRlbnNvciBZXSJdLFswLDEsImYiXV0=
+% https://q.uiver.app/#q=WzAsMixbMCwwLCIoWCJdLFsyLDAsIkFcXHRlbnNvciBZKSJdLFswLDEsImYiXV0=
 \[\begin{tikzcd}
-	{[X} && {A\tensor Y]}
+	{(X} && {A\tensor Y)}
 	\arrow["f", from=1-1, to=1-3]
 \end{tikzcd}\]
 
-% https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXHNpbVtYIl0sWzEsMCwiWFxcdGVuc29yIFgiXSxbMiwwXSxbMywwLCJYXFx0ZW5zb3IgQVxcdGVuc29yIFldIl0sWzAsMSwiXFxEZWx0YV9YIl0sWzEsMywiWFxcdGVuc29yIGYiXV0=
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHNpbVxcIChYIl0sWzEsMCwiWFxcdGVuc29yIFgiXSxbMiwwXSxbMywwLCJYXFx0ZW5zb3IgQVxcdGVuc29yIFkgKSJdLFswLDEsIlxcRGVsdGFfWCJdLFsxLDMsIlhcXHRlbnNvciBmIl1d
 \[\begin{tikzcd}
-	{\sim[X} & {X\tensor X} & {} & {X\tensor A\tensor Y]}
+	{\sim\ (X} & {X\tensor X} & {} & {X\tensor A\tensor Y )}
 	\arrow["{\Delta_X}", from=1-1, to=1-2]
 	\arrow["{X\tensor f}", from=1-2, to=1-4]
 \end{tikzcd}\]
@@ -797,13 +845,13 @@ $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
     
     % https://q.uiver.app/?q=WzAsMixbMCwwLCJbWCJdLFsyLDAsIkFcXHRlbnNvciBZXSJdLFswLDEsImYiXV0=
     \[\begin{tikzcd}
-    	{[X} && {A\tensor Y]}
+    	{(X} && {A\tensor Y)}
     	\arrow["f", from=1-1, to=1-3]
     \end{tikzcd}\]
     
     % https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXHNpbVxcIFtYIl0sWzEsMCwiQVxcdGVuc29yIFkiXSxbMywwLCJBXFx0ZW5zb3IgWVxcdGVuc29yIFldIl0sWzUsMCwiXFx0ZXh0eyhieSBwcm9wIDQuMi40KX0iXSxbMCwxLCJmIl0sWzEsMiwiQVxcdGVuc29yIFxcRGVsdGFfWSJdXQ==
     \[\begin{tikzcd}
-    	{\sim\ [X} & {A\tensor Y} && {A\tensor Y\tensor Y]} && {\text{(by prop \arabic{section}.2.4)}}
+    	{\sim\ (X} & {A\tensor Y} && {A\tensor Y\tensor Y)} && {\text{(by prop \arabic{section}.2.4)}}
     	\arrow["f", from=1-1, to=1-2]
     	\arrow["{A\tensor \Delta_Y}", from=1-2, to=1-4]
     \end{tikzcd}\]
@@ -811,7 +859,7 @@ $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
     % https://q.uiver.app/?q=WzAsNixbMCwxLCJcXHNpbVxcIFtYIl0sWzEsMSwiQVxcdGVuc29yIFkiXSxbMywxLCJBXFx0ZW5zb3IgWVxcdGVuc29yIFkiXSxbNSwxLCJBXFx0ZW5zb3IgQVxcdGVuc29yIFlcXHRlbnNvciBZXSJdLFsxLDBdLFsyLDBdLFswLDEsImYiXSxbMSwyLCJBXFx0ZW5zb3IgXFxEZWx0YV9ZIl0sWzIsMywiXFxEZWx0YV97QX1cXHRlbnNvciBZWSJdLFs0LDUsIlxcdGV4dHsoYnkgcHJvcCA0LjIuMyBhbmQgNC4yLjcpfSIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
     \[\begin{tikzcd}
     	& {} & {} \\
-    	{\sim\ [X} & {A\tensor Y} && {A\tensor Y\tensor Y} && {A\tensor A\tensor Y\tensor Y]}
+    	{\sim\ (X} & {A\tensor Y} && {A\tensor Y\tensor Y} && {A\tensor A\tensor Y\tensor Y)}
     	\arrow["f", from=2-1, to=2-2]
     	\arrow["{A\tensor \Delta_Y}", from=2-2, to=2-4]
     	\arrow["{\Delta_{A}\tensor YY}", from=2-4, to=2-6]
@@ -820,28 +868,28 @@ $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
     
     % https://q.uiver.app/?q=WzAsNCxbMCwwLCI9XFwgW1giXSxbMSwwLCJBXFx0ZW5zb3IgWSJdLFszLDAsIkFcXHRlbnNvciBBXFx0ZW5zb3IgWVxcdGVuc29yIFldIl0sWzQsMCwiXFx0ZXh0eyhieSBmdW5jdG9yaWFsaXR5IG9mICRcXHRlbnNvciQpfSJdLFswLDEsImYiXSxbMSwyLCJcXERlbHRhX3tBfVxcdGVuc29yIFxcRGVsdGFfWSJdXQ==
     \[\begin{tikzcd}
-    	{=\ [X} & {A\tensor Y} && {A\tensor A\tensor Y\tensor Y]} & {\text{(by functoriality of $\tensor$)}}
+    	{=\ (X} & {A\tensor Y} && {A\tensor A\tensor Y\tensor Y)} & {\text{(by functoriality of $\tensor$)}}
     	\arrow["f", from=1-1, to=1-2]
     	\arrow["{\Delta_{A}\tensor \Delta_Y}", from=1-2, to=1-4]
     \end{tikzcd}\]
     
     % https://q.uiver.app/?q=WzAsNCxbMCwwLCI9XFwgW1giXSxbMSwwLCJBXFx0ZW5zb3IgWSJdLFszLDAsIkFcXHRlbnNvciBZXFx0ZW5zb3IgQVxcdGVuc29yIFldIl0sWzQsMCwiXFx0ZXh0eyhiZWNhdXNlICRcXERlbHRhJCBpcyBtb25vaWRhbCl9Il0sWzAsMSwiZiJdLFsxLDIsIlxcRGVsdGFfe0FZfSJdXQ==
     \[\begin{tikzcd}
-    	{=\ [X} & {A\tensor Y} && {A\tensor Y\tensor A\tensor Y]} & {\text{(because $\Delta$ is monoidal)}}
+    	{\sim\ (X} & {A\tensor Y} && {A\tensor Y\tensor A\tensor Y)} & {\text{(because $\Delta$ is monoidal)}}
     	\arrow["f", from=1-1, to=1-2]
     	\arrow["{\Delta_{AY}}", from=1-2, to=1-4]
     \end{tikzcd}\]
     
     % https://q.uiver.app/?q=WzAsNCxbMCwwLCI9XFwgW1giXSxbMSwwLCJYXFx0ZW5zb3IgWCJdLFszLDAsIkFcXHRlbnNvciBZXFx0ZW5zb3IgQVxcdGVuc29yIFldIl0sWzQsMCwiXFx0ZXh0eyhieSBuYXR1cmFsaXR5IG9mICRcXERlbHRhJCl9Il0sWzAsMSwiXFxEZWx0YV9YIl0sWzEsMiwiZlxcdGVuc29yIGYiXV0=
     \[\begin{tikzcd}
-    	{=\ [X} & {X\tensor X} && {A\tensor Y\tensor A\tensor Y]} & {\text{(by naturality of $\Delta$)}}
+    	{=\ (X} & {X\tensor X} && {A\tensor Y\tensor A\tensor Y)} & {\text{(by naturality of $\Delta$)}}
     	\arrow["{\Delta_X}", from=1-1, to=1-2]
     	\arrow["{f\tensor f}", from=1-2, to=1-4]
     \end{tikzcd}\]
     
     % https://q.uiver.app/?q=WzAsNCxbMCwwLCI9XFwgW1giXSxbMSwwLCJYXFx0ZW5zb3IgWCJdLFszLDAsIlhcXHRlbnNvciBBXFx0ZW5zb3IgWSJdLFs1LDAsIkFcXHRlbnNvciBZXFx0ZW5zb3IgQVxcdGVuc29yIFldIl0sWzAsMSwiXFxEZWx0YV9YIl0sWzEsMiwiWFxcdGVuc29yIGYiXSxbMiwzLCJmXFx0ZW5zb3IgQVkiXV0=
     \[\begin{tikzcd}
-    	{=\ [X} & {X\tensor X} && {X\tensor A\tensor Y} && {A\tensor Y\tensor A\tensor Y]}
+    	{=\ (X} & {X\tensor X} && {X\tensor A\tensor Y} && {A\tensor Y\tensor A\tensor Y)}
     	\arrow["{\Delta_X}", from=1-1, to=1-2]
     	\arrow["{X\tensor f}", from=1-2, to=1-4]
     	\arrow["{f\tensor AY}", from=1-4, to=1-6]
@@ -849,40 +897,43 @@ $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
     
     % https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXHNpbVxcIFtYIl0sWzEsMCwiWFxcdGVuc29yIFgiXSxbMywwLCJYXFx0ZW5zb3IgQVxcdGVuc29yIFldIl0sWzQsMCwiXFx0ZXh0eyhieSBwcm9wIDQuMi4zIGFuZCA0LjIuNyBhZ2Fpbil9Il0sWzAsMSwiXFxEZWx0YV9YIl0sWzEsMiwiWFxcdGVuc29yIGYiXV0=
     \[\begin{tikzcd}
-    	{\sim\ [X} & {X\tensor X} && {X\tensor A\tensor Y]} & {\text{(by prop \arabic{section}.2.3 and \arabic{section}.2.7)}}
+    	{\sim\ (X} & {X\tensor X} && {X\tensor A\tensor Y)} & {\text{(by prop \arabic{section}.2.3 and \arabic{section}.2.7)}}
     	\arrow["{\Delta_X}", from=1-1, to=1-2]
     	\arrow["{X\tensor f}", from=1-2, to=1-4]
     \end{tikzcd}\]
     
     %(String Diagramによる証明も書く)
     以上で示された。
+    参考までに、この証明をString Diagramを用いて書き直しておく。次のようになる：
+    \includegraphics[width=5cm]{\graphics\delta_comp_x_tens_f.png}
+
 \end{proof}
 
 
-\paragraph{Lemma \arabic{section}.3.4：\ $\Lambda(\M)$の射の合成のwell-defined性}\ \\
-$X,Y,Z\in\calLambda(\M)$とする。
-任意の$(A_1,f_1),(A_2,f_2)\in\calLambda(\M)(X,Y),\ (B_1,g_1),(B_2,g_2) \in\calLambda(\M)(Y,Z)$に対し、
+\paragraph{Lemma \arabic{section}.3.4：\ $\Lambda(\R)$の射の合成のwell-defined性}\ \\
+$X,Y,Z\in\calLambda(\R)$とする。
+任意の$(A_1,f_1),(A_2,f_2)\in\calLambda(\R)(\bar{X},\bar{Y}),\ (B_1,g_1),(B_2,g_2) \in\calLambda(\R)(\bar{Y},\bar{Z})$に対し、
 $(A_1,f_1) \sim (A_2,f_2)$かつ$(B_1,g_1) \sim (B_2,g_2)$ならば、
 $(A_1,f_1)\comp(B_1,g_1) \sim (A_2,f_2)\comp(B_2,g_2)$である。
 
 \begin{proof}
     同値関係$\sim$は2-射の生成する同値関係として定義されていたので、次の２つを示せばよい：\\
-    (1) 任意の$(A_1,f_1),(A_2,f_2)\in\calLambda(\M)(X,Y), (B,g)\in\calLambda(\M)(Y,Z)$
+    (1) 任意の$(A_1,f_1),(A_2,f_2)\in\calLambda(\R)(\bar{X},\bar{Y}), (B,g)\in\calLambda(\R)(\bar{Y},\bar{Z})$
     及び$k:(A_1,f_1)\to (A_2,f_2)$に対し、$(A_1,f_1)\comp(B,g) \sim (A_2,f_2)\comp(B,g)$である。\\
-    (2) 任意の$(A,f)\in\calLambda(\M)(X,Y), (B_1,g_1),(B_2,g_2)\in\calLambda(\M)(Y,Z)$
+    (2) 任意の$(A,f)\in\calLambda(\R)(\bar{X},\bar{Y}), (B_1,g_1),(B_2,g_2)\in\calLambda(\R)(\bar{Y},\bar{Z})$
     及び$l:(B_1,g_1)\to (B_2,g_2)$に対し、$(A,f)\comp(B_1,g_1) \sim (A,f)\comp(B_2,g_2)$である。
     
     このうち(2)はprop \arabic{section}.2.7そのものである。従って、(1)を示せば十分である。
 
     (1)を示す。
-    $(A_1,f_1),(A_2,f_2)\in\calLambda(\M)(X,Y), (B,g)\in\calLambda(\M)(Y,Z)$
+    $(A_1,f_1),(A_2,f_2)\calLambda(\R)(\bar{X},\bar{Y}), (B,g)\in\calLambda(\R)(\bar{X},\bar{Y})$
     及び$k:(A_1,f_1)\to (A_2,f_2)$を任意に固定する。
     $(A_1,f_1)\comp(B,g)$から$(A_2,f_2)\comp(B,g)$へ至る2-射のジグザグを構成する。\\
     
     
     % https://q.uiver.app/?q=WzAsMyxbMCwwLCJbWCJdLFsxLDAsIkFfMVxcdGVuc29yIFkiXSxbMywwLCJBXzFcXHRlbnNvciBCXFx0ZW5zb3IgWl0iXSxbMCwxLCJmXzEiXSxbMSwyLCJBXzFcXHRlbnNvciBnIl1d
     \[\begin{tikzcd}
-    	{[X} & {A_1\tensor Y} && {A_1\tensor B\tensor Z]}
+    	{(X} & {A_1\tensor Y} && {A_1\tensor B\tensor Z)}
     	\arrow["{f_1}", from=1-1, to=1-2]
     	\arrow["{A_1\tensor g}", from=1-2, to=1-4]
     \end{tikzcd}\]
@@ -890,7 +941,7 @@ $(A_1,f_1)\comp(B_1,g_1) \sim (A_2,f_2)\comp(B_2,g_2)$である。
     % https://q.uiver.app/?q=WzAsNSxbMCwxLCJcXHNpbVxcIFtYIl0sWzEsMSwiQV8xXFx0ZW5zb3IgWSJdLFszLDEsIkFfMVxcdGVuc29yIFlcXHRlbnNvciBZIl0sWzUsMSwiQV8xXFx0ZW5zb3IgWVxcdGVuc29yIEJcXHRlbnNvciBaXSJdLFsxLDAsIlxcdGV4dHsoYnkgcHJvcCA0LjIuNywgbGVtIDQuMy4zKX0iXSxbMCwxLCJmXzEiXSxbMSwyLCJBXzFcXHRlbnNvclxcRGVsdGFfWSJdLFsyLDMsIkFfMVlcXHRlbnNvciBnIl1d
     \[\begin{tikzcd}
     	& {\text{(by prop \arabic{section}.2.7, lem \arabic{section}.3.3)}} \\
-    	{\sim\ [X} & {A_1\tensor Y} && {A_1\tensor Y\tensor Y} && {A_1\tensor Y\tensor B\tensor Z]}
+    	{\sim\ (X} & {A_1\tensor Y} && {A_1\tensor Y\tensor Y} && {A_1\tensor Y\tensor B\tensor Z)}
     	\arrow["{f_1}", from=2-1, to=2-2]
     	\arrow["{A_1\tensor\Delta_Y}", from=2-2, to=2-4]
     	\arrow["{A_1Y\tensor g}", from=2-4, to=2-6]
@@ -898,7 +949,7 @@ $(A_1,f_1)\comp(B_1,g_1) \sim (A_2,f_2)\comp(B_2,g_2)$である。
     
     % https://q.uiver.app/?q=WzAsNCxbMCwwLCJcXHNpbVxcIFtYIl0sWzEsMCwiQV8xXFx0ZW5zb3IgWSJdLFszLDAsIkFfMVxcdGVuc29yIFlcXHRlbnNvciBZIl0sWzUsMCwiQV8xXFx0ZW5zb3IgWVxcdGVuc29yIEJcXHRlbnNvciBaIl0sWzAsMSwiZl8xIl0sWzEsMiwiQV8xXFx0ZW5zb3JcXERlbHRhX1kiXSxbMiwzLCJBXzFZXFx0ZW5zb3IgZyJdXQ==
     \[\begin{tikzcd}
-    	{\sim\ [X} & {A_1\tensor Y} && {A_1\tensor Y\tensor Y} && {A_1\tensor Y\tensor B\tensor Z}
+    	{\sim\ (X} & {A_1\tensor Y} && {A_1\tensor Y\tensor Y} && {A_1\tensor Y\tensor B\tensor Z}
     	\arrow["{f_1}", from=1-1, to=1-2]
     	\arrow["{A_1\tensor\Delta_Y}", from=1-2, to=1-4]
     	\arrow["{A_1Y\tensor g}", from=1-4, to=1-6]
@@ -906,13 +957,13 @@ $(A_1,f_1)\comp(B_1,g_1) \sim (A_2,f_2)\comp(B_2,g_2)$である。
     
     % https://q.uiver.app/?q=WzAsNCxbMCwwXSxbNCwwLCJBXzJcXHRlbnNvciBZXFx0ZW5zb3IgQlxcdGVuc29yIFpdIl0sWzUsMCwiXFx0ZXh0eyhieSBwcm9wIDQuMi4zLCBwcm9wIDQuMi43KX0iXSxbMiwwXSxbMywxLCJrXFx0ZW5zb3IgQloiXV0=
     \[\begin{tikzcd}
-    	{} && {} && {A_2\tensor Y\tensor B\tensor Z]} & {\text{(by prop \arabic{section}.2.3, prop \arabic{section}.2.7)}}
+    	{} && {} && {A_2\tensor Y\tensor B\tensor Z)} & {\text{(by prop \arabic{section}.2.3, prop \arabic{section}.2.7)}}
     	\arrow["{k\tensor BZ}", from=1-3, to=1-5]
     \end{tikzcd}\]
     
     % https://q.uiver.app/?q=WzAsNCxbMCwwLCI9XFwgW1giXSxbMSwwLCJBXzFcXHRlbnNvciBZIl0sWzMsMCwiQV8xXFx0ZW5zb3IgWVxcdGVuc29yIFkiXSxbNSwwLCJBXzJcXHRlbnNvciBZXFx0ZW5zb3IgWSJdLFswLDEsImZfMSJdLFsxLDIsIkFfMVxcdGVuc29yXFxEZWx0YV9ZIl0sWzIsMywia1xcdGVuc29yIFkiXV0=
     \[\begin{tikzcd}
-    	{=\ [X} & {A_1\tensor Y} && {A_1\tensor Y\tensor Y} && {A_2\tensor Y\tensor Y}
+    	{=\ (X} & {A_1\tensor Y} && {A_1\tensor Y\tensor Y} && {A_2\tensor Y\tensor Y}
     	\arrow["{f_1}", from=1-1, to=1-2]
     	\arrow["{A_1\tensor\Delta_Y}", from=1-2, to=1-4]
     	\arrow["{k\tensor Y}", from=1-4, to=1-6]
@@ -920,26 +971,26 @@ $(A_1,f_1)\comp(B_1,g_1) \sim (A_2,f_2)\comp(B_2,g_2)$である。
     
     % https://q.uiver.app/?q=WzAsNCxbMCwwXSxbNCwwLCJBXzJcXHRlbnNvciBZXFx0ZW5zb3IgQlxcdGVuc29yIFpdIl0sWzUsMCwiXFx0ZXh0eyhieSBmdW5jdG9yaWFsaXR5IG9mICRcXHRlbnNvciQpfSJdLFsyLDBdLFszLDEsIkFfMllcXHRlbnNvciBnIl1d
     \[\begin{tikzcd}
-    	{} && {} && {A_2\tensor Y\tensor B\tensor Z]} & {\text{(by functoriality of $\tensor$)}}
+    	{} && {} && {A_2\tensor Y\tensor B\tensor Z)} & {\text{(by functoriality of $\tensor$)}}
     	\arrow["{A_2Y\tensor g}", from=1-3, to=1-5]
     \end{tikzcd}\]
     
     % https://q.uiver.app/?q=WzAsNSxbMCwwLCI9XFwgW1giXSxbMSwwLCJBXzJcXHRlbnNvciBZIl0sWzMsMCwiQV8yXFx0ZW5zb3IgWVxcdGVuc29yIFkiXSxbNSwwXSxbNywwXSxbMCwxLCJmXzIiXSxbMSwyLCJBXzJcXHRlbnNvclxcRGVsdGFfWSJdXQ==
     \[\begin{tikzcd}
-    	{=\ [X} & {A_2\tensor Y} && {A_2\tensor Y\tensor Y} && {} && {}
+    	{=\ (X} & {A_2\tensor Y} && {A_2\tensor Y\tensor Y} && {} && {}
     	\arrow["{f_2}", from=1-1, to=1-2]
     	\arrow["{A_2\tensor\Delta_Y}", from=1-2, to=1-4]
     \end{tikzcd}\]
     
     % https://q.uiver.app/?q=WzAsNCxbMCwwXSxbNCwwLCJBXzJcXHRlbnNvciBZXFx0ZW5zb3IgQlxcdGVuc29yIFpdIl0sWzUsMCwiXFx0ZXh0eyhiZWNhdXNlICRrJCBpcyBhIDItbW9ycGhpc20gZnJvbSAkKEFfMSwgZl8xKSQgdG8gJChBXzIsIGZfMikkKX0iXSxbMiwwXSxbMywxLCJBXzJZXFx0ZW5zb3IgZyJdXQ==
     \[\begin{tikzcd}
-    	{} && {} && {A_2\tensor Y\tensor B\tensor Z]} & {\text{(because $k$ is a 2-morphism from $(A_1, f_1)$ to $(A_2, f_2)$)}}
+    	{} && {} && {A_2\tensor Y\tensor B\tensor Z)} & {\text{(because $k$ is a 2-morphism from $(A_1, f_1)$ to $(A_2, f_2)$)}}
     	\arrow["{A_2Y\tensor g}", from=1-3, to=1-5]
     \end{tikzcd}\]
     
     % https://q.uiver.app/?q=WzAsNixbMCwwLCJcXHNpbVxcIFtYIl0sWzEsMCwiQV8yXFx0ZW5zb3IgWSJdLFszLDAsIkFfMlxcdGVuc29yIEJcXHRlbnNvciBaXSJdLFs1LDBdLFs3LDBdLFs0LDAsIlxcdGV4dHsoYnkgcHJvcCA0LjIuNyBhbmQgNC4zLjMpfSJdLFswLDEsImZfMiJdLFsxLDIsIkFfMlxcdGVuc29yIGdfMiJdXQ==
     \[\begin{tikzcd}
-    	{\sim\ [X} & {A_2\tensor Y} && {A_2\tensor B\tensor Z]} & {\text{(by prop \arabic{section}.2.7 and \arabic{section}.3.3)}} & {} && {}
+    	{\sim\ (X} & {A_2\tensor Y} && {A_2\tensor B\tensor Z)} & {\text{(by prop \arabic{section}.2.7 and \arabic{section}.3.3)}} & {} && {}
     	\arrow["{f_2}", from=1-1, to=1-2]
     	\arrow["{A_2\tensor g_2}", from=1-2, to=1-4]
     \end{tikzcd}\]
@@ -949,37 +1000,37 @@ $(A_1,f_1)\comp(B_1,g_1) \sim (A_2,f_2)\comp(B_2,g_2)$である。
 \end{proof}
 
 
-\paragraph{Definition \arabic{section}.3.5：\ $\Lambda(\M)$の射の合成}\ \\
-$X,Y,Z\in\Lambda(\M), [A,f]\in\Lambda(\M)(X,Y), [B,g]\in\Lambda(\M)(Y,Z)$とする。
+\paragraph{Definition \arabic{section}.\arabic{subsection}.5：\ $\Lambda(\R)$の射の合成}\ \\
+$\bar{X},\bar{Y},\bar{Z}\in\Lambda(\R), [A,f]\in\Lambda(\R)(\bar{X},\bar{Y}), [B,g]\in\Lambda(\R)(\bar{Y},\bar{Z})$とする。
 これらの合成を$[A,f]\comp[B,g]:=[(A,f)\comp(B,g)]$で定める。これはlemma\arabic{section}.3.4よりwell-definedである。
 
-\paragraph{Definition \arabic{section}.3.6：\ $\Lambda(\M)$の恒等射}\ \\
-各$X\in\Lambda(\M)$に対し、$id_X:=[I,\rho_X^{-1}]$と定める。
+\paragraph{Definition \arabic{section}.\arabic{subsection}.6：\ $\Lambda(\R)$の恒等射}\ \\
+各$\bar{X}\in\Lambda(\R)$に対し、$id_{\bar{X}}:=[I,\rho_X^{-1}]$と定める。
 
-\paragraph{Proposition \arabic{section}.3.7：\ $\Lambda(\M)$の結合則}\ \\
+\paragraph{Proposition \arabic{section}.\arabic{subsection}.7：\ $\Lambda(\R)$の結合則}\ \\
 上記compositionは結合則を満たす。
-これは$\calLambda(\M)$で1-射の結合則が成り立っていたことから従う。
+これは$\calLambda(\R)$で1-射の結合則が成り立っていたことから従う。
 
-\paragraph{Proposition \arabic{section}.3.8：\ $\Lambda(\M)$の単位律}\ \\
+\paragraph{Proposition \arabic{section}.\arabic{subsection}.8：\ $\Lambda(\R)$の単位律}\ \\
 上記合成とidentityは単位律を満たす。
-これは明らか。
 
-\paragraph{Definition \arabic{section}.3.9：\ 圏 $\Lambda(\M)$}\ \\
-definition \arabic{section}.3.1, \arabic{section}.3.2, \arabic{section}.3.5, \arabic{section}.3.6 で与えられる構造達は、proposition\arabic{section}.3.7, \arabic{section}.3.8より、圏を成す。
-この圏を$\Lambda(\M)$と書くことにする。\\
+\paragraph{Definition \arabic{section}.\arabic{subsection}.9：\ 圏 $\Lambda(\R)$}\ \\
+definition \arabic{section}.3.1, \arabic{section}.3.2, \arabic{section}.3.5, \arabic{section}.3.6 で与えられる構造達は、
+proposition\arabic{section}.3.7, \arabic{section}.3.8より、圏を成す。
+この圏を$\Lambda(\R)$と書くことにする。\\
 
 
 \newpage
-\subsection{Cartesian Structure of the Category \texorpdfstring{$\Lambda(\M)$}{Lambda(M)}}
-以上で定義した$\Lambda(\M)$が\CC になっていることを示す。
-実は$\M$から引き継ぐモノイド構造がそのまま直積となる。
+\subsection{Cartesian Structure of the Category \texorpdfstring{$\Lambda(\R)$}{Lambda(R)}}
+以上で定義した$\Lambda(\R)$が\CC になっていることを示す。
+実は$\R$から引き継ぐモノイド構造がそのまま直積となる。
 まずモノイド構造を引き継ぐことを示し、その後それが直積の普遍性を持つことを示す。
 %the category $\Lambda(\M)$ defined in previous sections, becomes cartesian category. In this section, we will find its cartesian structure and prove that.
 
 
-\paragraph{Definition \arabic{section}.4.1：\texorpdfstring{$\Lambda(\M)$}{Lambda(M)}のモノイド構造}\ \\
-$\M$を \RC とする。
-$\Lambda(\M)$は、素朴な方法で\SMC となる。
+\paragraph{Definition \arabic{section}.4.1：\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}のモノイド構造}\ \\
+$\R$を \RC とする。
+$\Lambda(\R)$は、素朴な方法で\SMC となる。
 モノイド積の函手$\tensor'$のみ明示する。$\tensor'$を次のように定める。
 \fct{\tensor'}{\Lambda(\M)\times \Lambda(\M)}{\Lambda(\M)}{(X,Y)}{([A,f], [B,g])}{(X',Y')}{X\tensor Y}{[A\tensor B, f\square g]}{X'\tensor Y'}
 ただし、$f\square g := (f\tensor g)\comp (A\tensor\gamma_{X,B}\tensor Y)$ である。

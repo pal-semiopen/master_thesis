@@ -7,6 +7,10 @@
 \providecommand{\href}[2]{#2}
 \begin{thebibliography}{Mac63}
 
+\bibitem[BW90]{barr1990category}
+Michael Barr and Charles Wells, \emph{Category theory for computing science},
+  vol.~1, Prentice Hall New York, 1990.
+
 \bibitem[HS19]{huot2019universal}
 Mathieu Huot and Sam Staton, \emph{Universal properties in quantum theory},
   arXiv preprint arXiv:1901.10117 (2019).

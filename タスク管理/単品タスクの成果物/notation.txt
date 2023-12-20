@@ -1,0 +1,17 @@
+記号
+\C:デカルト圏変数
+\R:関連圏変数
+\M:対称モノイド圏変数
+\R_bar:関連圏\Rの台の対称モノイド圏
+F:関連函手変数
+
+L:L-construction
+Λ:Λ-construction
+\B:中間構造
+
+X,Y,A,B:\Rの対象
+X_bar, Y_bar:\B[\R], Λ[\R]の対象
+f,g,k,j:\Rの射
+(A,f), (B,f):\B[\R]の1-射
+k,j:\B[\R]の2-射
+[A,f], [B,g]:Λ[\R]の射
