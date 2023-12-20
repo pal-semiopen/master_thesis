@@ -34,6 +34,9 @@
  pdfauthor={},%
  pdfkeywords={}}
 
+
+\graphicspath{{graphics/}}
+
 \newcommand{\hang}[1]{\noindent \settowidth{\hangindent}{#1}#1}
 
 \newcommand{\card}[1]{ |#1| }
@@ -905,8 +908,12 @@ $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
     %(String Diagramによる証明も書く)
     以上で示された。
     参考までに、この証明をString Diagramを用いて書き直しておく。次のようになる：
-    \includegraphics[width=5cm]{\graphics\delta_comp_x_tens_f.png}
-
+    \begin{figure}
+        \centering
+        \includegraphics[width=5cm]{delta_comp_x_tens_f.png}
+        \caption{String Diagramによる証明}
+        \label{fig:my_label}
+    \end{figure}
 \end{proof}
 
 
