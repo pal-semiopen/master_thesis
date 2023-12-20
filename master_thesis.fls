@@ -68,6 +68,10 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT c:/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 INPUT c:/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+INPUT c:/texlive/2023/texmf-dist/tex/latex/here/here.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/here/here.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/float/float.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/float/float.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty

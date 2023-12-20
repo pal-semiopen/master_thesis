@@ -9,6 +9,7 @@
 \usepackage{comment}
 \usepackage{mathrsfs} %\mathscrの使用
 \usepackage[dvipdfmx]{graphicx} %\includegraphics[options]{name}の使用
+\usepackage{here} %graphicsの[H]の使用
 \geometry{a4paper}
 
 %\usepackage[frenchb]{babel}
@@ -908,7 +909,7 @@ $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
     %(String Diagramによる証明も書く)
     以上で示された。
     参考までに、この証明をString Diagramを用いて書き直しておく。次のようになる：
-    \begin{figure}[h]
+    \begin{figure}[H]
         \centering
         \includegraphics[width=5cm]{delta_comp_x_tens_f.png}
         \caption{String Diagramによる証明}

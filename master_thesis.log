@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  20 DEC 2023 22:13
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  20 DEC 2023 22:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -197,6 +197,15 @@ Package graphics Info: Driver file: dvipdfmx.def on input line 107.
 \Gin@req@height=\dimen177
 \Gin@req@width=\dimen178
 )
+(c:/texlive/2023/texmf-dist/tex/latex/here/here.sty)
+(c:/texlive/2023/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count274
+\float@exts=\toks34
+\float@box=\box70
+\@float@everytoks=\toks35
+\@floatcapt=\box71
+)
 (c:/texlive/2023/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 Package: tikz-cd 2021/05/04 v1.0 Commutative diagrams with TikZ
 
@@ -204,12 +213,12 @@ Package: tikz-cd 2021/05/04 v1.0 Commutative diagrams with TikZ
 (c:/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (c:/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks34
+\pgfutil@everybye=\toks36
 \pgfutil@tempdima=\dimen179
 \pgfutil@tempdimb=\dimen180
 )
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box70
+\pgfutil@abb=\box72
 )
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/pgf.revision.tex)
@@ -223,12 +232,12 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks35
-\pgfkeys@temptoks=\toks36
+\pgfkeys@pathtoks=\toks37
+\pgfkeys@temptoks=\toks38
 
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.co
 de.tex
-\pgfkeys@tmptoks=\toks37
+\pgfkeys@tmptoks=\toks39
 ))
 \pgf@x=\dimen181
 \pgf@y=\dimen182
@@ -242,14 +251,14 @@ de.tex
 \pgf@yd=\dimen190
 \w@pgf@writea=\write4
 \r@pgf@reada=\read2
-\c@pgf@counta=\count274
-\c@pgf@countb=\count275
-\c@pgf@countc=\count276
-\c@pgf@countd=\count277
-\t@pgf@toka=\toks38
-\t@pgf@tokb=\toks39
-\t@pgf@tokc=\toks40
-\pgf@sys@id@count=\count278
+\c@pgf@counta=\count275
+\c@pgf@countb=\count276
+\c@pgf@countc=\count277
+\c@pgf@countd=\count278
+\t@pgf@toka=\toks40
+\t@pgf@tokb=\toks41
+\t@pgf@tokc=\toks42
+\pgf@sys@id@count=\count279
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -261,12 +270,12 @@ File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 )
-\pgfsys@objnum=\count279
+\pgfsys@objnum=\count280
 ))
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count280
-\pgfsyssoftpath@bigbuffer@items=\count281
+\pgfsyssoftpath@smallbuffer@items=\count281
+\pgfsyssoftpath@bigbuffer@items=\count282
 )
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -296,11 +305,11 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen191
-\pgfmath@count=\count282
-\pgfmath@box=\box71
-\pgfmath@toks=\toks41
-\pgfmath@stack@operand=\toks42
-\pgfmath@stack@operation=\toks43
+\pgfmath@count=\count283
+\pgfmath@box=\box73
+\pgfmath@toks=\toks43
+\pgfmath@stack@operand=\toks44
+\pgfmath@stack@operation=\toks45
 )
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
@@ -321,7 +330,7 @@ x)
 etics.code.tex)
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count283
+\c@pgfmathroundto@lastzeros=\count284
 ))
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
@@ -355,10 +364,10 @@ File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box72
-\pgf@hbox=\box73
-\pgf@layerbox@main=\box74
-\pgf@picture@serial@count=\count284
+\pgfpic=\box74
+\pgf@hbox=\box75
+\pgf@layerbox@main=\box76
+\pgf@picture@serial@count=\count285
 )
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
 .tex
@@ -389,15 +398,15 @@ File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen271
-\pgf@sys@shading@range@num=\count285
-\pgf@shadingcount=\count286
+\pgf@sys@shading@range@num=\count286
+\pgf@shadingcount=\count287
 )
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box75
+\pgfexternal@startupbox=\box77
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -412,7 +421,7 @@ File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (c:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.te
 x
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box76
+\pgfnodeparttextbox=\box78
 )
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -435,8 +444,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen274
 \pgffor@skip=\dimen275
-\pgffor@stack=\toks44
-\pgffor@toks=\toks45
+\pgffor@stack=\toks46
+\pgffor@toks=\toks47
 ))
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
@@ -444,7 +453,7 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
 de.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count287
+\pgf@plot@mark@count=\count288
 \pgfplotmarksize=\dimen276
 )
 \tikz@lastx=\dimen277
@@ -455,22 +464,22 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@lastmovetoy=\dimen282
 \tikzleveldistance=\dimen283
 \tikzsiblingdistance=\dimen284
-\tikz@figbox=\box77
-\tikz@figbox@bg=\box78
-\tikz@tempbox=\box79
-\tikz@tempbox@bg=\box80
-\tikztreelevel=\count288
-\tikznumberofchildren=\count289
-\tikznumberofcurrentchild=\count290
-\tikz@fig@count=\count291
+\tikz@figbox=\box79
+\tikz@figbox@bg=\box80
+\tikz@tempbox=\box81
+\tikz@tempbox@bg=\box82
+\tikztreelevel=\count289
+\tikznumberofchildren=\count290
+\tikznumberofcurrentchild=\count291
+\tikz@fig@count=\count292
 
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count292
-\pgfmatrixcurrentcolumn=\count293
-\pgf@matrix@numberofcolumns=\count294
+\pgfmatrixcurrentrow=\count293
+\pgfmatrixcurrentcolumn=\count294
+\pgf@matrix@numberofcolumns=\count295
 )
-\tikz@expandcount=\count295
+\tikz@expandcount=\count296
 
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarytopaths.code.tex
@@ -510,11 +519,11 @@ ex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen291
 \pgfdecoratedinputsegmentremainingdistance=\dimen292
 \pgf@decorate@distancetomove=\dimen293
-\pgf@decorate@repeatstate=\count296
+\pgf@decorate@repeatstate=\count297
 \pgfdecorationsegmentamplitude=\dimen294
 \pgfdecorationsegmentlength=\dimen295
 )
-\tikz@lib@dec@box=\box81
+\tikz@lib@dec@box=\box83
 )
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydec
 orations.pathmorphing.code.tex)))
@@ -526,10 +535,10 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (c:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (c:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks46
-\XKV@tempa@toks=\toks47
+\XKV@toks=\toks48
+\XKV@tempa@toks=\toks49
 )
-\XKV@depth=\count297
+\XKV@depth=\count298
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (c:/texlive/2023/texmf-dist/tex/latex/adjustbox/adjcalc.sty
@@ -541,7 +550,7 @@ Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 
 (c:/texlive/2023/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box82
+\collectedbox=\box84
 )
 \tc@llx=\dimen296
 \tc@lly=\dimen297
@@ -565,12 +574,12 @@ Package trimclip Info: No clipping driver 'tc-dvipdfmx.def' available.
 
 (c:/texlive/2023/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count298
+\c@checkoddpage=\count299
 )
 (c:/texlive/2023/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box83
-\sift@deathcycles=\count299
+\@vwid@box=\box85
+\sift@deathcycles=\count300
 \@vwid@loff=\dimen308
 \@vwid@roff=\dimen309
 ))
@@ -621,15 +630,15 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 (c:/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count300
+\c@section@level=\count301
 )
 (c:/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count301
+\etb@tempcnta=\count302
 )
 \@linkdim=\dimen310
-\Hy@linkcounter=\count302
-\Hy@pagecounter=\count303
+\Hy@linkcounter=\count303
+\Hy@pagecounter=\count304
 
 (c:/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2023-11-09 v7.01f Hyperref: PDFDocEncoding definition (HO)
@@ -639,7 +648,7 @@ Now handling font encoding PD1 ...
 (c:/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count304
+\Hy@SavedSpaceFactor=\count305
 
 (c:/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2023-11-09 v7.01f Hyperref: PDF Unicode definition (HO)
@@ -653,7 +662,7 @@ Package hyperref Info: Plain pages OFF on input line 4186.
 Package hyperref Info: Backreferencing OFF on input line 4191.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4438.
-\c@Hy@tempcnt=\count305
+\c@Hy@tempcnt=\count306
 
 (c:/texlive/2023/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
@@ -669,7 +678,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count306
+\Fld@menulength=\count307
 \Field@Width=\dimen312
 \Fld@charsize=\dimen313
 Package hyperref Info: Hyper figures OFF on input line 6055.
@@ -684,19 +693,19 @@ Package hyperref Info: PDF/A mode OFF on input line 6085.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count307
-\c@Item=\count308
-\c@Hfootnote=\count309
+\Hy@abspage=\count308
+\c@Item=\count309
+\c@Hfootnote=\count310
 )
 Package hyperref Info: Driver: hdvipdfm.
 
 (c:/texlive/2023/texmf-dist/tex/latex/hyperref/hdvipdfm.def
 File: hdvipdfm.def 2023-11-09 v7.01f Hyperref driver for dvipdfm
-\pdfm@box=\box84
-\c@Hy@AnnotLevel=\count310
-\HyField@AnnotCount=\count311
-\Fld@listcount=\count312
-\c@bookmark@seq@number=\count313
+\pdfm@box=\box86
+\c@Hy@AnnotLevel=\count311
+\HyField@AnnotCount=\count312
+\Fld@listcount=\count313
+\c@bookmark@seq@number=\count314
 
 (c:/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
@@ -728,44 +737,44 @@ File: pxjahyper-uni.def 2023/03/01 v1.3
 )
 Package pxjahyper Info: The setup for hyperref 'unicode' is applied.
 )
-Package hyperref Info: Option `setpagesize' set `false' on input line 35.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 35.
-Package hyperref Info: Option `colorlinks' set `true' on input line 35.
-\c@mynum=\count314
+Package hyperref Info: Option `setpagesize' set `false' on input line 36.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 36.
+Package hyperref Info: Option `colorlinks' set `true' on input line 36.
+\c@mynum=\count315
 
 (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
 File: l3backend-dvipdfmx.def 2023-11-09 L3 backend support: dvipdfmx
-\g__graphics_track_int=\count315
-\l__pdf_internal_box=\box85
-\g__pdf_backend_object_int=\count316
-\g__pdf_backend_annotation_int=\count317
-\g__pdf_backend_link_int=\count318
+\g__graphics_track_int=\count316
+\l__pdf_internal_box=\box87
+\g__pdf_backend_object_int=\count317
+\g__pdf_backend_annotation_int=\count318
+\g__pdf_backend_link_int=\count319
 )
 (./master_thesis.aux)
 \openout1 = `master_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 225.
-LaTeX Font Info:    ... okay on input line 225.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 225.
-LaTeX Font Info:    ... okay on input line 225.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 225.
-LaTeX Font Info:    ... okay on input line 225.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 225.
-LaTeX Font Info:    ... okay on input line 225.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 225.
-LaTeX Font Info:    ... okay on input line 225.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 225.
-LaTeX Font Info:    ... okay on input line 225.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 225.
-LaTeX Font Info:    ... okay on input line 225.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 225.
-LaTeX Font Info:    ... okay on input line 225.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 225.
-LaTeX Font Info:    ... okay on input line 225.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 225.
-LaTeX Font Info:    ... okay on input line 225.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 225.
-LaTeX Font Info:    ... okay on input line 225.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 226.
+LaTeX Font Info:    ... okay on input line 226.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 226.
+LaTeX Font Info:    ... okay on input line 226.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 226.
+LaTeX Font Info:    ... okay on input line 226.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 226.
+LaTeX Font Info:    ... okay on input line 226.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 226.
+LaTeX Font Info:    ... okay on input line 226.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 226.
+LaTeX Font Info:    ... okay on input line 226.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 226.
+LaTeX Font Info:    ... okay on input line 226.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 226.
+LaTeX Font Info:    ... okay on input line 226.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 226.
+LaTeX Font Info:    ... okay on input line 226.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 226.
+LaTeX Font Info:    ... okay on input line 226.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 226.
+LaTeX Font Info:    ... okay on input line 226.
 
 *geometry* detected driver: dvipdfm
 *geometry* verbose mode - [ preamble ] result:
@@ -800,25 +809,25 @@ LaTeX Font Info:    ... okay on input line 225.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 225.
+Package hyperref Info: Link coloring ON on input line 226.
 (./master_thesis.out) (./master_thesis.out)
 \@outlinefile=\write5
 \openout5 = `master_thesis.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 239
+LaTeX Font Info:    Trying to load font information for U+msa on input line 240
 .
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 239
+LaTeX Font Info:    Trying to load font information for U+msb on input line 240
 .
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 23
-9.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 24
+0.
 
 (c:/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -826,9 +835,9 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 270.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 271.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 270.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 271.
 
 (./master_thesis.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
@@ -841,60 +850,57 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
 
  [2] Excluding 'comment' comment. [3] [4]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 353.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 354.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 353.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 354.
  [5] [6] [7]
 Excluding 'comment' comment. [8] Excluding 'comment' comment. [9]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 698.
+(Font)              No change on input line 699.
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 725.
+(Font)              No change on input line 726.
  [10]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 772.
+(Font)              No change on input line 773.
  [11]
 [12]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 847.
+(Font)              No change on input line 848.
 File: graphics/delta_comp_x_tens_f.png Graphic file (type bmp)
 <graphics/delta_comp_x_tens_f.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+ [13]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 927.
-[13]
-Overfull \hbox (2.79457pt too wide) detected at line 955
+(Font)              No change on input line 928.
+
+Overfull \hbox (2.79457pt too wide) detected at line 956
 []
  []
 
 
-Overfull \hbox (45.79054pt too wide) detected at line 996
+Overfull \hbox (45.79054pt too wide) detected at line 997
 []
  []
 
 
-Overfull \hbox (25.27919pt too wide) detected at line 1003
+Overfull \hbox (25.27919pt too wide) detected at line 1004
 []
  []
 
 [14] [15]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1062.
+(Font)              No change on input line 1063.
  [16]
-Overfull \hbox (27.91685pt too wide) detected at line 1158
+Overfull \hbox (27.91685pt too wide) detected at line 1159
 []
  []
 
 [17]
-Overfull \hbox (156.603pt too wide) detected at line 1206
+Overfull \hbox (156.603pt too wide) detected at line 1207
 []
  []
 
 [18] Excluding 'comment' comment. [19]
-Overfull \hbox (86.49446pt too wide) detected at line 1326
+Overfull \hbox (86.49446pt too wide) detected at line 1327
 []
  []
 
@@ -921,12 +927,12 @@ Package rerunfilecheck Info: File `master_thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 8040317CB1E2CCEA339F04D266471E16;2407.
  ) 
 Here is how much of TeX's memory you used:
- 26085 strings out of 474925
- 508230 string characters out of 5765769
+ 26172 strings out of 474925
+ 509732 string characters out of 5765769
  1962403 words of memory out of 5000000
- 47836 multiletter control sequences out of 15000+600000
+ 47915 multiletter control sequences out of 15000+600000
  617972 words of font info for 134 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  98i,20n,107p,908b,1075s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master_thesis.dvi (23 pages, 306480 bytes).
+Output written on master_thesis.dvi (23 pages, 306496 bytes).
