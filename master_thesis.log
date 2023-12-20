@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  20 DEC 2023 22:24
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  20 DEC 2023 22:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -866,75 +866,24 @@ LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
 [12]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
 (Font)              No change on input line 848.
-File: graphics/delta_comp_x_tens_f.png Graphic file (type bmp)
-<graphics/delta_comp_x_tens_f.png>
-File: graphics/delta_comp_x_tens_f.png Graphic file (type bmp)
-<graphics/delta_comp_x_tens_f.png>
- [13]
-LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 929.
-
-Overfull \hbox (2.79457pt too wide) detected at line 957
-[]
- []
-
-[14]
-Overfull \hbox (45.79054pt too wide) detected at line 998
-[]
- []
 
 
-Overfull \hbox (25.27919pt too wide) detected at line 1005
-[]
- []
+./master_thesis.tex:914: LaTeX Error: Cannot determine size of graphic in graph
+ics/2. f.xbb (no BoundingBox).
 
-[15]
-LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1064.
- [16]
-Overfull \hbox (27.91685pt too wide) detected at line 1160
-[]
- []
-
-[17]
-Overfull \hbox (156.603pt too wide) detected at line 1208
-[]
- []
-
-[18] Excluding 'comment' comment. [19]
-Overfull \hbox (86.49446pt too wide) detected at line 1328
-[]
- []
-
-[20] [21] (./master_thesis.bbl
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 11.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 15.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 20.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 24.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 28.
-LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 32.
- [22]) [23] (./master_thesis.aux)
- ***********
-pLaTeX2e <2023-02-14>+1, based on
-LaTeX2e <2023-11-01>
-L3 programming layer <2023-11-09>
- ***********
-Package rerunfilecheck Info: File `master_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 8040317CB1E2CCEA339F04D266471E16;2407.
- ) 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.914 ...    \includegraphics[width=5cm]{2. f.png}
+                                                  \\ 
 Here is how much of TeX's memory you used:
- 26172 strings out of 474925
- 509732 string characters out of 5765769
- 1959403 words of memory out of 5000000
- 47915 multiletter control sequences out of 15000+600000
+ 25178 strings out of 474925
+ 484719 string characters out of 5765769
+ 1949403 words of memory out of 5000000
+ 46925 multiletter control sequences out of 15000+600000
  617972 words of font info for 134 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 98i,20n,107p,908b,1075s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,20n,107p,673b,1071s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master_thesis.dvi (23 pages, 306592 bytes).
+Output written on master_thesis.dvi (12 pages, 134596 bytes).
