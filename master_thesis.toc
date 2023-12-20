@@ -1,0 +1,40 @@
+\contentsline {section}{\numberline {\S \ 1}Introduction}{3}{section.1}%
+\contentsline {subsection}{\numberline {\S \ 1.1}記法}{5}{subsection.1.1}%
+\contentsline {section}{\numberline {\S \ 2}{関連圏}}{6}{section.2}%
+\contentsline {paragraph}{Definition 2.1：{関連圏}}{6}{section*.2}%
+\contentsline {paragraph}{Definition 2.2：{関連函手}}{7}{section*.3}%
+\contentsline {paragraph}{Example 2.3：デカルト圏}{7}{section*.4}%
+\contentsline {paragraph}{Definition 2.4：{関連部分圏}}{7}{section*.5}%
+\contentsline {paragraph}{Example 2.5：モノ射の成す{関連部分圏}}{7}{section*.6}%
+\contentsline {section}{\numberline {\S \ 3}構成 $\Lambda $}{8}{section.3}%
+\contentsline {subsection}{\numberline {\S \ 3.1}構成$\Lambda $ の発想・動機付け}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {\S \ 3.2}中間構造 $\mathcal {B}(\mathcal {R})$の構成}{9}{subsection.3.2}%
+\contentsline {paragraph}{Definition 3.2.1：$\mathcal {B}(\mathcal {R})$の1-射}{9}{section*.7}%
+\contentsline {paragraph}{Definition 3.2.2： $\mathcal {B}(\mathcal {R})$の2-射}{9}{section*.8}%
+\contentsline {paragraph}{Proposition 3.2.3： 自明な 2-射 }{10}{section*.9}%
+\contentsline {paragraph}{Proposition 3.2.4：\ 対角射は 2-射である }{10}{section*.10}%
+\contentsline {paragraph}{Definition 3.2.5: local category of $\mathcal {B}(\mathcal {M})$}{11}{section*.11}%
+\contentsline {paragraph}{Definition 3.2.6: 1-射の合成}{11}{section*.12}%
+\contentsline {paragraph}{Proposition 3.2.7: 2-射の左whiskering}{11}{section*.13}%
+\contentsline {subsection}{\numberline {\S \ 3.3}圏$\Lambda (\mathcal {R})$の構成}{12}{subsection.3.3}%
+\contentsline {paragraph}{Definition 3.3.1：\ $\Lambda (\mathcal {R})$の対象}{12}{section*.14}%
+\contentsline {paragraph}{Definition 3.3.2：\ $\Lambda (\mathcal {R})$の射}{12}{section*.15}%
+\contentsline {paragraph}{Lemma 3.3.3：\ $\mathcal {R}$の射のグラフは$\Lambda (\mathcal {R})$ではもとの $\mathcal {R}$の射と同じ}{12}{section*.16}%
+\contentsline {paragraph}{Lemma 3.3.4：\ $\Lambda (\mathcal {R})$の射の合成のwell-defined性}{15}{section*.17}%
+\contentsline {paragraph}{Definition 3.3.5：\ $\Lambda (\mathcal {R})$の射の合成}{16}{section*.18}%
+\contentsline {paragraph}{Definition 3.3.6：\ $\Lambda (\mathcal {R})$の恒等射}{16}{section*.19}%
+\contentsline {paragraph}{Proposition 3.3.7：\ $\Lambda (\mathcal {R})$の結合則}{16}{section*.20}%
+\contentsline {paragraph}{Proposition 3.3.8：\ $\Lambda (\mathcal {R})$の単位律}{16}{section*.21}%
+\contentsline {paragraph}{Definition 3.3.9：\ 圏 $\Lambda (\mathcal {R})$}{16}{section*.22}%
+\contentsline {subsection}{\numberline {\S \ 3.4}Cartesian Structure of the Category $\Lambda (\mathcal {R})$}{17}{subsection.3.4}%
+\contentsline {paragraph}{Definition 3.4.1：$\Lambda (\mathcal {R})$のモノイド構造}{17}{section*.23}%
+\contentsline {paragraph}{Definition 3.4.2：ユニット函手 $\mathit {H}_{\mathcal {M}}$}{17}{section*.24}%
+\contentsline {paragraph}{Proposition 3.4.3：$\Lambda [\mathcal {M}]$の直積 }{17}{section*.25}%
+\contentsline {section}{\numberline {\S \ 4}universality of $\Lambda $ construction}{20}{section.4}%
+\contentsline {paragraph}{prop 5.2.1:\ universality of $\Lambda $}{20}{section*.26}%
+\contentsline {section}{\numberline {\S \ 5}The Category of monomorphisms}{22}{section.5}%
+\contentsline {subsection}{\numberline {\S \ 5.1}The Category of monomorphisms}{22}{subsection.5.1}%
+\contentsline {paragraph}{thm 6.1.1 : $\Lambda [\mathcal {R}]\cong \mathcal {C}$ }{22}{section*.27}%
+\contentsline {paragraph}{cor 6.1.2 : $\Lambda [\mathcal {C}^{{\mathrm {mono}}}]\cong \mathcal {C}$ }{23}{section*.28}%
+\contentsline {section}{\numberline {\S \ 6}Reference}{23}{section.6}%
+\contentsline {section}{\numberline {\S \ 7}謝辞}{24}{section.7}%

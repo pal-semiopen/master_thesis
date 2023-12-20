@@ -1,10 +1,18 @@
 # Fdb version 4
-["dvipdf"] 1703078682 "master_thesis.dvi" "master_thesis.pdf" "master_thesis" 1703078683 0
-  "master_thesis.dvi" 1703080339 134596 475c3c8aadef6764733e8120529d5e6e "latex"
+["bibtex master_thesis"] 1703080868 "master_thesis.aux" "master_thesis.bbl" "master_thesis" 1703080877 0
+  "./Bibliography_Master_Thesis.bib" 1703058852 4650 5cd1b2d0c6df016f1a20db7cc01fe5ef ""
+  "c:/texlive/2023/texmf-dist/bibtex/bst/amscls/amsalpha.bst" 1700820639 28675 71ba1b1ee8387ac88670b0ea0eb2399a ""
+  "master_thesis.aux" 1703080874 6463 34565ea10894cec9f7fc3e14f4b4503a "latex"
+  (generated)
+  "master_thesis.bbl"
+  "master_thesis.blg"
+  (rewritten before read)
+["dvipdf"] 1703080875 "master_thesis.dvi" "master_thesis.pdf" "master_thesis" 1703080877 0
+  "master_thesis.dvi" 1703080874 307424 b1e11d8c4531a0355a9a6e266f05664a "latex"
   (generated)
   "master_thesis.pdf"
   (rewritten before read)
-["latex"] 1703080336 "master_thesis.tex" "master_thesis.dvi" "master_thesis" 1703080339 2
+["latex"] 1703080868 "master_thesis.tex" "master_thesis.dvi" "master_thesis" 1703080877 0
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1700828716 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1700823045 3584 2d666ecf6d466d8b007246bc2f94d9da ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1700823045 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -202,11 +210,18 @@
   "c:/texlive/2023/texmf-dist/web2c/texmf.cnf" 1700820204 41009 84b61f42d16d06bedb915f57aa2374cf ""
   "c:/texlive/2023/texmf-var/web2c/euptex/platex.fmt" 1700834642 8151829 915aa6a4994ac29cd84aba6a2922b64d ""
   "c:/texlive/2023/texmf.cnf" 1700834455 713 e69b156964470283e0530f5060668171 ""
-  "graphics/2. f.png" 1703079788 10111 f42ea1b483432768651ddff3d4ecc3a6 ""
-  "master_thesis.aux" 1703080339 3389 d090e0e0142be9ab93d32e3239976a1d "latex"
-  "master_thesis.out" 1703080339 1124 6f18e244c331e7c46dfd68ed5181b84a "latex"
-  "master_thesis.tex" 1703080333 81231 4eb1fdbb4cf8a0e8aaef6d09bafc6bc1 ""
-  "master_thesis.toc" 1703080338 0 d41d8cd98f00b204e9800998ecf8427e "latex"
+  "graphics/02_f.png" 1703079788 10111 f42ea1b483432768651ddff3d4ecc3a6 ""
+  "graphics/03_f_comp_a_tens_delta.png" 1703079810 19618 e9b5619918387776df24516d77971864 ""
+  "graphics/04_f_comp_delta_tens_delta.png" 1703079851 24391 639c63ff8932257b2bdc2ef68a35b6ea ""
+  "graphics/05_f_comp_delta_tens_delta_comp_gamma.png" 1703079901 32142 1705ad7021a1c36c16e8ab5b321d52a0 ""
+  "graphics/06_f_comp_delta.png" 1703079936 25191 2d56ef639c8464452e7b9ed03f792cdb ""
+  "graphics/07_delta_comp_f_tens_f.png" 1703079968 21751 dca70e2f71d742c6fc025d117a65d202 ""
+  "graphics/08_delta_comp_x_tens_f.png" 1703075172 15678 59cee97dc901a5d0ea748443d70af7ca ""
+  "master_thesis.aux" 1703080874 6463 34565ea10894cec9f7fc3e14f4b4503a "latex"
+  "master_thesis.bbl" 1703080868 1402 fed3c7bf74cc8e3115cb1c9524ebc64e "bibtex master_thesis"
+  "master_thesis.out" 1703080874 2407 8040317cb1e2ccea339f04d266471e16 "latex"
+  "master_thesis.tex" 1703080856 81352 477f93375f9378bcbc9555c9e6ad589d ""
+  "master_thesis.toc" 1703080874 3869 8163b201f7f3f60f205ba763bc0e7107 "latex"
   (generated)
   "master_thesis.aux"
   "master_thesis.dvi"
