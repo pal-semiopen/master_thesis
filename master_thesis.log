@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  20 DEC 2023 21:55
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  20 DEC 2023 22:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -859,9 +859,13 @@ LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
 (Font)              No change on input line 847.
 File: graphics/delta_comp_x_tens_f.png Graphic file (type bmp)
 <graphics/delta_comp_x_tens_f.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
 (Font)              No change on input line 927.
- [13]
+[13]
 Overfull \hbox (2.79457pt too wide) detected at line 955
 []
  []
