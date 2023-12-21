@@ -464,16 +464,17 @@ $\Delta$がモノイド自然変換で結合的かつ可換であるようなも
 
 \paragraph{Definition \arabic{section}.2：\Rf}\ \\
 $\R_1,\R_2$を\RC とする。
-\Rf とは、強対称モノイド函手 $F:\R_1\to\R_2$ であって、下の図式を可換にするもののこと。
-% https://q.uiver.app/?q=WzAsNCxbMCwwLCJGKFgpIl0sWzIsMCwiRihYXFx0ZW5zb3IgWCkiXSxbMCwyLCJGKFgpIl0sWzIsMiwiRihYKSBcXHRlbnNvciBGKFgpIl0sWzAsMSwiRihcXERlbHRhX3tYfSkiXSxbMCwyLCI9IiwyXSxbMiwzLCJcXERlbHRhX3tGKFgpfSIsMl0sWzEsMywiaWRfe1hcXHRlbnNvciBYfSJdXQ==
+\Rf とは、強対称モノイド函手 $F=(F,\theta):\R_1\to\R_2$ であって、下の図式を可換にするもののこと。
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJGKFgpIl0sWzIsMCwiRihYKSBcXHRlbnNvciBGKFgpIl0sWzAsMiwiRihYKSJdLFsyLDIsIkYoWFxcdGVuc29yIFgpIl0sWzAsMSwiXFxEZWx0YV97RihYKX0iXSxbMCwyLCI9IiwyXSxbMiwzLCJGKFxcRGVsdGFfe1h9KSIsMl0sWzEsMywiXFx0aGV0YV97WH0iXSxbMSwzLCJcXHNpbWVxIiwyXV0=
 \[\begin{tikzcd}
-	{F(X)} && {F(X\tensor X)} \\
+	{F(X)} && {F(X) \tensor F(X)} \\
 	\\
-	{F(X)} && {F(X) \tensor F(X)}
-	\arrow["{F(\Delta_{X})}", from=1-1, to=1-3]
+	{F(X)} && {F(X\tensor X)}
+	\arrow["{\Delta_{F(X)}}", from=1-1, to=1-3]
 	\arrow["{=}"', from=1-1, to=3-1]
-	\arrow["{\Delta_{F(X)}}"', from=3-1, to=3-3]
-	\arrow["{id_{X\tensor X}}", from=1-3, to=3-3]
+	\arrow["{F(\Delta_{X})}"', from=3-1, to=3-3]
+	\arrow["{\theta_{X}}", from=1-3, to=3-3]
+	\arrow["\simeq"', from=1-3, to=3-3]
 \end{tikzcd}\]
 \\
 
@@ -609,8 +610,8 @@ end{comment}
 
 本節では、上記第二案の構成の詳細及びwell-defined性の証明を述べる。
 \S\arabic{section}.2 で構成の第一段階として双圏様の中間構造を定義し、
-\S\arabic{section}.3 でその商として$\Lambda[\M]$を定義し、そのwell-defined性を証明する。
-\S\arabic{section}.4では構成した圏$\Lambda[\M]$が\CC になっていることを証明する。
+\S\arabic{section}.3 でその商として$\Lambda[\R]$を定義し、そのwell-defined性を証明する。
+\S\arabic{section}.4では構成した圏$\Lambda[\R]$が\CC になっていることを証明する。
 
 %一点注意しておく。
 本稿における$\Lambda$の構成は、\cite{HT12}の構成が大きなヒントになっているが、重大な違いがある。
@@ -636,13 +637,13 @@ $\calLambda(\R)$は、双圏に似た次の４つの構造を持っている：\
 
 
 \begin{comment}
-これから定義される$\Lambda(\M)$の対象は、ちょうど$\M$の対象とする予定である。\\
-本節では$\Lambda(\M)$を定義する前準備をする。\\
-各$X,Y\in\M$に対し、
-我々はこれから射の集合$\Lambda(\M)(X,Y)$を定義するわけだが、
-まず始めに圏$\calLambda(\M)(X,Y)$を定義し、
-その連結成分の集合として$\Lambda(\M)(X,Y)$を定義する。\\
-連結成分を取る操作に関するwell-definednessが非自明な部分は次節\S \arabic{section}.3 に回し、本節では中間構造$\calLambda(\M)(X,Y)$を定義する。\\
+これから定義される$\Lambda(\R)$の対象は、ちょうど$\R$の対象とする予定である。\\
+本節では$\Lambda(\R)$を定義する前準備をする。\\
+各$X,Y\in\R$に対し、
+我々はこれから射の集合$\Lambda(\R)(X,Y)$を定義するわけだが、
+まず始めに圏$\calLambda(\R)(X,Y)$を定義し、
+その連結成分の集合として$\Lambda(\R)(X,Y)$を定義する。\\
+連結成分を取る操作に関するwell-definednessが非自明な部分は次節\S \arabic{section}.3 に回し、本節では中間構造$\calLambda(\R)(X,Y)$を定義する。\\
 \end{comment}
 
 $\calLambda(\R)$は$\Lambda(\R)$の定義に用いる。
@@ -739,7 +740,7 @@ $(A\tensor Y,g)$は$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射 であ
     \end{tikzcd}\]
 \end{proof}
 
-\paragraph{Definition \arabic{section}.\arabic{subsection}.5: local category of $\calLambda(\M)$}\ \\
+\paragraph{Definition \arabic{section}.\arabic{subsection}.5: local category of $\calLambda(\R)$}\ \\
 各$X,Y\in\R$に対し、圏$\calLambda(\R)(\bar{X},\bar{Y})$を以下のように定める：
 対象は$\bar{X}$から$\bar{Y}$への1-射, 射はその間の2-射とし、
 2-射同士の(垂直)合成、及び恒等2-射は素直に定義する。
@@ -800,7 +801,7 @@ $k:(B_1,g_1)\to (B_2,g_2)$を$\calLambda(\R)$の2-射とする。
     この図式に$A\tensor -$を施せば、求める図式の可換性を得る。\\
 \end{proof}
 
-以上で中間構造$\calLambda(\R)$の定義が完了した。次節で圏 $\Lambda(\M)$を定義し、次々節でそのデカルト構造を示す。
+以上で中間構造$\calLambda(\R)$の定義が完了した。次節で圏 $\Lambda(\R)$を定義し、次々節でそのデカルト構造を示す。
 
 
 \subsection{圏\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}の構成}
@@ -846,7 +847,16 @@ $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
 
 \begin{proof}
     次のように同値で結ぶことができる。
-    
+    \begin{align*}
+        & (A,f)\\
+        \sim & (A\tensor Y, f\comp(A\tensor \Delta_Y))\\
+        \sim & (A\tensor A\tensor Y, f\comp(\Delta_A\tensor \Delta_Y))\\
+        \sim & (A\tensor Y\tensor A, f\comp(\Delta_A\tensor \Delta_Y)\comp(A\tensor\gamma_{AY}\tensor Y)\\
+        = & (A\tensor Y\tensor A, f\comp\Delta_{A\tensor Y}))\\
+        = & (A\tensor Y\tensor A, \Delta_X\comp(f\tensor f))\\
+        \sim & (X\tensor A, \Delta_X\comp(X\tensor f))\\
+    \end{align*}
+    これで示された。分かりやすさのために、同じ式変形の図式とstring diagramを付しておく。
     % https://q.uiver.app/?q=WzAsMixbMCwwLCJbWCJdLFsyLDAsIkFcXHRlbnNvciBZXSJdLFswLDEsImYiXV0=
     \[\begin{tikzcd}
     	{(X} && {A\tensor Y)}
@@ -1039,28 +1049,24 @@ proposition\arabic{section}.3.7, \arabic{section}.3.8より、圏を成す。
 以上で定義した$\Lambda(\R)$が\CC になっていることを示す。
 実は$\R$から引き継ぐモノイド構造がそのまま直積となる。
 まずモノイド構造を引き継ぐことを示し、その後それが直積の普遍性を持つことを示す。
-%the category $\Lambda(\M)$ defined in previous sections, becomes cartesian category. In this section, we will find its cartesian structure and prove that.
+%the category $\Lambda(\R)$ defined in previous sections, becomes cartesian category. In this section, we will find its cartesian structure and prove that.
 
 
 \paragraph{Definition \arabic{section}.4.1：\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}のモノイド構造}\ \\
 $\R$を \RC とする。
 $\Lambda(\R)$は、素朴な方法で\SMC となる。
 モノイド積の函手$\tensor'$のみ明示する。$\tensor'$を次のように定める。
-\fct{\tensor'}{\Lambda(\M)\times \Lambda(\M)}{\Lambda(\M)}{(X,Y)}{([A,f], [B,g])}{(X',Y')}{X\tensor Y}{[A\tensor B, f\square g]}{X'\tensor Y'}
+\fct{\tensor'}{\Lambda(\R)\times \Lambda(\R)}{\Lambda(\R)}{(X,Y)}{([A,f], [B,g])}{(X',Y')}{X\tensor Y}{[A\tensor B, f\square g]}{X'\tensor Y'}
 ただし、$f\square g := (f\tensor g)\comp (A\tensor\gamma_{X,B}\tensor Y)$ である。
 このように定めた$\tensor'$は確かにwell-definedである。
 %次に単位対象を $I':=I$で定める。
-%整合性の同型$\alpha', \lambda', \rho'$及び捻り同型$\gamma'$を素朴な方法で定めると、$(\Lambda(\M),\tensor')$
+%整合性の同型$\alpha', \lambda', \rho'$及び捻り同型$\gamma'$を素朴な方法で定めると、$(\Lambda(\R),\tensor')$
 
 %$\Delta$の構成
 
-\paragraph{Definition \arabic{section}.4.2：ユニット函手 $\Eta_{\M}$}\ \\
-函手 $\Eta_{\M}:\M\to\Lambda[\M]$を次で定める：
-\fct{\Eta_{\M}}{\M}{\Lambda(\M)}{X}{f}{Y}{X}{[I,f\comp\rho_X]}{Y}
-$\Eta_{\M}$は関連函手である。
 
-\paragraph{Proposition \arabic{section}.4.3：$\Lambda[\M]$の直積 }\ \\
-簡単のため$\C:=\Lambda[\M]$とおく。
+\paragraph{Proposition \arabic{section}.4.3：$\Lambda[\R]$の直積 }\ \\
+簡単のため$\C:=\Lambda[\R]$とおく。
 $X,Y\in\C$に対し、$(X\tensor Y, \pi_X, \pi_Y)$は$X$と$Y$の直積である。
 ただし、$\pi_Y:X\tensor Y\to Y$は、$\pi_Y:=[X,id_{X\tensor Y}]$で定める。
 $\pi_X:X\tensor Y\to X$は、$\pi_X:=[Y,\gamma_{X,Y}]$で定める。
@@ -1081,7 +1087,7 @@ $\pi_X:X\tensor Y\to X$は、$\pi_X:=[Y,\gamma_{X,Y}]$で定める。
     (i)\ $\phi$の逆対応$\psi$を構成する。
     
     $[A,f]:Z\to X, \ [B,g]:Z\to Y$を任意に取る。
-    $\M$の射 $f\boxdot g$を$f\boxdot g :=\Delta_{Z}\comp (f\square g)$で定める。
+    $\R$の射 $f\boxdot g$を$f\boxdot g :=\Delta_{Z}\comp (f\square g)$で定める。
     即ち$f\boxdot g$は次の列の合成である：
     \[
     Z\to Z\tensor Z\to(A\tensor X)\tensor(B\tensor Y)\to(A\tensor B)\tensor(X\tensor Y)
@@ -1089,8 +1095,8 @@ $\pi_X:X\tensor Y\to X$は、$\pi_X:=[Y,\gamma_{X,Y}]$で定める。
     %$\underline{Z}\to\underline{Z}\tensor\underline{Z}\to(A\tensor\underline{X})\tensor(B\tensor\underline{Y})\to(A\tensor B)\tensor(\underline{X}\tensor\underline{Y})$
     $\psi([A,f],[B,g]):=[A\tensor B, f\boxdot g]$とする。
     $\psi$のwell-defined性を示す。次の２つを示せばよい：\\
-    (a)\ 任意の$(A_1,f_1),(A_2,f_2):Z\to X, (B,g):Z\to Y \rmin \calLambda(\M)$と$k:(A_1,f_1)\to(A_2,f_2)$に対し、$(A_1\tensor B, f_1\boxdot g)\sim (A_2\tensor B, f_2\boxdot g)$である。\\
-    (b)\ 任意の$(A,f):Z\to X, (B_1,g_1),(B_2,g_2):Z\to Y \rmin \calLambda(\M)$と$l:(B_1,g_1)\to(B_2,g_2)$に対し、$(A\tensor B_1, f\boxdot g_1)\sim (A\tensor B_2, f\boxdot g_2)$である。
+    (a)\ 任意の$(A_1,f_1),(A_2,f_2):Z\to X, (B,g):Z\to Y \rmin \calLambda(\R)$と$k:(A_1,f_1)\to(A_2,f_2)$に対し、$(A_1\tensor B, f_1\boxdot g)\sim (A_2\tensor B, f_2\boxdot g)$である。\\
+    (b)\ 任意の$(A,f):Z\to X, (B_1,g_1),(B_2,g_2):Z\to Y \rmin \calLambda(\R)$と$l:(B_1,g_1)\to(B_2,g_2)$に対し、$(A\tensor B_1, f\boxdot g_1)\sim (A\tensor B_2, f\boxdot g_2)$である。
     
     両者の証明は同様なので(a)のみ示す。
     $k\tensor BXY:(A_1\tensor B, f_1\boxdot g)\to (A_2\tensor B, f_2\boxdot g)$は次の図式を可換にするから、確かに$(A_1\tensor B, f_1\boxdot g)$から$(A_2\tensor B, f_2\boxdot g)$への2-射である。
@@ -1230,132 +1236,111 @@ $\pi_X:X\tensor Y\to X$は、$\pi_X:=[Y,\gamma_{X,Y}]$で定める。
 
 
 \section{universality of \texorpdfstring{$\Lambda$}{Lambda} construction}
+前節で定義した構成$\Lambda$は、実は関連圏からデカルト圏を得る普遍的な方法になっている。今節ではこの普遍性を示す。
+まず$\R$から$\Lambda(\R)$への素朴な埋め込みを定める。
+
+\paragraph{Definition \arabic{section}.1：ユニット函手 $\Eta_{\R}$}\ \\
+函手 $\Eta_{\R}:\R\to\Lambda[\R]$を次で定める：
+\fct{\Eta_{\R}}{\R}{\Lambda(\R)}{X}{f}{Y}{X}{[I,f\comp\rho_Y]}{Y}
+$\Eta_{\R}$は\Rf である。
+
+そして$\Lambda$は次の普遍性を満たす（煩雑な議論を避けるため、２圏論的主張を１圏論的主張に弱めている）。
+\paragraph{proposition \arabic{section}.2:\ universality of $\Lambda$}\ \\
+$\R$を\RC とし、
+\CC \ $\C:=\Lambda[\R]$及び\Rf $\Eta_{\R}:\R \to \C$を上で定めたものとする。\\
+このとき、任意の\CC \ $\D$ 及びstrong relevance functor $F=(F,\theta):\R \to \D$に対し、\\
+次を満たすstrong cartesian functor $\bar{F}:\C\to\D$が一意に存在する：
+
+$F = \Eta_{\R}\comp \bar{F}$
+
+\begin{proof}
+    (i)strong relevance functor $F:\R \to \D$に対しstrong cartesian functor $\bar{F}:\C\to\D$を対応させる操作$\bar{(-)}$を次で定める：\\
+    各$\bar{X}\in\C$に対し、$\bar{F}(\bar{X}):=F(X)$.\\
+    各$[A,f]:\bar{X}\to \bar{Y}\ \text{in}\ \C$に対し、$\bar{F}([A,f])$を
+    $\bar{F}([A,f]):=F(f)\comp\theta_{A,Y}$で定める。\\
+    ただし、$\theta_{A,Y}:F(A\tensor Y)\to F(A)\times F(Y)$はFのモノイド函手としての構造の同型である。\\
+    分かりやすさのために追記する。これは下の列の合成のことである：\\
+    $F(X)\to F(A\tensor Y)\simeq F(A)\times F(Y)\to F(Y)$.\\
+
+    この$\bar{F}$のwell-definednessは以下のようによい：\\
+    $(A,f),(B,g):X\to Y \rmin \calLambda(\R)$と$k:(A,f)\to (B,g)$を任意に取る。$\bar{F}$はrelevance functorであったから、次の図式は可換：
+
+    \[
+    \adjustbox{scale=0.7, center}{
+    \begin{tikzcd}
+        &&& {F(A\tensor Y\tensor Y)} && {F(A\tensor Y)\times F(Y)} && {F(A)\times F(Y)\times F(Y)} \\
+        && {F(A\tensor Y)} &&&& {F(A)\times F(Y)} \\
+        {F(X)} &&& {F(B\tensor Y\tensor Y)} && {F(B\tensor Y)\times F(Y)} && {F(B)\times F(Y)\times F(Y)} && {F(Y)} \\
+        && {F(B\tensor Y)} &&&& {F(B)\times F(Y)}
+        \arrow["{F(f)}", from=3-1, to=2-3, crossing over]
+        \arrow["{F(g)}"', from=3-1, to=4-3, crossing over]
+        \arrow["{F(k)}", from=2-3, to=4-3, crossing over]
+        \arrow["\Delta", from=2-3, to=1-4, crossing over]
+        \arrow["\simeq", from=1-4, to=1-6, crossing over]
+        \arrow["\Delta", from=4-3, to=3-4, crossing over]
+        \arrow["{F(k\tensor Y)}"{pos=0.3}, from=1-4, to=3-4, crossing over]
+        \arrow["\simeq", from=3-4, to=3-6, crossing over]
+        \arrow["{F(k)\times F(Y)}"{pos=0.3}, from=1-6, to=3-6, crossing over]
+        \arrow["\simeq", from=2-3, to=2-7, crossing over]
+        \arrow["\simeq", from=4-3, to=4-7, crossing over]
+        \arrow["\simeq", from=1-6, to=1-8, crossing over]
+        \arrow["\simeq", from=3-6, to=3-8, crossing over]
+        \arrow["\pi"{description}, from=2-7, to=3-10, crossing over]
+        \arrow["\pi"{description}, from=4-7, to=3-10, crossing over]
+        \arrow[from=2-7, to=1-8, crossing over]
+        \arrow[from=4-7, to=3-8, crossing over]
+        \arrow["\pi"{description}, from=1-8, to=3-10, crossing over]
+        \arrow["\pi"{description}, from=3-8, to=3-10]
+    \end{tikzcd}
+    }
+    \]
+    これは確かにCartesian functorである。\\
+    %ほぼ自明なので特に説明しない
 
 
+    (ii)操作 $\bar{(-)}$と $\Eta_{\R}\comp-$が互いに逆であることを示す。\\
+    どちらも対象上何も操作しないので、対象の対応が等しいことは直ちに分かる。よって射の対応だけ見ればよい。\par
+    (ii-a) strong relevance functor $F:\R\to\D$に対し、$\Eta_{\R}\comp\bar{F}=F$であることを示す。\\
+    各$f:X\to Y \rmin \R$に対し、\\
+    $\bar{F}(\Eta_{\R}(f))=\bar{F}([1,f'])$は次の列の合成である：\\
+    $F({X})\to F(1\tensor{Y})\simeq F(1)\times F({Y})\to F({Y})$\\
+    これは即ち$F(f)$に他ならない。\\
 
-
-\paragraph{prop 5.2.1:\ universality of $\Lambda$}\ \\
-$\M$を\RC とする。\\
-\CC \ $\C:=\Lambda[\M]$及びstrong relevance functor $\Eta_{\M}:\M \to \C$を上で定めたものとする。\\
-このとき、任意の\CC \ $\D$ 及びstrong relevance functor $F:\M \to \D$に対し、\\
-次を満たすstrong cartesian functor $\bar{F}:\C\to\D$がupto canonical isoでuniqueに存在する：\\
-
-$F\simeq \Eta_{\M}\comp \bar{F}$
-
-(proof)\\
-(i)strong relevance functor $F:\M \to \D$に対しstrong cartesian functor $\bar{F}:\C\to\D$を対応させる操作$\bar{(-)}$を次で定める：\\
-各$X\in\C$に対し、$\bar{F}(X):=F(\underline{X})$.\\
-各$[A,f]:X\to Y\ \text{in}\ \C$に対し、$\bar{F}([A,f])$を次の列の合成で定める：\\
-$F(\underline{X})\to F(A\tensor\underline{Y})\simeq F(A)\times F(\underline{Y})\to F(\underline{Y})$.\\
-
-この$\bar{F}$のwell-definednessは以下のようによい：\\
-$(A,f),(B,g):X\to Y \rmin \calLambda(\M)$と$k:(A,f)\to (B,g)$を任意に取る。$\bar{F}$はrelevance functorであったから、次の図式は可換：
-\begin{comment}
-    % https://q.uiver.app/?q=WzAsMTIsWzAsMiwiRihYKSJdLFsyLDEsIkYoQVxcdGVuc29yIFkpIl0sWzIsMywiRihCXFx0ZW5zb3IgWSkiXSxbNiwzLCJGKEIpXFx0aW1lcyBGKFkpIl0sWzYsMSwiRihBKVxcdGltZXMgRihZKSJdLFszLDAsIkYoQVxcdGVuc29yIFlcXHRlbnNvciBZKSJdLFs1LDAsIkYoQVxcdGVuc29yIFkpXFx0aW1lcyBGKFkpIl0sWzMsMiwiRihCXFx0ZW5zb3IgWVxcdGVuc29yIFkpIl0sWzUsMiwiRihCXFx0ZW5zb3IgWSlcXHRpbWVzIEYoWSkiXSxbNywwLCJGKEEpXFx0aW1lcyBGKFkpXFx0aW1lcyBGKFkpIl0sWzcsMiwiRihCKVxcdGltZXMgRihZKVxcdGltZXMgRihZKSJdLFs5LDIsIkYoWSkiXSxbMCwxLCJGKGYpIl0sWzAsMiwiRihnKSIsMl0sWzEsMiwiRihrKSJdLFsxLDUsIlxcRGVsdGEiXSxbNSw2LCJcXHNpbWVxIl0sWzIsNywiXFxEZWx0YSJdLFs1LDcsIkYoa1xcdGVuc29yIFkpIl0sWzcsOCwiXFxzaW1lcSJdLFs2LDgsIkYoaylcXHRpbWVzIEYoWSkiXSxbMSw0LCJcXHNpbWVxIl0sWzIsMywiXFxzaW1lcSIsMl0sWzYsOSwiXFxzaW1lcSJdLFs4LDEwLCJcXHNpbWVxIl0sWzQsMTEsIlxccGkiLDJdLFszLDExLCJcXHBpIiwyXSxbNCw5XSxbMywxMF0sWzksMTEsIlxccGkiXSxbMTAsMTEsIlxccGkiXV0=
-\[\begin{tikzcd}
-	&&& {F(A\tensor Y\tensor Y)} && {F(A\tensor Y)\times F(Y)} && {F(A)\times F(Y)\times F(Y)} \\
-	&& {F(A\tensor Y)} &&&& {F(A)\times F(Y)} \\
-	{F(X)} &&& {F(B\tensor Y\tensor Y)} && {F(B\tensor Y)\times F(Y)} && {F(B)\times F(Y)\times F(Y)} && {F(Y)} \\
-	&& {F(B\tensor Y)} &&&& {F(B)\times F(Y)}
-	\arrow["{F(f)}", from=3-1, to=2-3]
-	\arrow["{F(g)}"', from=3-1, to=4-3]
-	\arrow["{F(k)}", from=2-3, to=4-3]
-	\arrow["\Delta", from=2-3, to=1-4]
-	\arrow["\simeq", from=1-4, to=1-6]
-	\arrow["\Delta", from=4-3, to=3-4]
-	\arrow["{F(k\tensor Y)}", from=1-4, to=3-4]
-	\arrow["\simeq", from=3-4, to=3-6]
-	\arrow["{F(k)\times F(Y)}", from=1-6, to=3-6]
-	\arrow["\simeq", from=2-3, to=2-7]
-	\arrow["\simeq"', from=4-3, to=4-7]
-	\arrow["\simeq", from=1-6, to=1-8]
-	\arrow["\simeq", from=3-6, to=3-8]
-	\arrow["\pi"', from=2-7, to=3-10]
-	\arrow["\pi"', from=4-7, to=3-10]
-	\arrow[from=2-7, to=1-8]
-	\arrow[from=4-7, to=3-8]
-	\arrow["\pi", from=1-8, to=3-10]
-	\arrow["\pi", from=3-8, to=3-10]
-\end{tikzcd}\]
-\end{comment}
-
-\[
-\adjustbox{scale=0.7, center}{
-\begin{tikzcd}
-    &&& {F(A\tensor Y\tensor Y)} && {F(A\tensor Y)\times F(Y)} && {F(A)\times F(Y)\times F(Y)} \\
-    && {F(A\tensor Y)} &&&& {F(A)\times F(Y)} \\
-    {F(X)} &&& {F(B\tensor Y\tensor Y)} && {F(B\tensor Y)\times F(Y)} && {F(B)\times F(Y)\times F(Y)} && {F(Y)} \\
-    && {F(B\tensor Y)} &&&& {F(B)\times F(Y)}
-    \arrow["{F(f)}", from=3-1, to=2-3, crossing over]
-    \arrow["{F(g)}"', from=3-1, to=4-3, crossing over]
-    \arrow["{F(k)}", from=2-3, to=4-3, crossing over]
-    \arrow["\Delta", from=2-3, to=1-4, crossing over]
-    \arrow["\simeq", from=1-4, to=1-6, crossing over]
-    \arrow["\Delta", from=4-3, to=3-4, crossing over]
-    \arrow["{F(k\tensor Y)}"{pos=0.3}, from=1-4, to=3-4, crossing over]
-    \arrow["\simeq", from=3-4, to=3-6, crossing over]
-    \arrow["{F(k)\times F(Y)}"{pos=0.3}, from=1-6, to=3-6, crossing over]
-    \arrow["\simeq", from=2-3, to=2-7, crossing over]
-    \arrow["\simeq", from=4-3, to=4-7, crossing over]
-    \arrow["\simeq", from=1-6, to=1-8, crossing over]
-    \arrow["\simeq", from=3-6, to=3-8, crossing over]
-    \arrow["\pi"{description}, from=2-7, to=3-10, crossing over]
-    \arrow["\pi"{description}, from=4-7, to=3-10, crossing over]
-    \arrow[from=2-7, to=1-8, crossing over]
-    \arrow[from=4-7, to=3-8, crossing over]
-    \arrow["\pi"{description}, from=1-8, to=3-10, crossing over]
-    \arrow["\pi"{description}, from=3-8, to=3-10]
-\end{tikzcd}
-}
-\]
-これは確かにCartesian functorである。\\
-%ほぼ自明なので特に説明しない
-
-
-(ii)操作 $\bar{(-)}$と $\Eta_{\M}\comp-$が互いに逆であることを示す。\\
-どちらも対象上何も操作しないので、対象の対応が等しいことは直ちに分かる。よって射の対応だけ見ればよい。\par
-(ii-a) strong relevance functor $F:\M\to\D$に対し、$\Eta_{\M}\comp\bar{F}=F$であることを示す。\\
-各$f:X\to Y \rmin \M$に対し、\\
-$\bar{F}(\Eta_{\M}(f))=\bar{F}([1,f'])$は次の列の合成である：\\
-$F({X})\to F(1\tensor{Y})\simeq F(1)\times F({Y})\to F({Y})$\\
-これは即ち$F(f)$に他ならない。\\
-
-(ii-b) strong cartesian functor $G:\C\to\D$に対し、$\bar{\Eta_{\M}\comp G}=G$であることを示す。\\
-各$[A,f]:X\to Y \rmin \C$に対して、\\
-$\bar{\Eta_{\M}\comp G}([A,f])$は次の合成に等しい：\\
-%$(\Eta_{\M}\comp G)(\underline{X})\to (\Eta_{\M}\comp G)(A\tensor\underline{Y})\simeq (\Eta_{\M}\comp G)(A)\times (\Eta_{\M}\comp G)(\underline{Y})\to (\Eta_{\M}\comp G)(\underline{Y})$.
-% https://q.uiver.app/?q=WzAsNCxbMCwwLCIoXFxFdGFfe1xcTX1cXGNvbXAgRykoWCkiXSxbMiwwLCIoXFxFdGFfe1xcTX1cXGNvbXAgRykoQVxcdGVuc29yIFkpIl0sWzQsMCwiKFxcRXRhX3tcXE19XFxjb21wIEcpKEEpXFx0aW1lcyhcXEV0YV97XFxNfVxcY29tcCBHKShZKSJdLFs2LDAsIihcXEV0YV97XFxNfVxcY29tcCBHKShZKSJdLFswLDEsIihcXEV0YV97XFxNfVxcY29tcCBHKShmKSJdLFsxLDIsIlxcc2ltZXEiXSxbMiwzLCJcXHBpIl1d
-\[\begin{tikzcd}
-	{(\Eta_{\M}\comp G)(X)} && {(\Eta_{\M}\comp G)(A\tensor Y)} && {(\Eta_{\M}\comp G)(A)\times(\Eta_{\M}\comp G)(Y)} && {(\Eta_{\M}\comp G)(Y).}
-	\arrow["{(\Eta_{\M}\comp G)(f)}", from=1-1, to=1-3]
-	\arrow["\simeq", from=1-3, to=1-5]
-	\arrow["\pi", from=1-5, to=1-7]
-\end{tikzcd}\]
-整理すればこれは
-% https://q.uiver.app/?q=WzAsNCxbMCwwLCJHKFgpIl0sWzIsMCwiRyhBXFx0ZW5zb3IgWSkiXSxbNCwwLCJHKEEpXFx0aW1lcyBHKFkpIl0sWzYsMCwiRyhZKSJdLFswLDEsIkcoWzEsZiddKSJdLFsxLDIsIlxcc2ltZXEiXSxbMiwzLCJcXHBpIl1d
-\[\begin{tikzcd}
-	{G(X)} && {G(A\tensor Y)} && {G(A)\times G(Y)} && {G(Y)}
-	\arrow["{G([1,f'])}", from=1-1, to=1-3]
-	\arrow["\simeq", from=1-3, to=1-5]
-	\arrow["\pi", from=1-5, to=1-7]
-\end{tikzcd}\]
-に等しい。$G$はcartesianだったのでこれは
-% https://q.uiver.app/?q=WzAsMyxbMCwwLCJHKFgpIl0sWzIsMCwiRyhBXFx0ZW5zb3IgWSkiXSxbNCwwLCJHKFkpIl0sWzAsMSwiRyhbMSxmJ10pIl0sWzEsMiwiRyhcXHBpKSJdXQ==
-\[\begin{tikzcd}
-	{G(X)} && {G(A\tensor Y)} && {G(Y)}
-	\arrow["{G([1,f'])}", from=1-1, to=1-3]
-	\arrow["{G(\pi)}", from=1-3, to=1-5]
-\end{tikzcd}\]
-に等しい。これが$G([A,f])$に等しいことを示すためには、$[A,f]$が次と等しいことを言えばよい：\\
-% https://q.uiver.app/?q=WzAsMyxbMCwwLCJYIl0sWzIsMCwiQVxcdGVuc29yIFkiXSxbNCwwLCJZIl0sWzAsMSwiWzEsZiddIl0sWzEsMiwiXFxwaSJdXQ==
-\[\begin{tikzcd}
-	X && {A\tensor Y} && Y.
-	\arrow["{[1,f']}", from=1-1, to=1-3]
-	\arrow["\pi", from=1-3, to=1-5]
-\end{tikzcd}\]
-これは $\Lambda(\M)$における射影の定義を見れば直ちに分かる。
-
-
+    (ii-b) strong cartesian functor $G:\C\to\D$に対し、$\bar{\Eta_{\R}\comp G}=G$であることを示す。\\
+    各$[A,f]:X\to Y \rmin \C$に対して、\\
+    $\bar{\Eta_{\R}\comp G}([A,f])$は次の合成に等しい：\\
+    %$(\Eta_{\R}\comp G)(\underline{X})\to (\Eta_{\R}\comp G)(A\tensor\underline{Y})\simeq (\Eta_{\R}\comp G)(A)\times (\Eta_{\R}\comp G)(\underline{Y})\to (\Eta_{\R}\comp G)(\underline{Y})$.
+    % https://q.uiver.app/?q=WzAsNCxbMCwwLCIoXFxFdGFfe1xcTX1cXGNvbXAgRykoWCkiXSxbMiwwLCIoXFxFdGFfe1xcTX1cXGNvbXAgRykoQVxcdGVuc29yIFkpIl0sWzQsMCwiKFxcRXRhX3tcXE19XFxjb21wIEcpKEEpXFx0aW1lcyhcXEV0YV97XFxNfVxcY29tcCBHKShZKSJdLFs2LDAsIihcXEV0YV97XFxNfVxcY29tcCBHKShZKSJdLFswLDEsIihcXEV0YV97XFxNfVxcY29tcCBHKShmKSJdLFsxLDIsIlxcc2ltZXEiXSxbMiwzLCJcXHBpIl1d
+    \[\begin{tikzcd}
+        {(\Eta_{\R}\comp G)(X)} && {(\Eta_{\R}\comp G)(A\tensor Y)} && {(\Eta_{\R}\comp G)(A)\times(\Eta_{\R}\comp G)(Y)} && {(\Eta_{\R}\comp G)(Y).}
+        \arrow["{(\Eta_{\R}\comp G)(f)}", from=1-1, to=1-3]
+        \arrow["\simeq", from=1-3, to=1-5]
+        \arrow["\pi", from=1-5, to=1-7]
+    \end{tikzcd}\]
+    整理すればこれは
+    % https://q.uiver.app/?q=WzAsNCxbMCwwLCJHKFgpIl0sWzIsMCwiRyhBXFx0ZW5zb3IgWSkiXSxbNCwwLCJHKEEpXFx0aW1lcyBHKFkpIl0sWzYsMCwiRyhZKSJdLFswLDEsIkcoWzEsZiddKSJdLFsxLDIsIlxcc2ltZXEiXSxbMiwzLCJcXHBpIl1d
+    \[\begin{tikzcd}
+        {G(X)} && {G(A\tensor Y)} && {G(A)\times G(Y)} && {G(Y)}
+        \arrow["{G([1,f'])}", from=1-1, to=1-3]
+        \arrow["\simeq", from=1-3, to=1-5]
+        \arrow["\pi", from=1-5, to=1-7]
+    \end{tikzcd}\]
+    に等しい。$G$はcartesianだったのでこれは
+    % https://q.uiver.app/?q=WzAsMyxbMCwwLCJHKFgpIl0sWzIsMCwiRyhBXFx0ZW5zb3IgWSkiXSxbNCwwLCJHKFkpIl0sWzAsMSwiRyhbMSxmJ10pIl0sWzEsMiwiRyhcXHBpKSJdXQ==
+    \[\begin{tikzcd}
+        {G(X)} && {G(A\tensor Y)} && {G(Y)}
+        \arrow["{G([1,f'])}", from=1-1, to=1-3]
+        \arrow["{G(\pi)}", from=1-3, to=1-5]
+    \end{tikzcd}\]
+    に等しい。これが$G([A,f])$に等しいことを示すためには、$[A,f]$が次と等しいことを言えばよい：\\
+    % https://q.uiver.app/?q=WzAsMyxbMCwwLCJYIl0sWzIsMCwiQVxcdGVuc29yIFkiXSxbNCwwLCJZIl0sWzAsMSwiWzEsZiddIl0sWzEsMiwiXFxwaSJdXQ==
+    \[\begin{tikzcd}
+        X && {A\tensor Y} && Y.
+        \arrow["{[1,f']}", from=1-1, to=1-3]
+        \arrow["\pi", from=1-3, to=1-5]
+    \end{tikzcd}\]
+    これは $\Lambda(\R)$における射影の定義を見れば直ちに分かる。
+\end{proof}
 
 
 \newpage
