@@ -1254,16 +1254,24 @@ $\R$を\RC とし、
 $F = \Eta_{\R}\comp \bar{F}$
 
 \begin{proof}
-    (i)\Rf $F:\R \to \D$に対しstrong cartesian functor $\bar{F}:\C\to\D$を対応させる操作$\bar{(-)}$を次で定める：\\
+    ３ステップに分ける。
+    (i) $\bar{F}$の構成とwell-definednessの証明\\
+    (ii) $\bar{-}$が$\Eta_{\R}\comp - $の左逆であることの証明\\
+    (iii) $\bar{-}$が$\Eta_{\R}\comp - $の右逆であることの証明\\
+
+    (i) ($\bar{F}$の構成とwell-definednessの証明)
+    \Rf $F:\R \to \D$に対し（強）モノイド函手 $\bar{F}:\C\to\D$を対応させる操作$\bar{(-)}$を次で定める：\\
     各$\bar{X}\in\C$に対し、$\bar{F}(\bar{X}):=F(X)$.\\
     各$[A,f]:\bar{X}\to \bar{Y}\ \text{in}\ \C$に対し、$\bar{F}([A,f])$を
-    $\bar{F}([A,f]):=F(f)\comp\theta_{A,Y}$で定める。\\
+    $\bar{F}([A,f]):=F(f)\comp\theta_{A,Y}\comp\pi_{F(A),F(Y)}$で定める。\\
     ただし、$\theta_{A,Y}:F(A\tensor Y)\to F(A)\times F(Y)$はFのモノイド函手としての構造の同型である。\\
     分かりやすさのために追記する。これは下の列の合成のことである：\\
     $F(X)\to F(A\tensor Y)\simeq F(A)\times F(Y)\to F(Y)$.\\
 
-    この$\bar{F}$のwell-definednessは以下のようによい：\\
-    $(A,f),(B,g):X\to Y \rmin \calLambda(\R)$と$k:(A,f)\to (B,g)$を任意に取る。$\bar{F}$はrelevance functorであったから、次の図式は可換：
+    この$\bar{F}$のwell-definednessを示す。\\
+    $(A,f),(B,g):X\to Y \rmin \calLambda(\R)$と$k:(A,f)\to (B,g)$を任意に取る。
+    $\bar{F}([A,f])=\bar{F}([B,g])$を示せばよい。\\
+    $\bar{F}$はrelevance functorであったから、次の図式は可換：
 
     \[
     \adjustbox{scale=0.7, center}{
@@ -1294,19 +1302,33 @@ $F = \Eta_{\R}\comp \bar{F}$
     \end{tikzcd}
     }
     \]
-    これは確かにCartesian functorである。\\
+    この図式は可換なので、従って特に$\bar{F}([A,f])=\bar{F}([B,g])$である。
+    これで$\bar{F}$のwell-definednessが示された。\\
+    また、$\bar{F}$は確かに強モノイド函手である。\\
     %ほぼ自明なので特に説明しない
 
 
     (ii)操作 $\bar{(-)}$と $\Eta_{\R}\comp-$が互いに逆であることを示す。\\
     どちらも対象上何も操作しないので、対象の対応が等しいことは直ちに分かる。よって射の対応だけ見ればよい。\par
-    (ii-a) strong relevance functor $F:\R\to\D$に対し、$\Eta_{\R}\comp\bar{F}=F$であることを示す。\\
+    (ii-a) \Rf $F:\R\to\D$に対し、$\Eta_{\R}\comp\bar{F}=F$であることを示す。\\
     各$f:X\to Y \rmin \R$に対し、\\
+    \begin{align*}
+        &(\Eta_{\R}\comp\bar{F})(f) 
+        =& \bar{F}(\Eta_{\R}(f))\\
+        =& \Eta_{\R}(F(f)\comp\theta_{I,Y}\comp\pi_{F(I),F(Y)})\\
+        =& [I,F(f)\comp\theta_{I,Y}\comp\pi_{F(I),F(Y)}\comp\rho_Y]\\
+        =& [I,F(f)\comp\theta_{I,Y}\comp F(\rho_Y)\comp\rho_Y]\\
+        =& [I,F(f)\comp\theta_{I,Y}\comp F(\rho_Y\comp\rho_Y)]\\
+        =& [I,F(f)\comp\theta_{I,Y}\comp F(\rho_Y)]\\
+        =& [I,F(f)\comp\theta_{I,Y}]\\
+        =& [I,F(f)]\\
+        =& F(f)
+    \end{align*}
     $\bar{F}(\Eta_{\R}(f))=\bar{F}([1,f'])$は次の列の合成である：\\
     $F({X})\to F(1\tensor{Y})\simeq F(1)\times F({Y})\to F({Y})$\\
     これは即ち$F(f)$に他ならない。\\
 
-    (ii-b) strong cartesian functor $G:\C\to\D$に対し、$\bar{\Eta_{\R}\comp G}=G$であることを示す。\\
+    (ii-b) （強）モノイド函手 $G:\C\to\D$に対し、$\bar{\Eta_{\R}\comp G}=G$であることを示す。\\
     各$[A,f]:X\to Y \rmin \C$に対して、\\
     $\bar{\Eta_{\R}\comp G}([A,f])$は次の合成に等しい：\\
     %$(\Eta_{\R}\comp G)(\underline{X})\to (\Eta_{\R}\comp G)(A\tensor\underline{Y})\simeq (\Eta_{\R}\comp G)(A)\times (\Eta_{\R}\comp G)(\underline{Y})\to (\Eta_{\R}\comp G)(\underline{Y})$.
