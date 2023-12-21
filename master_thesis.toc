@@ -36,5 +36,6 @@
 \contentsline {subsection}{\numberline {\S \ 5.1}The Category of monomorphisms}{23}{subsection.5.1}%
 \contentsline {paragraph}{thm 6.1.1 : $\Lambda [\mathcal {R}]\cong \mathcal {C}$ }{23}{section*.27}%
 \contentsline {paragraph}{cor 6.1.2 : $\Lambda [\mathcal {C}^{{\mathrm {mono}}}]\cong \mathcal {C}$ }{24}{section*.28}%
-\contentsline {section}{\numberline {\S \ 6}Reference}{24}{section.6}%
-\contentsline {section}{\numberline {\S \ 7}謝辞}{25}{section.7}%
+\contentsline {section}{\numberline {\S \ 6}関連研究と今後の課題}{24}{section.6}%
+\contentsline {section}{\numberline {\S \ 7}Reference}{24}{section.7}%
+\contentsline {section}{\numberline {\S \ 8}謝辞}{25}{section.8}%

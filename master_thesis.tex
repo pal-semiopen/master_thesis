@@ -1248,13 +1248,13 @@ $\Eta_{\R}$は\Rf である。
 \paragraph{proposition \arabic{section}.2:\ universality of $\Lambda$}\ \\
 $\R$を\RC とし、
 \CC \ $\C:=\Lambda[\R]$及び\Rf $\Eta_{\R}:\R \to \C$を上で定めたものとする。\\
-このとき、任意の\CC \ $\D$ 及びstrong relevance functor $F=(F,\theta):\R \to \D$に対し、\\
-次を満たすstrong cartesian functor $\bar{F}:\C\to\D$が一意に存在する：
+このとき、任意の\CC \ $\D$ 及び\Rf $F=(F,\theta):\R \to \D$に対し、\\
+次を満たす（強）モノイド函手 $\bar{F}:\C\to\D$が一意に存在する：
 
 $F = \Eta_{\R}\comp \bar{F}$
 
 \begin{proof}
-    (i)strong relevance functor $F:\R \to \D$に対しstrong cartesian functor $\bar{F}:\C\to\D$を対応させる操作$\bar{(-)}$を次で定める：\\
+    (i)\Rf $F:\R \to \D$に対しstrong cartesian functor $\bar{F}:\C\to\D$を対応させる操作$\bar{(-)}$を次で定める：\\
     各$\bar{X}\in\C$に対し、$\bar{F}(\bar{X}):=F(X)$.\\
     各$[A,f]:\bar{X}\to \bar{Y}\ \text{in}\ \C$に対し、$\bar{F}([A,f])$を
     $\bar{F}([A,f]):=F(f)\comp\theta_{A,Y}$で定める。\\
@@ -1397,6 +1397,16 @@ $[A,f]:X\to Y \ \mathrm{in}\ \cL$を取り固定する。
 \paragraph{cor 6.1.2 :  $\Lambda[\C^{\mono}]\simeq \C$ }\ \par
 $\C$を\CC とする。\\
 このとき、包含函手$i_{\C}:\C^{\mono}\to\C$から、$\Lambda$の普遍性によりのびる函手$\bar{i_{\C}}:\Lambda[\C^{\mono}]\to\C$はisoである。\\
+
+
+\section{関連研究と今後の課題}
+
+
+・関連圏の「複製」構造は、前述のとおり"lax-universality"とでも呼ぶべきものである。
+    この"lax-universality"の概念は比較的容易に一般化できる。
+    既によく知られる"weak-universality"よりは強い概念であり、一般的に言えることが見つかる可能性がある。
+    真のuniversalityでなくとも十分豊かな性質を示すことは関連圏の姿から窺い知ることができるため、
+    様々な普遍性についてそのlax版を調べてみることは有益であることが示唆される。
 
 
 \section{Reference}
