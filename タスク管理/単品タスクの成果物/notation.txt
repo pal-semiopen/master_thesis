@@ -3,7 +3,9 @@
 \R:関連圏変数
 \M:対称モノイド圏変数
 \R_bar:関連圏\Rの台の対称モノイド圏
-F:関連函手変数
+F=(F,\mu,\epsilon):関連函手変数
+G=(G,\nu,\zeta):デカルト函手変数
+\Eta_\R = (\Eta_\R, m, e) : ユニット函手
 
 L:L-construction
 Λ:Λ-construction
