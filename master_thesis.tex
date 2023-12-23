@@ -464,7 +464,7 @@ $\Delta$がモノイド自然変換で結合的かつ可換であるようなも
 
 \paragraph{Definition \arabic{section}.2：\Rf}\ \\
 $\R_1,\R_2$を\RC とする。
-\Rf とは、強対称モノイド函手 $F=(F,\theta):\R_1\to\R_2$ であって、下の図式を可換にするもののこと。
+\Rf とは、強対称モノイド函手 $F=(F, \theta, \epsilon):\R_1\to\R_2$ であって、下の図式を可換にするもののこと。
 % https://q.uiver.app/#q=WzAsNCxbMCwwLCJGKFgpIl0sWzIsMCwiRihYKSBcXHRlbnNvciBGKFgpIl0sWzAsMiwiRihYKSJdLFsyLDIsIkYoWFxcdGVuc29yIFgpIl0sWzAsMSwiXFxEZWx0YV97RihYKX0iXSxbMCwyLCI9IiwyXSxbMiwzLCJGKFxcRGVsdGFfe1h9KSIsMl0sWzEsMywiXFx0aGV0YV97WH0iXSxbMSwzLCJcXHNpbWVxIiwyXV0=
 \[\begin{tikzcd}
 	{F(X)} && {F(X) \tensor F(X)} \\
@@ -1248,7 +1248,7 @@ $\Eta_{\R}$は\Rf である。
 \paragraph{proposition \arabic{section}.2:\ universality of $\Lambda$}\ \\
 $\R$を\RC とし、
 \CC \ $\C:=\Lambda[\R]$及び\Rf $\Eta_{\R}:\R \to \C$を上で定めたものとする。\\
-このとき、任意の\CC \ $\D$ 及び\Rf $F=(F,\theta):\R \to \D$に対し、\\
+このとき、任意の\CC \ $\D$ 及び\Rf $F=(F,\theta, \epsilon):\R \to \D$に対し、\\
 次を満たす（強）モノイド函手 $\bar{F}:\C\to\D$が一意に存在する：
 
 $F = \Eta_{\R}\comp \bar{F}$
@@ -1260,11 +1260,13 @@ $F = \Eta_{\R}\comp \bar{F}$
     (iii) $\bar{-}$が$\Eta_{\R}\comp - $の右逆であることの証明\\
 
     (i) ($\bar{F}$の構成とwell-definednessの証明)
-    \Rf $F:\R \to \D$に対し（強）モノイド函手 $\bar{F}:\C\to\D$を対応させる操作$\bar{(-)}$を次で定める：\\
+    \Rf $F=(F,\theta, \epsilon):\R \to \D$に対し
+    （強）モノイド函手 $\bar{F} = (\bar{F}, \bar{\theta}, \bar{\epsilon}):\C\to\D$
+    を対応させる操作$\bar{(-)}$を次で定める：\\
     各$\bar{X}\in\C$に対し、$\bar{F}(\bar{X}):=F(X)$.\\
-    各$[A,f]:\bar{X}\to \bar{Y}\ \text{in}\ \C$に対し、$\bar{F}([A,f])$を
-    $\bar{F}([A,f]):=F(f)\comp\theta_{A,Y}\comp\pi_{F(A),F(Y)}$で定める。\\
-    ただし、$\theta_{A,Y}:F(A\tensor Y)\to F(A)\times F(Y)$はFのモノイド函手としての構造の同型である。\\
+    各$[A,f]:\bar{X}\to \bar{Y}\ \text{in}\ \C$に対し、函手$\bar{F}([A,f])$を
+    $\bar{F}([A,f]):=F(f)\comp\theta_{A,Y}^{-1}\comp\pi_{F(A),F(Y)}$で定める。\\
+    ただし、$\theta_{A,Y}:F(A)\times F(Y) \to F(A\tensor Y)$はFのモノイド函手としての構造の同型である。\\
     分かりやすさのために追記する。これは下の列の合成のことである：\\
     $F(X)\to F(A\tensor Y)\simeq F(A)\times F(Y)\to F(Y)$.\\
 
@@ -1303,8 +1305,10 @@ $F = \Eta_{\R}\comp \bar{F}$
     }
     \]
     この図式は可換なので、従って特に$\bar{F}([A,f])=\bar{F}([B,g])$である。
-    これで$\bar{F}$のwell-definednessが示された。\\
-    また、$\bar{F}$は確かに強モノイド函手である。\\
+    これで函手$\bar{F}$のwell-definednessが示された。\\
+    また$\bar{\theta}_{\bar{F}(\bar{X}),\bar{F}(\bar{Y})}:\bar{F}(\bar{X})\times\bar{F}(\bar{Y})\to \bar{F}(\bar{X}\tensor)$を
+    $\bar{\theta}_{\bar{F}(\bar{X}),\bar{F}(\bar{Y})}:=\theta_{F(X),F(Y)}$、$\bar{\epsilon}:=\epsilon$と定める。
+    すると$(\bar{F},\bar{\theta},\bar{\epsilon})$は確かに強モノイド函手である。\\
     %ほぼ自明なので特に説明しない
 
 
@@ -1316,15 +1320,31 @@ $F = \Eta_{\R}\comp \bar{F}$
         &(\Eta_{\R}\comp\bar{F})(f)\\
         =& \bar{F}(\Eta_{\R}(f))\\
         =& \bar{F}([1,f'])\\
-        =& F(f')\comp\theta_{I,Y}\comp\pi_{F(I),F(Y)}\\
+        =& F(f')\comp\theta_{I,Y}^{-1}\comp\pi_{F(I),F(Y)}\\
+        =& F(f')\comp\theta_{I,Y}^{-1}\comp(\epsilon\times F(Y))^{-1}\comp\rho_{F(Y)}\\
+        =& F(f')\comp F(\rho_Y)\comp\rho_{F(Y)}^{-1}\comp\rho_{F(Y)}\\
+        =& F(f)\comp\rho_{F(Y)}^{-1}\comp\rho_{F(Y)}\\
         =& F(f)
     \end{align*}
-    $\bar{F}(\Eta_{\R}(f))=\bar{F}([1,f'])$は次の列の合成である：\\
-    $F({X})\to F(1\tensor{Y})\simeq F(1)\times F({Y})\to F({Y})$\\
-    これは即ち$F(f)$に他ならない。\\
+    である（下記図式参照）。これで示された。
+
+    % https://q.uiver.app/#q=WzAsNixbMCwwLCJGKFgpIl0sWzIsMCwiRigxXFx0ZW5zb3IgWSkiXSxbNCwwLCJGKDEpXFx0aW1lcyBGKFkpIl0sWzYsMCwiRihZKSJdLFsyLDEsIkYoWSkiXSxbNCwxLCIxXFx0aW1lcyBGKFkpIl0sWzAsMSwiRihmJykiXSxbMiwxLCJcXHRoZXRhX3sxLFl9IiwyXSxbMiwzLCJcXHBpX3tGKDEpLEYoWSl9Il0sWzAsNCwiRihmKSIsMl0sWzEsNCwiRihcXHJob19ZKSIsMl0sWzUsMiwiXFxlcHNpbG9uXFx0aW1lcyBGKFkpIiwwLHsib2Zmc2V0IjotM31dLFs1LDMsIlxccmhvX3tGKFkpfSIsMl0sWzUsNCwiXFxyaG9fe0YoWSl9IiwyXSxbMiw1LCIhXFx0aW1lcyBGKFkpIl1d
+    \[\begin{tikzcd}
+        {F(X)} && {F(1\tensor Y)} && {F(1)\times F(Y)} && {F(Y)} \\
+        && {F(Y)} && {1\times F(Y)}
+        \arrow["{F(f')}", from=1-1, to=1-3]
+        \arrow["{\theta_{1,Y}}"', from=1-5, to=1-3]
+        \arrow["{\pi_{F(1),F(Y)}}", from=1-5, to=1-7]
+        \arrow["{F(f)}"', from=1-1, to=2-3]
+        \arrow["{F(\rho_Y)}"', from=1-3, to=2-3]
+        \arrow["{\epsilon\times F(Y)}", shift left=3, from=2-5, to=1-5]
+        \arrow["{\rho_{F(Y)}}"', from=2-5, to=1-7]
+        \arrow["{\rho_{F(Y)}}"', from=2-5, to=2-3]
+        \arrow["{!\times F(Y)}", from=1-5, to=2-5]
+    \end{tikzcd}\]
 
     (ii-b) （強）モノイド函手 $G:\C\to\D$に対し、$\bar{\Eta_{\R}\comp G}=G$であることを示す。\\
-    各$[A,f]:X\to Y \rmin \C$に対して、\\
+    各$[A,f]:\bar{X}\to \bar{Y} \rmin \C$に対して、\\
     $\bar{\Eta_{\R}\comp G}([A,f])$は次の合成に等しい：\\
     %$(\Eta_{\R}\comp G)(\underline{X})\to (\Eta_{\R}\comp G)(A\tensor\underline{Y})\simeq (\Eta_{\R}\comp G)(A)\times (\Eta_{\R}\comp G)(\underline{Y})\to (\Eta_{\R}\comp G)(\underline{Y})$.
     % https://q.uiver.app/?q=WzAsNCxbMCwwLCIoXFxFdGFfe1xcTX1cXGNvbXAgRykoWCkiXSxbMiwwLCIoXFxFdGFfe1xcTX1cXGNvbXAgRykoQVxcdGVuc29yIFkpIl0sWzQsMCwiKFxcRXRhX3tcXE19XFxjb21wIEcpKEEpXFx0aW1lcyhcXEV0YV97XFxNfVxcY29tcCBHKShZKSJdLFs2LDAsIihcXEV0YV97XFxNfVxcY29tcCBHKShZKSJdLFswLDEsIihcXEV0YV97XFxNfVxcY29tcCBHKShmKSJdLFsxLDIsIlxcc2ltZXEiXSxbMiwzLCJcXHBpIl1d
