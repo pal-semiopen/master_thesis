@@ -1313,15 +1313,10 @@ $F = \Eta_{\R}\comp \bar{F}$
     (ii-a) \Rf $F:\R\to\D$に対し、$\Eta_{\R}\comp\bar{F}=F$であることを示す。\\
     各$f:X\to Y \rmin \R$に対し、\\
     \begin{align*}
-        &(\Eta_{\R}\comp\bar{F})(f) 
+        &(\Eta_{\R}\comp\bar{F})(f)\\
         =& \bar{F}(\Eta_{\R}(f))\\
-        =& \Eta_{\R}(F(f)\comp\theta_{I,Y}\comp\pi_{F(I),F(Y)})\\
-        =& [I,F(f)\comp\theta_{I,Y}\comp\pi_{F(I),F(Y)}\comp\rho_Y]\\
-        =& [I,F(f)\comp\theta_{I,Y}\comp F(\rho_Y)\comp\rho_Y]\\
-        =& [I,F(f)\comp\theta_{I,Y}\comp F(\rho_Y\comp\rho_Y)]\\
-        =& [I,F(f)\comp\theta_{I,Y}\comp F(\rho_Y)]\\
-        =& [I,F(f)\comp\theta_{I,Y}]\\
-        =& [I,F(f)]\\
+        =& \bar{F}([1,f'])\\
+        =& F(f')\comp\theta_{I,Y}\comp\pi_{F(I),F(Y)}\\
         =& F(f)
     \end{align*}
     $\bar{F}(\Eta_{\R}(f))=\bar{F}([1,f'])$は次の列の合成である：\\
