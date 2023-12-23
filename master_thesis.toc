@@ -29,13 +29,13 @@
 \contentsline {subsection}{\numberline {\S \ 3.4}Cartesian Structure of the Category $\Lambda (\mathcal {R})$}{18}{subsection.3.4}%
 \contentsline {paragraph}{Definition 3.4.1：$\Lambda (\mathcal {R})$のモノイド構造}{18}{section*.23}%
 \contentsline {paragraph}{Proposition 3.4.3：$\Lambda [\mathcal {R}]$の直積 }{18}{section*.24}%
-\contentsline {section}{\numberline {\S \ 4}universality of $\Lambda $ construction}{21}{section.4}%
-\contentsline {paragraph}{Definition 4.1：ユニット函手 $\mathit {H}_{\mathcal {R}}$}{21}{section*.25}%
-\contentsline {paragraph}{proposition 4.2:\ universality of $\Lambda $}{21}{section*.26}%
-\contentsline {section}{\numberline {\S \ 5}The Category of monomorphisms}{24}{section.5}%
-\contentsline {subsection}{\numberline {\S \ 5.1}The Category of monomorphisms}{24}{subsection.5.1}%
-\contentsline {paragraph}{thm 6.1.1 : $\Lambda [\mathcal {R}]\cong \mathcal {C}$ }{24}{section*.27}%
-\contentsline {paragraph}{cor 6.1.2 : $\Lambda [\mathcal {C}^{{\mathrm {mono}}}]\cong \mathcal {C}$ }{25}{section*.28}%
-\contentsline {section}{\numberline {\S \ 6}関連研究と今後の課題}{25}{section.6}%
-\contentsline {section}{\numberline {\S \ 7}Reference}{25}{section.7}%
-\contentsline {section}{\numberline {\S \ 8}謝辞}{26}{section.8}%
+\contentsline {section}{\numberline {\S \ 4}universality of $\Lambda $ construction}{22}{section.4}%
+\contentsline {paragraph}{Definition 4.1：ユニット函手 $\mathit {H}_{\mathcal {R}}$}{22}{section*.26}%
+\contentsline {paragraph}{proposition 4.2:\ universality of $\Lambda $}{22}{section*.27}%
+\contentsline {section}{\numberline {\S \ 5}The Category of monomorphisms}{25}{section.5}%
+\contentsline {subsection}{\numberline {\S \ 5.1}The Category of monomorphisms}{25}{subsection.5.1}%
+\contentsline {paragraph}{thm 6.1.1 : $\Lambda [\mathcal {R}]\cong \mathcal {C}$ }{25}{section*.28}%
+\contentsline {paragraph}{cor 6.1.2 : $\Lambda [\mathcal {C}^{{\mathrm {mono}}}]\cong \mathcal {C}$ }{26}{section*.29}%
+\contentsline {section}{\numberline {\S \ 6}関連研究と今後の課題}{26}{section.6}%
+\contentsline {section}{\numberline {\S \ 7}Reference}{26}{section.7}%
+\contentsline {section}{\numberline {\S \ 8}謝辞}{27}{section.8}%

@@ -1056,7 +1056,7 @@ proposition\arabic{section}.3.7, \arabic{section}.3.8より、圏を成す。
 $\R$を \RC とする。
 $\Lambda(\R)$は、素朴な方法で\SMC となる。
 モノイド積の函手$\tensor'$のみ明示する。$\tensor'$を次のように定める。
-\fct{\tensor'}{\Lambda(\R)\times \Lambda(\R)}{\Lambda(\R)}{(X,Y)}{([A,f], [B,g])}{(X',Y')}{X\tensor Y}{[A\tensor B, f\square g]}{X'\tensor Y'}
+\fct{\tensor'}{\Lambda(\R)\times \Lambda(\R)}{\Lambda(\R)}{(\bar{X},\bar{Y})}{([A,f], [B,g])}{(\bar{X'},\bar{Y'})}{\bar{X\tensor Y}}{[A\tensor B, f\square g]}{\bar{X'\tensor Y'}}
 ただし、$f\square g := (f\tensor g)\comp (A\tensor\gamma_{X,B}\tensor Y)$ である。
 このように定めた$\tensor'$は確かにwell-definedである。
 %次に単位対象を $I':=I$で定める。
@@ -1065,7 +1065,7 @@ $\Lambda(\R)$は、素朴な方法で\SMC となる。
 %$\Delta$の構成
 
 
-\paragraph{Proposition \arabic{section}.4.3：$\Lambda[\R]$の直積 }\ \\
+\paragraph{Proposition \arabic{section}.\arabic{subsection}.3：$\Lambda[\R]$の直積 }\ \\
 簡単のため$\C:=\Lambda[\R]$とおく。
 $X,Y\in\C$に対し、$(X\tensor Y, \pi_X, \pi_Y)$は$X$と$Y$の直積である。
 ただし、$\pi_Y:X\tensor Y\to Y$は、$\pi_Y:=[X,id_{X\tensor Y}]$で定める。
@@ -1223,11 +1223,17 @@ $\pi_X:X\tensor Y\to X$は、$\pi_X:=[Y,\gamma_{X,Y}]$で定める。
 \end{proof}
 
 
-
-
-
-
-
+\paragraph*{proposition \arabic{section}.\arabic{subsection}.4：\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}の終対象}\ \\
+$\Lambda(\R)$の終対象は$I$である。
+実際、任意の$\bar{X}\in\Lambda(\R)$に対し、$!_{\bar{X}}:=[X,\l_X]:\bar{X}\to I$と置けば、
+任意の$[A,f]:\bar{X}\to I$に対し、次のように$[A,f]=!_{\bar{X}}$である：\\
+$f':X\to A$を$f':=(-\tensor I)^{-1}(f\comp\l_X)$と定めると、
+\begin{align*}
+    &(A,f)\\
+    = &\ (A,\l_X\comp f)\\
+    \sim &\ (X, \l_X) (\text{by prop \arabic{section}.2.4})
+\end{align*}
+である。
 
 
 
