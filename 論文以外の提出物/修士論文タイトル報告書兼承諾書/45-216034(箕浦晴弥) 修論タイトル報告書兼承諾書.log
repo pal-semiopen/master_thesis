@@ -1,0 +1,110 @@
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  25 DEC 2023 17:09
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"45-216034(邂墓^^b5^^a6譎^^b4蠑^^a5) 菫^^ae隲悶ち繧^^a4繝医Ν蝣^^b1蜻頑嶌蜈^^
+bc謇^^bf隲^^be譖^^b8.tex"
+(./45-216034(邂墓^^b5^^a6譎^^b4蠑^^a5) 菫^^ae隲悶ち繧^^a4繝医Ν蝣^^b1蜻頑嶌蜈^^
+bc謇^^bf隲^^be譖^^b8.tex
+pLaTeX2e <2023-02-14>+1, based on
+LaTeX2e <2023-11-01>
+L3 programming layer <2023-11-09>
+(c:/texlive/2023/texmf-dist/tex/platex/base/jarticle.cls
+Document Class: jarticle 2020/09/30 v1.8f Standard pLaTeX class
+\c@@paper=\count185
+(c:/texlive/2023/texmf-dist/tex/platex/base/jsize10.clo
+File: jsize10.clo 2020/09/30 v1.8f Standard pLaTeX file (size option)
+)
+\c@part=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 615.
+\toclineskip=\dimen156
+\@lnumwidth=\dimen157
+\bibindent=\dimen158
+\heisei=\count194
+)
+(c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2023-11-09 L3 backend support: dvips
+\l__pdf_internal_box=\box68
+\g__pdf_backend_object_int=\count195
+\l__pdf_backend_content_box=\box69
+\l__pdf_backend_model_box=\box70
+\g__pdf_backend_annotation_int=\count196
+\g__pdf_backend_link_int=\count197
+\g__pdf_backend_link_sf_int=\count198
+)
+(./45-216034(邂墓^^b5^^a6譎^^b4蠑^^a5) 菫^^ae隲悶ち繧^^a4繝医Ν蝣^^b1蜻頑嶌蜈^^
+bc謇^^bf隲^^be譖^^b8.aux)
+\openout1 = `"45-216034(邂墓^^b5^^a6譎^^b4蠑^^a5) 菫^^ae隲悶ち繧^^a4繝医Ν蝣^^b
+1蜻頑嶌蜈^^bc謇^^bf隲^^be譖^^b8.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+ (./thesis23.sty)
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 18.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 18.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 28.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 28.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 29.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 29.
+
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 29--31
+[][] 
+ []
+
+[1
+
+] (./45-216034(邂墓^^b5^^a6譎^^b4蠑^^a5) 菫^^ae隲悶ち繧^^a4繝医Ν蝣^^b1蜻頑嶌蜈
+^^bc謇^^bf隲^^be譖^^b8.aux)
+ ***********
+pLaTeX2e <2023-02-14>+1, based on
+LaTeX2e <2023-11-01>
+L3 programming layer <2023-11-09>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 539 strings out of 474925
+ 10430 string characters out of 5765769
+ 1919403 words of memory out of 5000000
+ 22816 multiletter control sequences out of 15000+600000
+ 566339 words of font info for 69 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 35i,5n,50p,218b,237s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on "45-216034(邂墓^^b5^^a6譎^^b4蠑^^a5) 菫^^ae隲悶ち繧^^a4繝医Ν
+蝣^^b1蜻頑嶌蜈^^bc謇^^bf隲^^be譖^^b8.dvi" (1 page, 1108 bytes).

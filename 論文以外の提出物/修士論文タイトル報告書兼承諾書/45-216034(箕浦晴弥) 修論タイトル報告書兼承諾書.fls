@@ -1,0 +1,37 @@
+PWD C:/Users/a1m2n_97p7i8q/OneDrive/ドキュメント/修論2023/2023_11_25/論文以外の提出物/修士論文タイトル報告書兼承諾書
+INPUT c:/texlive/2023/texmf.cnf
+INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2023/texmf-var/web2c/euptex/platex.fmt
+INPUT 45-216034(箕浦晴弥) 修論タイトル報告書兼承諾書.tex
+OUTPUT 45-216034(箕浦晴弥) 修論タイトル報告書兼承諾書.log
+INPUT c:/texlive/2023/texmf-dist/tex/platex/base/jarticle.cls
+INPUT c:/texlive/2023/texmf-dist/tex/platex/base/jarticle.cls
+INPUT c:/texlive/2023/texmf-dist/tex/platex/base/jsize10.clo
+INPUT c:/texlive/2023/texmf-dist/tex/platex/base/jsize10.clo
+INPUT c:/texlive/2023/texmf-dist/tex/platex/base/jsize10.clo
+INPUT c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+INPUT c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+INPUT ./45-216034(箕浦晴弥) 修論タイトル報告書兼承諾書.aux
+INPUT ./45-216034(箕浦晴弥) 修論タイトル報告書兼承諾書.aux
+INPUT 45-216034(箕浦晴弥) 修論タイトル報告書兼承諾書.aux
+OUTPUT 45-216034(箕浦晴弥) 修論タイトル報告書兼承諾書.aux
+INPUT thesis23.sty
+INPUT c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin8.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/min8.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/min6.tfm
+OUTPUT 45-216034(箕浦晴弥) 修論タイトル報告書兼承諾書.dvi
+INPUT 45-216034(箕浦晴弥) 修論タイトル報告書兼承諾書.aux

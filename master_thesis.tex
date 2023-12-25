@@ -1,4 +1,4 @@
-\documentclass[dvipdfmx]{article}
+\documentclass[10pt, dvipdfmx]{article}
 \usepackage[utf8]{inputenc}
 
 \usepackage{color}
@@ -228,7 +228,7 @@
 %ココカラタイトル
 {
 \ \\
-{\LARGE \ \ \ \   2022年度}\\
+{\LARGE \ \ \ \   2023年度}\\
 \ \\
 \ \\
 \ \\
@@ -849,12 +849,16 @@ $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
     次のように同値で結ぶことができる。
     \begin{align*}
         & (A,f)\\
-        \sim & (A\tensor Y, f\comp(A\tensor \Delta_Y))\\
-        \sim & (A\tensor A\tensor Y, f\comp(\Delta_A\tensor \Delta_Y))\\
-        \sim & (A\tensor Y\tensor A, f\comp(\Delta_A\tensor \Delta_Y)\comp(A\tensor\gamma_{AY}\tensor Y)\\
-        = & (A\tensor Y\tensor A, f\comp\Delta_{A\tensor Y}))\\
-        = & (A\tensor Y\tensor A, \Delta_X\comp(f\tensor f))\\
-        \sim & (X\tensor A, \Delta_X\comp(X\tensor f))\\
+        \sim \ & (A\tensor Y,\ f\comp(A\tensor \Delta_Y))  \ \ \text{(by prop \arabic{section}.2.4)}\\
+        \sim \ & (A\tensor A\tensor Y,\ f\comp(A\tensor \Delta_Y)\comp(\Delta_A\tensor YY))
+            \ \ \text{(by prop \arabic{section}.2.3 and \arabic{section}.2.7)}\\
+        = \ & (A\tensor A\tensor Y,\ f\comp(\Delta_A\tensor \Delta_Y))\\
+        \sim & (A\tensor Y\tensor A,\ f\comp(\Delta_A\tensor \Delta_Y)\comp(A\tensor\gamma_{AY}\tensor Y)
+            \ \ \text{(by prop \arabic{section}.2.3 and \arabic{section}.2.7)}\\
+        = \ & (A\tensor Y\tensor A,\ f\comp\Delta_{A\tensor Y}))\\
+        = \ & (A\tensor Y\tensor A,\ \Delta_X\comp(f\tensor f))\\
+        \sim \ & (X\tensor A,\ \Delta_X\comp(X\tensor f))
+            \ \ \text{(by prop \arabic{section}.2.3 and \arabic{section}.2.7)}\\
     \end{align*}
     これで示された。分かりやすさのために、同じ式変形の図式とstring diagramを付しておく。
     % https://q.uiver.app/?q=WzAsMixbMCwwLCJbWCJdLFsyLDAsIkFcXHRlbnNvciBZXSJdLFswLDEsImYiXV0=
