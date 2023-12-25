@@ -853,7 +853,7 @@ $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
         \sim \ & (A\tensor A\tensor Y,\ f\comp(A\tensor \Delta_Y)\comp(\Delta_A\tensor YY))
             \ \ \text{(by prop \arabic{section}.2.3 and \arabic{section}.2.7)}\\
         = \ & (A\tensor A\tensor Y,\ f\comp(\Delta_A\tensor \Delta_Y))\\
-        \sim & (A\tensor Y\tensor A,\ f\comp(\Delta_A\tensor \Delta_Y)\comp(A\tensor\gamma_{AY}\tensor Y)
+        \sim \ & (A\tensor Y\tensor A,\ f\comp(\Delta_A\tensor \Delta_Y)\comp(A\tensor\gamma_{AY}\tensor Y)
             \ \ \text{(by prop \arabic{section}.2.3 and \arabic{section}.2.7)}\\
         = \ & (A\tensor Y\tensor A,\ f\comp\Delta_{A\tensor Y}))\\
         = \ & (A\tensor Y\tensor A,\ \Delta_X\comp(f\tensor f))\\
@@ -939,7 +939,7 @@ $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
 
 
 \paragraph{Lemma \arabic{section}.3.4：\ $\Lambda(\R)$の射の合成のwell-defined性}\ \\
-$X,Y,Z\in\calLambda(\R)$とする。
+$\bar{X},\bar{Y},\bar{Z}\in\calLambda(\R)$とする。
 任意の$(A_1,f_1),(A_2,f_2)\in\calLambda(\R)(\bar{X},\bar{Y}),\ (B_1,g_1),(B_2,g_2) \in\calLambda(\R)(\bar{Y},\bar{Z})$に対し、
 $(A_1,f_1) \sim (A_2,f_2)$かつ$(B_1,g_1) \sim (B_2,g_2)$ならば、
 $(A_1,f_1)\comp(B_1,g_1) \sim (A_2,f_2)\comp(B_2,g_2)$である。
@@ -954,17 +954,30 @@ $(A_1,f_1)\comp(B_1,g_1) \sim (A_2,f_2)\comp(B_2,g_2)$である。
     このうち(2)はprop \arabic{section}.2.7そのものである。従って、(1)を示せば十分である。
 
     (1)を示す。
-    $(A_1,f_1),(A_2,f_2)\calLambda(\R)(\bar{X},\bar{Y}), (B,g)\in\calLambda(\R)(\bar{X},\bar{Y})$
+    $(A_1,f_1),(A_2,f_2)\in\calLambda(\R)(\bar{X},\bar{Y}), (B,g)\in\calLambda(\R)(\bar{Y},\bar{Z})$
     及び$k:(A_1,f_1)\to (A_2,f_2)$を任意に固定する。
-    $(A_1,f_1)\comp(B,g)$から$(A_2,f_2)\comp(B,g)$へ至る2-射のジグザグを構成する。\\
-    
+    $(A_1,f_1)\comp(B,g)\sim(A_2,f_2)\comp(B,g)$を示す。\\
+    \begin{align*}
+        & (A_1,f_1)\comp(B,g)\\
+        = \ & (A_1\tensor B, f_1\comp(A_1\tensor g)) \ \ \text{(by definition of composition)}\\
+        \sim \ & (A_1\tensor Y\tensor B, f_1\comp(A_1\tensor \Delta_Y)\comp(A_1 Y\tensor g))
+            \ \ \text{(by prop \arabic{section}.3.3 and lem \arabic{section}.2.7)}\\
+        \sim \ & (A_2\tensor Y\tensor B, f_1\comp(A_1\tensor \Delta_Y)\comp(A_1 Y\tensor g))\comp(k\tensor BZ)
+            \ \ \text{(by prop \arabic{section}.2.3 and lem \arabic{section}.2.7)}\\
+        = \ & (A_2\tensor Y\tensor B, f_1\comp(A_1\tensor \Delta_Y)\comp(k\tensor Y))\comp(A_2 Y\tensor g)\\
+        = \ & (A_2\tensor Y\tensor B, f_2\comp(A_2\tensor \Delta_Y))\comp(A_2 Y\tensor g)
+            \ \ \text{(because $k$ is a 2-morphism from $(A_1,f_1)$ to $(A_2,f_2)$)}\\
+        \sim \ & (A_2\tensor B, f_2\comp(A_2 Y\tensor g))
+            \ \ \text{(by prop \arabic{section}.3.3 and lem \arabic{section}.2.7)}
+    \end{align*}
+    以上で示された。
     
     % https://q.uiver.app/?q=WzAsMyxbMCwwLCJbWCJdLFsxLDAsIkFfMVxcdGVuc29yIFkiXSxbMywwLCJBXzFcXHRlbnNvciBCXFx0ZW5zb3IgWl0iXSxbMCwxLCJmXzEiXSxbMSwyLCJBXzFcXHRlbnNvciBnIl1d
     \[\begin{tikzcd}
     	{(X} & {A_1\tensor Y} && {A_1\tensor B\tensor Z)}
     	\arrow["{f_1}", from=1-1, to=1-2]
     	\arrow["{A_1\tensor g}", from=1-2, to=1-4]
-    \end{tikzcd}\]
+    \end{tikzcd}\])
     
     % https://q.uiver.app/?q=WzAsNSxbMCwxLCJcXHNpbVxcIFtYIl0sWzEsMSwiQV8xXFx0ZW5zb3IgWSJdLFszLDEsIkFfMVxcdGVuc29yIFlcXHRlbnNvciBZIl0sWzUsMSwiQV8xXFx0ZW5zb3IgWVxcdGVuc29yIEJcXHRlbnNvciBaXSJdLFsxLDAsIlxcdGV4dHsoYnkgcHJvcCA0LjIuNywgbGVtIDQuMy4zKX0iXSxbMCwxLCJmXzEiXSxbMSwyLCJBXzFcXHRlbnNvclxcRGVsdGFfWSJdLFsyLDMsIkFfMVlcXHRlbnNvciBnIl1d
     \[\begin{tikzcd}
