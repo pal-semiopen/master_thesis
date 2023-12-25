@@ -292,24 +292,40 @@ morphism $[A,f], [B,g]$ of $\Lambda(\R)$\\
 
 
 \topic{対称モノイド圏論は、ホモトピー論を出自としてMacLaneにより創始された(\cite{maclane1963natural})。}
-モノイド圏論では、圏に函手的なモノイド演算が乗った構造であるモノイド圏を扱う。対称モノイド圏論は、その中でも特にモノイド演算が(同型を除いて)可換な対称モノイド圏を扱う分野である。
+モノイド圏論では、圏に函手的なモノイド演算が乗った構造であるモノイド圏を扱う。
+対称モノイド圏論は、その中でも特にモノイド演算が(同型を除いて)可換な対称モノイド圏を扱う分野である。
 これは直積でない「積」と呼ばれるもの、例えばテンソル積やスマッシュ積などの一般化である。
 
 \topic{対称モノイド圏論は、圏論の中では比較的弱い構造を扱う理論である。}
-他の圏論の多くの分野、例えばトポス理論やアーベル圏論では、全ての有限直積があること、即ちデカルト圏であることは大前提として、その上にさらに構造を加えていく。対照的に、対称モノイド圏論においてはデカルト圏が最も強い構造である：対称モノイド圏に構造を付加してデカルト圏より強い構造になるならば、それは単にデカルト圏の理論で扱えばよい。即ち、対称モノイド圏論とは「対称モノイド圏とデカルト圏の中間構造たちを調べる分野」であると言うことができる。
+他の圏論の多くの分野、例えばトポス理論やアーベル圏論では、全ての有限直積があること、即ちデカルト圏であることは大前提として、その上にさらに構造を加えていく。
+対照的に、対称モノイド圏論においてはデカルト圏が最も強い構造である：
+    対称モノイド圏に構造を付加してデカルト圏より強い構造になるならば、それは単にデカルト圏の理論で扱えばよい。
+即ち、対称モノイド圏論とは「対称モノイド圏とデカルト圏の中間構造たちを調べる分野」であると言うことができる。
+
+\topic{対称モノイド圏とデカルト圏の中間構造として、関連圏(relevant category)・アフィン圏(affine category)(\cite{JACOBS199473}, \cite{Pet02})が挙げられる。}
+そもそもデカルト圏とはどのような構造であったかというと、
+    対称モノイド圏$\C$と自然同型$\phi_{X,Y}:\C(-,X)\times\C(-,Y)\simeq\C(-,X\tensor Y)$であって
+    モノイド構造と整合的なものの組$(\C,\phi)$である。
+この普遍性を用いた定義は、実は次のような定義と等価であることが知られている(\cite{Fox76})。
+すなわち、デカルト圏とは対称モノイド圏$\C$と２つの自然変換「複製」$\Delta_X:X\to X\tensor X$と「削除」$!_X:X\to I$
+    の組$(\C,\Delta,!)$であって整合性の条件を満たすものに他ならない。
+ここで$I$は$\C$の単位対象である。
+この定義を見ると、デカルト圏とは対称モノイド圏に「複製」射と「削除」射を付加した構造と見なせる。
+すると素朴に考えられるのが、対称モノイド圏に「複製」のみ、あるいは「削除」のみを付加した構造である。
+これがそれぞれ関連圏・アフィン圏である。
+関連圏には例えば集合と単射の圏 $\Set^{\mono}$ や点付き集合の圏$\Set_*$などがある。
+アフィン圏には例えば凸空間の圏 $\mathrm{Conv}$(\cite{JacobsConvex}) や混合量子状態の圏$\mathrm{CPTP}$(\cite{HS19})などがある。
 
 
 
-
-\topic{対称モノイド圏論の視点で見れば、デカルト圏とは次のような構造だとみなせる：}デカルト圏とは、対称モノイド圏 $\C$と自然同型$\phi_{X,Y}:\C(-,X)\times\C(-,Y)\simeq\C(-,X\tensor Y)$の組$(\C,\phi)$のことである。
-\topic{この同型を弱めて、対称モノイド圏$\C$によい自然変換$\C(-,X)\times\C(-,Y)\to\C(-,X\tensor Y)$を付加した構造や、対称モノイド圏$\C$によい自然変換$\C(-,X)\times\C(-,Y)\gets\C(-,X\tensor Y)$を付加した構造を考える。}これらはそれぞれ\topic{関連圏(relevance category)} / \topic{アフィン圏(affine category)}と呼ばれるものと一致し、対称モノイド圏とデカルト圏の中間構造として知られている(\cite{Pet02})。
-関連圏 / アフィン圏 は、対称モノイド圏にそれぞれ「対角射」「終対象への標準射」を付加したものとして定義される。即ち、関連圏とは対称モノイド圏$\C$とよいモノイド自然変換$\Delta : Id_{\C}\to -\tensor -$の組であり、アフィン圏は対称モノイド圏$\C$であって単位対象が終対象であるようなものである（ただし、ここで函手$-\tensor-$は各対象$X$に$X\tensor X$を対応させる自己函手のことである）。
-関連圏には例えば集合と単射の圏 $\Set^{\mono}$ などがある。アフィン圏には例えば凸空間の圏 $\mathrm{Conv}$ などがある。
-
-
-
-\topic{\RC や\AC は、対称モノイド圏と\CC のよい中間構造と思える。}具体的には、対称モノイド圏に「対角射」を追加すれば\RC に、「終対象」を追加すれば\AC になるし、\CC は\RC に「終対象」を追加したものと見なせ、また\AC に「対角射」を追加したものとも見なせる。\topic{ゆえに、これら中間構造を調べることは対称モノイド圏と\CC の関係性を調べるのに有用である。}例えば、与えられた対称モノイド圏 $\M$から普遍的な\CC $CC[\M]$を構成する問題(直積を付加する問題)は、与えられた対称モノイド圏 $\M$から普遍的な\RC $RC[\M]$を構成する問題(対角射を付加する問題)と与えられた\RC $\R$から普遍的な\CC $CC[\R]$を構成する問題(終対象を付加する問題)とに分割できる。
-実際\AC については、アフィン論理への関心も相まって多くの研究がある。しかし、\RC についてはまだ調べられてこなかった。
+%\topic{\RC や\AC は、対称モノイド圏と\CC のよい中間構造と思える。}
+%具体的には、対称モノイド圏に「複製」を追加すれば\RC に、「削除」を追加すれば\AC になるし、
+%\CC は\RC に「削除」を追加したものと見なせ、また\AC に「複製」を追加したものとも見なせる。
+\topic{これら中間構造を調べることは対称モノイド圏と\CC の関係性を調べるのに有用である。}
+例えば、与えられた対称モノイド圏 $\M$から普遍的な\CC $CC[\M]$を構成する問題(直積を付加する問題)は、
+与えられた対称モノイド圏 $\M$から普遍的な\RC $RC[\M]$を構成する問題(複製を付加する問題)と与えられた\RC $\R$から普遍的な\CC $CC[\R]$を構成する問題(削除を付加する問題)とに分割できる。
+実際\AC については、アフィン論理への関心も相まって多くの研究がある(\cite{JacobsConvex}, \cite{HS19})。
+しかし、\RC についてはまだ調べられてこなかった。
 
 
 % https://q.uiver.app/?q=WzAsNCxbMywwLCJcXHRleHR7XFxTTUMgfSJdLFszLDIsIlxcdGV4dHtcXFJDIH0iXSxbMCwyLCJcXHRleHR7XFxDQ30iXSxbMCwwLCJcXHRleHR7XFxBQyB9Il0sWzEsMCwiXFx0ZXh0e+WvvuinkuWwhOOCkuW/mOWNtH0iLDJdLFsyLDEsIlxcdGV4dHvntYLlr77osaHjgpLlv5jljbR9IiwyXSxbMiwzLCJcXHRleHR75a++6KeS5bCE44KS5b+Y5Y20fSJdLFszLDAsIlxcdGV4dHvntYLlr77osaHjgpLlv5jljbR9IiwyXSxbMSwyLCJcXExhbWJkYSIsMix7ImN1cnZlIjozfV0sWzAsMywiTCIsMix7ImN1cnZlIjozfV0sWzgsNSwiIiwxLHsibGV2ZWwiOjEsInN0eWxlIjp7Im5hbWUiOiJhZGp1bmN0aW9uIn19XSxbOSw3LCIiLDIseyJsZXZlbCI6MSwic3R5bGUiOnsibmFtZSI6ImFkanVuY3Rpb24ifX1dXQ==
@@ -317,31 +333,39 @@ morphism $[A,f], [B,g]$ of $\Lambda(\R)$\\
 	{\text{\AC }} &&& {\text{\SMC }} \\
 	\\
 	{\text{\CC}} &&& {\text{\RC }}\\
-	\arrow["{\text{対角射を忘却}}"', from=3-4, to=1-4]
-	\arrow[""{name=0, anchor=center, inner sep=0}, "{\text{終対象を忘却}}"', from=3-1, to=3-4]
-	\arrow["{\text{対角射を忘却}}", from=3-1, to=1-1]
-	\arrow[""{name=1, anchor=center, inner sep=0}, "{\text{終対象を忘却}}"', from=1-1, to=1-4]
+	\arrow["{\text{複製を忘却}}"', from=3-4, to=1-4]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{\text{削除を忘却}}"', from=3-1, to=3-4]
+	\arrow["{\text{複製を忘却}}", from=3-1, to=1-1]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{\text{削除を忘却}}"', from=1-1, to=1-4]
 	\arrow[""{name=2, anchor=center, inner sep=0}, "\Lambda"', curve={height=18pt}, from=3-4, to=3-1]
 	\arrow[""{name=3, anchor=center, inner sep=0}, "L"', curve={height=18pt}, from=1-4, to=1-1]
 	\arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=2, to=0]
 	\arrow["\dashv"{anchor=center, rotate=-92}, draw=none, from=3, to=1]
 \end{tikzcd}\]
 
-\topic{本論文では、\RC について調べる足掛かりとして、\CC との関係を調べることを試みた。}具体的には、\RC がしばしば\CC の\subRC として構成されることに着目し、逆に与えられた\RC がどのような\CC のよい\subRC となるのかを調べた。結果、次の事実を得た：任意の\RC に対し、それをよい\subRC に持つ\CC は存在すれば一意である。さらに全ての\RC に対して、そのような\CC が存在するかどうか、また存在すればそれがどのような\CC であるかを計算する方法を与えた。
+\topic{本論文では、\RC について調べる足掛かりとして、\CC との関係を調べることを試みた。}
+具体的には、\RC がしばしば\CC の\subRC として構成されることに着目し、逆に与えられた\RC がどのような\CC のよい\subRC となるのかを調べた。
+結果、次の事実を得た：任意の\RC に対し、それをよい\subRC に持つ\CC は存在すれば一意である。
+さらに全ての\RC に対して、そのような\CC が存在するかどうか、また存在すればそれがどのような\CC であるかを計算する方法を与えた。
 
 
-\topic{本論文で主に扱うのは、与えられた\RC からそれをよい\subRC に持ちうる\CC を構成する普遍的な操作$\Lambda$である。}操作$\Lambda$は、あらゆる\RC $\R$に対して\CC $\Lambda(\R)$ 及び函手$\Eta_{\R}:\R \to \Lambda(\R)$の組$(\Lambda(\R), \Eta_{\R})$を１つずつ返すものである。この$\Eta_{\R}$は必ずしも単射的(即ち忠実かつ対象上本質的に単射)であるとは限らないが、もしも$\R$が何か\CC $\C$のよい\subRC として構成されているときには、必ず$\Lambda(\R)\simeq \C$である。特に、$\R$をよい\subRC に持つ\CC $\C$は同型を除いて一意的であることが従う。
+\topic{本論文で主に扱うのは、与えられた\RC からそれをよい\subRC に持ちうる\CC を構成する普遍的な操作$\Lambda$である。}
+操作$\Lambda$は、あらゆる\RC $\R$に対して\CC $\Lambda(\R)$ 及び函手$\Eta_{\R}:\R \to \Lambda(\R)$の組$(\Lambda(\R), \Eta_{\R})$を１つずつ返すものである。この$\Eta_{\R}$は必ずしも単射的(即ち忠実かつ対象上本質的に単射)であるとは限らないが、もしも$\R$が何か\CC $\C$のよい\subRC として構成されているときには、必ず$\Lambda(\R)\simeq \C$である。特に、$\R$をよい\subRC に持つ\CC $\C$は同型を除いて一意的であることが従う。
 \topic{さらにこの操作$\Lambda$は、\RC から\CC を構成する方法として普遍的である。}全ての\CC は自然な方法で\RC と見なせるが、この忘却操作に対して$\Lambda$は左随伴である。%また、この随伴はただの随伴ではなくreflectionである。\CC に対しては$\Lambda$を行っても不変であり、即ちこの忘却操作と$\Lambda$を連続して適用しても\CC たちの成す2-圏上の恒等函手に同型である。つまり、\CC の2-圏は\RC の2-圏のreflective subcategoryである。
 
 \topic{$\Lambda\-$constructionの着想の説明をする。}
-\RC から\CC を作る方法は「終対象を追加する」ものであるはずだから、\SMC から\AC を作る方法に一致するか少なくとも類似するはずである。後者は実際に知られていて、
+\RC から\CC を作る方法は「削除を追加する」ものであるはずだから、\SMC から\AC を作る方法に一致するか少なくとも類似するはずである。後者は実際に知られていて、
 \topic{対称モノイド圏から、\AC を作る(左)普遍的な構成が
-\cite{HT12}の系として得られている(\cite{HT12}, \cite{huot2019universal})。}
-この普遍的な構成、L-construction(named by \cite{huot2019universal})は、与えられた対称モノイド圏の射を余分に増やしたのち適切な同値関係で割る構成である。
+\cite{HT12}の系として得られている(\cite{HT12}, \cite{HS19})。}
+この普遍的な構成、L-construction(named by \cite{HS19})は、与えられた対称モノイド圏の射を余分に増やしたのち適切な同値関係で割る構成である。
 特にモノイド単位対象への射を全て同一視するような同値関係で割るので、モノイド単位対象が終対象になる。標語的に言えば、L-constructionは「対称モノイド圏の単位対象を終対象にする構成」である。
-%\topic{relevance categoryに施せば「対角射と終対象を備えた圏」即ちcartesian categoryになると期待される。}
-\topic{L-constructionは\RC に施しても一般には\CC にはならない}。例えば$\Set^{\mono}$は素朴な方法で\RC の構造を持ち、$\Set^{\mono}$にL-constructionを施して得られる圏$L(\Set^{\mono})$は$\Set$と非同型であるが、$\Lambda(\Set^{\mono})\simeq\Set$である。$L\-$construction及び$\Lambda\-$constructionの普遍性を踏まえれば、$L(\Set^{\mono})$は\CC ではないことがわかる。
-$L(\Set^{\mono})$については\cite{HT12}のThm4.4に類似物の言及があり、Tennent category(\cite{tennent1990semantical})との関連が示唆されている。
+%\topic{relevance categoryに施せば「複製と終対象を備えた圏」即ちcartesian categoryになると期待される。}
+\topic{L-constructionは\RC に施しても一般には\CC にはならない}。
+例えば$\Set^{\mono}$は素朴な方法で\RC の構造を持ち
+、$\Set^{\mono}$にL-constructionを施して得られる圏$L(\Set^{\mono})$は$\Set$と非同型であるが、
+$\Lambda(\Set^{\mono})\simeq\Set$である。
+$L\-$construction及び$\Lambda\-$constructionの普遍性を踏まえれば、$L(\Set^{\mono})$は\CC ではないことがわかる。
+$L(\Set^{\mono})$はTennent category(\cite{tennent1990semantical})と等しい(\cite{HT12},Thm4.4)ことが分かっている。
 
 構成Lは\SMC のモノイド単位対象を終対象にするものであったが、上に述べたようにテンソル積を直積にするものではなかった。これに対して 構成$\Lambda$は、\RC を受け取り、そのモノイド単位対象を終対象に、テンソル積を直積にするものである。
 
@@ -398,15 +422,15 @@ $f\comp g := g\o f$である。すなわち、この記法では射の合成を�
 
 
 \section{\RC}
-introductionで述べたように、\RC とは対称モノイド圏$\R$に「対角射」$\set{\Delta_X:X\to X\tensor X}_{X\in\R}$を付加した構造である。
+introductionで述べたように、\RC とは対称モノイド圏$\R$に「複製」$\set{\Delta_X:X\to X\tensor X}_{X\in\R}$を付加した構造である。
 \RC は対応$\R(Z,X)\times\R(Z,Y)\to\R(Z,X\tensor Y);(f,g)\mapsto \Delta_Z\comp(f\tensor g)$を伴うから、
 \RC は対称モノイド圏$\R$に自然変換$\set{\R(-,X)\times\R(-,Y)\to\R(-,X\tensor Y)}_{X,Y\in\R}$を付加した構造を持つ。
 逆に、よい自然変換$\set{\phi_{X,Y}:\R(-,X)\times\R(-,Y)\to\R(-,X\tensor Y)}_{X,Y\in\R}$があれば
-対角射$\Delta_X:=\phi_{X,X,X}(id_X,id_X):X\to X\tensor X$が得られるので、
+複製$\Delta_X:=\phi_{X,X,X}(id_X,id_X):X\to X\tensor X$が得られるので、
 \RC は対称モノイド圏$\R$に自然変換$\set{\R(-,X)\times\R(-,Y)\to\R(-,X\tensor Y)}_{X,Y\in\R}$を付加した構造に他ならないと言える。
 \CC は対称モノイド圏$\C$によい自然同型$\set{\C(-,X)\times\C(-,Y)\simeq\C(-,X\tensor Y)}_{X,Y\in\C}$を付加した構造であったから、
 \RC はlax-\CC とも呼ぶべきものである。
-\RC は{\cite{Pet02}}でsubstructural categoriesの一つとして定義されたのが初出と思われる。
+\RC は{\cite{JACOBS199473}}でmonoidal structure with diagonalsとして定義されたのが初出と思われる。
 
 %\subsection{\RC の定義}
 \paragraph{Definition \arabic{section}.1：\RC}\ \\
@@ -460,7 +484,7 @@ $\Delta$がモノイド自然変換で結合的かつ可換であるようなも
 	\arrow["{id_{X\tensor X}}", from=1-3, to=3-3]
 \end{tikzcd}\]
 
-関連圏を定義したので関連函手を定義する。関連函手は関連圏の間の強対称モノイド函手で対角射を保つものである。
+関連圏を定義したので関連函手を定義する。関連函手は関連圏の間の強対称モノイド函手で複製を保つものである。
 
 \paragraph{Definition \arabic{section}.2：\Rf}\ \\
 $\R_1,\R_2$を\RC とする。
@@ -483,7 +507,7 @@ $\R_1,\R_2$を\RC とする。
 集合と単射の圏$\Set^{\mono}$は素朴な方法で\RC とみなせるのであった。
 この事実は次の２つから従うことだと理解できる。
 まず、全ての\CC は素朴な方法で\RC とみなせる。
-また、\CC のモノ射は直積で閉じていて対角射はモノ射なので、モノ射の全体は「\subRC 」 になる。
+また、\CC のモノ射は直積で閉じていて複製はモノ射なので、モノ射の全体は「\subRC 」 になる。
 
 \paragraph{Example \arabic{section}.3：\CC}\ \\
 全ての\CC は素朴な方法で\RC とみなせる。特に、$\Set$は\RC である。%また全てのbounded semi-lattice も\RC である。
@@ -715,7 +739,7 @@ $(B,g)$は$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射である。\\
 
 
 
-\paragraph{Proposition \arabic{section}.\arabic{subsection}.4：\ 対角射は 2-射である }\ \\
+\paragraph{Proposition \arabic{section}.\arabic{subsection}.4：\ 複製は 2-射である }\ \\
 $X,Y\in\R$とし、
 $(A,f)$を$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射とする。
 このとき、\\
@@ -1352,7 +1376,7 @@ $F = \Eta_{\R}\comp \bar{F}$
         =& \bar{F}(\Eta_{\R}(f))\\
         =& \bar{F}([1,f'])\\
         =& F(f')\comp\mu_{I,Y}^{-1}\comp\pi_{F(I),F(Y)}\\
-        =& F(f')\comp\mu_{I,Y}^{-1}\comp(\!\times F(Y))\comp\rho_{F(Y)}\\
+        =& F(f')\comp\mu_{I,Y}^{-1}\comp(!_{F(I)}\times F(Y))\comp\rho_{F(Y)}\\
         =& F(f')\comp\mu_{I,Y}^{-1}\comp(\epsilon\times F(Y))^{-1}\comp\rho_{F(Y)}\\
         =& F(f')\comp F(\rho_Y)\comp\rho_{F(Y)}^{-1}\comp\rho_{F(Y)}\\
         =& F(f)\comp\rho_{F(Y)}^{-1}\comp\rho_{F(Y)}\\
@@ -1480,6 +1504,9 @@ $\C$を\CC とする。\\
 
 \section{関連研究と今後の課題}
 
+・本論文では、2-圏論的議論を避けるためにstrictな議論を用いた。
+    しかし、本論文の主張は2-圏的なものである。
+    本論文の主張を2-圏論的に書き直すことは今後の課題である。
 
 ・関連圏の「複製」構造は、前述のとおり"lax-universality"とでも呼ぶべきものである。
     この"lax-universality"の概念は比較的容易に一般化できる。

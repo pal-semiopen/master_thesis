@@ -12,7 +12,7 @@
 \contentsline {paragraph}{Definition 3.2.1：$\mathcal {B}(\mathcal {R})$の1-射}{9}{section*.7}%
 \contentsline {paragraph}{Definition 3.2.2： $\mathcal {B}(\mathcal {R})$の2-射}{9}{section*.8}%
 \contentsline {paragraph}{Proposition 3.2.3： 自明な 2-射 }{10}{section*.9}%
-\contentsline {paragraph}{Proposition 3.2.4：\ 対角射は 2-射である }{10}{section*.10}%
+\contentsline {paragraph}{Proposition 3.2.4：\ 複製は 2-射である }{10}{section*.10}%
 \contentsline {paragraph}{Definition 3.2.5: local category of $\mathcal {B}(\mathcal {R})$}{11}{section*.11}%
 \contentsline {paragraph}{Definition 3.2.6: 1-射の合成}{11}{section*.12}%
 \contentsline {paragraph}{Proposition 3.2.7: 2-射の左whiskering}{11}{section*.13}%

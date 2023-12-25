@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  25 DEC 2023 18:57
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  25 DEC 2023 23:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -848,24 +848,27 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
 \tf@toc=\write6
 \openout6 = `master_thesis.toc'.
 
- [2] Excluding 'comment' comment. [3] [4]
+ [2] Excluding 'comment' comment.
+
+LaTeX Warning: Citation `Fox76' on page 3 undefined on input line 309.
+
+[3] [4]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 354.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 378.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 354.
- [5] [6] [7]
-Excluding 'comment' comment. [8] Excluding 'comment' comment. [9]
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 378.
+ [5] [6] [7] Excluding 'comment' comment. [8]
+Excluding 'comment' comment. [9]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 700.
+(Font)              No change on input line 724.
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 727.
+(Font)              No change on input line 751.
  [10]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 774.
- [11]
-[12]
+(Font)              No change on input line 798.
+ [11] [12]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 849.
+(Font)              No change on input line 873.
  [13]
 File: graphics/02_f.png Graphic file (type bmp)
 <graphics/02_f.png>
@@ -888,45 +891,45 @@ Overfull \vbox (106.03pt too high) has occurred while \output is active []
 
 [15]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 948.
+(Font)              No change on input line 972.
 
-Overfull \hbox (18.3844pt too wide) detected at line 972
+Overfull \hbox (18.3844pt too wide) detected at line 996
 []
  []
 
 
-Overfull \hbox (2.79457pt too wide) detected at line 989
+Overfull \hbox (2.79457pt too wide) detected at line 1013
 []
  []
 
 [16]
-Overfull \hbox (45.79054pt too wide) detected at line 1030
+Overfull \hbox (45.79054pt too wide) detected at line 1054
 []
  []
 
 
-Overfull \hbox (25.27919pt too wide) detected at line 1037
+Overfull \hbox (25.27919pt too wide) detected at line 1061
 []
  []
 
 [17]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1092.
+(Font)              No change on input line 1116.
  [18]
-Overfull \hbox (27.91685pt too wide) detected at line 1188
+Overfull \hbox (27.91685pt too wide) detected at line 1212
 []
  []
 
 [19]
-Overfull \hbox (156.603pt too wide) detected at line 1236
+Overfull \hbox (156.603pt too wide) detected at line 1260
 []
  []
 
 [20] [21]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1287.
+(Font)              No change on input line 1311.
  [22] [23]
-Overfull \hbox (73.83653pt too wide) detected at line 1398
+Overfull \hbox (73.83653pt too wide) detected at line 1422
 []
  []
 
@@ -935,31 +938,39 @@ LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 11.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 15.
+ [26]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 20.
- [26]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 24.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 28.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
-(Font)              No change on input line 32.
+(Font)              No change on input line 33.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 37.
+LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
+(Font)              No change on input line 41.
 ) [27] (./master_thesis.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `master_thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D091331BA28F0285B2C4E6007D9B5644;2560.
  ) 
 Here is how much of TeX's memory you used:
- 26291 strings out of 474925
- 513314 string characters out of 5765769
+ 26293 strings out of 474925
+ 513329 string characters out of 5765769
  1960403 words of memory out of 5000000
- 48028 multiletter control sequences out of 15000+600000
+ 48030 multiletter control sequences out of 15000+600000
  617972 words of font info for 134 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 98i,20n,107p,673b,1148s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,20n,107p,587b,1148s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master_thesis.dvi (27 pages, 329020 bytes).
+Output written on master_thesis.dvi (27 pages, 329832 bytes).

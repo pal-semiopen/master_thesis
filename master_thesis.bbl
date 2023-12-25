@@ -11,7 +11,7 @@
 Michael Barr and Charles Wells, \emph{Category theory for computing science},
   vol.~1, Prentice Hall New York, 1990.
 
-\bibitem[HS19]{huot2019universal}
+\bibitem[HS19]{HS19}
 Mathieu Huot and Sam Staton, \emph{Universal properties in quantum theory},
   arXiv preprint arXiv:1901.10117 (2019).
 
@@ -19,6 +19,15 @@ Mathieu Huot and Sam Staton, \emph{Universal properties in quantum theory},
 C.~Hermida and R.D. Tennent, \emph{Monoidal indeterminates and categories of
   possible worlds}, Theoretical Computer Science \textbf{430} (2012), 3--22,
   Mathematical Foundations of Programming Semantics (MFPS XXV).
+
+\bibitem[Jac94]{JACOBS199473}
+Bart Jacobs, \emph{Semantics of weakening and contraction}, Annals of Pure and
+  Applied Logic \textbf{69} (1994), no.~1, 73--106.
+
+\bibitem[Jac10]{JacobsConvex}
+Bart Jacobs, \emph{Convexity, duality and effects}, Theoretical Computer
+  Science (Berlin, Heidelberg) (Cristian~S. Calude and Vladimiro Sassone,
+  eds.), Springer Berlin Heidelberg, 2010, pp.~1--19.
 
 \bibitem[Mac63]{maclane1963natural}
 Saunders MacLane, \emph{Natural associativity and commutativity}, Rice
