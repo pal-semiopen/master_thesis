@@ -812,7 +812,7 @@ $\Lambda(\R)(\bar{X},\bar{Y}):=\calLambda(\R)(\bar{X},\bar{Y})/\sim$とする。
 これからこの商集合の上に合成が誘導されることを示す(lem\arabic{section}.\arabic{subsection}.4)。
 そのために、先に必要な技術的な補題(lem\arabic{section}.\arabic{subsection}.3)を示しておく。
 
-lemma \arabic{section}.\arabic{subsection}.3は次のような意味を持つ補題と解釈できる。
+lemma \arabic{section}.\arabic{subsection}.3に先んじて、その意味を説明しておく。
 前述のとおり、$\Lambda[\Set^{\mono}]$の射は$\Set^{\mono}$の射をグラフとするようなものである。
 一方で、$\Set^{\mono}$の射はそれ自体素朴に$\Lambda[\Set^{\mono}]$の射だとみなせるべきである。
 即ち、単射写像$f:X\to Y$に対して、$f$自身を$\Lambda[\Set^{\mono}]$に埋め込んだ射$[1,f]$と$f$のグラフ$[X,(id_X,f)]$は、
@@ -840,16 +840,19 @@ $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
     次のように同値で結ぶことができる。
     \begin{align*}
         & (A,f)\\
-        \sim \ & (A\tensor Y,\ f\comp(A\tensor \Delta_Y))  \ \ \text{(by prop \arabic{section}.2.4)}\\
+        \sim \ & (A\tensor Y,\ f\comp(A\tensor \Delta_Y))  \ \ \text{(prop \arabic{section}.2.4)より}\\
         \sim \ & (A\tensor A\tensor Y,\ f\comp(A\tensor \Delta_Y)\comp(\Delta_A\tensor YY))
-            \ \ \text{(by prop \arabic{section}.2.3 and \arabic{section}.2.7)}\\
-        = \ & (A\tensor A\tensor Y,\ f\comp(\Delta_A\tensor \Delta_Y))\\
+            \ \ \text{(prop \arabic{section}.2.3 and \arabic{section}.2.7より)}\\
+        = \ & (A\tensor A\tensor Y,\ f\comp(\Delta_A\tensor \Delta_Y))
+        \ \ \text{($\tensor$の函手性より)}\\
         \sim \ & (A\tensor Y\tensor A,\ f\comp(\Delta_A\tensor \Delta_Y)\comp(A\tensor\gamma_{AY}\tensor Y)
-            \ \ \text{(by prop \arabic{section}.2.3 and \arabic{section}.2.7)}\\
-        = \ & (A\tensor Y\tensor A,\ f\comp\Delta_{A\tensor Y}))\\
-        = \ & (A\tensor Y\tensor A,\ \Delta_X\comp(f\tensor f))\\
+            \ \ \text{(prop \arabic{section}.2.3 and \arabic{section}.2.7より)}\\
+        = \ & (A\tensor Y\tensor A,\ f\comp\Delta_{A\tensor Y}))
+        \ \ \text{($\because \Delta$はモノイド自然変換であった)}\\
+        = \ & (A\tensor Y\tensor A,\ \Delta_X\comp(f\tensor f))
+        \ \ \text{($\Delta$の自然性より)}\\
         \sim \ & (X\tensor A,\ \Delta_X\comp(X\tensor f))
-            \ \ \text{(by prop \arabic{section}.2.3 and \arabic{section}.2.7)}\\
+            \ \ \text{(prop \arabic{section}.2.3 and \arabic{section}.2.7より)}\\
     \end{align*}
     これで示された。分かりやすさのために、同じ式変形の図式とstring diagramを付しておく。
     % https://q.uiver.app/?q=WzAsMixbMCwwLCJbWCJdLFsyLDAsIkFcXHRlbnNvciBZXSJdLFswLDEsImYiXV0=
