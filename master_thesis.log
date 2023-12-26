@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  26 DEC 2023 21:22
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  26 DEC 2023 23:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -742,39 +742,54 @@ Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 36.
 Package hyperref Info: Option `colorlinks' set `true' on input line 36.
 \c@mynum=\count315
 
+(c:/texlive/2023/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2023/10/27 v2.16 Sectioning titles
+\ttl@box=\box87
+\beforetitleunit=\skip57
+\aftertitleunit=\skip58
+\ttl@plus=\dimen314
+\ttl@minus=\dimen315
+\ttl@toksa=\toks50
+\titlewidth=\dimen316
+\titlewidthlast=\dimen317
+\titlewidthfirst=\dimen318
+)
+\c@definition=\count316
+\c@definitionsub=\count317
+
 (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
 File: l3backend-dvipdfmx.def 2023-11-09 L3 backend support: dvipdfmx
-\g__graphics_track_int=\count316
-\l__pdf_internal_box=\box87
-\g__pdf_backend_object_int=\count317
-\g__pdf_backend_annotation_int=\count318
-\g__pdf_backend_link_int=\count319
+\g__graphics_track_int=\count318
+\l__pdf_internal_box=\box88
+\g__pdf_backend_object_int=\count319
+\g__pdf_backend_annotation_int=\count320
+\g__pdf_backend_link_int=\count321
 )
 (./master_thesis.aux)
 \openout1 = `master_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 226.
-LaTeX Font Info:    ... okay on input line 226.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
 
 *geometry* detected driver: dvipdfm
 *geometry* verbose mode - [ preamble ] result:
@@ -809,24 +824,24 @@ LaTeX Font Info:    ... okay on input line 226.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 226.
+Package hyperref Info: Link coloring ON on input line 256.
 (./master_thesis.out) (./master_thesis.out)
 \@outlinefile=\write5
 \openout5 = `master_thesis.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 240
+LaTeX Font Info:    Trying to load font information for U+msa on input line 270
 .
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 240
+LaTeX Font Info:    Trying to load font information for U+msb on input line 270
 .
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 24
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 27
 0.
 
 (c:/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
@@ -834,42 +849,41 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
 ]
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 271.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 271.
-
-(./master_thesis.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 301.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
-)
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 301.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 301.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 301.
+
+(./master_thesis.toc)
 \tf@toc=\write6
 \openout6 = `master_thesis.toc'.
 
  [2] Excluding 'comment' comment.
 
-LaTeX Warning: Citation `Fox76' on page 3 undefined on input line 310.
+LaTeX Warning: Citation `Fox76' on page 3 undefined on input line 340.
 
 [3] [4]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 379.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 409.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 379.
- [5] [6] [7] [8] Excluding 'comment' comment. [9]
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 409.
+ [5] [6] [7] [8] [9] Excluding 'comment' comment. [10]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 688.
+(Font)              No change on input line 721.
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 715.
- [10]
+(Font)              No change on input line 748.
+ [11]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 765.
- [11] [12]
-LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 840.
-
+(Font)              No change on input line 798.
+ [12]
 [13]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 873.
+ [14]
 File: graphics/02_f.png Graphic file (type bmp)
 <graphics/02_f.png>
 File: graphics/03_f_comp_a_tens_delta.png Graphic file (type bmp)
@@ -885,60 +899,60 @@ File: graphics/07_delta_comp_f_tens_f.png Graphic file (type bmp)
 <graphics/07_delta_comp_f_tens_f.png>
 File: graphics/08_delta_comp_x_tens_f.png Graphic file (type bmp)
 <graphics/08_delta_comp_x_tens_f.png>
- [14]
+ [15]
 Overfull \vbox (106.03pt too high) has occurred while \output is active []
 
 
-[15]
-LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 942.
-
-Overfull \hbox (18.3844pt too wide) detected at line 966
-[]
- []
-
-
-Overfull \hbox (2.79457pt too wide) detected at line 983
-[]
- []
-
 [16]
-Overfull \hbox (45.79054pt too wide) detected at line 1024
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 975.
+
+Overfull \hbox (18.3844pt too wide) detected at line 999
 []
  []
 
 
-Overfull \hbox (25.27919pt too wide) detected at line 1031
+Overfull \hbox (2.79457pt too wide) detected at line 1016
 []
  []
 
 [17]
+Overfull \hbox (45.79054pt too wide) detected at line 1057
+[]
+ []
+
+
+Overfull \hbox (25.27919pt too wide) detected at line 1064
+[]
+ []
+
+[18]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1086.
- [18]
-Overfull \hbox (27.91685pt too wide) detected at line 1182
+(Font)              No change on input line 1119.
+ [19]
+Overfull \hbox (27.91685pt too wide) detected at line 1215
 []
  []
 
-[19]
-Overfull \hbox (156.603pt too wide) detected at line 1230
+[20]
+Overfull \hbox (156.603pt too wide) detected at line 1263
 []
  []
 
-[20] [21]
+[21] [22]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1281.
- [22] [23]
-Overfull \hbox (73.83653pt too wide) detected at line 1392
+(Font)              No change on input line 1314.
+ [23] [24]
+Overfull \hbox (73.83653pt too wide) detected at line 1425
 []
  []
 
-[24] [25] (./master_thesis.bbl
+[25] [26] (./master_thesis.bbl
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 11.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 15.
- [26]
+ [27]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 20.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
@@ -951,7 +965,7 @@ LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 37.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 41.
-) [27] (./master_thesis.aux)
+) [28] (./master_thesis.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-11-01>
@@ -962,15 +976,15 @@ L3 programming layer <2023-11-09>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `master_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 77A112A3EE342F6F596DA82B218F56C2;2369.
+(rerunfilecheck)             Checksum: 28B08CE3270F49750D5EA9858BB90955;2161.
  ) 
 Here is how much of TeX's memory you used:
- 26293 strings out of 474925
- 513329 string characters out of 5765769
+ 26647 strings out of 474925
+ 518398 string characters out of 5765769
  1953403 words of memory out of 5000000
- 48030 multiletter control sequences out of 15000+600000
- 617972 words of font info for 134 fonts, out of 8000000 for 9000
+ 48382 multiletter control sequences out of 15000+600000
+ 615977 words of font info for 130 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 98i,20n,107p,581b,1148s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,20n,107p,581b,1151s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master_thesis.dvi (27 pages, 329980 bytes).
+Output written on master_thesis.dvi (28 pages, 329388 bytes).

@@ -187,7 +187,12 @@
 %\setcounter{tocdepth}{4}
 
 
-\renewcommand{\thesection}{\S \ \arabic{section}}
+%\renewcommand{\thesection}{\S \ \arabic{section}}　　外法だったのでクビ
+
+%thesectionいじりの代わりに\sectionをいじるパッケージを利用
+\usepackage{titlesec}
+\titleformat{\section}[block]{\normalfont\bfseries\Large}{§\,\thesection.}{0.5em}{}
+\titleformat{\subsection}[block]{\normalfont\bfseries\large}{§\,\thesubsection.}{0.5em}{}
 
 
 
@@ -220,7 +225,32 @@
 %%ここまでこの論文中でのみ使うコマンド
 
 
+%ココカラamsthmの設定
 
+\newtheoremstyle{jpstyle}%   % スタイル名
+    {13pt}%                   % 上部スペース
+    {13pt}%                   % 下部スペース
+    {\normalfont}%                       % 本文フォント
+    {0pt}%                       % 1行目のインデント量
+    {\bfseries}%              % 見出しフォント
+    {\\}%                     % 見出し後の句読点
+    {\parindent}%               % 見出し後のスペース
+    {\thmname{#1}\thmnumber{#2}：\thmnote{#3}}%                      % 見出しの書式(後述)
+
+\theoremstyle{jpstyle}
+\newtheorem{definition}{定義}[section]
+\newtheorem{proposition}[definition]{命題}
+\newtheorem{theorem}[definition]{定理}
+\newtheorem{lemma}[definition]{補題}
+\newtheorem{example}[definition]{例}
+
+\newtheorem{definitionsub}{定義}[subsection]
+\newtheorem{propositionsub}[definitionsub]{命題}
+\newtheorem{theoremsub}[definitionsub]{定理}
+\newtheorem{lemmasub}[definitionsub]{補題}
+\newtheorem{examplesub}[definitionsub]{例}
+
+%ココマデamsthmの設定
 
 
 \begin{document}
@@ -441,75 +471,76 @@ Introductionで述べたように、\RC とは対称モノイド圏$\R$に「複
 本節では、\RC とその周辺概念の定義、及び基本的な例を記述する。
 
 %\subsection{\RC の定義}
-\paragraph{Definition \arabic{section}.1：\RC}\ \\
-\RC とは、
-\SMC $\underline{\R} = (\underline{\underline{\R}},\tensor, I, \alpha, \lambda, \rho, \gamma)$ と
-自然変換$\Delta_X:X\to X\tensor X$ の組$(\R, \Delta)$であって、
-$\Delta$がモノイド自然変換で結合的かつ可換であるようなものである。
-ただし、自然変換$\Delta$がモノイド自然変換で結合的かつ可換であるとは、
-以下の４つの図式を可換にすることである。
-% https://q.uiver.app/?q=WzAsNCxbMCwwLCJYXFx0ZW5zb3IgWSJdLFsyLDAsIlhcXHRlbnNvciBYIFxcdGVuc29yIFlcXHRlbnNvciBZIl0sWzAsMiwiWFxcdGVuc29yIFkiXSxbMiwyLCJYXFx0ZW5zb3IgWSBcXHRlbnNvciBYXFx0ZW5zb3IgWSJdLFswLDEsIlxcRGVsdGFfe1hcXHRlbnNvciBZfSJdLFswLDIsIj0iLDJdLFsyLDMsIlxcRGVsdGFfe1h9XFx0ZW5zb3JcXERlbHRhX3tZfSIsMl0sWzEsMywiWFxcdGVuc29yXFxnYW1tYV97WCxZfVxcdGVuc29yIFkiXV0=
-\[\begin{tikzcd}
-	{X\tensor Y} && {X\tensor X \tensor Y\tensor Y} \\
-	\\
-	{X\tensor Y} && {X\tensor Y \tensor X\tensor Y}
-	\arrow["{\Delta_{X\tensor Y}}", from=1-1, to=1-3]
-	\arrow["{=}"', from=1-1, to=3-1]
-	\arrow["{\Delta_{X}\tensor\Delta_{Y}}"', from=3-1, to=3-3]
-	\arrow["{X\tensor\gamma_{X,Y}\tensor Y}", from=1-3, to=3-3]
-\end{tikzcd}\]
-% https://q.uiver.app/?q=WzAsNCxbMCwwLCJJIl0sWzIsMCwiSVxcdGVuc29yIEkiXSxbMCwyLCJJIl0sWzIsMiwiSVxcdGVuc29yIEkiXSxbMCwxLCJcXERlbHRhX3tJfSJdLFswLDIsIj0iLDJdLFsxLDMsIj0iXSxbMywyLCJcXHJob19JICg9XFxsYW1iZGFfSSkiXV0=
-\[\begin{tikzcd}
-	I && {I\tensor I} \\
-	\\
-	I && {I\tensor I}
-	\arrow["{\Delta_{I}}", from=1-1, to=1-3]
-	\arrow["{=}"', from=1-1, to=3-1]
-	\arrow["{=}", from=1-3, to=3-3]
-	\arrow["{\rho_I (=\lambda_I)}", from=3-3, to=3-1]
-\end{tikzcd}\]
+\begin{definition}[\RC]
+    \RC とは、
+    \SMC $\underline{\R} = (\underline{\underline{\R}},\tensor, I, \alpha, \lambda, \rho, \gamma)$ と
+    自然変換$\Delta_X:X\to X\tensor X$ の組$(\R, \Delta)$であって、
+    $\Delta$がモノイド自然変換で結合的かつ可換であるようなものである。
+    ただし、自然変換$\Delta$がモノイド自然変換で結合的かつ可換であるとは、
+    以下の４つの図式を可換にすることである。
+    % https://q.uiver.app/#q=WzAsNCxbMCwwLCJYXFx0ZW5zb3IgWSJdLFsyLDAsIlhcXHRlbnNvciBZIFxcdGVuc29yIFggXFx0ZW5zb3IgWSJdLFswLDIsIlhcXHRlbnNvciBZIl0sWzIsMiwiWFxcdGVuc29yIFggXFx0ZW5zb3IgWSBcXHRlbnNvciBZIl0sWzAsMSwiXFxEZWx0YV97WFxcdGVuc29yIFl9Il0sWzAsMiwiPSIsMl0sWzIsMywiXFxEZWx0YV97WH1cXHRlbnNvclxcRGVsdGFfe1l9IiwyXSxbMSwzLCJYXFx0ZW5zb3JcXGdhbW1hX3tYLFl9XFx0ZW5zb3IgWSJdXQ==
+    \[\begin{tikzcd}
+        {X\tensor Y} && {X\tensor Y \tensor X \tensor Y} \\
+        \\
+        {X\tensor Y} && {X\tensor X \tensor Y \tensor Y}
+        \arrow["{\Delta_{X\tensor Y}}", from=1-1, to=1-3]
+        \arrow["{=}"', from=1-1, to=3-1]
+        \arrow["{\Delta_{X}\tensor\Delta_{Y}}"', from=3-1, to=3-3]
+        \arrow["{X\tensor\gamma_{X,Y}\tensor Y}", from=1-3, to=3-3]
+    \end{tikzcd}\]
+    % https://q.uiver.app/?q=WzAsNCxbMCwwLCJJIl0sWzIsMCwiSVxcdGVuc29yIEkiXSxbMCwyLCJJIl0sWzIsMiwiSVxcdGVuc29yIEkiXSxbMCwxLCJcXERlbHRhX3tJfSJdLFswLDIsIj0iLDJdLFsxLDMsIj0iXSxbMywyLCJcXHJob19JICg9XFxsYW1iZGFfSSkiXV0=
+    \[\begin{tikzcd}
+        I && {I\tensor I} \\
+        \\
+        I && {I\tensor I}
+        \arrow["{\Delta_{I}}", from=1-1, to=1-3]
+        \arrow["{=}"', from=1-1, to=3-1]
+        \arrow["{=}", from=1-3, to=3-3]
+        \arrow["{\rho_I (=\lambda_I)}", from=3-3, to=3-1]
+    \end{tikzcd}\]
 
-% https://q.uiver.app/?q=WzAsNCxbMCwwLCJYIl0sWzIsMCwiWFxcdGVuc29yIFgiXSxbMCwyLCJYXFx0ZW5zb3IgWCJdLFsyLDIsIlhcXHRlbnNvciBYIFxcdGVuc29yIFgiXSxbMCwxLCJcXERlbHRhX3tYfSJdLFswLDIsIlxcRGVsdGFfe1h9IiwyXSxbMiwzLCJcXERlbHRhX3tYfVxcdGVuc29yIFgiLDJdLFsxLDMsIlhcXHRlbnNvclxcRGVsdGFfe1h9Il1d
-\[\begin{tikzcd}
-	X && {X\tensor X} \\
-	\\
-	{X\tensor X} && {X\tensor X \tensor X}
-	\arrow["{\Delta_{X}}", from=1-1, to=1-3]
-	\arrow["{\Delta_{X}}"', from=1-1, to=3-1]
-	\arrow["{\Delta_{X}\tensor X}"', from=3-1, to=3-3]
-	\arrow["{X\tensor\Delta_{X}}", from=1-3, to=3-3]
-\end{tikzcd}\]
+    % https://q.uiver.app/?q=WzAsNCxbMCwwLCJYIl0sWzIsMCwiWFxcdGVuc29yIFgiXSxbMCwyLCJYXFx0ZW5zb3IgWCJdLFsyLDIsIlhcXHRlbnNvciBYIFxcdGVuc29yIFgiXSxbMCwxLCJcXERlbHRhX3tYfSJdLFswLDIsIlxcRGVsdGFfe1h9IiwyXSxbMiwzLCJcXERlbHRhX3tYfVxcdGVuc29yIFgiLDJdLFsxLDMsIlhcXHRlbnNvclxcRGVsdGFfe1h9Il1d
+    \[\begin{tikzcd}
+        X && {X\tensor X} \\
+        \\
+        {X\tensor X} && {X\tensor X \tensor X}
+        \arrow["{\Delta_{X}}", from=1-1, to=1-3]
+        \arrow["{\Delta_{X}}"', from=1-1, to=3-1]
+        \arrow["{\Delta_{X}\tensor X}"', from=3-1, to=3-3]
+        \arrow["{X\tensor\Delta_{X}}", from=1-3, to=3-3]
+    \end{tikzcd}\]
 
-% https://q.uiver.app/?q=WzAsNCxbMCwwLCJYIl0sWzIsMCwiWFxcdGVuc29yIFgiXSxbMCwyLCJYXFx0ZW5zb3IgWCJdLFsyLDIsIlhcXHRlbnNvciBYIl0sWzAsMSwiXFxEZWx0YV97WH0iXSxbMCwyLCJcXERlbHRhX3tYfSIsMl0sWzIsMywiXFxnYW1tYV97WCxYfSIsMl0sWzEsMywiaWRfe1hcXHRlbnNvciBYfSJdXQ==
-\[\begin{tikzcd}
-	X && {X\tensor X} \\
-	\\
-	{X\tensor X} && {X\tensor X}
-	\arrow["{\Delta_{X}}", from=1-1, to=1-3]
-	\arrow["{\Delta_{X}}"', from=1-1, to=3-1]
-	\arrow["{\gamma_{X,X}}"', from=3-1, to=3-3]
-	\arrow["{id_{X\tensor X}}", from=1-3, to=3-3]
-\end{tikzcd}\]
-この自然変換$\Delta$を関連圏$\R$の複製、複製射あるいは対角射と呼ぶ。
+    % https://q.uiver.app/#q=WzAsNCxbMCwwLCJYIl0sWzIsMCwiWFxcdGVuc29yIFgiXSxbMCwyLCJYXFx0ZW5zb3IgWCJdLFsyLDIsIlhcXHRlbnNvciBYIl0sWzAsMSwiXFxEZWx0YV97WH0iXSxbMCwyLCJcXERlbHRhX3tYfSIsMl0sWzIsMywiXFxnYW1tYV97WCxYfSIsMl0sWzEsMywiPSJdXQ==
+    \[\begin{tikzcd}
+        X && {X\tensor X} \\
+        \\
+        {X\tensor X} && {X\tensor X}
+        \arrow["{\Delta_{X}}", from=1-1, to=1-3]
+        \arrow["{\Delta_{X}}"', from=1-1, to=3-1]
+        \arrow["{\gamma_{X,X}}"', from=3-1, to=3-3]
+        \arrow["{=}", from=1-3, to=3-3]
+    \end{tikzcd}\]
+    この自然変換$\Delta$を関連圏$\R$の複製、複製射あるいは対角射と呼ぶ。
+\end{definition}
 
 
 次に関連函手を定義する。関連函手は関連圏の間の強対称モノイド函手で複製を保つものである。
 
-\paragraph{Definition \arabic{section}.2：\Rf}\ \\
-$\R_1,\R_2$を\RC とする。
-\Rf とは、強対称モノイド函手 $F=(F, \mu, \epsilon):\R_1\to\R_2$ であって、下の図式を可換にするもののこと。
-% https://q.uiver.app/#q=WzAsNCxbMCwwLCJGKFgpIl0sWzIsMCwiRihYKSBcXHRlbnNvciBGKFgpIl0sWzAsMiwiRihYKSJdLFsyLDIsIkYoWFxcdGVuc29yIFgpIl0sWzAsMSwiXFxEZWx0YV97RihYKX0iXSxbMCwyLCI9IiwyXSxbMiwzLCJGKFxcRGVsdGFfe1h9KSIsMl0sWzEsMywiXFx0aGV0YV97WH0iXSxbMSwzLCJcXHNpbWVxIiwyXV0=
-\[\begin{tikzcd}
-	{F(X)} && {F(X) \tensor F(X)} \\
-	\\
-	{F(X)} && {F(X\tensor X)}
-	\arrow["{\Delta_{F(X)}}", from=1-1, to=1-3]
-	\arrow["{=}"', from=1-1, to=3-1]
-	\arrow["{F(\Delta_{X})}"', from=3-1, to=3-3]
-	\arrow["{\mu_{X}}", from=1-3, to=3-3]
-	\arrow["\simeq"', from=1-3, to=3-3]
-\end{tikzcd}\]
-\\
+\begin{definition}[\Rf]
+    $\R_1,\R_2$を\RC とする。
+    \Rf とは、強対称モノイド函手 $F=(F, \mu, \epsilon):\R_1\to\R_2$ であって、下の図式を可換にするもののこと。
+    % https://q.uiver.app/#q=WzAsNCxbMCwwLCJGKFgpIl0sWzIsMCwiRihYKSBcXHRlbnNvciBGKFgpIl0sWzAsMiwiRihYKSJdLFsyLDIsIkYoWFxcdGVuc29yIFgpIl0sWzAsMSwiXFxEZWx0YV97RihYKX0iXSxbMCwyLCI9IiwyXSxbMiwzLCJGKFxcRGVsdGFfe1h9KSIsMl0sWzEsMywiXFx0aGV0YV97WH0iXSxbMSwzLCJcXHNpbWVxIiwyXV0=
+    \[\begin{tikzcd}
+        {F(X)} && {F(X) \tensor F(X)} \\
+        \\
+        {F(X)} && {F(X\tensor X)}
+        \arrow["{\Delta_{F(X)}}", from=1-1, to=1-3]
+        \arrow["{=}"', from=1-1, to=3-1]
+        \arrow["{F(\Delta_{X})}"', from=3-1, to=3-3]
+        \arrow["{\mu_{X}}", from=1-3, to=3-3]
+        \arrow["\simeq"', from=1-3, to=3-3]
+    \end{tikzcd}\]
+\end{definition}
 
 
 %\subsection{Examples of \RC}
@@ -518,25 +549,25 @@ $\R_1,\R_2$を\RC とする。
 まず、全ての\CC は素朴な方法で\RC とみなせる。
 また、\CC のモノ射は直積で閉じていて複製はモノ射なので、モノ射の全体は「\subRC 」 になる。
 
-\paragraph{Example \arabic{section}.3：\CC}\ \\
-全ての\CC は素朴な方法で\RC とみなせる。特に、$\Set$は\RC である。%また全てのbounded semi-lattice も\RC である。
+    
+\begin{example}[\CC]
+    全ての\CC は素朴な方法で\RC とみなせる。特に、$\Set$は\RC である。%また全てのbounded semi-lattice も\RC である。    
+\end{example}
 
-
-\paragraph{Definition \arabic{section}.4：\subRC}\ \\
-$\R=(\underline{\R},\Delta)$を\RC とする。
-$\R$の\subRC とは、$\underline{\R}$のモノイド部分圏$\underline{\N}\subset \underline{\R}$であって、
-任意の$\underline{\N}$の対象$X$に対し$\underline{\R}$の射$\Delta_X$が$\underline{\N}$の射であるようなもののことである。
+\begin{definition}[\subRC]
+    $\R=(\underline{\R},\Delta)$を\RC とする。
+    $\R$の\subRC とは、$\underline{\R}$のモノイド部分圏$\underline{\N}\subset \underline{\R}$であって、
+    任意の$\underline{\N}$の対象$X$に対し$\underline{\R}$の射$\Delta_X$が$\underline{\N}$の射であるようなもののことである。
+\end{definition}
 
 関連部分圏は自然な方法で関連圏とみなせる。
 
-
-
-\paragraph{Example \arabic{section}.5：モノ射の成す\subRC}\ \\
-\CC\ $\C$に対し、$\C$のモノ射全体の成す部分圏$\C^{\mono}$ は \subRC である。
-正則モノ射や分裂モノ射についても同様である。
-特に、$\Set^{\mono}$は\RC である。\\
-%また、bounded semi-lattice の 分裂モノ射の全体を取ることで、離散\RC が得られる。離散対称モノイド圏とは即ち可換モノイドであるが、このモノイドが関連圏の構造を持つことは冪等であることを意味する。つまり、この操作はbounded semilatticeから順序を忘れて冪等可換モノイドをつくる操作と解釈できる。
-
+\begin{example}[モノ射の成す\subRC]
+    \CC\ $\C$に対し、$\C$のモノ射全体の成す部分圏$\C^{\mono}$ は \subRC である。
+    正則モノ射や分裂モノ射についても同様である。
+    特に、$\Set^{\mono}$は\RC である。
+    %また、bounded semi-lattice の 分裂モノ射の全体を取ることで、離散\RC が得られる。離散対称モノイド圏とは即ち可換モノイドであるが、このモノイドが関連圏の構造を持つことは冪等であることを意味する。つまり、この操作はbounded semilatticeから順序を忘れて冪等可換モノイドをつくる操作と解釈できる。
+\end{example}
 特に$\C$として有界半束をその順序構造でデカルト圏と見なしたものを考えると、
 $\C$の分裂モノ射は恒等射しかないので、分裂モノ射の全体は離散圏に関連圏の構造を入れたものになる。
 離散対称モノイド圏とは即ち可換モノイドであるが、このモノイドが関連圏の構造を持つことは冪等であることを意味する。
@@ -596,9 +627,9 @@ $f:X\to X\times Y$と$g:Y\to Y\times Z$の安直な合成は$\compose{f}{(X\time
 本節では、その構成の詳細を記述する。
 
 本節では、上記第二案の構成の詳細及びwell-defined性の証明を述べる。
-\S\arabic{section}.2 で構成の第一段階として双圏様の中間構造を定義し、
-\S\arabic{section}.3 でその商として$\Lambda[\R]$を定義し、そのwell-defined性を証明する。
-\S\arabic{section}.4では構成した圏$\Lambda[\R]$が\CC になっていることを証明する。
+\S\thesection.2 で構成の第一段階として双圏様の中間構造を定義し、
+\S\thesection.3 でその商として$\Lambda[\R]$を定義し、そのwell-defined性を証明する。
+\S\thesection.4では構成した圏$\Lambda[\R]$が\CC になっていることを証明する。
 
 %一点注意しておく。
 本稿における$\Lambda$の構成は、\cite{HT12}の構成が大きなヒントになっているが、重大な違いがある。
@@ -613,7 +644,7 @@ $f:X\to X\times Y$と$g:Y\to Y\times Z$の安直な合成は$\compose{f}{(X\time
 
 
 \subsection{中間構造 \texorpdfstring{$\calLambda(\R)$}{Lambda(R)}の構成}
-本\S \arabic{section}.\arabic{subsection} 節では、圏$\Lambda(\R)$を定義する前準備として、中間構造$\calLambda(\R)$を構成する。
+本\S\thesubsection 節では、圏$\Lambda(\R)$を定義する前準備として、中間構造$\calLambda(\R)$を構成する。
 
 $\calLambda(\R)$は、双圏に似た次の４つの構造を持っている：\\
 (1)対象、あるいは0-cellの集まり $\Ob{\calLambda(\R)}$\\
@@ -645,44 +676,46 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 即ち、$\Ob{\calLambda(\R)}:=\set{\bar{X} | X\in\R}$である。
 はじめに、各対象 $\bar{X},\bar{Y}\in\Ob{\calLambda(\R)}$毎に圏 $\calLambda(\R)(\bar{X},\bar{Y})$を定義する。
 
-\paragraph{Definition \arabic{section}.\arabic{subsection}.1：\texorpdfstring{$\calLambda(\R)$}{Lambda(R)}の1-射}\ \\
-$X,Y\in\R$とする。
-$\calLambda(\R)$の$\bar{X}$から$\bar{Y}$への1-射とは、
-$A\in\R$と$\R$の射$f:X\to A\tensor Y$ の組$(A,f)$のことである。
+\begin{definitionsub}[\texorpdfstring{$\calLambda(\R)$}{Lambda(R)}の1-射]
+    $X,Y\in\R$とする。
+    $\calLambda(\R)$の$\bar{X}$から$\bar{Y}$への1-射とは、
+    $A\in\R$と$\R$の射$f:X\to A\tensor Y$ の組$(A,f)$のことである。
+\end{definitionsub}
 
 このように定めた$\calLambda(\R)$の1-射の同値類が$\Lambda(\R)$の射となる。
 同値関係として「有限個の2-射で結ばれていること」を用いる。その2-射は下記のとおり定義する。
 
-\paragraph{Definition \arabic{section}.\arabic{subsection}.2： $\calLambda(\R)$の2-射}\ \\
-$X,Y\in\R$とし、
-$(A,f), (B,g)$を$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射とする。
-$\calLambda(\R)$の$(A,f)$から$(B,g)$への2-射とは、
-$\R$の射$k:A\tensor Y \to B\tensor Y$ であって下の図式の三角形及び四角形を可換にするもののことである。
+\begin{definitionsub}[$\calLambda(\R)$の2-射]
+    $X,Y\in\R$とし、
+    $(A,f), (B,g)$を$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射とする。
+    $\calLambda(\R)$の$(A,f)$から$(B,g)$への2-射とは、
+    $\R$の射$k:A\tensor Y \to B\tensor Y$ であって下の図式の三角形及び四角形を可換にするもののことである。
 
-% https://q.uiver.app/?q=WzAsNSxbMCwxLCJYIl0sWzIsMCwiQVxcdGVuc29yIFkiXSxbMiwyLCJCXFx0ZW5zb3IgWSJdLFs0LDAsIkFcXHRlbnNvciBZXFx0ZW5zb3IgWSJdLFs0LDIsIkJcXHRlbnNvciBZXFx0ZW5zb3IgWSJdLFswLDEsImYiXSxbMCwyLCJnIiwyXSxbMSwzLCJBXFx0ZW5zb3JcXERlbHRhX1kiXSxbMiw0LCJCXFx0ZW5zb3JcXERlbHRhX1kiLDJdLFszLDQsImtcXHRlbnNvciBZIl0sWzEsMiwiayJdXQ==
-\[\begin{tikzcd}
-	&& {A\tensor Y} && {A\tensor Y\tensor Y} \\
-	X \\
-	&& {B\tensor Y} && {B\tensor Y\tensor Y}
-	\arrow["f", from=2-1, to=1-3]
-	\arrow["g"', from=2-1, to=3-3]
-	\arrow["{A\tensor\Delta_Y}", from=1-3, to=1-5]
-	\arrow["{B\tensor\Delta_Y}"', from=3-3, to=3-5]
-	\arrow["{k\tensor Y}", from=1-5, to=3-5]
-	\arrow["k", from=1-3, to=3-3]
-\end{tikzcd}\]
+    % https://q.uiver.app/?q=WzAsNSxbMCwxLCJYIl0sWzIsMCwiQVxcdGVuc29yIFkiXSxbMiwyLCJCXFx0ZW5zb3IgWSJdLFs0LDAsIkFcXHRlbnNvciBZXFx0ZW5zb3IgWSJdLFs0LDIsIkJcXHRlbnNvciBZXFx0ZW5zb3IgWSJdLFswLDEsImYiXSxbMCwyLCJnIiwyXSxbMSwzLCJBXFx0ZW5zb3JcXERlbHRhX1kiXSxbMiw0LCJCXFx0ZW5zb3JcXERlbHRhX1kiLDJdLFszLDQsImtcXHRlbnNvciBZIl0sWzEsMiwiayJdXQ==
+    \[\begin{tikzcd}
+        && {A\tensor Y} && {A\tensor Y\tensor Y} \\
+        X \\
+        && {B\tensor Y} && {B\tensor Y\tensor Y}
+        \arrow["f", from=2-1, to=1-3]
+        \arrow["g"', from=2-1, to=3-3]
+        \arrow["{A\tensor\Delta_Y}", from=1-3, to=1-5]
+        \arrow["{B\tensor\Delta_Y}"', from=3-3, to=3-5]
+        \arrow["{k\tensor Y}", from=1-5, to=3-5]
+        \arrow["k", from=1-3, to=3-3]
+    \end{tikzcd}\]
+\end{definitionsub}
 
 2-射の例を２つ挙げておく。
 
-
-\paragraph{Proposition \arabic{section}.\arabic{subsection}.3： 自明な 2-射 }\ \\
-$B,X,Y\in\R$とし、
-$(A,f)$を$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射、
-$a:A \to B$を$\R$の射とする。
-このとき、\\
-(1)$g:=f\comp(a\tensor Y)$とおくと、
-$(B,g)$は$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射である。\\
-(2)$\R$の射$k:=(a\tensor Y)$は$\calLambda(\R)$の 2-射 $k:(A,f)\to(B,g)$を与える。\\
+\begin{propositionsub}[自明な 2-射]
+    $B,X,Y\in\R$とし、
+    $(A,f)$を$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射、
+    $a:A \to B$を$\R$の射とする。
+    このとき、\\
+    (1)$g:=f\comp(a\tensor Y)$とおくと、
+    $(B,g)$は$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射である。\\
+    (2)$\R$の射$k:=(a\tensor Y)$は$\calLambda(\R)$の 2-射 $k:(A,f)\to(B,g)$を与える。\\
+\end{propositionsub}
 
 \begin{proof}
     (1)定義より従う。\\
@@ -702,14 +735,14 @@ $(B,g)$は$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射である。\\
 \end{proof}
 
 
-
-\paragraph{Proposition \arabic{section}.\arabic{subsection}.4：\ 複製は 2-射である }\ \\
-$X,Y\in\R$とし、
-$(A,f)$を$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射とする。
-このとき、\\
-(1)$g:=f\comp(A\tensor\Delta_Y)$とおくと、
-$(A\tensor Y,g)$は$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射 である。\\
-(2)$\R$の射$k:=A\tensor\Delta_Y$は$\calLambda(\R)$の 2-射 $k:(A,f)\to(A\tensor Y,g)$を与える。\\
+\begin{propositionsub}[複製は 2-射である]
+    $X,Y\in\R$とし、
+    $(A,f)$を$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射とする。
+    このとき、\\
+    (1)$g:=f\comp(A\tensor\Delta_Y)$とおくと、
+    $(A\tensor Y,g)$は$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射 である。\\
+    (2)$\R$の射$k:=A\tensor\Delta_Y$は$\calLambda(\R)$の 2-射 $k:(A,f)\to(A\tensor Y,g)$を与える。\\
+\end{propositionsub}
 
 \begin{proof}
     (1)定義より従う。\\
