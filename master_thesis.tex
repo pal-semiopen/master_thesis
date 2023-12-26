@@ -297,7 +297,8 @@ morphism $[A,f], [B,g]$ of $\Lambda(\R)$\\
 これは直積でない「積」と呼ばれるもの、例えばテンソル積やスマッシュ積などの一般化である。
 
 \topic{対称モノイド圏論は、圏論の中では比較的弱い構造を扱う理論である。}
-他の圏論の多くの分野、例えばトポス理論やアーベル圏論では、全ての有限直積があること、即ちデカルト圏であることは大前提として、その上にさらに構造を加えていく。
+他の圏論の多くの分野、例えばトポス理論やアーベル圏論では、
+    全ての有限直積があること、即ちデカルト圏であることを前提として、その上にさらに構造を加えていく。
 対照的に、対称モノイド圏論においてはデカルト圏が最も強い構造である：
     対称モノイド圏に構造を付加してデカルト圏より強い構造になるならば、それは単にデカルト圏の理論で扱えばよい。
 即ち、対称モノイド圏論とは「対称モノイド圏とデカルト圏の中間構造たちを調べる分野」であると言うことができる。
@@ -306,12 +307,12 @@ morphism $[A,f], [B,g]$ of $\Lambda(\R)$\\
 そもそもデカルト圏とはどのような構造であったかというと、
     対称モノイド圏$\C$と自然同型$\phi_{X,Y}:\C(-,X)\times\C(-,Y)\simeq\C(-,X\tensor Y)$であって
     モノイド構造と整合的なものの組$(\C,\phi)$である。
-この普遍性を用いた定義は、実は次のような定義と等価であることが知られている(\cite{Fox76})。
-すなわち、デカルト圏とは対称モノイド圏$\C$と２つの自然変換「複製」$\Delta_X:X\to X\tensor X$と「削除」$!_X:X\to I$
-    の組$(\C,\Delta,!)$であって整合性の条件を満たすものに他ならない。
+この普遍性を用いた定義は、次のような定義と等価であることが知られている(\cite{Fox76})。
+すなわち、デカルト圏とは対称モノイド圏$\C$及び２つの自然変換「複製」$\Delta_X:X\to X\tensor X$と「削除」$!_X:X\to I$
+    の組$(\C,\Delta,!)$であって整合性の条件を満たすものである。
 ここで$I$は$\C$の単位対象である。
 この定義を見ると、デカルト圏とは対称モノイド圏に「複製」射と「削除」射を付加した構造と見なせる。
-すると素朴に考えられるのが、対称モノイド圏に「複製」のみ、あるいは「削除」のみを付加した構造である。
+すると中間構造として、対称モノイド圏に「複製」のみ、あるいは「削除」のみを付加した構造が考えられる。
 これがそれぞれ関連圏・アフィン圏である。
 関連圏には例えば集合と単射の圏 $\Set^{\mono}$ や点付き集合の圏$\Set_*$などがある。
 アフィン圏には例えば凸空間の圏 $\mathrm{Conv}$(\cite{JacobsConvex}) や混合量子状態の圏$\mathrm{CPTP}$(\cite{HS19})などがある。
@@ -372,15 +373,20 @@ $L(\Set^{\mono})$はTennent category(\cite{tennent1990semantical})と等しい(\
 
 本論文では、\RC (relevance category)の定義及び基本的な例を述べたのち、\RC の「\CC 化」操作である構成$\Lambda$を記述
 %し、そのwell-defined性を証明
-する。
+し、$\Lambda$の普遍性、及び$\Lambda$が$\Set^{\mono}$から$\Set$を復元する性質を持つことを証明する。
 
 
 \subsection{記法}
 本論文では簡明さのために、圏の射の合成の記号として$\comp$を用いる。
 $f\comp g := g\o f$である。すなわち、この記法では射の合成を図式を読む順番と同じ順番で書くことになる。
-
 古くは情報系の文脈では合成を$f;g$と書く文献もあるとされる(\cite{barr1990category})が、数学では大変分かりにくくなるためこれを避ける。
 
+また、モノイド圏の図式の記述に際して、煩雑さを避けるため、
+結合律の同型$\alpha$によって結ばれる対象同士は記号の濫用によって同一視し、$\alpha$は明示しない。
+
+加えて、図式中の射の表示に際しては、簡単のため
+$id_A\tensor id_B \tensor f \tensor id_D \tensor id_E$を
+$AB\tensor f \tensor DE$のように記述する。
 \newpage
 
 
@@ -422,7 +428,7 @@ $f\comp g := g\o f$である。すなわち、この記法では射の合成を�
 
 
 \section{\RC}
-introductionで述べたように、\RC とは対称モノイド圏$\R$に「複製」$\set{\Delta_X:X\to X\tensor X}_{X\in\R}$を付加した構造である。
+Introductionで述べたように、\RC とは対称モノイド圏$\R$に「複製」$\set{\Delta_X:X\to X\tensor X}_{X\in\R}$を付加した構造である。
 \RC は対応$\R(Z,X)\times\R(Z,Y)\to\R(Z,X\tensor Y);(f,g)\mapsto \Delta_Z\comp(f\tensor g)$を伴うから、
 \RC は対称モノイド圏$\R$に自然変換$\set{\R(-,X)\times\R(-,Y)\to\R(-,X\tensor Y)}_{X,Y\in\R}$を付加した構造を持つ。
 逆に、よい自然変換$\set{\phi_{X,Y}:\R(-,X)\times\R(-,Y)\to\R(-,X\tensor Y)}_{X,Y\in\R}$があれば
@@ -432,6 +438,8 @@ introductionで述べたように、\RC とは対称モノイド圏$\R$に「複
 \RC はlax-\CC とも呼ぶべきものである。
 \RC は{\cite{JACOBS199473}}でmonoidal structure with diagonalsとして定義されたのが初出と思われる。
 
+本節では、\RC とその周辺概念の定義、及び基本的な例を記述する。
+
 %\subsection{\RC の定義}
 \paragraph{Definition \arabic{section}.1：\RC}\ \\
 \RC とは、
@@ -440,7 +448,6 @@ introductionで述べたように、\RC とは対称モノイド圏$\R$に「複
 $\Delta$がモノイド自然変換で結合的かつ可換であるようなものである。
 ただし、自然変換$\Delta$がモノイド自然変換で結合的かつ可換であるとは、
 以下の４つの図式を可換にすることである。
-（煩雑さを避けるため、結合律の同型$\alpha$によって結ばれる対象同士は記号の濫用によって同一視している）
 % https://q.uiver.app/?q=WzAsNCxbMCwwLCJYXFx0ZW5zb3IgWSJdLFsyLDAsIlhcXHRlbnNvciBYIFxcdGVuc29yIFlcXHRlbnNvciBZIl0sWzAsMiwiWFxcdGVuc29yIFkiXSxbMiwyLCJYXFx0ZW5zb3IgWSBcXHRlbnNvciBYXFx0ZW5zb3IgWSJdLFswLDEsIlxcRGVsdGFfe1hcXHRlbnNvciBZfSJdLFswLDIsIj0iLDJdLFsyLDMsIlxcRGVsdGFfe1h9XFx0ZW5zb3JcXERlbHRhX3tZfSIsMl0sWzEsMywiWFxcdGVuc29yXFxnYW1tYV97WCxZfVxcdGVuc29yIFkiXV0=
 \[\begin{tikzcd}
 	{X\tensor Y} && {X\tensor X \tensor Y\tensor Y} \\
@@ -483,8 +490,10 @@ $\Delta$がモノイド自然変換で結合的かつ可換であるようなも
 	\arrow["{\gamma_{X,X}}"', from=3-1, to=3-3]
 	\arrow["{id_{X\tensor X}}", from=1-3, to=3-3]
 \end{tikzcd}\]
+この自然変換$\Delta$を関連圏$\R$の複製、複製射あるいは対角射と呼ぶ。
 
-関連圏を定義したので関連函手を定義する。関連函手は関連圏の間の強対称モノイド函手で複製を保つものである。
+
+次に関連函手を定義する。関連函手は関連圏の間の強対称モノイド函手で複製を保つものである。
 
 \paragraph{Definition \arabic{section}.2：\Rf}\ \\
 $\R_1,\R_2$を\RC とする。
@@ -528,7 +537,7 @@ $\R$の\subRC とは、$\underline{\R}$のモノイド部分圏$\underline{\N}\s
 特に、$\Set^{\mono}$は\RC である。\\
 %また、bounded semi-lattice の 分裂モノ射の全体を取ることで、離散\RC が得られる。離散対称モノイド圏とは即ち可換モノイドであるが、このモノイドが関連圏の構造を持つことは冪等であることを意味する。つまり、この操作はbounded semilatticeから順序を忘れて冪等可換モノイドをつくる操作と解釈できる。
 
-分裂モノ射の例は、特に$\C$として有界半束をその順序構造でデカルト圏と見なしたものを考えると面白い。
+特に$\C$として有界半束をその順序構造でデカルト圏と見なしたものを考えると、
 $\C$の分裂モノ射は恒等射しかないので、分裂モノ射の全体は離散圏に関連圏の構造を入れたものになる。
 離散対称モノイド圏とは即ち可換モノイドであるが、このモノイドが関連圏の構造を持つことは冪等であることを意味する。
 つまり、この操作はbounded semilatticeから順序を忘れて冪等可換モノイドをつくる操作と解釈できる。
@@ -539,66 +548,16 @@ $\C$の分裂モノ射は恒等射しかないので、分裂モノ射の全体�
 
 
 \newpage
-\section{構成 \texorpdfstring{$\Lambda$}{Lambda}}
+\section{構成 \texorpdfstring{$\Lambda$}{Lambda}の定義}
 本節では構成 $\Lambda$の定義を述べる。$\Lambda$は、与えられた\RC から\CC を構成する普遍的な操作である。
 以下、$\R=(\R,\tensor,I,\alpha,\lambda,\rho,\gamma,\Delta)$を\RC とする。
 これから本節全体を通して、デカルト圏$\Lambda(\R)$を定義する。
 圏$\Lambda(\R)$を定義した後に $\Lambda(\R)$が持つ素朴なモノイド構造がデカルト積を与えることを示す。
 圏$\Lambda(\R)$を構成するに当たって、まず双圏様の中間構造 $\calLambda(\R)$を構成し、その後 $\Lambda(\R)$を作る。
 
-\begin{comment}
-    
-\subsection{Idea of \texorpdfstring{$\Lambda\-$}{Lambda-}Construction}
-Λ-constructionは、\S3の[HT12]の構成を元に、relevance categoryからCartesian categoryを得るように改変したものである。\\
-
-前節で述べたように、今回主に想定している\RC の例は\CC のmono射達が成すsub-relevance category である。Cartesian category $\C$ に対し、その全てのmono射の成すsubcategory\ $\C^{mono}$はsub-relevance-categoryであった。この $\C^{mono}$に$\Lambda$を施したとき、もとの$\C$自身が復元されるよう構成を作りたい。
-
-まず、$\Lambda[\C^{mono}]$の対象は$\C^{mono}$の対象とすればよい。射の定義を考える。
-ここで、Cartesian categoryにおける「グラフ」は全てmonoであったことに注目する。
-%具体的には、$\Lambda[\C^mono]$の対象は$\C$の対象であり、$\Lambda[\C^mono]$の射は$\C$のグラフである。
-
-第一案としては、各$X,Y\in\C^{\mono}$に対し、
-\[
-\Lambda[\C^{\mono}](X,Y):=\set{f:X\to X\times Y \rmin \C^{\mono} \ | \ \left(\ (f\comp\pi_X = id_X \rmin \C)\text{と同値な$\C^{\mono}$の条件式}\ \right)}
-\]
-とすることを思いつく。こうすれば確かに$\Lambda[\C^{\mono}](X,Y)\simeq  \C(X,Y)$だが、このままでは合成がうまく定義できない：$f:X\to X\times Y$と$g:Y\to Y\times Z$の安直な合成は$f\comp(X\times g):X\to X\times Y \times Z$で、これから$X \to X\times Z$の射を得るためには射影$X\times Y\times Z\to X\times Z$が必要であるが、射影は多くの場合monoではないので使えない(そもそも射影があるrelevance category は ただのcartesian categoryである)。\\
-
-そこで第二案として、
-各$X,Y\in\C^{\mono}$に対し、$\Lambda[\C^{\mono}]$における$X$から$Y$への射を、「パラメータ付きグラフ」として定義することを考える。すなわち、
-\[
-\Lambda[\C^{\mono}](X,Y):=\set{(A,f) \ | \ A\in\C^{\mono}, \  f:X\to X\times A\times Y \rmin \C^{\mono}}/(\text{適切な同値関係})
-\]
-begin{comment}
-$\C^{\mono}$の対象$A$と$\C^{\mono}$の射$f:X\to X\times A\times Y$の組$(A,f)$の(適切な同値関係に関する)同値類を$\Lambda[\C^{\mono}]$における$X$から$Y$への射
-end{comment}
-とすることを試みる。ただしここで、適切な同値関係とは、$(A,f)\sim (B,g)$であるのがちょうど$\C$で$f\comp\pi_Y = g\comp\pi_Y$であるときになるような同値関係である。
-このような同値関係は$\C^{\mono}$の構造のみから得られるだろうか？これは得られる。容易ではないが、再び\cite{HT12}がヒントを与えてくれた。
-%本節では、その構成の詳細を記述する。
-\\
-
-第二案の構成は上手く行くが、これを簡略化した第三案を本\S.\arabic{section}節では説明する。第二案では「$A\in\C^{\mono}$と$f:X\to X\times A\times Y \ \mathrm{in} \ \C^{\mono}$ の組$(A,f)$の同値類を$\Lambda[\C^{\mono}]$における$X$から$Y$への射とする」と方針を書いたが、実はcodomainの$X$はパラメータ$A$に「繰り込む」ことが可能である。即ち、第三案では「$A\in\C^{\mono}$と$f:X\to A\times Y \ \mathrm{in} \ \C^{\mono}$ の組$(A,f)$の同値類を$\Lambda[\C^{\mono}]$における$X$から$Y$への射とする」とする方針を取る。つまり、第三案では
-\[
-\Lambda[\C^{\mono}](X,Y):=\set{(A,f) \ | \ A\in\C^{\mono}, \  f:X\to A\times Y \rmin \C^{\mono}}/(\text{適切な同値関係})
-\]
-とする。「適切な同値関係」とは、第二案のとき同様、$(A,f)\sim (B,g)$であるのがちょうど$\C$で$f\comp\pi_Y = g\comp\pi_Y$であるときになるような同値関係のことである。
-本節では、上記第三案の構成の詳細及びwell-definednessを述べる。\S\arabic{section}.2 で構成の第一段階としてbicategory様の中間構造を定義し、\S\arabic{section}.3 でその商として$\Lambda[\M]$を定義し、そのwell-definednessを証明する。\S\arabic{section}.4では構成した圏$\Lambda[\M]$が\CC になっていることを証明する。\\
 
 
-begin{comment}
-二点補足する。まず一点目、上記では「$A\in\C^{\mono}$と$f:X\to X\times A\times Y \ \mathrm{in} \ \C^{\mono}$ の組$(A,f)$の同値類を$\Lambda[\C^{\mono}]$における$X$から$Y$への射とする」と方針を書いたが、実はcodomainの$X$はパラメータ$A$に「繰り込む」ことが可能である。即ち、「$A\in\C^{\mono}$と$f:X\to A\times Y \ \mathrm{in} \ \C^{\mono}$ の組$(A,f)$の同値類を$\Lambda[\C^{\mono}]$における$X$から$Y$への射とする」方針でもうまくいく。前者の定義でも、以下に述べる議論は全てうまくいくが、後者の方が定義も証明も簡明なので、以下ではそのような定義を採用する。\\
-二点目の補足を述べる。
-end{comment}
-
-一点注意しておく。本稿における$\Lambda$の構成は、\cite{HT12}の構成が大きなヒントになっているが、重大な違いがある。
-\cite{HT12}ではまず中間構造としてbicategoryを構成して、
-そのlocal categoryの連結成分を取ることで欲しい圏を得ていた。
-本稿でも概ねそのような方針で構成するのだが、
-\cite{HT12}でbicategoryになっていたものに相当する中間構造は惜しくもbicategoryにならない。この問題に起因して、連結成分を取ることで圏が得られることが自明ではなくなっている。そのため、最終的に得る圏のwell-definednessの証明(prop \arabic{section}.3.4)がわざわざ書かれている。
-\end{comment}
-
-
-
-\subsection{構成\texorpdfstring{$\Lambda$}{Lambda} の発想・動機付け}
+%\subsection{構成\texorpdfstring{$\Lambda$}{Lambda} の発想・動機付け}
 %$\Lambda\-$constructionは、\cite{HT12} の構成を元に、\RC から\CC を得るように改変したものである。
 
 \RC はしばしば\CC の\subRC として構成される。
@@ -606,7 +565,7 @@ end{comment}
 
 
 そのために注目したい\RC の例は\CC のモノ射達が成す\subRC である。
-\CC $\C$ に対し、その全てのモノ射の成す部分圏 $\C^{\mono}$は\subRC であった。
+例2.5に述べたように、\CC $\C$ に対し、その全てのモノ射の成す部分圏 $\C^{\mono}$は\subRC である。
 この$\C^{\mono}$をよい\subRC として持つ\CC は$\C$である。
 そこで構成$\Lambda$を、$\C^{\mono}$に$\Lambda$を施したとき$\C$が復元されるように作る。
 
@@ -618,16 +577,20 @@ end{comment}
 \Lambda[\C^{\mono}](X,Y):=\set{f:X\to X\times Y \rmin \C^{\mono} \ | \ \left(\ \text{適切な条件式}\ \right)}
 \]
 %(\compose{f}{\pi_X} = id_X \rmin \C)
-と定義することを思いつく。
+と定義することが考えられる。
 ただし「適切な条件式」とは$f$が$\C$でグラフであることと同値な$\C^{\mono}$の条件式である(これは実現可能だが仔細には触れない)。
-こうすれば確かに$\Lambda[\C^{\mono}](X,Y)\simeq  \C(X,Y)$だが、このままでは合成がうまく定義できない：$f:X\to X\times Y$と$g:Y\to Y\times Z$の安直な合成は$\compose{f}{(X\times g)}:X\to X\times Y \times Z$で、これから$X \to X\times Z$の射を得るためには射影$X\times Y\times Z\to X\times Z$が必要であるが、射影は多くの場合モノ射ではないので使えない(そもそも全ての射影がある\RC はただの\CC である)。
+このとき確かに$\Lambda[\C^{\mono}](X,Y)\simeq  \C(X,Y)$だが、このままでは合成がうまく定義できない：
+$f:X\to X\times Y$と$g:Y\to Y\times Z$の安直な合成は$\compose{f}{(X\times g)}:X\to X\times Y \times Z$で、
+これから$X \to X\times Z$の射を得るためには射影$X\times Y\times Z\to X\times Z$が必要であるが、
+射影は多くの場合モノ射ではないので使えない。
+そもそも全ての射影がある\RC はただの\CC である。
 
 そこで第二案として、
 各$X,Y\in\C^{\mono}$に対し、$\Lambda[\C^{\mono}]$における$X$から$Y$への射を、「パラメータ付きグラフ」として定義することを考える。すなわち、
 \[
 \Lambda[\C^{\mono}](X,Y):=\set{(A,f) \ | \ A\in\C^{\mono}, \  f:X\to A\times Y \rmin \C^{\mono}}/(\text{適切な同値関係})
 \]
-とすることを試みる。ただしここで、適切な同値関係とは、$(A,f)\sim (B,g)$であるのがちょうど$\C$で$f\comp\pi_Y = g\comp\pi_Y$であるときになるような同値関係である。
+とする。ただしここで、適切な同値関係とは、$(A,f)\sim (B,g)$であるのがちょうど$\C$で$f\comp\pi_Y = g\comp\pi_Y$であるときになるような同値関係である。
 このような同値関係は実際$\C^{\mono}$の構造のみから得られる。
 %容易ではないが、再び\cite{HT12}がヒントを与えてくれた。
 本節では、その構成の詳細を記述する。
@@ -641,8 +604,9 @@ end{comment}
 本稿における$\Lambda$の構成は、\cite{HT12}の構成が大きなヒントになっているが、重大な違いがある。
 \cite{HT12}ではまず中間構造として双圏を構成して、
 そのlocal categoryの連結成分を取ることで欲しい圏を得ていた。
-本稿でも概ねそのような方針で構成するのだが、
-\cite{HT12}で双圏になっていたものに相当する中間構造は惜しくも双圏にならない。この問題に起因して、連結成分を取ることで圏が得られることが自明ではなくなっている。そのため、最終的に得る圏のwell-defined性の証明(prop \arabic{section}.3.4)がわざわざ書かれている。
+本稿でも概ねそのような方針で構成するのだが、\cite{HT12}で双圏になっていたものに相当する中間構造が双圏にならない。
+この問題に起因して、連結成分を取ることで圏が得られることが自明ではなくなっている。
+そのため、最終的に得る圏のwell-defined性の証明(prop \arabic{section}.3.4)が書かれている。
 
 
 
@@ -653,8 +617,8 @@ end{comment}
 
 $\calLambda(\R)$は、双圏に似た次の４つの構造を持っている：\\
 (1)対象、あるいは0-cellの集まり $\Ob{\calLambda(\R)}$\\
-(2)$\calLambda(\R)$の各対象$\bar{X},\bar{Y}$毎の圏$\calLambda(\R)(\bar{X},\bar{Y})$\\ 
-($\calLambda(\R)(\bar{X},\bar{Y})$の対象を1-射と、射を2-射と呼ぶ。)\\
+(2)$\calLambda(\R)$の各対象$\bar{X},\bar{Y}$毎の圏$\calLambda(\R)(\bar{X},\bar{Y})$
+    \hspace{1em}($\calLambda(\R)(\bar{X},\bar{Y})$の対象を1-射と、射を2-射と呼ぶ。)\\
 (3)各1-射$v:\bar{X}\to\bar{Y}, w:\bar{Y}\to\bar{Z}$毎の合成1-射$v\comp w:\bar{X}\to\bar{Z}$\\
 (4)$\calLambda(\R)$各対象$\bar{X}$毎の恒等1-射$id_{\bar{X}}:\bar{X}\to\bar{X}$\\
 しかしながら、$\calLambda(\R)$は2-射の間の水平合成を持たないため、双圏にはならない。
@@ -686,7 +650,7 @@ $X,Y\in\R$とする。
 $\calLambda(\R)$の$\bar{X}$から$\bar{Y}$への1-射とは、
 $A\in\R$と$\R$の射$f:X\to A\tensor Y$ の組$(A,f)$のことである。
 
-このように定めた$\calLambda(\R)$の1-射、その同値類が$\Lambda(\R)$の射となる。
+このように定めた$\calLambda(\R)$の1-射の同値類が$\Lambda(\R)$の射となる。
 同値関係として「有限個の2-射で結ばれていること」を用いる。その2-射は下記のとおり定義する。
 
 \paragraph{Definition \arabic{section}.\arabic{subsection}.2： $\calLambda(\R)$の2-射}\ \\
@@ -788,6 +752,9 @@ $\bar{X}$から$\bar{Z}$への$\calLambda(\R)$の1-射$(A,f)\comp(B,g)$を $(A\t
 
 %(String Diagramも描く)
 
+
+\paragraph{Definition \arabic{section}.\arabic{subsection}.7: 恒等1-射}\ \\
+
 \paragraph{Proposition \arabic{section}.\arabic{subsection}.7: 2-射の左whiskering}\ \\
 $X,Y,Z\in\R$とし、$(A,f)$を$\bar{X}$から$\bar{Y}$への、$(B_1,g_1),(B_2,g_2)$を$\bar{Y}$から$\bar{Z}$への$\calLambda(\R)$の1-射とする。
 $k:(B_1,g_1)\to (B_2,g_2)$を$\calLambda(\R)$の2-射とする。
@@ -796,31 +763,31 @@ $k:(B_1,g_1)\to (B_2,g_2)$を$\calLambda(\R)$の2-射とする。
 \begin{proof}
     %(proof)\\% of 2-射であること)\\
     次の図式の上下が等しいことを示せばよい：
-    % https://q.uiver.app/?q=WzAsNixbMiwwLCJBXFx0ZW5zb3IgQl8xXFx0ZW5zb3IgWiJdLFsyLDIsIkFcXHRlbnNvciBCXzJcXHRlbnNvciBaIl0sWzQsMCwiQVxcdGVuc29yIEJfMVxcdGVuc29yIFpcXHRlbnNvciBaIl0sWzQsMiwiQVxcdGVuc29yIEJfMVxcdGVuc29yIFpcXHRlbnNvciBaIl0sWzEsMSwiQVxcdGVuc29yIFkiXSxbMCwxLCJYIl0sWzAsMiwiQUJcXHRlbnNvclxcRGVsdGFfWiJdLFsxLDMsIkFCXFx0ZW5zb3JcXERlbHRhX1oiLDJdLFsyLDMsIihmKmspXFx0ZW5zb3IgWjo9QVxcdGVuc29yIGtcXHRlbnNvciBaIl0sWzQsMCwiQVxcdGVuc29yIGdfMSJdLFs0LDEsIkFcXHRlbnNvciBnXzIiLDJdLFs1LDQsImYiXSxbMCwxLCJmKmsiLDFdXQ==
+    % https://q.uiver.app/#q=WzAsNixbMiwwLCJBXFx0ZW5zb3IgQl8xXFx0ZW5zb3IgWiJdLFsyLDIsIkFcXHRlbnNvciBCXzJcXHRlbnNvciBaIl0sWzQsMCwiQVxcdGVuc29yIEJfMVxcdGVuc29yIFpcXHRlbnNvciBaIl0sWzQsMiwiQVxcdGVuc29yIEJfMlxcdGVuc29yIFpcXHRlbnNvciBaIl0sWzEsMSwiQVxcdGVuc29yIFkiXSxbMCwxLCJYIl0sWzAsMiwiQUJfMVxcdGVuc29yXFxEZWx0YV9aIl0sWzEsMywiQUJfMlxcdGVuc29yXFxEZWx0YV9aIiwyXSxbMiwzLCIoZiprKVxcdGVuc29yIFo6PUFcXHRlbnNvciBrXFx0ZW5zb3IgWiJdLFs0LDAsIkFcXHRlbnNvciBnXzEiXSxbNCwxLCJBXFx0ZW5zb3IgZ18yIiwyXSxbNSw0LCJmIl0sWzAsMSwiZiprIiwxXV0=
     \[\begin{tikzcd}
-    	&& {A\tensor B_1\tensor Z} && {A\tensor B_1\tensor Z\tensor Z} \\
-    	X & {A\tensor Y} \\
-    	&& {A\tensor B_2\tensor Z} && {A\tensor B_1\tensor Z\tensor Z}
-    	\arrow["{AB\tensor\Delta_Z}", from=1-3, to=1-5]
-    	\arrow["{AB\tensor\Delta_Z}"', from=3-3, to=3-5]
-    	\arrow["{(f*k)\tensor Z:=A\tensor k\tensor Z}", from=1-5, to=3-5]
-    	\arrow["{A\tensor g_1}", from=2-2, to=1-3]
-    	\arrow["{A\tensor g_2}"', from=2-2, to=3-3]
-    	\arrow["f", from=2-1, to=2-2]
-    	\arrow["{f*k}"{description}, from=1-3, to=3-3]
+        && {A\tensor B_1\tensor Z} && {A\tensor B_1\tensor Z\tensor Z} \\
+        X & {A\tensor Y} \\
+        && {A\tensor B_2\tensor Z} && {A\tensor B_2\tensor Z\tensor Z}
+        \arrow["{AB_1\tensor\Delta_Z}", from=1-3, to=1-5]
+        \arrow["{AB_2\tensor\Delta_Z}"', from=3-3, to=3-5]
+        \arrow["{(f*k)\tensor Z:=A\tensor k\tensor Z}", from=1-5, to=3-5]
+        \arrow["{A\tensor g_1}", from=2-2, to=1-3]
+        \arrow["{A\tensor g_2}"', from=2-2, to=3-3]
+        \arrow["f", from=2-1, to=2-2]
+        \arrow["{f*k}"{description}, from=1-3, to=3-3]
     \end{tikzcd}\]
     $k$は2-射であったから、次の図式は可換である：
-    % https://q.uiver.app/?q=WzAsNSxbMCwxLCJZIl0sWzIsMCwiQl8xXFx0ZW5zb3IgWiJdLFsyLDIsIkJfMlxcdGVuc29yIFoiXSxbNCwwLCJCXzFcXHRlbnNvciBaXFx0ZW5zb3IgWiJdLFs0LDIsIkJfMlxcdGVuc29yIFpcXHRlbnNvciBaIl0sWzAsMSwiZ18xIl0sWzAsMiwiZ18yIiwyXSxbMSwzLCJCXFx0ZW5zb3JcXERlbHRhX1oiXSxbMiw0LCJCXFx0ZW5zb3JcXERlbHRhX1oiLDJdLFszLDQsImtcXHRlbnNvciBaIl0sWzEsMiwiayJdXQ==
+    % https://q.uiver.app/#q=WzAsNSxbMCwxLCJZIl0sWzIsMCwiQl8xXFx0ZW5zb3IgWiJdLFsyLDIsIkJfMlxcdGVuc29yIFoiXSxbNCwwLCJCXzFcXHRlbnNvciBaXFx0ZW5zb3IgWiJdLFs0LDIsIkJfMlxcdGVuc29yIFpcXHRlbnNvciBaIl0sWzAsMSwiZ18xIl0sWzAsMiwiZ18yIiwyXSxbMSwzLCJCXzFcXHRlbnNvclxcRGVsdGFfWiJdLFsyLDQsIkJfMlxcdGVuc29yXFxEZWx0YV9aIiwyXSxbMyw0LCJrXFx0ZW5zb3IgWiJdLFsxLDIsImsiXV0=
     \[\begin{tikzcd}
-    	&& {B_1\tensor Z} && {B_1\tensor Z\tensor Z} \\
-    	Y \\
-    	&& {B_2\tensor Z} && {B_2\tensor Z\tensor Z}
-    	\arrow["{g_1}", from=2-1, to=1-3]
-    	\arrow["{g_2}"', from=2-1, to=3-3]
-    	\arrow["{B\tensor\Delta_Z}", from=1-3, to=1-5]
-    	\arrow["{B\tensor\Delta_Z}"', from=3-3, to=3-5]
-    	\arrow["{k\tensor Z}", from=1-5, to=3-5]
-    	\arrow["k", from=1-3, to=3-3]
+        && {B_1\tensor Z} && {B_1\tensor Z\tensor Z} \\
+        Y \\
+        && {B_2\tensor Z} && {B_2\tensor Z\tensor Z}
+        \arrow["{g_1}", from=2-1, to=1-3]
+        \arrow["{g_2}"', from=2-1, to=3-3]
+        \arrow["{B_1\tensor\Delta_Z}", from=1-3, to=1-5]
+        \arrow["{B_2\tensor\Delta_Z}"', from=3-3, to=3-5]
+        \arrow["{k\tensor Z}", from=1-5, to=3-5]
+        \arrow["k", from=1-3, to=3-3]
     \end{tikzcd}\]
     この図式に$A\tensor -$を施せば、求める図式の可換性を得る。\\
 \end{proof}
