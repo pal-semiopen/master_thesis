@@ -805,7 +805,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
 %\paragraph{Definition \arabic{section}.\arabic{subsection}.7: 恒等1-射}\ \\
 \begin{definitionsub}[恒等1-射]
-    
+    この恒等射と上記合成は整合性の同型の違いを除いて単位律を満たす。
 \end{definitionsub}
 
 %\paragraph{Proposition \arabic{section}.\arabic{subsection}.7: 2-射の左whiskering}\ \\
@@ -860,11 +860,13 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
 %\paragraph{Definition \arabic{section}.\arabic{subsection}.1：\ $\Lambda(\R)$の対象}\ \\
 \begin{definitionsub}[$\Lambda(\R)$の対象]
+    \label{def:object_of_Lambda(R)}
     $\Ob{\Lambda(\R)}:= \Ob{\calLambda(\R)} (=\Ob{\R})$とする。
 \end{definitionsub}
 
 %\paragraph{Definition \arabic{section}.\arabic{subsection}.2：\ $\Lambda(\R)$の射}\ \\
 \begin{definitionsub}[$\Lambda(\R)$の射]
+    \label{def:morphism_of_Lambda(R)}
     $\calLambda(\R)(\bar{X},\bar{Y})$上の同値関係$\sim$を二項関係「２射で繋がれている」が生成する同値関係とする。
     すなわち、２つの2-射$(A,f),(B,g):\bar{X}\to \bar{Y}$が$(A,f)\sim (B,g)$であるのは、有限個の2-射
         $k_{2i}:(C_{2i},h_{2i})\to (C_{2i+1},h_{2i+1})$,
@@ -1019,7 +1021,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     (2) 任意の$(A,f)\in\calLambda(\R)(\bar{X},\bar{Y}), (B_1,g_1),(B_2,g_2)\in\calLambda(\R)(\bar{Y},\bar{Z})$
     及び$l:(B_1,g_1)\to (B_2,g_2)$に対し、$(A,f)\comp(B_1,g_1) \sim (A,f)\comp(B_2,g_2)$である。
     
-    このうち(2)はprop \arabic{section}.2.7そのものである。従って、(1)を示せば十分である。
+    このうち(2)は\refprop{prop:left_whiskering}そのものである。従って、(1)を示せば十分である。
 
     (1)を示す。
     $(A_1,f_1),(A_2,f_2)\in\calLambda(\R)(\bar{X},\bar{Y}), (B,g)\in\calLambda(\R)(\bar{Y},\bar{Z})$
@@ -1111,24 +1113,46 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 \end{proof}
 
 
-\paragraph{Definition \arabic{section}.\arabic{subsection}.5：\ $\Lambda(\R)$の射の合成}\ \\
-$\bar{X},\bar{Y},\bar{Z}\in\Lambda(\R), [A,f]\in\Lambda(\R)(\bar{X},\bar{Y}), [B,g]\in\Lambda(\R)(\bar{Y},\bar{Z})$とする。
-これらの合成を$[A,f]\comp[B,g]:=[(A,f)\comp(B,g)]$で定める。これはlemma\arabic{section}.3.4よりwell-definedである。
+%\paragraph{Definition \arabic{section}.\arabic{subsection}.5：\ $\Lambda(\R)$の射の合成}\ \\
+\begin{definitionsub}[$\Lambda(\R)$の射の合成]
+    \label{def:composition_of_Lambda(R)}
+    $\bar{X},\bar{Y},\bar{Z}\in\Lambda(\R), [A,f]\in\Lambda(\R)(\bar{X},\bar{Y}), [B,g]\in\Lambda(\R)(\bar{Y},\bar{Z})$とする。
+    これらの合成を$[A,f]\comp[B,g]:=[(A,f)\comp(B,g)]$で定める。
+    これは\reflem{lem:composition_of_Lambda(R)_is_well-defined} よりwell-definedである。
+\end{definitionsub}
 
-\paragraph{Definition \arabic{section}.\arabic{subsection}.6：\ $\Lambda(\R)$の恒等射}\ \\
-各$\bar{X}\in\Lambda(\R)$に対し、$id_{\bar{X}}:=[I,\rho_X^{-1}]$と定める。
 
-\paragraph{Proposition \arabic{section}.\arabic{subsection}.7：\ $\Lambda(\R)$の結合則}\ \\
-上記compositionは結合則を満たす。
-これは$\calLambda(\R)$で1-射の結合則が成り立っていたことから従う。
+%\paragraph{Definition \arabic{section}.\arabic{subsection}.6：\ $\Lambda(\R)$の恒等射}\ \\
+\begin{definitionsub}[$\Lambda(\R)$の恒等射]
+    \label{def:identity_of_Lambda(R)}
+    各$\bar{X}\in\Lambda(\R)$に対し、$id_{\bar{X}}:=[I,\rho_X^{-1}]$と定める。
+\end{definitionsub}
 
-\paragraph{Proposition \arabic{section}.\arabic{subsection}.8：\ $\Lambda(\R)$の単位律}\ \\
-上記合成とidentityは単位律を満たす。
+%\paragraph{Proposition \arabic{section}.\arabic{subsection}.7：\ $\Lambda(\R)$の結合則}\ \\
+\begin{propositionsub}[$\Lambda(\R)$の結合則]
+    \label{prop:associativity_of_Lambda(R)}
+    上記compositionは結合則を満たす。
+    これは$\calLambda(\R)$で1-射の結合則が成り立っていたことから従う。
+\end{propositionsub}
 
-\paragraph{Definition \arabic{section}.\arabic{subsection}.9：\ 圏 $\Lambda(\R)$}\ \\
-definition \arabic{section}.3.1, \arabic{section}.3.2, \arabic{section}.3.5, \arabic{section}.3.6 で与えられる構造達は、
-proposition\arabic{section}.3.7, \arabic{section}.3.8より、圏を成す。
-この圏を$\Lambda(\R)$と書くことにする。\\
+%\paragraph{Proposition \arabic{section}.\arabic{subsection}.8：\ $\Lambda(\R)$の単位律}\ \\
+\begin{propositionsub}[$\Lambda(\R)$の単位律]
+    \label{prop:unitlaw_of_Lambda(R)}
+    上記合成と恒等射は単位律を満たす。
+    これは$\calLambda(\R)$で1-射の単位律が成り立っていたことから従う。
+\end{propositionsub}
+
+%\paragraph{Definition \arabic{section}.\arabic{subsection}.9：\ 圏 $\Lambda(\R)$}\ \\
+\begin{definitionsub}[圏 $\Lambda(\R)$]
+    %definition \arabic{section}.3.1, \arabic{section}.3.2, \arabic{section}.3.5, \arabic{section}.3.6 で与えられる構造達は、
+    \refdef{def:object_of_Lambda(R)}, \refdef{def:morphism_of_Lambda(R)}, 
+        \refdef{def:composition_of_Lambda(R)}, \refdef{def:identity_of_Lambda(R)}
+        で与えられる構造達は、
+    %proposition\arabic{section}.3.7, \arabic{section}.3.8より、圏を成す。
+    \refprop{prop:associativity_of_Lambda(R)}, \refprop{prop:unitlaw_of_Lambda(R)}より、圏を成す。
+    この圏を$\Lambda(\R)$と書くことにする。\\
+\end{definitionsub}
+
 
 
 \newpage
@@ -1140,16 +1164,18 @@ proposition\arabic{section}.3.7, \arabic{section}.3.8より、圏を成す。
 
 
 \paragraph{Definition \arabic{section}.4.1：\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}のモノイド構造}\ \\
-$\R$を \RC とする。
-$\Lambda(\R)$は、素朴な方法で\SMC となる。
-モノイド積の函手$\tensor'$のみ明示する。$\tensor'$を次のように定める。
-\fct{\tensor'}{\Lambda(\R)\times \Lambda(\R)}{\Lambda(\R)}{(\bar{X},\bar{Y})}{([A,f], [B,g])}{(\bar{X'},\bar{Y'})}{\bar{X\tensor Y}}{[A\tensor B, f\square g]}{\bar{X'\tensor Y'}}
-ただし、$f\square g := (f\tensor g)\comp (A\tensor\gamma_{X,B}\tensor Y)$ である。
-このように定めた$\tensor'$は確かにwell-definedである。
-%次に単位対象を $I':=I$で定める。
+\begin{definitionsub}[$\Lambda(\R)$のモノイド構造]
+    \label{def:monoidal_structure_of_Lambda(R)}
+    $\R$を \RC とする。
+    $\Lambda(\R)$は、素朴な方法で\SMC となる。
+    モノイド積の函手$\tensor'$と単位対象$I'$のみ明示する。
+    まず$\tensor'$を次のように定める。
+    \fct{\tensor'}{\Lambda(\R)\times \Lambda(\R)}{\Lambda(\R)}{(\bar{X},\bar{Y})}{([A,f], [B,g])}{(\bar{X'},\bar{Y'})}{\bar{X\tensor Y}}{[A\tensor B, f\square g]}{\bar{X'\tensor Y'}}
+    ただし、$f\square g := (f\tensor g)\comp (A\tensor\gamma_{X,B}\tensor Y)$ である。
+    このように定めた$\tensor'$は確かにwell-definedである。
+    次に単位対象を $I':=I$で定める。
 %整合性の同型$\alpha', \lambda', \rho'$及び捻り同型$\gamma'$を素朴な方法で定めると、$(\Lambda(\R),\tensor')$
-
-%$\Delta$の構成
+\end{definitionsub}
 
 
 \paragraph{Proposition \arabic{section}.\arabic{subsection}.3：$\Lambda[\R]$の直積 }\ \\

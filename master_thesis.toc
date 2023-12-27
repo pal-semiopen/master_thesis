@@ -4,14 +4,9 @@
 \contentsline {section}{\numberline {3}構成 $\Lambda $の定義}{8}{section.3}%
 \contentsline {subsection}{\numberline {3.1}中間構造 $\mathcal {B}(\mathcal {R})$の構成}{9}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}圏$\Lambda (\mathcal {R})$の構成}{12}{subsection.3.2}%
-\contentsline {paragraph}{Definition 3.2.5：\ $\Lambda (\mathcal {R})$の射の合成}{17}{definitionsub.3.2.4}%
-\contentsline {paragraph}{Definition 3.2.6：\ $\Lambda (\mathcal {R})$の恒等射}{17}{definitionsub.3.2.4}%
-\contentsline {paragraph}{Proposition 3.2.7：\ $\Lambda (\mathcal {R})$の結合則}{17}{definitionsub.3.2.4}%
-\contentsline {paragraph}{Proposition 3.2.8：\ $\Lambda (\mathcal {R})$の単位律}{17}{definitionsub.3.2.4}%
-\contentsline {paragraph}{Definition 3.2.9：\ 圏 $\Lambda (\mathcal {R})$}{17}{definitionsub.3.2.4}%
 \contentsline {subsection}{\numberline {3.3}Cartesian Structure of the Category $\Lambda (\mathcal {R})$}{18}{subsection.3.3}%
 \contentsline {paragraph}{Definition 3.4.1：$\Lambda (\mathcal {R})$のモノイド構造}{18}{subsection.3.3}%
-\contentsline {paragraph}{Proposition 3.3.3：$\Lambda [\mathcal {R}]$の直積 }{18}{subsection.3.3}%
+\contentsline {paragraph}{Proposition 3.3.3：$\Lambda [\mathcal {R}]$の直積 }{18}{definitionsub.3.3.1}%
 \contentsline {section}{\numberline {4}universality of $\Lambda $ construction}{22}{section.4}%
 \contentsline {paragraph}{Definition 4.1：ユニット函手 $\mathit {H}_{\mathcal {R}}$}{22}{section.4}%
 \contentsline {paragraph}{proposition 4.2:\ universality of $\Lambda $}{22}{section.4}%
