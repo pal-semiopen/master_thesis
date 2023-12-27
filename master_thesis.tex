@@ -230,6 +230,7 @@
 \newcommand{\propositionword}{命題}
 \newcommand{\theoremword}{定理}
 \newcommand{\lemmmaword}{補題}
+\newcommand{\corollaryword}{系}
 \newcommand{\exampleword}{例}
 
 \newtheoremstyle{jpstyle}%   % スタイル名
@@ -247,18 +248,21 @@
 \newtheorem{proposition}[definition]{\propositionword}
 \newtheorem{theorem}[definition]{\theoremword}
 \newtheorem{lemma}[definition]{\lemmmaword}
+\newtheorem{corollary}[definition]{\corollaryword}
 \newtheorem{example}[definition]{\exampleword}
 
 \newtheorem{definitionsub}{\definitionword}[subsection]
 \newtheorem{propositionsub}[definitionsub]{\propositionword}
 \newtheorem{theoremsub}[definitionsub]{\theoremword}
 \newtheorem{lemmasub}[definitionsub]{\lemmmaword}
+\newtheorem{corollarysub}[definitionsub]{\corollaryword}
 \newtheorem{examplesub}[definitionsub]{\exampleword}
 
 \newcommand{\refdef}[1]{\definitionword \ref{#1}}
 \newcommand{\refprop}[1]{\propositionword \ref{#1}}
 \newcommand{\refthm}[1]{\theoremword \ref{#1}}
 \newcommand{\reflem}[1]{\lemmmaword \ref{#1}}
+\newcommand{\refcor}[1]{\corollaryword \ref{#1}}
 \newcommand{\refex}[1]{\exampleword \ref{#1}}
 %ココマデamsthmの設定
 
@@ -1163,7 +1167,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 %the category $\Lambda(\R)$ defined in previous sections, becomes cartesian category. In this section, we will find its cartesian structure and prove that.
 
 
-\paragraph{Definition \arabic{section}.4.1：\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}のモノイド構造}\ \\
+%\paragraph{Definition \arabic{section}.4.1：\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}のモノイド構造}\ \\
 \begin{definitionsub}[$\Lambda(\R)$のモノイド構造]
     \label{def:monoidal_structure_of_Lambda(R)}
     $\R$を \RC とする。
@@ -1178,11 +1182,14 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 \end{definitionsub}
 
 
-\paragraph{Proposition \arabic{section}.\arabic{subsection}.3：$\Lambda[\R]$の直積 }\ \\
-簡単のため$\C:=\Lambda[\R]$とおく。
-$X,Y\in\C$に対し、$(X\tensor Y, \pi_X, \pi_Y)$は$X$と$Y$の直積である。
-ただし、$\pi_Y:X\tensor Y\to Y$は、$\pi_Y:=[X,id_{X\tensor Y}]$で定める。
-$\pi_X:X\tensor Y\to X$は、$\pi_X:=[Y,\gamma_{X,Y}]$で定める。
+%\paragraph{Proposition \arabic{section}.\arabic{subsection}.3：$\Lambda[\R]$の直積 }\ \\
+\begin{propositionsub}[$\Lambda{[\R]}$の直積]
+    \label{prop:product_of_Lambda(R)}
+    簡単のため$\C:=\Lambda[\R]$とおく。
+    $\bar{X},\bar{Y}\in\C$に対し、$(\bar{X\tensor Y}, \pi_X, \pi_Y)$は$X$と$Y$の直積である。
+    ただし、$Y$への射影$\pi_Y:X\tensor Y\to Y$は、$\pi_Y:=[X,id_{X\tensor Y}]$で定める。
+    $X$への射影$\pi_X:X\tensor Y\to X$は、$\pi_X:=[Y,\gamma_{X,Y}]$で定める。
+\end{propositionsub}
 
 \begin{proof}
     $Z\in\C$を任意に取る。
@@ -1190,6 +1197,7 @@ $\pi_X:X\tensor Y\to X$は、$\pi_X:=[Y,\gamma_{X,Y}]$で定める。
     $\phi:\C(Z,X\tensor Y)\to \C(Z,X)\times\C(Z,Y)$を
     $\phi([C,h]):=([C,h]\comp\pi_X, [C,h]\comp\pi_Y)$で定める。
     $\phi$が全単射であることを示す。
+    %TODO:自然性の証明
 
     次の３つのことをすればよい。\\
     (i)\ $\phi$の逆対応$\psi$を構成する。\\
@@ -1336,57 +1344,65 @@ $\pi_X:X\tensor Y\to X$は、$\pi_X:=[Y,\gamma_{X,Y}]$で定める。
 \end{proof}
 
 
-\paragraph*{proposition \arabic{section}.\arabic{subsection}.4：\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}の終対象}\ \\
-$\Lambda(\R)$の終対象は$I$である。
-実際、任意の$\bar{X}\in\Lambda(\R)$に対し、$!_{\bar{X}}:=[X,\l_X]:\bar{X}\to I$と置けば、
-任意の$[A,f]:\bar{X}\to I$に対し、次のように$[A,f]=!_{\bar{X}}$である：\\
-$f':X\to A$を$f':=(-\tensor I)^{-1}(f\comp\l_X)$と定めると、
-\begin{align*}
-    &(A,f)\\
-    = &\ (A,\l_X\comp (f'\times I))\\
-    \sim &\ (X, \l_X) (\text{by prop \arabic{section}.2.4})
-\end{align*}
-である。
+%\paragraph*{proposition \arabic{section}.\arabic{subsection}.4：\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}の終対象}\ \\
+\begin{propositionsub}[$\Lambda(\R)$の終対象]
+    \label{prop:terminal_object_of_Lambda(R)}
+    $\Lambda(\R)$の終対象は$I$である。
+    実際、任意の$\bar{X}\in\Lambda(\R)$に対し、$!_{\bar{X}}:=[X,\l_X]:\bar{X}\to I$と置けば、
+    任意の$[A,f]:\bar{X}\to I$に対し、次のように$[A,f]=!_{\bar{X}}$である：\\
+    $f':X\to A$を$f':=(-\tensor I)^{-1}(f\comp\l_X)$と定めると、
+    \begin{align*}
+        &(A,f)\\
+        = &\ (A,\l_X\comp (f'\times I))\\
+        \sim &\ (X, \l_X) (\text{\refprop{prop:trivial_2-morphism}})
+    \end{align*}
+    である。
+\end{propositionsub}
 
-
+以上より$\Lambda(\R)$は全ての有限直積を持ち、従って\CC であることが示された。
 
 \newpage
 
 
 
 \section{universality of \texorpdfstring{$\Lambda$}{Lambda} construction}
-前節で定義した構成$\Lambda$は、実は関連圏からデカルト圏を得る普遍的な方法になっている。今節ではこの普遍性を示す。
+前節で定義した構成$\Lambda$は、関連圏からデカルト圏を得る普遍的な方法になっている。今節ではこの普遍性を示す。
 まず$\R$から$\Lambda(\R)$への素朴な埋め込みを定める。
 
-\paragraph{Definition \arabic{section}.1：ユニット函手 $\Eta_{\R}$}\ \\
-函手 $\Eta_{\R}:\R\to\Lambda[\R]$を次で定める：
-\fct{\Eta_{\R}}{\R}{\Lambda(\R)}{X}{f}{Y}{X}{[I,f\comp\rho_Y]}{Y}
-$\Eta_{\R}$は\Rf である。
-また、$m_{X,Y}:\Eta_\R(X)\tensor\Eta_\R(Y)\to\Eta_\R(X\tensor Y)$と
-$e:I\to\Eta_\R(I)$を次で定める：
-\begin{align*}
-    m_{X,Y} &:= [I,\rho_X^{-1}\tensor\rho_Y^{-1}]\comp\pi_{I,X,Y}\\
-    e &:= [I,\rho_I^{-1}]
-\end{align*}
+%\paragraph{Definition \arabic{section}.1：ユニット函手 $\Eta_{\R}$}\ \\
+\begin{definition}[ユニット函手 $\Eta_{\R}$]
+    函手 $\Eta_{\R}:\R\to\Lambda[\R]$を次で定める：
+    \fct{\Eta_{\R}}{\R}{\Lambda(\R)}{X}{f}{Y}{X}{[I,f\comp\rho_Y]}{Y}
+    $\Eta_{\R}$は\Rf である。
+    また、$m_{X,Y}:\Eta_\R(X)\tensor\Eta_\R(Y)\to\Eta_\R(X\tensor Y)$と
+    $e:I\to\Eta_\R(I)$を次で定める：
+    \begin{align*}
+        m_{X,Y} &:= [I,\rho_X^{-1}\tensor\rho_Y^{-1}]\comp\pi_{I,X,Y}\\
+        e &:= [I,\rho_I^{-1}]
+    \end{align*}
+\end{definition}
 
 
 そして$\Lambda$は次の普遍性を満たす（煩雑な議論を避けるため、２圏論的主張を１圏論的主張に弱めている）。
-\paragraph{proposition \arabic{section}.2:\ universality of $\Lambda$}\ \\
-$\R$を\RC とし、
-\CC \ $\C:=\Lambda[\R]$及び\Rf $\Eta_{\R}:\R \to \C$を上で定めたものとする。\\
-このとき、任意の\CC \ $\D$ 及び\Rf $F=(F,\mu, \epsilon):\R \to \D$に対し、\\
-次を満たす（強）モノイド函手 $\bar{F}:\C\to\D$が一意に存在する：
 
-$F = \Eta_{\R}\comp \bar{F}$
+%\paragraph{proposition \arabic{section}.2:\ universality of $\Lambda$}\ \\
+\begin{proposition}[$\Lambda$の普遍性]
+    $\R$を\RC とし、
+    \CC \ $\C:=\Lambda[\R]$及び\Rf $\Eta_{\R}:\R \to \C$を上で定めたものとする。\\
+    このとき、任意の\CC \ $\D$ 及び\Rf $F=(F,\mu, \epsilon):\R \to \D$に対し、\\
+    次を満たす（強）モノイド函手 $\bar{F}:\C\to\D$が一意に存在する：
+    
+    $F = \Eta_{\R}\comp \bar{F}$
+\end{proposition}
 
 \begin{proof}
     $\D$をデカルト圏とする。
     ３ステップに分けて示す。\\
-    (i) $\bar{F}$の構成とwell-definednessの証明\\
+    (i) $\bar{F}$の構成とwell-defined性の証明\\
     (ii) $\bar{-}$が$\Eta_{\R}\comp - $の左逆であることの証明\\
     (iii) $\bar{-}$が$\Eta_{\R}\comp - $の右逆であることの証明\\
 
-    (i) ($\bar{F}$の構成とwell-definednessの証明)
+    (i) ($\bar{F}$の構成とwell-defined性の証明)
     \Rf $F=(F,\mu, \epsilon):\R \to \D$に対し
     （強）モノイド函手 $\bar{F} = (\bar{F}, \bar{\mu}, \bar{\epsilon}):\C\to\D$
     を対応させる操作$\bar{(-)}$を次で定める：\\
@@ -1528,56 +1544,59 @@ $\Lambda\-$constructionを考えたもともとの動機は、\CC $\C$に対し�
 
 \subsection{The Category of monomorphisms}
 
-\paragraph{thm 6.1.1 :  $\Lambda[\R]\simeq \C$ }\ \par
-$\C$を\CC とし、$\R$を$\C$の\subRC で$\C$の全てのグラフを含むものとする。\\
-このとき、$\Lambda[\R]\simeq \C$である。\\
-包含函手$i:\R\to\C$から、$\Lambda$の普遍性によりのびる函手$\bar{i}:\Lambda[\R]\to\C$はisoである。\\
+%\paragraph{thm 6.1.1 :  $\Lambda[\R]\simeq \C$ }\ \par
+\begin{theorem}[{$\Lambda[\R]\simeq \C$}]
+    $\C$を\CC とし、$\R$を$\C$の\subRC で$\C$の全てのグラフを含むものとする。
+    このとき、$\Lambda[\R]\simeq \C$である。
+    包含函手$i:\R\to\C$から、$\Lambda$の普遍性によりのびる函手$\bar{i}:\Lambda[\R]\to\C$はisoである。    
+\end{theorem}
+
+\begin{proof}
+    \newcommand{\cL}{\Lambda}
+    簡単のため、$\cL:=\Lambda[\R]$と置く。\\
+    $\bar{i}$がbijective on objectsであることは、$i$がそうであることと$\bar{i}$の定義から明らか。\\
+    あとは$\bar{i}$がfully-faithfulであることを示せばよい。\\
+    $X,Y\in\C$を取る。\\
+    $(\bar{i})_{X,Y}:\cL(X,Y)\to\C(X,Y)$の逆写像$\psi:\C(X,Y)\to\cL(X,Y)$を構成する。\\
+    $\psi(f):=[X, (id_X,f)]$と置く。これが逆であることを示す。\\
+    
+    (i)$\psi\comp(\bar{i})_{X,Y} = id$であること：
+    $f:X\to Y \ \mathrm{in}\ \C$を取り固定する。
+    
+    \begin{align*}
+      & (\bar{i})_{X,Y}(\psi(f))\\
+    =\ & (\bar{i})_{X,Y}([X, (id_X,f)])\\
+    =\ & (id_X, f)\comp \pi_Y\\
+    =\ & f\\
+    \end{align*}
+    
+    (ii)$(\bar{i})_{X,Y} \comp\psi = id$であること：
+    $[A,f]:X\to Y \ \mathrm{in}\ \cL$を取り固定する。
+    
+    \begin{align*}
+      & \psi((\bar{i})_{X,Y}([A,f]))\\
+    =\ & \psi((\bar{i})_{X,Y}([A,f]))\\
+    =\ & \psi(f\comp \pi_Y)\\
+    =\ & [X, (id_X, f\comp \pi_Y)]\\
+    =\ & [X\times A, (id_X, f\comp \pi_Y)\comp((id_X, f\comp\pi_A)\times Y)] \ \ \ (\text{by prop 4.2.3})\\
+    =\ & [X\times A, (id_X, f\comp \pi_Y, f\comp\pi_A)]\\
+    =\ & [X\times A, (id_X, f)]\\
+    =\ & [X\times A, \Delta_X \comp(X\times f)]\\
+    =\ & [A,f]\ \ \ (\text{by prop 4.3.3})
+    \end{align*}
+\end{proof}
 
 
-(proof)\\
-\newcommand{\cL}{\Lambda}
-簡単のため、$\cL:=\Lambda[\R]$と置く。\\
-$\bar{i}$がbijective on objectsであることは、$i$がそうであることと$\bar{i}$の定義から明らか。\\
-あとは$\bar{i}$がfully-faithfulであることを示せばよい。\\
-$X,Y\in\C$を取る。\\
-$(\bar{i})_{X,Y}:\cL(X,Y)\to\C(X,Y)$の逆写像$\psi:\C(X,Y)\to\cL(X,Y)$を構成する。\\
-$\psi(f):=[X, (id_X,f)]$と置く。これが逆であることを示す。\\
-
-(i)$\psi\comp(\bar{i})_{X,Y} = id$であること：
-$f:X\to Y \ \mathrm{in}\ \C$を取り固定する。
-
-\begin{align*}
-  & (\bar{i})_{X,Y}(\psi(f))\\
-=\ & (\bar{i})_{X,Y}([X, (id_X,f)])\\
-=\ & (id_X, f)\comp \pi_Y\\
-=\ & f\\
-\end{align*}
-
-(ii)$(\bar{i})_{X,Y} \comp\psi = id$であること：
-$[A,f]:X\to Y \ \mathrm{in}\ \cL$を取り固定する。
-
-\begin{align*}
-  & \psi((\bar{i})_{X,Y}([A,f]))\\
-=\ & \psi((\bar{i})_{X,Y}([A,f]))\\
-=\ & \psi(f\comp \pi_Y)\\
-=\ & [X, (id_X, f\comp \pi_Y)]\\
-=\ & [X\times A, (id_X, f\comp \pi_Y)\comp((id_X, f\comp\pi_A)\times Y)] \ \ \ (\text{by prop 4.2.3})\\
-=\ & [X\times A, (id_X, f\comp \pi_Y, f\comp\pi_A)]\\
-=\ & [X\times A, (id_X, f)]\\
-=\ & [X\times A, \Delta_X \comp(X\times f)]\\
-=\ & [A,f]\ \ \ (\text{by prop 4.3.3})
-\end{align*}
-
-
-\paragraph{cor 6.1.2 :  $\Lambda[\C^{\mono}]\simeq \C$ }\ \par
-$\C$を\CC とする。\\
-このとき、包含函手$i_{\C}:\C^{\mono}\to\C$から、$\Lambda$の普遍性によりのびる函手$\bar{i_{\C}}:\Lambda[\C^{\mono}]\to\C$はisoである。\\
-
+%\paragraph{cor 6.1.2 :  $\Lambda[\C^{\mono}]\simeq \C$ }\ \par
+\begin{corollary}[{$\Lambda[\C^{\mono}]\simeq \C$}]
+    $\C$を\CC とする。\\
+    このとき、包含函手$i_{\C}:\C^{\mono}\to\C$から、$\Lambda$の普遍性によりのびる函手$\bar{i_{\C}}:\Lambda[\C^{\mono}]\to\C$はisoである。\\
+\end{corollary}
 
 \section{関連研究と今後の課題}
 
 ・本論文では、2-圏論的議論を避けるためにstrictな議論を用いた。
-    しかし、本論文の主張は2-圏的なものである。
+    しかし、本論文の主張は本来2-圏的なものであるべきである。
     本論文の主張を2-圏論的に書き直すことは今後の課題である。
 
 ・関連圏の「複製」構造は、前述のとおり"lax-universality"とでも呼ぶべきものである。
@@ -1606,6 +1625,7 @@ $\C$を\CC とする。\\
 
 
 \section{謝辞}
+
 
 %\section{Appendix A: proofs of details}
 

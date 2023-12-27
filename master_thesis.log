@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  27 DEC 2023 14:44
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  27 DEC 2023 15:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -768,28 +768,28 @@ File: l3backend-dvipdfmx.def 2023-11-09 L3 backend support: dvipdfmx
 (./master_thesis.aux)
 \openout1 = `master_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 270.
+LaTeX Font Info:    ... okay on input line 270.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 270.
+LaTeX Font Info:    ... okay on input line 270.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 270.
+LaTeX Font Info:    ... okay on input line 270.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 270.
+LaTeX Font Info:    ... okay on input line 270.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 270.
+LaTeX Font Info:    ... okay on input line 270.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 270.
+LaTeX Font Info:    ... okay on input line 270.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 270.
+LaTeX Font Info:    ... okay on input line 270.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 270.
+LaTeX Font Info:    ... okay on input line 270.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 270.
+LaTeX Font Info:    ... okay on input line 270.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 270.
+LaTeX Font Info:    ... okay on input line 270.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 270.
+LaTeX Font Info:    ... okay on input line 270.
 
 *geometry* detected driver: dvipdfm
 *geometry* verbose mode - [ preamble ] result:
@@ -824,25 +824,25 @@ LaTeX Font Info:    ... okay on input line 266.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 266.
+Package hyperref Info: Link coloring ON on input line 270.
 (./master_thesis.out) (./master_thesis.out)
 \@outlinefile=\write5
 \openout5 = `master_thesis.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 280
+LaTeX Font Info:    Trying to load font information for U+msa on input line 284
 .
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 280
+LaTeX Font Info:    Trying to load font information for U+msb on input line 284
 .
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 28
-0.
+4.
 
 (c:/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -850,13 +850,13 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 311.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 315.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 311.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 315.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 311.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 315.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 311.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 315.
 
 (./master_thesis.toc)
 \tf@toc=\write6
@@ -864,24 +864,24 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 
  [2] Excluding 'comment' comment.
 
-LaTeX Warning: Citation `Fox76' on page 3 undefined on input line 350.
+LaTeX Warning: Citation `Fox76' on page 3 undefined on input line 354.
 
 [3] [4]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 419.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 423.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 419.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 423.
  [5] [6] [7] [8] Excluding 'comment' comment. [9]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 732.
+(Font)              No change on input line 736.
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 760.
+(Font)              No change on input line 764.
  [10]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 823.
+(Font)              No change on input line 827.
  [11] [12]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 913.
+(Font)              No change on input line 917.
 
 [13]
 File: graphics/02_f.png Graphic file (type bmp)
@@ -904,7 +904,7 @@ Overfull \vbox (106.03pt too high) has occurred while \output is active []
 
 
 [15]
-Overfull \hbox (8.63588pt too wide) in paragraph at lines 1011--1015
+Overfull \hbox (8.63588pt too wide) in paragraph at lines 1015--1019
 [] []$[]\OML/cmm/m/it/10 ; []; [] \OMS/cmsy/m/n/10 2 B\OT1/cmr/m/n/10 (\OMS/cms
 y/m/n/10 R\OT1/cmr/m/n/10 )$ \JY1/mc/m/n/10 とする 。 任意の $\OT1/cmr/m/n/10 (
 \OML/cmm/m/it/10 A[]; f[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (\
@@ -917,44 +917,47 @@ m/m/it/10 ; []\OT1/cmr/m/n/10 )$
  []
 
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1018.
+(Font)              No change on input line 1022.
 
-Overfull \hbox (2.79457pt too wide) detected at line 1061
+Overfull \hbox (2.79457pt too wide) detected at line 1065
 []
  []
 
 [16]
-Overfull \hbox (45.79054pt too wide) detected at line 1102
+Overfull \hbox (45.79054pt too wide) detected at line 1106
 []
  []
 
 
-Overfull \hbox (25.27919pt too wide) detected at line 1109
+Overfull \hbox (25.27919pt too wide) detected at line 1113
 []
  []
 
 [17]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1188.
+(Font)              No change on input line 1195.
  [18]
-Overfull \hbox (27.91685pt too wide) detected at line 1284
+Overfull \hbox (27.91685pt too wide) detected at line 1292
 []
  []
 
 [19]
-Overfull \hbox (156.603pt too wide) detected at line 1332
+Overfull \hbox (156.603pt too wide) detected at line 1340
 []
  []
 
 [20] [21]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1383.
+(Font)              No change on input line 1399.
  [22] [23]
-Overfull \hbox (73.83653pt too wide) detected at line 1494
+Overfull \hbox (73.83653pt too wide) detected at line 1510
 []
  []
 
-[24] [25] (./master_thesis.bbl
+[24]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 1555.
+ [25] (./master_thesis.bbl
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 11.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
@@ -986,12 +989,12 @@ Package rerunfilecheck Info: File `master_thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 28B08CE3270F49750D5EA9858BB90955;2161.
  ) 
 Here is how much of TeX's memory you used:
- 26671 strings out of 474925
- 518905 string characters out of 5765769
+ 26685 strings out of 474925
+ 519213 string characters out of 5765769
  1952403 words of memory out of 5000000
- 48406 multiletter control sequences out of 15000+600000
+ 48420 multiletter control sequences out of 15000+600000
  615977 words of font info for 130 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 98i,20n,107p,581b,1151s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,20n,107p,581b,1149s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master_thesis.dvi (27 pages, 335276 bytes).
+Output written on master_thesis.dvi (27 pages, 336172 bytes).
