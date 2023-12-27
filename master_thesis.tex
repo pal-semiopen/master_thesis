@@ -1365,31 +1365,32 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
 
 
-\section{universality of \texorpdfstring{$\Lambda$}{Lambda} construction}
-前節で定義した構成$\Lambda$は、関連圏からデカルト圏を得る普遍的な方法になっている。今節ではこの普遍性を示す。
-まず$\R$から$\Lambda(\R)$への素朴な埋め込みを定める。
+\section{構成\texorpdfstring{$\Lambda$}{Lambda}の普遍性}
+前節で定義した構成$\Lambda$は、関連圏からデカルト圏を得る普遍的な方法になっている。
+今節ではこの普遍性を示す。
+まず、$\R$から$\Lambda(\R)$への普遍的な函手を定める。
 
 %\paragraph{Definition \arabic{section}.1：ユニット函手 $\Eta_{\R}$}\ \\
 \begin{definition}[ユニット函手 $\Eta_{\R}$]
-    函手 $\Eta_{\R}:\R\to\Lambda[\R]$を次で定める：
-    \fct{\Eta_{\R}}{\R}{\Lambda(\R)}{X}{f}{Y}{X}{[I,f\comp\rho_Y]}{Y}
-    $\Eta_{\R}$は\Rf である。
-    また、$m_{X,Y}:\Eta_\R(X)\tensor\Eta_\R(Y)\to\Eta_\R(X\tensor Y)$と
-    $e:I\to\Eta_\R(I)$を次で定める：
+    函手 $\Eta_{\R}:\R\to\Lambda[\R]$を次で定める。
+    \fct{\Eta_{\R}}{\R}{\Lambda(\R)}{X}{f}{Y}{\bar{X}}{[I,f\comp\rho_Y]}{\bar{Y}}
+    $\Eta_{\R}$は\Rf になる。
+    $\Eta_{\R}$の関連函手としての構造の同型$m_{X,Y}:\Eta_\R(X)\tensor\Eta_\R(Y)\to\Eta_\R(X\tensor Y)$と
+    $e:I\to\Eta_\R(I)$を次で定める。
     \begin{align*}
-        m_{X,Y} &:= [I,\rho_X^{-1}\tensor\rho_Y^{-1}]\comp\pi_{I,X,Y}\\
+        m_{X,Y} &:= [I,\rho_{X\tensor Y}^{-1}]\\
         e &:= [I,\rho_I^{-1}]
     \end{align*}
 \end{definition}
 
 
-そして$\Lambda$は次の普遍性を満たす（煩雑な議論を避けるため、２圏論的主張を１圏論的主張に弱めている）。
+そして$\Lambda$は次の普遍性を満たす（煩雑な議論を避けるため、2-圏論的主張を1-圏論的主張に弱めている）。
 
 %\paragraph{proposition \arabic{section}.2:\ universality of $\Lambda$}\ \\
 \begin{proposition}[$\Lambda$の普遍性]
     $\R$を\RC とし、
-    \CC \ $\C:=\Lambda[\R]$及び\Rf $\Eta_{\R}:\R \to \C$を上で定めたものとする。\\
-    このとき、任意の\CC \ $\D$ 及び\Rf $F=(F,\mu, \epsilon):\R \to \D$に対し、\\
+    \CC \ $\C:=\Lambda[\R]$及び\Rf $\Eta_{\R}:\R \to \C$を上で定めたものとする。
+    このとき、任意の\CC \ $\D$ 及び\Rf $F=(F,\mu, \epsilon):\R \to \D$に対し、
     次を満たす（強）モノイド函手 $\bar{F}:\C\to\D$が一意に存在する：
     
     $F = \Eta_{\R}\comp \bar{F}$
@@ -1402,21 +1403,25 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     (ii) $\bar{-}$が$\Eta_{\R}\comp - $の左逆であることの証明\\
     (iii) $\bar{-}$が$\Eta_{\R}\comp - $の右逆であることの証明\\
 
-    (i) ($\bar{F}$の構成とwell-defined性の証明)
+    \noindent
+    (i) ($\bar{F}$の構成とwell-defined性の証明)\\
     \Rf $F=(F,\mu, \epsilon):\R \to \D$に対し
     （強）モノイド函手 $\bar{F} = (\bar{F}, \bar{\mu}, \bar{\epsilon}):\C\to\D$
-    を対応させる操作$\bar{(-)}$を次で定める：\\
-    各$\bar{X}\in\C$に対し、$\bar{F}(\bar{X}):=F(X)$.\\
-    各$[A,f]:\bar{X}\to \bar{Y}\ \text{in}\ \C$に対し、函手$\bar{F}([A,f])$を
-    $\bar{F}([A,f]):=F(f)\comp\mu_{A,Y}^{-1}\comp\pi_{F(A),F(Y)}$で定める。\\
-    ただし、$\mu_{A,Y}:F(A)\times F(Y) \to F(A\tensor Y)$はFのモノイド函手としての構造の同型である。\\
-    分かりやすさのために追記する。これは下の列の合成のことである：\\
-    $F(X)\to F(A\tensor Y)\simeq F(A)\times F(Y)\to F(Y)$.\\
+    を対応させる操作$\bar{(-)}$を次で定める：
+    \begin{itemize}
+        \item 各$\bar{X}\in\C$に対し、$\bar{F}(\bar{X}):=F(X)$とする
+        \item 各$[A,f]:\bar{X}\to \bar{Y}\ \text{in}\ \C$に対し、$\bar{F}([A,f])$を
+        $\bar{F}([A,f]):=F(f)\comp\mu_{A,Y}^{-1}\comp\pi_{2, F(A),F(Y)}$とする。
+    \end{itemize}
+    ただし、$\mu_{A,Y}:F(A)\times F(Y) \to F(A\tensor Y)$はFのモノイド函手としての構造の同型であり、
+    $\pi_{2, F(A), F(Y)}$はデカルト圏$\D$における第二射影である。
+    分かりやすさのために追記する。$F(f)$は下の列の合成である：\\
+    $F(X)\to F(A\tensor Y)\simeq F(A)\times F(Y)\to F(Y)$.
 
-    この$\bar{F}$のwell-definednessを示す。\\
+    $\bar{F}$のwell-defined性を示す。
     $(A,f),(B,g):X\to Y \rmin \calLambda(\R)$と$k:(A,f)\to (B,g)$を任意に取る。
-    $\bar{F}([A,f])=\bar{F}([B,g])$を示せばよい。\\
-    $\bar{F}$はrelevance functorであったから、次の図式は可換：
+    $\bar{F}([A,f])=\bar{F}([B,g])$を示せばよい。
+    $F$は\Rf であったから、次の図式は可換である。
 
     \[
     \adjustbox{scale=0.7, center}{
@@ -1447,10 +1452,14 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     \end{tikzcd}
     }
     \]
-    この図式は可換なので、従って特に$\bar{F}([A,f])=\bar{F}([B,g])$である。
-    これで函手$\bar{F}$のwell-definednessが示された。\\
-    また$\bar{\mu}_{\bar{F}(\bar{X}),\bar{F}(\bar{Y})}:\bar{F}(\bar{X})\times\bar{F}(\bar{Y})\to \bar{F}(\bar{X}\tensor\bar{Y})$を
-    $\bar{\mu}_{\bar{F}(\bar{X}),\bar{F}(\bar{Y})}:=\mu_{F(X),F(Y)}$、$\bar{\epsilon}:=\epsilon$と定める。
+    この図式の手前上辺と手前下辺は等しいことが分かるので、$\bar{F}([A,f])=\bar{F}([B,g])$である。
+    これで函手$\bar{F}$のwell-defined性が示された。
+
+    また$\bar{F}$のモノイド函手としての構造の同型
+    $\bar{\mu}_{\bar{F}(\bar{X}),\bar{F}(\bar{Y})}:\bar{F}(\bar{X})\times\bar{F}(\bar{Y})\to \bar{F}(\bar{X}\tensor\bar{Y})$と
+    $\bar{\epsilon}:1\to \bar{F}(\bar{I})$を
+    $\bar{\mu}_{\bar{F}(\bar{X}),\bar{F}(\bar{Y})}:=\mu_{F(X),F(Y)}$、
+    $\bar{\epsilon}:=\epsilon$と定める。
     すると$(\bar{F},\bar{\mu},\bar{\epsilon})$は確かに強モノイド函手である。\\
     %ほぼ自明なので特に説明しない
 

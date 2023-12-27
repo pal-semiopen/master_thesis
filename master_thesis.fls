@@ -408,6 +408,7 @@ INPUT extractbb -B cropbox -O graphics/07_delta_comp_f_tens_f.png
 INPUT ./graphics/08_delta_comp_x_tens_f.png
 INPUT ./graphics/08_delta_comp_x_tens_f.png
 INPUT extractbb -B cropbox -O graphics/08_delta_comp_x_tens_f.png
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT ./master_thesis.bbl
 INPUT ./master_thesis.bbl
 INPUT master_thesis.bbl
