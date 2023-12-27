@@ -492,6 +492,7 @@ Introductionで述べたように、\RC とは対称モノイド圏$\R$に「複
     $\Delta$がモノイド自然変換で結合的かつ可換であるようなものである。
     ただし、自然変換$\Delta$がモノイド自然変換で結合的かつ可換であるとは、
     以下の４つの図式を可換にすることである。
+
     % https://q.uiver.app/#q=WzAsNCxbMCwwLCJYXFx0ZW5zb3IgWSJdLFsyLDAsIlhcXHRlbnNvciBZIFxcdGVuc29yIFggXFx0ZW5zb3IgWSJdLFswLDIsIlhcXHRlbnNvciBZIl0sWzIsMiwiWFxcdGVuc29yIFggXFx0ZW5zb3IgWSBcXHRlbnNvciBZIl0sWzAsMSwiXFxEZWx0YV97WFxcdGVuc29yIFl9Il0sWzAsMiwiPSIsMl0sWzIsMywiXFxEZWx0YV97WH1cXHRlbnNvclxcRGVsdGFfe1l9IiwyXSxbMSwzLCJYXFx0ZW5zb3JcXGdhbW1hX3tYLFl9XFx0ZW5zb3IgWSJdXQ==
     \[\begin{tikzcd}
         {X\tensor Y} && {X\tensor Y \tensor X \tensor Y} \\
@@ -1415,41 +1416,62 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     \end{itemize}
     ただし、$\mu_{A,Y}:F(A)\times F(Y) \to F(A\tensor Y)$はFのモノイド函手としての構造の同型であり、
     $\pi_{2, F(A), F(Y)}$はデカルト圏$\D$における第二射影である。
-    分かりやすさのために追記する。$F(f)$は下の列の合成である：\\
+    分かりやすさのために追記する。$F(f)$は下の列の合成である：\par
     $F(X)\to F(A\tensor Y)\simeq F(A)\times F(Y)\to F(Y)$.
 
     $\bar{F}$のwell-defined性を示す。
     $(A,f),(B,g):X\to Y \rmin \calLambda(\R)$と$k:(A,f)\to (B,g)$を任意に取る。
     $\bar{F}([A,f])=\bar{F}([B,g])$を示せばよい。
-    $F$は\Rf であったから、次の図式は可換である。
+    %$F$は\Rf であったから、次の図式は可換である。
 
+    まず、次の図式は可換である。
+    % https://q.uiver.app/#q=WzAsNixbMCwwLCJGKEEgXFx0ZW5zb3IgWSBcXHRlbnNvciBZKSJdLFswLDIsIkYoQVxcdGVuc29yIFkpIl0sWzIsMCwiRihBXFx0ZW5zb3IgWSlcXHRpbWVzIEYoWSkiXSxbNCwwLCJGKEEpXFx0aW1lcyBGKFkpXFx0aW1lcyBGKFkpIl0sWzQsMiwiRihBKVxcdGltZXMgRihZKSJdLFsyLDEsIkYoQSlcXHRpbWVzIEYoWVxcdGVuc29yIFkpIl0sWzEsMCwiRihBXFx0ZW5zb3IgXFxEZWx0YV9ZKSJdLFsyLDAsIlxcbXVfe0FcXHRlbnNvciBZLCBZfSIsMl0sWzMsMiwiXFxtdV97QSxZfVxcdGVuc29yIEYoWSkiLDJdLFs0LDMsIkYoQSlcXHRpbWVzIFxcRGVsdGFfe0YoWSl9IiwyXSxbNCwxLCJcXG11X3tBLFl9Il0sWzUsMCwiXFxtdV97QSxZXFx0ZW5zb3IgWX0iXSxbNCw1LCJGKEEpXFx0aW1lcyBGKFxcRGVsdGFfWSkiLDJdLFszLDUsIkYoQSlcXHRpbWVzIFxcbXVfe1ksWX0iXV0=
+    \[\begin{tikzcd}
+        {F(A \tensor Y \tensor Y)} && {F(A\tensor Y)\times F(Y)} && {F(A)\times F(Y)\times F(Y)} \\
+        && {F(A)\times F(Y\tensor Y)} \\
+        {F(A\tensor Y)} &&&& {F(A)\times F(Y)}
+        \arrow["{F(A\tensor \Delta_Y)}", from=3-1, to=1-1]
+        \arrow["{\mu_{A\tensor Y, Y}}"', from=1-3, to=1-1]
+        \arrow["{\mu_{A,Y}\tensor F(Y)}"', from=1-5, to=1-3]
+        \arrow["{F(A)\times \Delta_{F(Y)}}"', from=3-5, to=1-5]
+        \arrow["{\mu_{A,Y}}", from=3-5, to=3-1]
+        \arrow["{\mu_{A,Y\tensor Y}}", from=2-3, to=1-1]
+        \arrow["{F(A)\times F(\Delta_Y)}"', from=3-5, to=2-3]
+        \arrow["{F(A)\times \mu_{Y,Y}}", from=1-5, to=2-3]
+    \end{tikzcd}\]
+    この図式の外側の五角形が可換であることが分かる。
+    すると、次の図式も可換であることが分かる。
     \[
     \adjustbox{scale=0.7, center}{
-    \begin{tikzcd}
-        &&& {F(A\tensor Y\tensor Y)} && {F(A\tensor Y)\times F(Y)} && {F(A)\times F(Y)\times F(Y)} \\
-        && {F(A\tensor Y)} &&&& {F(A)\times F(Y)} \\
-        {F(X)} &&& {F(B\tensor Y\tensor Y)} && {F(B\tensor Y)\times F(Y)} && {F(B)\times F(Y)\times F(Y)} && {F(Y)} \\
-        && {F(B\tensor Y)} &&&& {F(B)\times F(Y)}
-        \arrow["{F(f)}", from=3-1, to=2-3, crossing over]
-        \arrow["{F(g)}"', from=3-1, to=4-3, crossing over]
-        \arrow["{F(k)}", from=2-3, to=4-3, crossing over]
-        \arrow["\Delta", from=2-3, to=1-4, crossing over]
-        \arrow["\simeq", from=1-4, to=1-6, crossing over]
-        \arrow["\Delta", from=4-3, to=3-4, crossing over]
-        \arrow["{F(k\tensor Y)}"{pos=0.3}, from=1-4, to=3-4, crossing over]
-        \arrow["\simeq", from=3-4, to=3-6, crossing over]
-        \arrow["{F(k)\times F(Y)}"{pos=0.3}, from=1-6, to=3-6, crossing over]
-        \arrow["\simeq", from=2-3, to=2-7, crossing over]
-        \arrow["\simeq", from=4-3, to=4-7, crossing over]
-        \arrow["\simeq", from=1-6, to=1-8, crossing over]
-        \arrow["\simeq", from=3-6, to=3-8, crossing over]
-        \arrow["\pi"{description}, from=2-7, to=3-10, crossing over]
-        \arrow["\pi"{description}, from=4-7, to=3-10, crossing over]
-        \arrow[from=2-7, to=1-8, crossing over]
-        \arrow[from=4-7, to=3-8, crossing over]
-        \arrow["\pi"{description}, from=1-8, to=3-10, crossing over]
-        \arrow["\pi"{description}, from=3-8, to=3-10]
-    \end{tikzcd}
+        % https://q.uiver.app/#q=WzAsMTIsWzMsMCwiRihBXFx0ZW5zb3IgWVxcdGVuc29yIFkpIl0sWzUsMCwiRihBXFx0ZW5zb3IgWSlcXHRpbWVzIEYoWSkiXSxbNywwLCJGKEEpXFx0aW1lcyBGKFkpXFx0aW1lcyBGKFkpIl0sWzIsMSwiRihBXFx0ZW5zb3IgWSkiXSxbNiwxLCJGKEEpXFx0aW1lcyBGKFkpIl0sWzAsMiwiRihYKSJdLFszLDIsIkYoQlxcdGVuc29yIFlcXHRlbnNvciBZKSJdLFs1LDIsIkYoQlxcdGVuc29yIFkpXFx0aW1lcyBGKFkpIl0sWzcsMiwiRihCKVxcdGltZXMgRihZKVxcdGltZXMgRihZKSJdLFs5LDIsIkYoWSkiXSxbMiwzLCJGKEJcXHRlbnNvciBZKSJdLFs2LDMsIkYoQilcXHRpbWVzIEYoWSkiXSxbNSwzLCJ7RihmKX0iXSxbNSwxMCwie0YoZyl9IiwyXSxbMywxMCwie0Yoayl9Il0sWzMsMCwiXFxEZWx0YSJdLFsxLDAsIlxcbXVfe0FcXHRlbnNvciBZLCBZfSIsMl0sWzEwLDYsIlxcRGVsdGEiXSxbMCw2LCJ7RihrXFx0ZW5zb3IgWSl9IiwwLHsibGFiZWxfcG9zaXRpb24iOjMwfV0sWzcsNiwiXFxzaW1lcSIsMl0sWzEsNywie0YoaylcXHRpbWVzIEYoWSl9IiwwLHsibGFiZWxfcG9zaXRpb24iOjMwfV0sWzQsMywiXFxzaW1lcSJdLFsxMSwxMCwiXFxzaW1lcSIsMl0sWzIsMSwiXFxzaW1lcSJdLFs4LDcsIlxcc2ltZXEiLDJdLFs0LDksIlxccGlfMiIsMV0sWzExLDksIlxccGlfMiIsMV0sWzQsMiwiRihBKVxcdGltZXNcXERlbHRhX3tGKFkpfSIsMix7ImxhYmVsX3Bvc2l0aW9uIjo5MH1dLFsxMSw4XSxbMiw5LCJcXHBpXzMiLDFdLFs4LDksIlxccGlfMyIsMV0sWzEsMCwiXFxzaW1lcSJdLFs0LDMsIlxcbXVfe0EsWX0iLDJdLFsyLDEsIlxcbXVfe0EsWX1cXHRpbWVzIEYoWSkiLDJdXQ==
+        \begin{tikzcd}
+            &&& {F(A\tensor Y\tensor Y)} && {F(A\tensor Y)\times F(Y)} && {F(A)\times F(Y)\times F(Y)} \\
+            && {F(A\tensor Y)} &&&& {F(A)\times F(Y)} \\
+            {F(X)} &&& {F(B\tensor Y\tensor Y)} && {F(B\tensor Y)\times F(Y)} && {F(B)\times F(Y)\times F(Y)} && {F(Y)} \\
+            && {F(B\tensor Y)} &&&& {F(B)\times F(Y)}
+            \arrow["{{F(f)}}", from=3-1, to=2-3]
+            \arrow["{{F(g)}}"', from=3-1, to=4-3]
+            \arrow["{{F(k)}}", from=2-3, to=4-3]
+            \arrow["\Delta", from=2-3, to=1-4]
+            \arrow["{\mu_{A\tensor Y, Y}}"', from=1-6, to=1-4]
+            \arrow["\Delta", from=4-3, to=3-4]
+            \arrow["{{F(k\tensor Y)}}"{pos=0.3}, from=1-4, to=3-4]
+            \arrow["\simeq"', from=3-6, to=3-4]
+            \arrow["{{F(k)\times F(Y)}}"{pos=0.3}, from=1-6, to=3-6]
+            \arrow["\simeq", from=2-7, to=2-3]
+            \arrow["\simeq"', from=4-7, to=4-3]
+            \arrow["\simeq", from=1-8, to=1-6]
+            \arrow["\simeq"', from=3-8, to=3-6]
+            \arrow["{\pi_2}"{description}, from=2-7, to=3-10]
+            \arrow["{\pi_2}"{description}, from=4-7, to=3-10]
+            \arrow["{F(A)\times\Delta_{F(Y)}}"'{pos=0.6}, from=2-7, to=1-8]
+            \arrow[from=4-7, to=3-8]
+            \arrow["{\pi_3}"{description}, from=1-8, to=3-10]
+            \arrow["{\pi_3}"{description}, from=3-8, to=3-10]
+            \arrow["\simeq", from=1-6, to=1-4]
+            \arrow["{\mu_{A,Y}}"', from=2-7, to=2-3]
+            \arrow["{\mu_{A,Y}\times F(Y)}"', from=1-8, to=1-6]
+        \end{tikzcd}
     }
     \]
     この図式の手前上辺と手前下辺は等しいことが分かるので、$\bar{F}([A,f])=\bar{F}([B,g])$である。
@@ -1553,39 +1575,54 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
 
 
-\section{The Category of monomorphisms}
-$\Lambda\-$constructionを考えたもともとの動機は、\CC $\C$に対し、$\Lambda[\C^{\mono}]\simeq \C$であろう、ということであった。本節ではこれを示す。\\
+\section{モノ射の成す関連圏からの復元}
+構成$\Lambda$を考えたもともとの動機は、\CC $\C$に対し、$\Lambda[\C^{\mono}]\simeq \C$であろう、という直感であった。
+本節ではこれを示す。
 
-\subsection{The Category of monomorphisms}
+\begin{definition}[よい関連部分圏]
+    $\C$を\CC とする。
+    $\C$の部分圏$\R$が\textbf{よい関連部分圏}であるとは、
+        $\R$が$\C$の全ての対象を持ち、
+        $\C$の任意の射$f:X\to Y$に対し、$f$のグラフ$(id_X,f):X\to X\times Y$が$\R$に属することをいう。
+\end{definition}
 
 %\paragraph{thm 6.1.1 :  $\Lambda[\R]\simeq \C$ }\ \par
 \begin{theorem}[{$\Lambda[\R]\simeq \C$}]
-    $\C$を\CC とし、$\R$を$\C$の\subRC で$\C$の全てのグラフを含むものとする。
+    $\C$を\CC とし、$\R$を$\C$のよい関連部分圏とする。
     このとき、$\Lambda[\R]\simeq \C$である。
-    包含函手$i:\R\to\C$から、$\Lambda$の普遍性によりのびる函手$\bar{i}:\Lambda[\R]\to\C$はisoである。    
+    包含函手$i:\R\to\C$から、$\Lambda$の普遍性により函手$\bar{i}:\Lambda[\R]\to\C$はisoである。    
 \end{theorem}
 
 \begin{proof}
     \newcommand{\cL}{\Lambda}
-    簡単のため、$\cL:=\Lambda[\R]$と置く。\\
-    $\bar{i}$がbijective on objectsであることは、$i$がそうであることと$\bar{i}$の定義から明らか。\\
-    あとは$\bar{i}$がfully-faithfulであることを示せばよい。\\
-    $X,Y\in\C$を取る。\\
-    $(\bar{i})_{X,Y}:\cL(X,Y)\to\C(X,Y)$の逆写像$\psi:\C(X,Y)\to\cL(X,Y)$を構成する。\\
+    簡単のため、$\cL:=\Lambda[\R]$と置く。
+    誘導される函手$\bar{i}$が対象上全単射であることは、$i$がそうであることと$\bar{i}$の定義から明らか。\
+    よって$\bar{i}$が忠実充満であることを示せばよい。
+
+    $X,Y\in\C$を取る。
+    $(\bar{i})_{X,Y}:\cL(X,Y)\to\C(X,Y)$が全単射であることを示す。
+    ３ステップに分けて示す。\\
+    (i) 逆写像となるべき写像$\psi:\C(X,Y)\to\cL(X,Y)$を構成する。\\
+    (ii) $\psi\comp(\bar{i})_{X,Y} = id$であることを示す。\\
+    (iii) $(\bar{i})_{X,Y} \comp\psi = id$であることを示す。\\
+
+    (i) 逆写像となるべき写像$\psi:\C(X,Y)\to\cL(X,Y)$を構成する。
     $\psi(f):=[X, (id_X,f)]$と置く。これが逆であることを示す。\\
     
-    (i)$\psi\comp(\bar{i})_{X,Y} = id$であること：
+    (ii) $\psi\comp(\bar{i})_{X,Y} = id$であることを示す。
     $f:X\to Y \ \mathrm{in}\ \C$を取り固定する。
-    
+    $(\bar{i})_{X,Y}(\psi(f)) = f \ \rmin \C$であることを示す。
     \begin{align*}
       & (\bar{i})_{X,Y}(\psi(f))\\
     =\ & (\bar{i})_{X,Y}([X, (id_X,f)])\\
     =\ & (id_X, f)\comp \pi_Y\\
     =\ & f\\
     \end{align*}
+    以上で示された。
     
-    (ii)$(\bar{i})_{X,Y} \comp\psi = id$であること：
+    (iii) $(\bar{i})_{X,Y} \comp\psi = id$であることを示す。
     $[A,f]:X\to Y \ \mathrm{in}\ \cL$を取り固定する。
+    $\psi(\bar{i}_{X,Y}([A,f])) = [A,f] \ \rmin \cL$であることを示す。
     
     \begin{align*}
       & \psi((\bar{i})_{X,Y}([A,f]))\\
@@ -1606,6 +1643,10 @@ $\Lambda\-$constructionを考えたもともとの動機は、\CC $\C$に対し�
     $\C$を\CC とする。\\
     このとき、包含函手$i_{\C}:\C^{\mono}\to\C$から、$\Lambda$の普遍性によりのびる函手$\bar{i_{\C}}:\Lambda[\C^{\mono}]\to\C$はisoである。\\
 \end{corollary}
+
+\begin{proof}
+    $\C^{\mono}$は$\C$のよい関連部分圏であることから従う。
+\end{proof}
 
 \section{関連研究と今後の課題}
 
