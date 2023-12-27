@@ -1,12 +1,12 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}記法}{5}{subsection.1.1}%
 \contentsline {section}{\numberline {2}{関連圏}}{6}{section.2}%
-\contentsline {section}{\numberline {3}構成 $\Lambda $の定義}{8}{section.3}%
-\contentsline {subsection}{\numberline {3.1}中間構造 $\mathcal {B}(\mathcal {R})$の構成}{9}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}圏$\Lambda (\mathcal {R})$の構成}{12}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Cartesian Structure of the Category $\Lambda (\mathcal {R})$}{18}{subsection.3.3}%
-\contentsline {section}{\numberline {4}構成$\Lambda $の普遍性}{22}{section.4}%
-\contentsline {section}{\numberline {5}モノ射の成す関連圏からの復元}{26}{section.5}%
-\contentsline {section}{\numberline {6}関連研究と今後の課題}{27}{section.6}%
-\contentsline {section}{\numberline {7}Reference}{28}{section.7}%
-\contentsline {section}{\numberline {8}謝辞}{28}{section.8}%
+\contentsline {section}{\numberline {3}構成 $\Lambda $の定義}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}中間構造 $\mathcal {B}(\mathcal {R})$の構成}{10}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}圏$\Lambda (\mathcal {R})$の構成}{13}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Cartesian Structure of the Category $\Lambda (\mathcal {R})$}{19}{subsection.3.3}%
+\contentsline {section}{\numberline {4}構成$\Lambda $の普遍性}{23}{section.4}%
+\contentsline {section}{\numberline {5}モノ射の成す関連圏からの復元}{27}{section.5}%
+\contentsline {section}{\numberline {6}まとめと今後の課題}{28}{section.6}%
+\contentsline {section}{\numberline {7}謝辞}{29}{section.7}%
+\contentsline {section}{\numberline {8}Reference}{29}{section.8}%

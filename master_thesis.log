@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  27 DEC 2023 19:05
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  27 DEC 2023 21:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -206,6 +206,10 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks35
 \@floatcapt=\box71
 )
+(c:/texlive/2023/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
+\@enLab=\toks36
+)
 (c:/texlive/2023/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
 Package: tikz-cd 2021/05/04 v1.0 Commutative diagrams with TikZ
 
@@ -213,7 +217,7 @@ Package: tikz-cd 2021/05/04 v1.0 Commutative diagrams with TikZ
 (c:/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (c:/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks36
+\pgfutil@everybye=\toks37
 \pgfutil@tempdima=\dimen179
 \pgfutil@tempdimb=\dimen180
 )
@@ -232,12 +236,12 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks37
-\pgfkeys@temptoks=\toks38
+\pgfkeys@pathtoks=\toks38
+\pgfkeys@temptoks=\toks39
 
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.co
 de.tex
-\pgfkeys@tmptoks=\toks39
+\pgfkeys@tmptoks=\toks40
 ))
 \pgf@x=\dimen181
 \pgf@y=\dimen182
@@ -255,9 +259,9 @@ de.tex
 \c@pgf@countb=\count276
 \c@pgf@countc=\count277
 \c@pgf@countd=\count278
-\t@pgf@toka=\toks40
-\t@pgf@tokb=\toks41
-\t@pgf@tokc=\toks42
+\t@pgf@toka=\toks41
+\t@pgf@tokb=\toks42
+\t@pgf@tokc=\toks43
 \pgf@sys@id@count=\count279
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
@@ -307,9 +311,9 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 \pgfmath@dimen=\dimen191
 \pgfmath@count=\count283
 \pgfmath@box=\box73
-\pgfmath@toks=\toks43
-\pgfmath@stack@operand=\toks44
-\pgfmath@stack@operation=\toks45
+\pgfmath@toks=\toks44
+\pgfmath@stack@operand=\toks45
+\pgfmath@stack@operation=\toks46
 )
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
@@ -444,8 +448,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen274
 \pgffor@skip=\dimen275
-\pgffor@stack=\toks46
-\pgffor@toks=\toks47
+\pgffor@stack=\toks47
+\pgffor@toks=\toks48
 ))
 (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
@@ -535,8 +539,8 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (c:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (c:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks48
-\XKV@tempa@toks=\toks49
+\XKV@toks=\toks49
+\XKV@tempa@toks=\toks50
 )
 \XKV@depth=\count298
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
@@ -737,9 +741,9 @@ File: pxjahyper-uni.def 2023/03/01 v1.3
 )
 Package pxjahyper Info: The setup for hyperref 'unicode' is applied.
 )
-Package hyperref Info: Option `setpagesize' set `false' on input line 36.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 36.
-Package hyperref Info: Option `colorlinks' set `true' on input line 36.
+Package hyperref Info: Option `setpagesize' set `false' on input line 37.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 37.
+Package hyperref Info: Option `colorlinks' set `true' on input line 37.
 \c@mynum=\count315
 
 (c:/texlive/2023/texmf-dist/tex/latex/titlesec/titlesec.sty
@@ -749,7 +753,7 @@ Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \aftertitleunit=\skip58
 \ttl@plus=\dimen314
 \ttl@minus=\dimen315
-\ttl@toksa=\toks50
+\ttl@toksa=\toks51
 \titlewidth=\dimen316
 \titlewidthlast=\dimen317
 \titlewidthfirst=\dimen318
@@ -768,28 +772,28 @@ File: l3backend-dvipdfmx.def 2023-11-09 L3 backend support: dvipdfmx
 (./master_thesis.aux)
 \openout1 = `master_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 270.
-LaTeX Font Info:    ... okay on input line 270.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 270.
-LaTeX Font Info:    ... okay on input line 270.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 270.
-LaTeX Font Info:    ... okay on input line 270.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 270.
-LaTeX Font Info:    ... okay on input line 270.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 270.
-LaTeX Font Info:    ... okay on input line 270.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 270.
-LaTeX Font Info:    ... okay on input line 270.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 270.
-LaTeX Font Info:    ... okay on input line 270.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 270.
-LaTeX Font Info:    ... okay on input line 270.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 270.
-LaTeX Font Info:    ... okay on input line 270.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 270.
-LaTeX Font Info:    ... okay on input line 270.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 270.
-LaTeX Font Info:    ... okay on input line 270.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 271.
+LaTeX Font Info:    ... okay on input line 271.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 271.
+LaTeX Font Info:    ... okay on input line 271.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 271.
+LaTeX Font Info:    ... okay on input line 271.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 271.
+LaTeX Font Info:    ... okay on input line 271.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 271.
+LaTeX Font Info:    ... okay on input line 271.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 271.
+LaTeX Font Info:    ... okay on input line 271.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 271.
+LaTeX Font Info:    ... okay on input line 271.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 271.
+LaTeX Font Info:    ... okay on input line 271.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 271.
+LaTeX Font Info:    ... okay on input line 271.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 271.
+LaTeX Font Info:    ... okay on input line 271.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 271.
+LaTeX Font Info:    ... okay on input line 271.
 
 *geometry* detected driver: dvipdfm
 *geometry* verbose mode - [ preamble ] result:
@@ -824,25 +828,25 @@ LaTeX Font Info:    ... okay on input line 270.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 270.
+Package hyperref Info: Link coloring ON on input line 271.
 (./master_thesis.out) (./master_thesis.out)
 \@outlinefile=\write5
 \openout5 = `master_thesis.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 284
+LaTeX Font Info:    Trying to load font information for U+msa on input line 285
 .
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 284
+LaTeX Font Info:    Trying to load font information for U+msb on input line 285
 .
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 28
-4.
+5.
 
 (c:/texlive/2023/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -850,13 +854,13 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 315.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 316.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 315.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 316.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 315.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 316.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 315.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 316.
 
 (./master_thesis.toc)
 \tf@toc=\write6
@@ -864,26 +868,26 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 
  [2] Excluding 'comment' comment.
 
-LaTeX Warning: Citation `Fox76' on page 3 undefined on input line 354.
+LaTeX Warning: Citation `Fox76' on page 3 undefined on input line 355.
 
 [3] [4]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 423.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 424.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 423.
- [5] [6] [7] [8] Excluding 'comment' comment. [9]
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 424.
+ [5] [6] [7] [8] [9] Excluding 'comment' comment. [10]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 737.
+(Font)              No change on input line 738.
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 765.
- [10]
+(Font)              No change on input line 766.
+ [11]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 828.
- [11] [12]
-LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 918.
-
+(Font)              No change on input line 829.
+ [12]
 [13]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 919.
+ [14]
 File: graphics/02_f.png Graphic file (type bmp)
 <graphics/02_f.png>
 File: graphics/03_f_comp_a_tens_delta.png Graphic file (type bmp)
@@ -899,12 +903,12 @@ File: graphics/07_delta_comp_f_tens_f.png Graphic file (type bmp)
 <graphics/07_delta_comp_f_tens_f.png>
 File: graphics/08_delta_comp_x_tens_f.png Graphic file (type bmp)
 <graphics/08_delta_comp_x_tens_f.png>
- [14]
+ [15]
 Overfull \vbox (106.03pt too high) has occurred while \output is active []
 
 
-[15]
-Overfull \hbox (8.63588pt too wide) in paragraph at lines 1016--1020
+[16]
+Overfull \hbox (8.63588pt too wide) in paragraph at lines 1017--1021
 [] []$[]\OML/cmm/m/it/10 ; []; [] \OMS/cmsy/m/n/10 2 B\OT1/cmr/m/n/10 (\OMS/cms
 y/m/n/10 R\OT1/cmr/m/n/10 )$ \JY1/mc/m/n/10 とする 。 任意の $\OT1/cmr/m/n/10 (
 \OML/cmm/m/it/10 A[]; f[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (\
@@ -917,53 +921,52 @@ m/m/it/10 ; []\OT1/cmr/m/n/10 )$
  []
 
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1023.
+(Font)              No change on input line 1024.
 
-Overfull \hbox (2.79457pt too wide) detected at line 1066
-[]
- []
-
-[16]
-Overfull \hbox (45.79054pt too wide) detected at line 1107
-[]
- []
-
-
-Overfull \hbox (25.27919pt too wide) detected at line 1114
+Overfull \hbox (2.79457pt too wide) detected at line 1068
 []
  []
 
 [17]
-LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1196.
- [18]
-Overfull \hbox (27.91685pt too wide) detected at line 1293
+Overfull \hbox (45.79054pt too wide) detected at line 1109
 []
  []
 
-[19]
-Overfull \hbox (156.603pt too wide) detected at line 1341
+
+Overfull \hbox (25.27919pt too wide) detected at line 1116
 []
  []
 
-[20] [21]
+[18]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1401.
- [22] [23]
-Overfull \hbox (73.83653pt too wide) detected at line 1546
+(Font)              No change on input line 1198.
+ [19]
+Overfull \hbox (27.91685pt too wide) detected at line 1295
 []
  []
 
-[24] [25]
+[20]
+Overfull \hbox (156.603pt too wide) detected at line 1343
+[]
+ []
+
+[21] [22]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1597.
- [26]
+(Font)              No change on input line 1403.
+ [23] [24]
+Overfull \hbox (73.83653pt too wide) detected at line 1548
+[]
+ []
+
+[25] [26]
 LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
-(Font)              No change on input line 1648.
- (./master_thesis.bbl
+(Font)              No change on input line 1602.
+ [27]
+LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
+(Font)              No change on input line 1654.
+ [28] (./master_thesis.bbl
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 11.
- [27]
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 15.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
@@ -978,7 +981,7 @@ LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 37.
 LaTeX Font Info:    Kanji font shape `JY1/gt/m/it' undefined
 (Font)              No change on input line 41.
-) [28] (./master_thesis.aux)
+) [29] (./master_thesis.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-11-01>
@@ -989,15 +992,15 @@ L3 programming layer <2023-11-09>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `master_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 093486C167C1224F1B608D0E9144B43B;1778.
+(rerunfilecheck)             Checksum: D7C5B7240E93DA344D26FA886D74000E;1770.
  ) 
 Here is how much of TeX's memory you used:
- 26758 strings out of 474925
- 521043 string characters out of 5765769
+ 26793 strings out of 474925
+ 521797 string characters out of 5765769
  1962403 words of memory out of 5000000
- 48492 multiletter control sequences out of 15000+600000
+ 48524 multiletter control sequences out of 15000+600000
  616312 words of font info for 131 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  98i,20n,107p,1181b,1149s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master_thesis.dvi (28 pages, 348272 bytes).
+Output written on master_thesis.dvi (29 pages, 350184 bytes).

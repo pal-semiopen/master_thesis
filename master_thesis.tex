@@ -10,6 +10,7 @@
 \usepackage{mathrsfs} %\mathscrの使用
 \usepackage[dvipdfmx]{graphicx} %\includegraphics[options]{name}の使用
 \usepackage{here} %graphicsの[H]の使用
+\usepackage{enumerate} %enumerate環境の使用
 \geometry{a4paper}
 
 %\usepackage[frenchb]{babel}
@@ -488,7 +489,7 @@ Introductionで述べたように、\RC とは対称モノイド圏$\R$に「複
 \begin{definition}[\RC]
     \RC とは、
     \SMC $\underline{\R} = (\underline{\underline{\R}},\tensor, I, \alpha, \lambda, \rho, \gamma)$ と
-    自然変換$\Delta_X:X\to X\tensor X$ の組$(\R, \Delta)$であって、
+    自然変換$\Delta_X:X\to X\tensor X$ の組$\R=(\underline{\R}, \Delta)$であって、
     $\Delta$がモノイド自然変換で結合的かつ可換であるようなものである。
     ただし、自然変換$\Delta$がモノイド自然変換で結合的かつ可換であるとは、
     以下の４つの図式を可換にすることである。
@@ -662,11 +663,11 @@ $f:X\to X\times Y$と$g:Y\to Y\times Z$の安直な合成は$\compose{f}{(X\time
 本\S\thesubsection 節では、圏$\Lambda(\R)$を定義する前準備として、中間構造$\calLambda(\R)$を構成する。
 
 $\calLambda(\R)$は、双圏に似た次の４つの構造を持っている：\\
-(1)対象、あるいは0-cellの集まり $\Ob{\calLambda(\R)}$\\
-(2)$\calLambda(\R)$の各対象$\bar{X},\bar{Y}$毎の圏$\calLambda(\R)(\bar{X},\bar{Y})$
+(1) 対象、あるいは0-cellの集まり $\Ob{\calLambda(\R)}$\\
+(2) $\calLambda(\R)$の各対象$\bar{X},\bar{Y}$毎の圏$\calLambda(\R)(\bar{X},\bar{Y})$
     \hspace{1em}($\calLambda(\R)(\bar{X},\bar{Y})$の対象を1-射と、射を2-射と呼ぶ。)\\
-(3)各1-射$v:\bar{X}\to\bar{Y}, w:\bar{Y}\to\bar{Z}$毎の合成1-射$v\comp w:\bar{X}\to\bar{Z}$\\
-(4)$\calLambda(\R)$各対象$\bar{X}$毎の恒等1-射$id_{\bar{X}}:\bar{X}\to\bar{X}$\\
+(3) 各1-射$v:\bar{X}\to\bar{Y}, w:\bar{Y}\to\bar{Z}$毎の合成1-射$v\comp w:\bar{X}\to\bar{Z}$\\
+(4) $\calLambda(\R)$の各対象$\bar{X}$毎の恒等1-射$id_{\bar{X}}:\bar{X}\to\bar{X}$\\
 しかしながら、$\calLambda(\R)$は2-射の間の水平合成を持たないため、双圏にはならない。
 
 
@@ -875,7 +876,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     $\calLambda(\R)(\bar{X},\bar{Y})$上の同値関係$\sim$を二項関係「２射で繋がれている」が生成する同値関係とする。
     すなわち、２つの2-射$(A,f),(B,g):\bar{X}\to \bar{Y}$が$(A,f)\sim (B,g)$であるのは、有限個の2-射
         $k_{2i}:(C_{2i},h_{2i})\to (C_{2i+1},h_{2i+1})$,
-        $k_{2i+1}:(C_{2i+2},h_{2i+2})\to (C_{2i+1},h_{2i+1}) \ \ (i=0,..n-1)$
+        $k_{2i+1}:(C_{2i+2},h_{2i+2})\to (C_{2i+1},h_{2i+1}) \ \ (i=0,..,n-1)$
         が存在して、
         $(C_0,h_0)=(A,f), (C_{2n}, h_{2n})=(B,g)$であるときである。
     この$\sim$を用いて$\Lambda(\R)(\bar{X},\bar{Y}):=\calLambda(\R)(\bar{X},\bar{Y})/\sim$と定義する。
@@ -1020,12 +1021,13 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 \end{lemmasub}
 
 \begin{proof}
-    同値関係$\sim$は2-射の生成する同値関係として定義されていたので、次の２つを示せばよい：\\
-    (1) 任意の$(A_1,f_1),(A_2,f_2)\in\calLambda(\R)(\bar{X},\bar{Y}), (B,g)\in\calLambda(\R)(\bar{Y},\bar{Z})$
-    及び$k:(A_1,f_1)\to (A_2,f_2)$に対し、$(A_1,f_1)\comp(B,g) \sim (A_2,f_2)\comp(B,g)$である。\\
-    (2) 任意の$(A,f)\in\calLambda(\R)(\bar{X},\bar{Y}), (B_1,g_1),(B_2,g_2)\in\calLambda(\R)(\bar{Y},\bar{Z})$
-    及び$l:(B_1,g_1)\to (B_2,g_2)$に対し、$(A,f)\comp(B_1,g_1) \sim (A,f)\comp(B_2,g_2)$である。
-    
+    同値関係$\sim$は2-射の生成する同値関係として定義されていたので、次の２つを示せばよい：
+    \begin{enumerate}[(1)]
+        \item 任意の$(A_1,f_1),(A_2,f_2)\in\calLambda(\R)(\bar{X},\bar{Y}), (B,g)\in\calLambda(\R)(\bar{Y},\bar{Z})$
+            及び$k:(A_1,f_1)\to (A_2,f_2)$に対し、$(A_1,f_1)\comp(B,g) \sim (A_2,f_2)\comp(B,g)$である
+        \item 任意の$(A,f)\in\calLambda(\R)(\bar{X},\bar{Y}), (B_1,g_1),(B_2,g_2)\in\calLambda(\R)(\bar{Y},\bar{Z})$
+            及び$l:(B_1,g_1)\to (B_2,g_2)$に対し、$(A,f)\comp(B_1,g_1) \sim (A,f)\comp(B_2,g_2)$である。
+    \end{enumerate}
     このうち(2)は\refprop{prop:left_whiskering}そのものである。従って、(1)を示せば十分である。
 
     (1)を示す。
@@ -1136,7 +1138,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 %\paragraph{Proposition \arabic{section}.\arabic{subsection}.7：\ $\Lambda(\R)$の結合則}\ \\
 \begin{propositionsub}[$\Lambda(\R)$の結合則]
     \label{prop:associativity_of_Lambda(R)}
-    上記compositionは結合則を満たす。
+    上記合成は結合則を満たす。
     これは$\calLambda(\R)$で1-射の結合則が成り立っていたことから従う。
 \end{propositionsub}
 
@@ -1578,6 +1580,8 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 \section{モノ射の成す関連圏からの復元}
 構成$\Lambda$を考えたもともとの動機は、\CC $\C$に対し、$\Lambda[\C^{\mono}]\simeq \C$であろう、という直感であった。
 本節ではこれを示す。
+より一般に、\CC $\C$に対し、$\C$の「よい関連部分圏」に対し$\Lambda[\R]\simeq \C$となることの証明を与える。
+まずは「よい関連部分圏」を定義する。よい関連部分圏とは、全てのグラフを持つような関連部分圏のことである。
 
 \begin{definition}[よい関連部分圏]
     $\C$を\CC とする。
@@ -1588,6 +1592,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
 %\paragraph{thm 6.1.1 :  $\Lambda[\R]\simeq \C$ }\ \par
 \begin{theorem}[{$\Lambda[\R]\simeq \C$}]
+    \label{thm:よい関連部分圏からの復元}
     $\C$を\CC とし、$\R$を$\C$のよい関連部分圏とする。
     このとき、$\Lambda[\R]\simeq \C$である。
     包含函手$i:\R\to\C$から、$\Lambda$の普遍性により函手$\bar{i}:\Lambda[\R]\to\C$はisoである。    
@@ -1637,7 +1642,8 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     \end{align*}
 \end{proof}
 
-
+このように、デカルト圏$\C$の全てのグラフを持つ$\C$の関連部分圏$\R$は、必ず$\Lambda[\R]\simeq \C$となる。
+冒頭で述べた$\Lambda[\C^{\mono}]\simeq \C$であることは、ここから直ちに従う。
 %\paragraph{cor 6.1.2 :  $\Lambda[\C^{\mono}]\simeq \C$ }\ \par
 \begin{corollary}[{$\Lambda[\C^{\mono}]\simeq \C$}]
     $\C$を\CC とする。\\
@@ -1648,7 +1654,10 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     $\C^{\mono}$は$\C$のよい関連部分圏であることから従う。
 \end{proof}
 
-\section{関連研究と今後の課題}
+この他にも、よい関連部分圏の例として、\S 2節で述べた分裂モノ射の成す関連部分圏や、多様体と埋め込みの成す関連圏などが挙げられる。
+これらの例についても、\refthm{thm:よい関連部分圏からの復元}の系として、操作Λを施せば元の圏が復元できることが分かる。
+
+\section{まとめと今後の課題}
 
 ・本論文では、2-圏論的議論を避けるためにstrictな議論を用いた。
     しかし、本論文の主張は本来2-圏的なものであるべきである。
@@ -1659,6 +1668,9 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     既によく知られる"weak-universality"よりは強い概念であり、一般的に言えることが見つかる可能性がある。
     真のuniversalityでなくとも十分豊かな性質を示すことは関連圏の姿から窺い知ることができるため、
     様々な普遍性についてそのlax版を調べてみることは有益であることが示唆される。
+
+
+\section{謝辞}
 
 
 \section{Reference}
@@ -1677,9 +1689,6 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
 \bibliography{Bibliography_Master_Thesis.bib} %hoge.bibの名前
 \bibliographystyle{amsalpha} %参考文献出力スタイル(ここではamsalphaを使用)
-
-
-\section{謝辞}
 
 
 %\section{Appendix A: proofs of details}
