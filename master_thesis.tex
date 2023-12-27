@@ -1631,14 +1631,15 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     
     \begin{align*}
       & \psi((\bar{i})_{X,Y}([A,f]))\\
-    =\ & \psi((\bar{i})_{X,Y}([A,f]))\\
     =\ & \psi(f\comp \pi_Y)\\
     =\ & [X, (id_X, f\comp \pi_Y)]\\
-    =\ & [X\times A, (id_X, f\comp \pi_Y)\comp((id_X, f\comp\pi_A)\times Y)] \ \ \ (\text{by prop 4.2.3})\\
+    =\ & [X\times A, (id_X, f\comp \pi_Y)\comp((id_X, f\comp\pi_A)\times Y)]
+        \ \ \text{(\refprop{prop:trivial_2-morphism}より)}\\
     =\ & [X\times A, (id_X, f\comp \pi_Y, f\comp\pi_A)]\\
     =\ & [X\times A, (id_X, f)]\\
     =\ & [X\times A, \Delta_X \comp(X\times f)]\\
-    =\ & [A,f]\ \ \ (\text{by prop 4.3.3})
+    =\ & [A,f]
+        \ \ \text{(\reflem{lem:graph_is_same_as_original}より)}
     \end{align*}
 \end{proof}
 
