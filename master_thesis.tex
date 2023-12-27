@@ -1464,10 +1464,12 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     %ほぼ自明なので特に説明しない
 
 
-    (ii)操作 $\bar{(-)}$と $\Eta_{\R}\comp-$が互いに逆であることを示す。\\
-    どちらも対象上何も操作しないので、対象の対応が等しいことは直ちに分かる。よって射の対応だけ見ればよい。\par
-    (ii-a) \Rf $F:\R\to\D$に対し、$\Eta_{\R}\comp\bar{F}=F$であることを示す。\\
-    各$f:X\to Y \rmin \R$に対し、\\
+    (ii)%操作 $\bar{(-)}$と $\Eta_{\R}\comp-$が互いに逆であることを示す。\\
+    \Rf $F:\R\to\D$に対し、$\Eta_{\R}\comp\bar{F}=F$であることを示す。
+    $\Eta_\R\comp -$も$\bar{-}$も対象上何も操作しないので、対象の対応が等しいことは直ちに分かる。
+    よって射の対応だけ見ればよい。
+    $f:X\to Y \rmin \R$を１つ取り固定する。
+    $(\Eta_{\R}\comp\bar{F})(f)$と$F(f)$が等しいことを示す。
     \begin{align*}
         &(\Eta_{\R}\comp\bar{F})(f)\\
         =& \bar{F}(\Eta_{\R}(f))\\
@@ -1496,10 +1498,13 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
         \arrow["{!\times F(Y)}", from=1-5, to=2-5]
     \end{tikzcd}\]
 
-    (ii-b) （強）モノイド函手 $G=(G,\nu, \zeta):\C\to\D$に対し、$\bar{\Eta_{\R}\comp G}=G$であることを示す。\\
+    (iii) （強）モノイド函手 $G=(G,\nu, \zeta):\C\to\D$に対し、$\bar{\Eta_{\R}\comp G}=G$であることを示す。
+    $\Eta_\R\comp -$も$\bar{-}$も対象上何も操作しないので、対象の対応が等しいことは直ちに分かる。
+    よって射の対応だけ見ればよい。
     $\Eta_{\R}\comp G =: (\Eta_{\R}\comp G, \mu, \epsilon)$と置く。
-    $\mu_{X,Y}=\nu_{\Eta(X),\Eta(Y)}\comp G(\bar{\mu}_{X,Y})$, $\epsilon=$である。\\
-    各$[A,f]:\bar{X}\to \bar{Y} \rmin \C$に対して、\\
+    $\mu_{X,Y}=\nu_{\Eta(X),\Eta(Y)}\comp G(\bar{\mu}_{X,Y})$, $\epsilon = G(e)\comp\zeta$である。
+
+    $[A,f]:\bar{X}\to \bar{Y} \rmin \C$を１つ取り固定する。$\bar{\Eta_{\R}\comp G}([A,f]) = G([A,f])$を示す。
     \begin{align*}
         &\bar{\Eta_{\R}\comp G}([A,f])\\ 
         =&\ (\Eta_{\R}\comp G)(f)\comp\mu_{X,Y}\comp\pi\\
