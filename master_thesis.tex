@@ -226,10 +226,15 @@
 
 
 %ココカラamsthmの設定
+\newcommand{\definitionword}{定義}
+\newcommand{\propositionword}{命題}
+\newcommand{\theoremword}{定理}
+\newcommand{\lemmmaword}{補題}
+\newcommand{\exampleword}{例}
 
 \newtheoremstyle{jpstyle}%   % スタイル名
-    {13pt}%                   % 上部スペース
-    {13pt}%                   % 下部スペース
+    {9pt}%                   % 上部スペース
+    {9pt}%                   % 下部スペース
     {\normalfont}%                       % 本文フォント
     {0pt}%                       % 1行目のインデント量
     {\bfseries}%              % 見出しフォント
@@ -238,18 +243,23 @@
     {\thmname{#1}\thmnumber{#2}：\thmnote{#3}}%                      % 見出しの書式(後述)
 
 \theoremstyle{jpstyle}
-\newtheorem{definition}{定義}[section]
-\newtheorem{proposition}[definition]{命題}
-\newtheorem{theorem}[definition]{定理}
-\newtheorem{lemma}[definition]{補題}
-\newtheorem{example}[definition]{例}
+\newtheorem{definition}{\definitionword}[section]
+\newtheorem{proposition}[definition]{\propositionword}
+\newtheorem{theorem}[definition]{\theoremword}
+\newtheorem{lemma}[definition]{\lemmmaword}
+\newtheorem{example}[definition]{\exampleword}
 
-\newtheorem{definitionsub}{定義}[subsection]
-\newtheorem{propositionsub}[definitionsub]{命題}
-\newtheorem{theoremsub}[definitionsub]{定理}
-\newtheorem{lemmasub}[definitionsub]{補題}
-\newtheorem{examplesub}[definitionsub]{例}
+\newtheorem{definitionsub}{\definitionword}[subsection]
+\newtheorem{propositionsub}[definitionsub]{\propositionword}
+\newtheorem{theoremsub}[definitionsub]{\theoremword}
+\newtheorem{lemmasub}[definitionsub]{\lemmmaword}
+\newtheorem{examplesub}[definitionsub]{\exampleword}
 
+\newcommand{\refdef}[1]{\definitionword \ref{#1}}
+\newcommand{\refprop}[1]{\propositionword \ref{#1}}
+\newcommand{\refthm}[1]{\theoremword \ref{#1}}
+\newcommand{\reflem}[1]{\lemmmaword \ref{#1}}
+\newcommand{\refex}[1]{\exampleword \ref{#1}}
 %ココマデamsthmの設定
 
 
@@ -708,6 +718,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 2-射の例を２つ挙げておく。
 
 \begin{propositionsub}[自明な 2-射]
+    \label{prop:trivial_2-morphism}
     $B,X,Y\in\R$とし、
     $(A,f)$を$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射、
     $a:A \to B$を$\R$の射とする。
@@ -736,6 +747,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
 
 \begin{propositionsub}[複製は 2-射である]
+    \label{prop:diagonal_2-morphism}
     $X,Y\in\R$とし、
     $(A,f)$を$\bar{X}$から$\bar{Y}$への$\calLambda(\R)$の1-射とする。
     このとき、\\
@@ -761,37 +773,50 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     \end{tikzcd}\]
 \end{proof}
 
-\paragraph{Definition \arabic{section}.\arabic{subsection}.5: local category of $\calLambda(\R)$}\ \\
-各$X,Y\in\R$に対し、圏$\calLambda(\R)(\bar{X},\bar{Y})$を以下のように定める：
-対象は$\bar{X}$から$\bar{Y}$への1-射, 射はその間の2-射とし、
-2-射同士の(垂直)合成、及び恒等2-射は素直に定義する。
-これらはwell-definedで、圏の公理を満たす。\\
+%\paragraph{Definition \arabic{section}.\arabic{subsection}.5: local category of $\calLambda(\R)$}\ \\
+\begin{definitionsub}[local category of $\calLambda(\R)$]
+    各$X,Y\in\R$に対し、圏$\calLambda(\R)(\bar{X},\bar{Y})$を以下のように定める：
+    対象は$\bar{X}$から$\bar{Y}$への1-射, 射はその間の2-射とし、
+    2-射同士の(垂直)合成、及び恒等2-射は素直に定義する。
+    これらはwell-definedで、圏の公理を満たす。\\
+\end{definitionsub}
 
 
 以上で圏$\calLambda(\R)(\bar{X},\bar{Y})$が定義された。
 本小節の残りで1-射の合成と2-射の左whiskeringを定義し、中間構造$\calLambda(\R)$の定義を終える。
 
-\paragraph{Definition \arabic{section}.\arabic{subsection}.6: 1-射の合成}\ \\
-$X,Y,Z\in\R$とし、$(A,f)$を$\bar{X}$から$\bar{Y}$への、$(B,g)$を$\bar{Y}$から$\bar{Z}$への$\calLambda(\R)$の1-射とする。
-$\bar{X}$から$\bar{Z}$への$\calLambda(\R)$の1-射$(A,f)\comp(B,g)$を $(A\tensor B, h)$と定める。
-ただし$\R$の射$h:X\to A\tensor B\tensor Z$は次の列の合成で定める：
-% https://q.uiver.app/?q=WzAsMyxbMSwwLCJBXFx0ZW5zb3IgWSJdLFszLDAsIkFcXHRlbnNvciBCXFx0ZW5zb3IgWiJdLFswLDAsIlgiXSxbMCwxLCJBXFx0ZW5zb3IgZyJdLFsyLDAsImYiXV0=
-\[\begin{tikzcd}
-	X & {A\tensor Y} && {A\tensor B\tensor Z.}
-	\arrow["{A\tensor g}", from=1-2, to=1-4]
-	\arrow["f", from=1-1, to=1-2]
-\end{tikzcd}\]
-この合成は結合律を満たす。
+%\paragraph{Definition \arabic{section}.\arabic{subsection}.6: 1-射の合成}\ \\
+\begin{definitionsub}[1-射の合成]
+    $X,Y,Z\in\R$とし、$(A,f)$を$\bar{X}$から$\bar{Y}$への、$(B,g)$を$\bar{Y}$から$\bar{Z}$への$\calLambda(\R)$の1-射とする。
+    $\bar{X}$から$\bar{Z}$への$\calLambda(\R)$の1-射$(A,f)\comp(B,g)$を $(A\tensor B, h)$と定める。
+    ただし$\R$の射$h:X\to A\tensor B\tensor Z$は次の列の合成で定める：
+    % https://q.uiver.app/?q=WzAsMyxbMSwwLCJBXFx0ZW5zb3IgWSJdLFszLDAsIkFcXHRlbnNvciBCXFx0ZW5zb3IgWiJdLFswLDAsIlgiXSxbMCwxLCJBXFx0ZW5zb3IgZyJdLFsyLDAsImYiXV0=
+    \[\begin{tikzcd}
+        X & {A\tensor Y} && {A\tensor B\tensor Z.}
+        \arrow["{A\tensor g}", from=1-2, to=1-4]
+        \arrow["f", from=1-1, to=1-2]
+    \end{tikzcd}\]
+    この合成は結合律を満たす。
+\end{definitionsub}
+
 
 %(String Diagramも描く)
 
 
-\paragraph{Definition \arabic{section}.\arabic{subsection}.7: 恒等1-射}\ \\
+%\paragraph{Definition \arabic{section}.\arabic{subsection}.7: 恒等1-射}\ \\
+\begin{definitionsub}[恒等1-射]
+    
+\end{definitionsub}
 
-\paragraph{Proposition \arabic{section}.\arabic{subsection}.7: 2-射の左whiskering}\ \\
-$X,Y,Z\in\R$とし、$(A,f)$を$\bar{X}$から$\bar{Y}$への、$(B_1,g_1),(B_2,g_2)$を$\bar{Y}$から$\bar{Z}$への$\calLambda(\R)$の1-射とする。
-$k:(B_1,g_1)\to (B_2,g_2)$を$\calLambda(\R)$の2-射とする。
-このとき、$\R$の射$f*k:A\tensor B_1\tensor Z\to A\tensor B_2\tensor Z$を$f*k:=A\tensor k$で定めると、これは$\calLambda(\R)$の2-射 $f*k:(A,f)\comp(B_1,g_1)\to (A,f)\comp(B_2,g_2)$を与える。\\
+%\paragraph{Proposition \arabic{section}.\arabic{subsection}.7: 2-射の左whiskering}\ \\
+\begin{propositionsub}[2-射の左whiskering]
+    \label{prop:left_whiskering}
+    $X,Y,Z\in\R$とし、$(A,f)$を$\bar{X}$から$\bar{Y}$への、
+        $(B_1,g_1),(B_2,g_2)$を$\bar{Y}$から$\bar{Z}$への$\calLambda(\R)$の1-射とする。
+    $k:(B_1,g_1)\to (B_2,g_2)$を$\calLambda(\R)$の2-射とする。
+    このとき、$\R$の射$f*k:A\tensor B_1\tensor Z\to A\tensor B_2\tensor Z$を$f*k:=A\tensor k$で定めると、
+        これは$\calLambda(\R)$の2-射 $f*k:(A,f)\comp(B_1,g_1)\to (A,f)\comp(B_2,g_2)$を与える。
+\end{propositionsub}
 
 \begin{proof}
     %(proof)\\% of 2-射であること)\\
@@ -833,39 +858,52 @@ $k:(B_1,g_1)\to (B_2,g_2)$を$\calLambda(\R)$の2-射とする。
 まず前述の通り$\Lambda(\R)$の射を$\calLambda(\R)$の1-射の同値類として定義する。
 次に合成を$\calLambda(\R)$の1-射の合成から誘導されるものとして定義するが、これのwell-defined性は非自明であるから、これを示す。
 
-\paragraph{Definition \arabic{section}.\arabic{subsection}.1：\ $\Lambda(\R)$の対象}\ \\
-$\Ob{\Lambda(\R)}:= \Ob{\calLambda(\R)} (=\Ob{\R})$とする。
+%\paragraph{Definition \arabic{section}.\arabic{subsection}.1：\ $\Lambda(\R)$の対象}\ \\
+\begin{definitionsub}[$\Lambda(\R)$の対象]
+    $\Ob{\Lambda(\R)}:= \Ob{\calLambda(\R)} (=\Ob{\R})$とする。
+\end{definitionsub}
 
-\paragraph{Definition \arabic{section}.\arabic{subsection}.2：\ $\Lambda(\R)$の射}\ \\
-$\Lambda(\R)(\bar{X},\bar{Y}):=\calLambda(\R)(\bar{X},\bar{Y})/\sim$とする。
-ただし$\sim$は$\calLambda(\R)(\bar{X},\bar{Y})$上の二項関係「２射で繋がれている」が生成する同値関係。
-即ち、$\Lambda(\R)(\bar{X},\bar{Y})$は$\calLambda(\R)(\bar{X},\bar{Y})$の連結成分全体の集合である。\\
+%\paragraph{Definition \arabic{section}.\arabic{subsection}.2：\ $\Lambda(\R)$の射}\ \\
+\begin{definitionsub}[$\Lambda(\R)$の射]
+    $\calLambda(\R)(\bar{X},\bar{Y})$上の同値関係$\sim$を二項関係「２射で繋がれている」が生成する同値関係とする。
+    すなわち、２つの2-射$(A,f),(B,g):\bar{X}\to \bar{Y}$が$(A,f)\sim (B,g)$であるのは、有限個の2-射
+        $k_{2i}:(C_{2i},h_{2i})\to (C_{2i+1},h_{2i+1})$,
+        $k_{2i+1}:(C_{2i+2},h_{2i+2})\to (C_{2i+1},h_{2i+1}) \ \ (i=0,..n-1)$
+        が存在して、
+        $(C_0,h_0)=(A,f), (C_{2n}, h_{2n})=(B,g)$であるときである。
+    この$\sim$を用いて$\Lambda(\R)(\bar{X},\bar{Y}):=\calLambda(\R)(\bar{X},\bar{Y})/\sim$と定義する。
+    即ち、$\Lambda(\R)(\bar{X},\bar{Y})$は$\calLambda(\R)(\bar{X},\bar{Y})$の連結成分全体の集合である。
+\end{definitionsub}
 
 
-これからこの商集合の上に合成が誘導されることを示す(lem\arabic{section}.\arabic{subsection}.4)。
-そのために、先に必要な技術的な補題(lem\arabic{section}.\arabic{subsection}.3)を示しておく。
+これからこの商集合の上に合成が誘導されることを示す(\reflem{lem:composition_of_Lambda(R)_is_well-defined})。
+そのために、先に必要な技術的な補題(\reflem{lem:graph_is_same_as_original})を示しておく。
 
-lemma \arabic{section}.\arabic{subsection}.3に先んじて、その意味を説明しておく。
+\reflem{lem:graph_is_same_as_original}に先んじて、その意味を説明しておく。
 前述のとおり、$\Lambda[\Set^{\mono}]$の射は$\Set^{\mono}$の射をグラフとするようなものである。
 一方で、$\Set^{\mono}$の射はそれ自体素朴に$\Lambda[\Set^{\mono}]$の射だとみなせるべきである。
 即ち、単射写像$f:X\to Y$に対して、$f$自身を$\Lambda[\Set^{\mono}]$に埋め込んだ射$[1,f]$と$f$のグラフ$[X,(id_X,f)]$は、
-($\Lambda[\Set^{\mono}]$の射として)同一であるべきだ。lem\arabic{section}.\arabic{subsection}.3はまさしくこれを主張するものである。
+    ($\Lambda[\Set^{\mono}]$の射として)同一であるべきだ。
+\reflem{lem:graph_is_same_as_original}はまさしくこれを主張するものである。
 
-\paragraph{Lemma \arabic{section}.3.3：\ $\R$の射のグラフは$\Lambda(\R)$ではもとの $\R$の射と同じ}\ \\
-$(A,f):\bar{X} \to \bar{Y} \rmin\calLambda(\R)$ に対し、
-$(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
-% https://q.uiver.app/#q=WzAsMixbMCwwLCIoWCJdLFsyLDAsIkFcXHRlbnNvciBZKSJdLFswLDEsImYiXV0=
-\[\begin{tikzcd}
-	{(X} && {A\tensor Y)}
-	\arrow["f", from=1-1, to=1-3]
-\end{tikzcd}\]
+%\paragraph{Lemma \arabic{section}.3.3：\ $\R$の射のグラフは$\Lambda(\R)$ではもとの $\R$の射と同じ}\ \\
+\begin{lemmasub}[$\R$の射のグラフは$\Lambda(\R)$ではもとの $\R$の射と同じ]
+    \label{lem:graph_is_same_as_original}
+    $(A,f):\bar{X} \to \bar{Y} \rmin\calLambda(\R)$ に対し、
+    $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
+    % https://q.uiver.app/#q=WzAsMixbMCwwLCIoWCJdLFsyLDAsIkFcXHRlbnNvciBZKSJdLFswLDEsImYiXV0=
+    \[\begin{tikzcd}
+        {(X} && {A\tensor Y)}
+        \arrow["f", from=1-1, to=1-3]
+    \end{tikzcd}\]
 
-% https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHNpbVxcIChYIl0sWzEsMCwiWFxcdGVuc29yIFgiXSxbMiwwXSxbMywwLCJYXFx0ZW5zb3IgQVxcdGVuc29yIFkgKSJdLFswLDEsIlxcRGVsdGFfWCJdLFsxLDMsIlhcXHRlbnNvciBmIl1d
-\[\begin{tikzcd}
-	{\sim\ (X} & {X\tensor X} & {} & {X\tensor A\tensor Y )}
-	\arrow["{\Delta_X}", from=1-1, to=1-2]
-	\arrow["{X\tensor f}", from=1-2, to=1-4]
-\end{tikzcd}\]
+    % https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHNpbVxcIChYIl0sWzEsMCwiWFxcdGVuc29yIFgiXSxbMiwwXSxbMywwLCJYXFx0ZW5zb3IgQVxcdGVuc29yIFkgKSJdLFswLDEsIlxcRGVsdGFfWCJdLFsxLDMsIlhcXHRlbnNvciBmIl1d
+    \[\begin{tikzcd}
+        {\sim\ (X} & {X\tensor X} & {} & {X\tensor A\tensor Y )}
+        \arrow["{\Delta_X}", from=1-1, to=1-2]
+        \arrow["{X\tensor f}", from=1-2, to=1-4]
+    \end{tikzcd}\]
+\end{lemmasub}
 
 %(Stringでも主張を書く)\\
 
@@ -873,19 +911,19 @@ $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
     次のように同値で結ぶことができる。
     \begin{align*}
         & (A,f)\\
-        \sim \ & (A\tensor Y,\ f\comp(A\tensor \Delta_Y))  \ \ \text{(prop \arabic{section}.2.4)より}\\
+        \sim \ & (A\tensor Y,\ f\comp(A\tensor \Delta_Y))  \ \ \text{(\refprop{prop:diagonal_2-morphism}より)}\\
         \sim \ & (A\tensor A\tensor Y,\ f\comp(A\tensor \Delta_Y)\comp(\Delta_A\tensor YY))
-            \ \ \text{(prop \arabic{section}.2.3 and \arabic{section}.2.7より)}\\
+            \ \ \text{(\refprop{prop:trivial_2-morphism} と \refprop{prop:left_whiskering} より)}\\
         = \ & (A\tensor A\tensor Y,\ f\comp(\Delta_A\tensor \Delta_Y))
         \ \ \text{($\tensor$の函手性より)}\\
         \sim \ & (A\tensor Y\tensor A,\ f\comp(\Delta_A\tensor \Delta_Y)\comp(A\tensor\gamma_{AY}\tensor Y)
-            \ \ \text{(prop \arabic{section}.2.3 and \arabic{section}.2.7より)}\\
+        \ \ \text{(\refprop{prop:trivial_2-morphism} と \refprop{prop:left_whiskering} より)}\\
         = \ & (A\tensor Y\tensor A,\ f\comp\Delta_{A\tensor Y}))
         \ \ \text{($\because \Delta$はモノイド自然変換であった)}\\
         = \ & (A\tensor Y\tensor A,\ \Delta_X\comp(f\tensor f))
         \ \ \text{($\Delta$の自然性より)}\\
         \sim \ & (X\tensor A,\ \Delta_X\comp(X\tensor f))
-            \ \ \text{(prop \arabic{section}.2.3 and \arabic{section}.2.7より)}\\
+        \ \ \text{(\refprop{prop:trivial_2-morphism} と \refprop{prop:left_whiskering} より)}\\
     \end{align*}
     これで示された。分かりやすさのために、同じ式変形の図式とstring diagramを付しておく。
     % https://q.uiver.app/?q=WzAsMixbMCwwLCJbWCJdLFsyLDAsIkFcXHRlbnNvciBZXSJdLFswLDEsImYiXV0=
@@ -965,11 +1003,14 @@ $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
 \end{proof}
 
 
-\paragraph{Lemma \arabic{section}.3.4：\ $\Lambda(\R)$の射の合成のwell-defined性}\ \\
-$\bar{X},\bar{Y},\bar{Z}\in\calLambda(\R)$とする。
-任意の$(A_1,f_1),(A_2,f_2)\in\calLambda(\R)(\bar{X},\bar{Y}),\ (B_1,g_1),(B_2,g_2) \in\calLambda(\R)(\bar{Y},\bar{Z})$に対し、
-$(A_1,f_1) \sim (A_2,f_2)$かつ$(B_1,g_1) \sim (B_2,g_2)$ならば、
-$(A_1,f_1)\comp(B_1,g_1) \sim (A_2,f_2)\comp(B_2,g_2)$である。
+%\paragraph{Lemma \arabic{section}.3.4：\ $\Lambda(\R)$の射の合成のwell-defined性}\ \\
+\begin{lemmasub}[$\Lambda(\R)$の射の合成のwell-defined性]
+    \label{lem:composition_of_Lambda(R)_is_well-defined}
+    $\bar{X},\bar{Y},\bar{Z}\in\calLambda(\R)$とする。
+    任意の$(A_1,f_1),(A_2,f_2)\in\calLambda(\R)(\bar{X},\bar{Y}),\ (B_1,g_1),(B_2,g_2) \in\calLambda(\R)(\bar{Y},\bar{Z})$に対し、
+    $(A_1,f_1) \sim (A_2,f_2)$かつ$(B_1,g_1) \sim (B_2,g_2)$ならば、
+    $(A_1,f_1)\comp(B_1,g_1) \sim (A_2,f_2)\comp(B_2,g_2)$である。
+\end{lemmasub}
 
 \begin{proof}
     同値関係$\sim$は2-射の生成する同値関係として定義されていたので、次の２つを示せばよい：\\
@@ -983,19 +1024,21 @@ $(A_1,f_1)\comp(B_1,g_1) \sim (A_2,f_2)\comp(B_2,g_2)$である。
     (1)を示す。
     $(A_1,f_1),(A_2,f_2)\in\calLambda(\R)(\bar{X},\bar{Y}), (B,g)\in\calLambda(\R)(\bar{Y},\bar{Z})$
     及び$k:(A_1,f_1)\to (A_2,f_2)$を任意に固定する。
-    $(A_1,f_1)\comp(B,g)\sim(A_2,f_2)\comp(B,g)$を示す。\\
+    $(A_1,f_1)\comp(B,g)\sim(A_2,f_2)\comp(B,g)$を示す。
     \begin{align*}
         & (A_1,f_1)\comp(B,g)\\
-        = \ & (A_1\tensor B, f_1\comp(A_1\tensor g)) \ \ \text{(by definition of composition)}\\
+        = \ & (A_1\tensor B, f_1\comp(A_1\tensor g))
+             \ \ \text{(合成の定義より)}\\
         \sim \ & (A_1\tensor Y\tensor B, f_1\comp(A_1\tensor \Delta_Y)\comp(A_1 Y\tensor g))
-            \ \ \text{(by prop \arabic{section}.3.3 and lem \arabic{section}.2.7)}\\
-        \sim \ & (A_2\tensor Y\tensor B, f_1\comp(A_1\tensor \Delta_Y)\comp(A_1 Y\tensor g))\comp(k\tensor BZ)
-            \ \ \text{(by prop \arabic{section}.2.3 and lem \arabic{section}.2.7)}\\
-        = \ & (A_2\tensor Y\tensor B, f_1\comp(A_1\tensor \Delta_Y)\comp(k\tensor Y))\comp(A_2 Y\tensor g)\\
-        = \ & (A_2\tensor Y\tensor B, f_2\comp(A_2\tensor \Delta_Y))\comp(A_2 Y\tensor g)
-            \ \ \text{(because $k$ is a 2-morphism from $(A_1,f_1)$ to $(A_2,f_2)$)}\\
+            \ \ \text{(\reflem{lem:graph_is_same_as_original} と \refprop{prop:left_whiskering} より)}\\
+        \sim \ & (A_2\tensor Y\tensor B, f_1\comp(A_1\tensor \Delta_Y)\comp(A_1 Y\tensor g)\comp(k\tensor BZ))
+            \ \ \text{(\refprop{prop:trivial_2-morphism} と \refprop{prop:left_whiskering} より)}\\
+        = \ & (A_2\tensor Y\tensor B, f_1\comp(A_1\tensor \Delta_Y)\comp(k\tensor Y)\comp(A_2 Y\tensor g))
+            \ \ \text{($\tensor$の函手性より)}\\
+        = \ & (A_2\tensor Y\tensor B, f_2\comp(A_2\tensor \Delta_Y)\comp(A_2 Y\tensor g))
+            \ \ \text{($\because$ $k$ は $(A_1,f_1)$から$(A_2,f_2)$への2-射であった)}\\
         \sim \ & (A_2\tensor B, f_2\comp(A_2 Y\tensor g))
-            \ \ \text{(by prop \arabic{section}.3.3 and lem \arabic{section}.2.7)}
+            \ \ \text{(\refprop{lem:graph_is_same_as_original} と \refprop{prop:left_whiskering} より)}
     \end{align*}
     以上で示された。
     
