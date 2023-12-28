@@ -11,6 +11,7 @@
 \usepackage[dvipdfmx]{graphicx} %\includegraphics[options]{name}の使用
 \usepackage{here} %graphicsの[H]の使用
 \usepackage{enumerate} %enumerate環境の使用
+\usepackage{fancyhdr} %ヘッダーの使用
 \geometry{a4paper}
 
 %\usepackage[frenchb]{babel}
@@ -266,6 +267,17 @@
 \newcommand{\refcor}[1]{\corollaryword \ref{#1}}
 \newcommand{\refex}[1]{\exampleword \ref{#1}}
 %ココマデamsthmの設定
+
+
+%ココカラヘッダとフッタの設定
+\pagestyle{fancy}
+\lhead{ver:\ {\number\year}/{\number\month}/{\number\day}/({\number\time}min./1440min.)}
+\chead{}
+\rhead{\S\thesection}
+\lfoot{--\ --\ --\ --}
+\cfoot{\thepage}
+\rfoot{--\ --\ --\ --}
+%ココマデヘッダとフッタの設定
 
 
 \begin{document}
@@ -1162,10 +1174,28 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \newpage
-\subsection{Cartesian Structure of the Category \texorpdfstring{$\Lambda(\R)$}{Lambda(R)}}
+\subsection{\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}のデカルト圏構造}
 以上で定義した$\Lambda(\R)$が\CC になっていることを示す。
-実は$\R$から引き継ぐモノイド構造がそのまま直積となる。
+$\R$から引き継ぐモノイド構造がそのまま直積となる。
 まずモノイド構造を引き継ぐことを示し、その後それが直積の普遍性を持つことを示す。
 %the category $\Lambda(\R)$ defined in previous sections, becomes cartesian category. In this section, we will find its cartesian structure and prove that.
 
@@ -1189,16 +1219,16 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 \begin{propositionsub}[$\Lambda{[\R]}$の直積]
     \label{prop:product_of_Lambda(R)}
     簡単のため$\C:=\Lambda[\R]$とおく。
-    $\bar{X},\bar{Y}\in\C$に対し、$(\bar{X\tensor Y}, \pi_X, \pi_Y)$は$X$と$Y$の直積である。
-    ただし、$Y$への射影$\pi_Y:X\tensor Y\to Y$は、$\pi_Y:=[X,id_{X\tensor Y}]$で定める。
-    $X$への射影$\pi_X:X\tensor Y\to X$は、$\pi_X:=[Y,\gamma_{X,Y}]$で定める。
+    $\bar{X},\bar{Y}\in\C$に対し、$(\bar{X\tensor Y}, \pi_{\bar{X}}, \pi_{\bar{Y}})$は$\bar{X}$と$\bar{Y}$の直積である。
+    ただし、$\bar{Y}$への射影$\pi_{\bar{Y}}:\bar{X\tensor Y}\to \bar{Y}$は、$\pi_{\bar{Y}}:=[X,id_{X\tensor Y}]$で定める。
+    $\bar{X}$への射影$\pi_{\bar{X}}:\bar{X\tensor Y}\to \bar{X}$は、$\pi_{\bar{X}}:=[Y,\gamma_{X,Y}]$で定める。
 \end{propositionsub}
 
 \begin{proof}
-    $Z\in\C$を任意に取る。
+    $\bar{Z}\in\C$を任意に取る。
     対応
-    $\phi:\C(Z,X\tensor Y)\to \C(Z,X)\times\C(Z,Y)$を
-    $\phi([C,h]):=([C,h]\comp\pi_X, [C,h]\comp\pi_Y)$で定める。
+    $\phi:\C(\bar{Z},\bar{X\tensor Y})\to \C(\bar{Z},\bar{X})\times\C(\bar{Z},\bar{Y})$を
+    $\phi([C,h]):=([C,h]\comp\pi_{\bar{X}}, [C,h]\comp\pi_{\bar{Y}})$で定める。
     $\phi$が全単射であることを示す。
     %TODO:自然性の証明
 
@@ -1210,8 +1240,8 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     \noindent
     (i)\ $\phi$の逆対応$\psi$を構成する。
     
-    $[A,f]:Z\to X, \ [B,g]:Z\to Y$を任意に取る。
-    $\R$の射 $f\boxdot g$を$f\boxdot g :=\Delta_{Z}\comp (f\square g)$で定める。
+    $[A,f]:\bar{Z}\to \bar{X}, \ [B,g]:\bar{Z}\to \bar{Y}$を任意に取る。
+    $\R$の射 $f\boxdot g:Z\to A\tensor B \tensor X\tensor Y$を$f\boxdot g :=\Delta_{Z}\comp (f\square g)$で定める。
     即ち$f\boxdot g$は次の列の合成である：
     \[
     Z\to Z\tensor Z\to(A\tensor X)\tensor(B\tensor Y)\to(A\tensor B)\tensor(X\tensor Y)
@@ -1219,8 +1249,8 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     %$\underline{Z}\to\underline{Z}\tensor\underline{Z}\to(A\tensor\underline{X})\tensor(B\tensor\underline{Y})\to(A\tensor B)\tensor(\underline{X}\tensor\underline{Y})$
     $\psi([A,f],[B,g]):=[A\tensor B, f\boxdot g]$とする。
     $\psi$のwell-defined性を示す。次の２つを示せばよい：\\
-    (a)\ 任意の$(A_1,f_1),(A_2,f_2):Z\to X, (B,g):Z\to Y \rmin \calLambda(\R)$と$k:(A_1,f_1)\to(A_2,f_2)$に対し、$(A_1\tensor B, f_1\boxdot g)\sim (A_2\tensor B, f_2\boxdot g)$である。\\
-    (b)\ 任意の$(A,f):Z\to X, (B_1,g_1),(B_2,g_2):Z\to Y \rmin \calLambda(\R)$と$l:(B_1,g_1)\to(B_2,g_2)$に対し、$(A\tensor B_1, f\boxdot g_1)\sim (A\tensor B_2, f\boxdot g_2)$である。
+    (a)\ 任意の$(A_1,f_1),(A_2,f_2):\bar{Z}\to \bar{X}, (B,g):\bar{Z}\to \bar{Y} \rmin \calLambda(\R)$と$k:(A_1,f_1)\to(A_2,f_2)$に対し、$(A_1\tensor B, f_1\boxdot g)\sim (A_2\tensor B, f_2\boxdot g)$である。\\
+    (b)\ 任意の$(A,f):\bar{Z}\to \bar{X}, (B_1,g_1),(B_2,g_2):\bar{Z}\to \bar{Y} \rmin \calLambda(\R)$と$l:(B_1,g_1)\to(B_2,g_2)$に対し、$(A\tensor B_1, f\boxdot g_1)\sim (A\tensor B_2, f\boxdot g_2)$である。
     
     両者の証明は同様なので(a)のみ示す。
     $k\tensor BXY:(A_1\tensor B, f_1\boxdot g)\to (A_2\tensor B, f_2\boxdot g)$は次の図式を可換にするから、確かに$(A_1\tensor B, f_1\boxdot g)$から$(A_2\tensor B, f_2\boxdot g)$への2-射である。
@@ -1239,31 +1269,37 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
     \noindent
     (ii)$\psi\comp\phi=id$であることを示す。
-    $[A,f]:Z\to X, \ [B,g]:Z\to Y$を任意に取る。
-    $([A\tensor B, f\boxdot g]\comp \pi_X,\ [A\tensor B, f\boxdot g]\comp \pi_Y) = ([A,f], [B,g])$
+    $[A,f]:\bar{Z}\to \bar{X}, \ [B,g]:\bar{Z}\to \bar{Y}$を任意に取る。
+    $([A\tensor B, f\boxdot g]\comp \pi_{\bar{X}},\ [A\tensor B, f\boxdot g]\comp \pi_{\bar{Y}}) = ([A,f], [B,g])$
     であることを示す。
-    $([A\tensor B, f\boxdot g]\comp \pi_Y) = [B,g]$
+    ２つの証明は同様なので、$([A\tensor B, f\boxdot g]\comp \pi_{\bar{Y}}) = [B,g]$
     であることのみ示す。
     \begin{align*}
-        [A\tensor B, f\boxdot g]\comp \pi_Y = &\ [A\tensor B\tensor X, f\boxdot g]\ \ \ (\text{by def of}\ \ \comp \ )\\
-        = &\ [A\tensor B\tensor X,\Delta_Z\comp(f\tensor g) \comp(A\tensor\gamma_{X,B}\tensor Y)]\ \ \ 
-        (\text{by def of}\ \boxdot \ )\\
-        = &\ [A\tensor X\tensor B, \Delta_Z \comp (f\tensor g)]\ \ \  
-        (\text{by prop \arabic{section}.2.3})\\
-        = &\ [Z\tensor B, \Delta_Z \comp (Z\tensor g)]\ \ \  
-        (\text{by prop \arabic{section}.2.3})\\
-        = &\ [B,g]\ \ \  
-        (\text{by prop \arabic{section}.3.3})
+        [A\tensor B, f\boxdot g]\comp \pi_{\bar{Y}} = &\ [A\tensor B\tensor X, f\boxdot g]
+            \ \ (\text{$\comp$の定義より})\\
+        = &\ [A\tensor B\tensor X,\Delta_Z\comp(f\tensor g) \comp(A\tensor\gamma_{X,B}\tensor Y)]
+            \ \ (\text{$\boxdot$の定義より})\\
+        = &\ [A\tensor X\tensor B, \Delta_Z \comp (f\tensor g)]
+            \ \ (\text{\refprop{prop:trivial_2-morphism}より})\\
+        = &\ [Z\tensor B, \Delta_Z \comp (Z\tensor g)]
+            \ \ (\text{\refprop{prop:trivial_2-morphism}より})\\
+        = &\ [B,g]
+            \ \ (\text{\reflem{lem:graph_is_same_as_original}より})
     \end{align*}
-    $([A\tensor B, f\boxdot g]\comp \pi_X) = [A,f]$
+    $([A\tensor B, f\boxdot g]\comp \pi_{\bar{X}}) = [A,f]$
     であることの証明も同様である。
     以上で$\psi\comp\phi=id$であることが示された。\\
     %$[C,h]:Z\to X\tensor Y$であって次の図式(*)を満たすものを構成する。\\
 
     \noindent
     (iii)$\phi\comp\psi=id$であることを示す。
-    $[C,h]:Z\to X\tensor Y$を任意に取る。
+    $[C,h]:\bar{Z}\to \bar{X\tensor Y}$を任意に取る。
     $[C,h]=\psi(\phi([C,h]))$であることを示す。
+
+    （次頁に続く）
+
+    \newpage
+    （続き：$[C,h]=\psi(\phi([C,h]))$であることの証明）
     \begin{align*}
         &\psi(\phi([C,h]))\\
         = &\ \psi([C,h]\comp\pi_X, [C,h]\comp\pi_Y)\ \ \ 
@@ -1507,13 +1543,13 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     \end{align*}
     である（下記図式参照）。これで示された。
 
-    % https://q.uiver.app/#q=WzAsNixbMCwwLCJGKFgpIl0sWzIsMCwiRigxXFx0ZW5zb3IgWSkiXSxbNCwwLCJGKDEpXFx0aW1lcyBGKFkpIl0sWzYsMCwiRihZKSJdLFsyLDEsIkYoWSkiXSxbNCwxLCIxXFx0aW1lcyBGKFkpIl0sWzAsMSwiRihmJykiXSxbMiwxLCJcXHRoZXRhX3sxLFl9IiwyXSxbMiwzLCJcXHBpX3tGKDEpLEYoWSl9Il0sWzAsNCwiRihmKSIsMl0sWzEsNCwiRihcXHJob19ZKSIsMl0sWzUsMiwiXFxlcHNpbG9uXFx0aW1lcyBGKFkpIiwwLHsib2Zmc2V0IjotM31dLFs1LDMsIlxccmhvX3tGKFkpfSIsMl0sWzUsNCwiXFxyaG9fe0YoWSl9IiwyXSxbMiw1LCIhXFx0aW1lcyBGKFkpIl1d
+    % https://q.uiver.app/#q=WzAsNixbMCwwLCJGKFgpIl0sWzIsMCwiRihJXFx0ZW5zb3IgWSkiXSxbNCwwLCJGKEkpXFx0aW1lcyBGKFkpIl0sWzYsMCwiRihZKSJdLFsyLDEsIkYoWSkiXSxbNCwxLCIxXFx0aW1lcyBGKFkpIl0sWzAsMSwiRihmJykiXSxbMiwxLCJcXG11X3sxLFl9IiwyXSxbMiwzLCJcXHBpX3tGKEkpLEYoWSl9Il0sWzAsNCwiRihmKSIsMl0sWzEsNCwiRihcXHJob19ZKSIsMl0sWzUsMiwiXFxlcHNpbG9uXFx0aW1lcyBGKFkpIiwwLHsib2Zmc2V0IjotM31dLFs1LDMsIlxccmhvX3tGKFkpfSIsMl0sWzUsNCwiXFxyaG9fe0YoWSl9IiwyXSxbMiw1LCIhXFx0aW1lcyBGKFkpIl1d
     \[\begin{tikzcd}
-        {F(X)} && {F(1\tensor Y)} && {F(1)\times F(Y)} && {F(Y)} \\
+        {F(X)} && {F(I\tensor Y)} && {F(I)\times F(Y)} && {F(Y)} \\
         && {F(Y)} && {1\times F(Y)}
         \arrow["{F(f')}", from=1-1, to=1-3]
         \arrow["{\mu_{1,Y}}"', from=1-5, to=1-3]
-        \arrow["{\pi_{F(1),F(Y)}}", from=1-5, to=1-7]
+        \arrow["{\pi_{F(I),F(Y)}}", from=1-5, to=1-7]
         \arrow["{F(f)}"', from=1-1, to=2-3]
         \arrow["{F(\rho_Y)}"', from=1-3, to=2-3]
         \arrow["{\epsilon\times F(Y)}", shift left=3, from=2-5, to=1-5]
@@ -1595,7 +1631,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     \label{thm:よい関連部分圏からの復元}
     $\C$を\CC とし、$\R$を$\C$のよい関連部分圏とする。
     このとき、$\Lambda[\R]\simeq \C$である。
-    包含函手$i:\R\to\C$から、$\Lambda$の普遍性により函手$\bar{i}:\Lambda[\R]\to\C$はisoである。    
+    包含函手$i:\R\to\C$から$\Lambda$の普遍性により誘導される函手$\bar{i}:\Lambda[\R]\to\C$は圏同型である。    
 \end{theorem}
 
 \begin{proof}
@@ -1641,6 +1677,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     =\ & [A,f]
         \ \ \text{(\reflem{lem:graph_is_same_as_original}より)}
     \end{align*}
+    以上で示された。
 \end{proof}
 
 このように、デカルト圏$\C$の全てのグラフを持つ$\C$の関連部分圏$\R$は、必ず$\Lambda[\R]\simeq \C$となる。
@@ -1648,7 +1685,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 %\paragraph{cor 6.1.2 :  $\Lambda[\C^{\mono}]\simeq \C$ }\ \par
 \begin{corollary}[{$\Lambda[\C^{\mono}]\simeq \C$}]
     $\C$を\CC とする。\\
-    このとき、包含函手$i_{\C}:\C^{\mono}\to\C$から、$\Lambda$の普遍性によりのびる函手$\bar{i_{\C}}:\Lambda[\C^{\mono}]\to\C$はisoである。\\
+    このとき、包含函手$i_{\C}:\C^{\mono}\to\C$から、$\Lambda$の普遍性によりのびる函手$\bar{i_{\C}}:\Lambda[\C^{\mono}]\to\C$は圏同型である。\\
 \end{corollary}
 
 \begin{proof}
