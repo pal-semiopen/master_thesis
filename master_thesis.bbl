@@ -5,11 +5,15 @@
   \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
 }
 \providecommand{\href}[2]{#2}
-\begin{thebibliography}{Mac63}
+\begin{thebibliography}{Lam72}
 
 \bibitem[BW90]{barr1990category}
 Michael Barr and Charles Wells, \emph{Category theory for computing science},
   vol.~1, Prentice Hall New York, 1990.
+
+\bibitem[Fox76]{Fox76}
+Thomas Fox, \emph{Coalgebras and cartesian categories}, Communications in
+  Algebra \textbf{4} (1976), no.~7, 665--667.
 
 \bibitem[HS19]{HS19}
 Mathieu Huot and Sam Staton, \emph{Universal properties in quantum theory},
@@ -28,6 +32,13 @@ Bart Jacobs, \emph{Semantics of weakening and contraction}, Annals of Pure and
 Bart Jacobs, \emph{Convexity, duality and effects}, Theoretical Computer
   Science (Berlin, Heidelberg) (Cristian~S. Calude and Vladimiro Sassone,
   eds.), Springer Berlin Heidelberg, 2010, pp.~1--19.
+
+\bibitem[Lam72]{Lambek72}
+Joachim Lambek, \emph{Deductive systems and categories. {III}. {C}artesian
+  closed categories, intuitionist propositional calculus, and combinatory
+  logic}, Toposes, algebraic geometry and logic ({C}onf., {D}alhousie {U}niv.,
+  {H}alifax, {N}.{S}., 1971), Lecture Notes in Math., vol. Vol. 274, Springer,
+  Berlin-New York, 1972, pp.~57--82. \MR{349356}
 
 \bibitem[Mac63]{maclane1963natural}
 Saunders MacLane, \emph{Natural associativity and commutativity}, Rice
