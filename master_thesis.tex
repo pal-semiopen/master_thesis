@@ -599,7 +599,7 @@ Introductionで述べたように、\RC とは対称モノイド圏$\R$に「複
 特に$\C$として有界半束をその順序構造でデカルト圏と見なしたものを考えると、
 $\C$の分裂モノ射は恒等射しかないので、分裂モノ射の全体は離散圏に関連圏の構造を入れたものになる。
 離散対称モノイド圏とは即ち可換モノイドであるが、このモノイドが関連圏の構造を持つことは冪等であることを意味する。
-つまり、この操作はbounded semilatticeから順序を忘れて冪等可換モノイドをつくる操作と解釈できる。
+つまり、この操作は有界半束から順序を忘れて冪等可換モノイドをつくる操作と解釈できる。
 
 モノ射の成す\subRC の類似例として、可微分多様体の圏の全ての埋め込みの成す部分圏なども関連部分圏である。
 
@@ -655,9 +655,9 @@ $f:X\to X\times Y$と$g:Y\to Y\times Z$の安直な合成は$\compose{f}{(X\time
 本節では、その構成の詳細を記述する。
 
 本節では、上記第二案の構成の詳細及びwell-defined性の証明を述べる。
-\S\thesection.2 で構成の第一段階として双圏様の中間構造を定義し、
-\S\thesection.3 でその商として$\Lambda[\R]$を定義し、そのwell-defined性を証明する。
-\S\thesection.4では構成した圏$\Lambda[\R]$が\CC になっていることを証明する。
+\S\ref{subsection:calLambda} で構成の第一段階として双圏様の中間構造を定義し、
+\S\ref{subsection:Lambda(R)} でその商として$\Lambda[\R]$を定義し、そのwell-defined性を証明する。
+\S\ref{subsection:cartesian_structure_of_Lambda(R)}では構成した圏$\Lambda[\R]$が\CC になっていることを証明する。
 
 %一点注意しておく。
 本稿における$\Lambda$の構成は、\cite{HT12}の構成が大きなヒントになっているが、重大な違いがある。
@@ -665,17 +665,18 @@ $f:X\to X\times Y$と$g:Y\to Y\times Z$の安直な合成は$\compose{f}{(X\time
 そのlocal categoryの連結成分を取ることで欲しい圏を得ていた。
 本稿でも概ねそのような方針で構成するのだが、\cite{HT12}で双圏になっていたものに相当する中間構造が双圏にならない。
 この問題に起因して、連結成分を取ることで圏が得られることが自明ではなくなっている。
-そのため、最終的に得る圏のwell-defined性の証明(prop \arabic{section}.3.4)が書かれている。
+そのため、最終的に得る圏のwell-defined性の証明(\reflem{lem:composition_of_Lambda(R)_is_well-defined})が書かれている。
 
 
 
 
 
 \subsection{中間構造 \texorpdfstring{$\calLambda(\R)$}{Lambda(R)}の構成}
+\label{subsection:calLambda}
 本\S\thesubsection 節では、圏$\Lambda(\R)$を定義する前準備として、中間構造$\calLambda(\R)$を構成する。
 
 $\calLambda(\R)$は、双圏に似た次の４つの構造を持っている：\\
-(1) 対象、あるいは0-cellの集まり $\Ob{\calLambda(\R)}$\\
+(1) 対象の集まり $\Ob{\calLambda(\R)}$\\
 (2) $\calLambda(\R)$の各対象$\bar{X},\bar{Y}$毎の圏$\calLambda(\R)(\bar{X},\bar{Y})$
     \hspace{1em}($\calLambda(\R)(\bar{X},\bar{Y})$の対象を1-射と、射を2-射と呼ぶ。)\\
 (3) 各1-射$v:\bar{X}\to\bar{Y}, w:\bar{Y}\to\bar{Z}$毎の合成1-射$v\comp w:\bar{X}\to\bar{Z}$\\
@@ -801,7 +802,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
 
 以上で圏$\calLambda(\R)(\bar{X},\bar{Y})$が定義された。
-本小節の残りで1-射の合成と2-射の左whiskeringを定義し、中間構造$\calLambda(\R)$の定義を終える。
+本小節の残りで1-射の合成、恒等1-射と2-射の左whiskeringを定義し、中間構造$\calLambda(\R)$の定義を終える。
 
 %\paragraph{Definition \arabic{section}.\arabic{subsection}.6: 1-射の合成}\ \\
 \begin{definitionsub}[1-射の合成]
@@ -872,6 +873,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
 
 \subsection{圏\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}の構成}
+\label{subsection:Lambda(R)}
 本節では圏$\Lambda(\R)$の定義を完成する。
 まず前述の通り$\Lambda(\R)$の射を$\calLambda(\R)$の1-射の同値類として定義する。
 次に合成を$\calLambda(\R)$の1-射の合成から誘導されるものとして定義するが、これのwell-defined性は非自明であるから、これを示す。
@@ -879,13 +881,13 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 %\paragraph{Definition \arabic{section}.\arabic{subsection}.1：\ $\Lambda(\R)$の対象}\ \\
 \begin{definitionsub}[$\Lambda(\R)$の対象]
     \label{def:object_of_Lambda(R)}
-    $\Ob{\Lambda(\R)}:= \Ob{\calLambda(\R)} (=\Ob{\R})$とする。
+    $\Ob{\Lambda(\R)}:= \Ob{\calLambda(\R)} \ (=\set{\bar{X} \ | \ X\in\Ob{\R}})$とする。
 \end{definitionsub}
 
 %\paragraph{Definition \arabic{section}.\arabic{subsection}.2：\ $\Lambda(\R)$の射}\ \\
 \begin{definitionsub}[$\Lambda(\R)$の射]
     \label{def:morphism_of_Lambda(R)}
-    $\calLambda(\R)(\bar{X},\bar{Y})$上の同値関係$\sim$を二項関係「２射で繋がれている」が生成する同値関係とする。
+    $\calLambda(\R)(\bar{X},\bar{Y})$上の同値関係$\sim$を二項関係「2-射で繋がれている」が生成する同値関係とする。
     すなわち、２つの2-射$(A,f),(B,g):\bar{X}\to \bar{Y}$が$(A,f)\sim (B,g)$であるのは、有限個の2-射
         $k_{2i}:(C_{2i},h_{2i})\to (C_{2i+1},h_{2i+1})$,
         $k_{2i+1}:(C_{2i+2},h_{2i+2})\to (C_{2i+1},h_{2i+1}) \ \ (i=0,..,n-1)$
@@ -1194,6 +1196,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
 \newpage
 \subsection{\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}のデカルト圏構造}
+\label{subsection:cartesian_structure_of_Lambda(R)}
 以上で定義した$\Lambda(\R)$が\CC になっていることを示す。
 $\R$から引き継ぐモノイド構造がそのまま直積となる。
 まずモノイド構造を引き継ぐことを示し、その後それが直積の普遍性を持つことを示す。
@@ -1204,13 +1207,13 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
 \begin{definitionsub}[$\Lambda(\R)$のモノイド構造]
     \label{def:monoidal_structure_of_Lambda(R)}
     $\R$を \RC とする。
-    $\Lambda(\R)$は、素朴な方法で\SMC となる。
+    $\Lambda(\R)$は、$\R$と同様にして\SMC となる。
     モノイド積の函手$\tensor'$と単位対象$I'$のみ明示する。
     まず$\tensor'$を次のように定める。
     \fct{\tensor'}{\Lambda(\R)\times \Lambda(\R)}{\Lambda(\R)}{(\bar{X},\bar{Y})}{([A,f], [B,g])}{(\bar{X'},\bar{Y'})}{\bar{X\tensor Y}}{[A\tensor B, f\square g]}{\bar{X'\tensor Y'}}
     ただし、$f\square g := (f\tensor g)\comp (A\tensor\gamma_{X,B}\tensor Y)$ である。
     このように定めた$\tensor'$は確かにwell-definedである。
-    次に単位対象を $I':=I$で定める。
+    単位対象は $I':=I$で定める。
 %整合性の同型$\alpha', \lambda', \rho'$及び捻り同型$\gamma'$を素朴な方法で定めると、$(\Lambda(\R),\tensor')$
 \end{definitionsub}
 
@@ -1302,32 +1305,30 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     （続き：$[C,h]=\psi(\phi([C,h]))$であることの証明）
     \begin{align*}
         &\psi(\phi([C,h]))\\
-        = &\ \psi([C,h]\comp\pi_X, [C,h]\comp\pi_Y)\ \ \ 
-        (\text{by def of}\ \ \phi \ )\\
-        = &\ \psi([C\tensor Y,h\comp(C\tensor\gamma_{X,Y})], [C\tensor X,h])\ \ \ 
-        (\text{by def of}\ \ \comp \ )\\
-        = &\ [C\tensor Y\tensor C\tensor X, \ (h\comp(C\tensor\gamma_{X,Y}))\boxdot h]\ \ \  
-        (\text{by def of}\ \psi \ )\\
-        = &\ [C\tensor Y\tensor C\tensor X,\  \Delta_Z\comp((h\comp(C\tensor\gamma_{X,Y}))\tensor h) \comp(CY\tensor\gamma_{X,CX}\tensor Y)]\ \ \  
-        (\text{by def of}\ \boxdot )\\
-        = &\ [C\tensor Y\tensor C\tensor X,\  \Delta_Z\comp(h\tensor h) 
-        \comp(C\tensor\gamma_{X,Y}\tensor CXY)
-        \comp(CY\tensor\gamma_{X,CX}\tensor Y)]\ \ \  
-        (\text{by functoriality of}\ \tensor)\\
-        = &\ [C\tensor Y\tensor C\tensor X,\  h\comp\Delta_{CXY}
-        \comp(C\tensor\gamma_{X,Y}\tensor CXY)
-        \comp(CY\tensor\gamma_{X,CX}\tensor Y)]\ \ \ 
-        (\text{by naturality of}\ \Delta)\\
-        = &\ [C\tensor Y\tensor C\tensor X,\  h
-        \comp(\Delta_{C}\tensor\Delta_{XY})
-        \comp(C\tensor\gamma_{CX,Y}\tensor XY)]\ \ \ 
-        (*)\\
-        = &\ [C\tensor C\tensor X\tensor Y,\  h\comp(\Delta_C\tensor\Delta_{XY})]\ \ \ 
-        (\text{by prop \arabic{section}.2.3})\\
-        = &\ [C\tensor X\tensor Y,\  h\comp(C\tensor\Delta_{XY})]\ \ \ 
-        (\text{by prop \arabic{section}.2.3})\\
-        = &\ [C,\  h]\ \ \ 
-        (\text{by prop \arabic{section}.2.4 and prop \arabic{section}.2.7})
+        = &\ \psi([C,h]\comp\pi_X, [C,h]\comp\pi_Y)
+            \ \ (\text{$\phi$の定義より})\\
+        = &\ \psi([C\tensor Y,h\comp(C\tensor\gamma_{X,Y})], [C\tensor X,h])
+            \ \ (\text{$\comp$の定義より})\\
+        = &\ [C\tensor Y\tensor C\tensor X, \ (h\comp(C\tensor\gamma_{X,Y}))\boxdot h]
+            \ \ (\text{$\phi$の定義より})\\
+        = &\ [C\tensor Y\tensor C\tensor X,\  
+            \Delta_Z\comp((h\comp(C\tensor\gamma_{X,Y}))\tensor h) \comp(CY\tensor\gamma_{X,CX}\tensor Y)]
+            \ \ (\text{$\boxdot$の定義より})\\
+        = &\ [C\tensor Y\tensor C\tensor X,\  
+            \Delta_Z\comp(h\tensor h) \comp(C\tensor\gamma_{X,Y}\tensor CXY)\comp(CY\tensor\gamma_{X,CX}\tensor Y)]
+            \ \ (\text{$\tensor$の函手性より})\\
+        = &\ [C\tensor Y\tensor C\tensor X,\  
+            h\comp\Delta_{CXY}\comp(C\tensor\gamma_{X,Y}\tensor CXY)\comp(CY\tensor\gamma_{X,CX}\tensor Y)]
+            \ \ (\text{$\Delta$の自然性より})\\
+        = &\ [C\tensor Y\tensor C\tensor X,\  
+            h\comp(\Delta_{C}\tensor\Delta_{XY})\comp(C\tensor\gamma_{CX,Y}\tensor XY)]
+            \ \ (*)\\
+        = &\ [C\tensor C\tensor X\tensor Y,\  h\comp(\Delta_C\tensor\Delta_{XY})]
+            \ \ (\text{\refprop{prop:trivial_2-morphism}})\\
+        = &\ [C\tensor X\tensor Y,\  h\comp(C\tensor\Delta_{XY})]
+            \ \ (\text{\refprop{prop:trivial_2-morphism}})\\
+        = &\ [C,\  h]
+            \ \ (\text{\refprop{prop:diagonal_2-morphism} and \refprop{prop:left_whiskering}})
     \end{align*}
 
     上式中の$(*)$の部分は下のように示される。
@@ -1386,19 +1387,25 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
 %\paragraph*{proposition \arabic{section}.\arabic{subsection}.4：\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}の終対象}\ \\
 \begin{propositionsub}[$\Lambda(\R)$の終対象]
     \label{prop:terminal_object_of_Lambda(R)}
-    $\Lambda(\R)$の終対象は$I$である。
-    実際、任意の$\bar{X}\in\Lambda(\R)$に対し、$!_{\bar{X}}:=[X,\l_X]:\bar{X}\to I$と置けば、
-    任意の$[A,f]:\bar{X}\to I$に対し、次のように$[A,f]=!_{\bar{X}}$である：\\
+    $\Lambda(\R)$の単位対象$I$は終対象である。
+\end{propositionsub}
+
+\begin{proof}
+    任意に$\bar{X}\in\Lambda(\R)$を取り、$!_{\bar{X}}:=[X,\l_X]:\bar{X}\to I$と置く。
+    任意の$[A,f]:\bar{X}\to I$に対し、次のように$[A,f]=!_{\bar{X}}$であることを示す。
+    $(A,f)~(X,\l_X)$であることを示せばよい。
+
     $f':X\to A$を$f':=(-\tensor I)^{-1}(f\comp\l_X)$と定めると、
     \begin{align*}
         &(A,f)\\
-        = &\ (A,\l_X\comp (f'\times I))\\
-        \sim &\ (X, \l_X) (\text{\refprop{prop:trivial_2-morphism}})
+        = \ & (A,\l_X\comp (f'\times I))\\
+        \sim\ & (X, \l_X) \ (\text{\refprop{prop:trivial_2-morphism} より})
     \end{align*}
-    である。
-\end{propositionsub}
+    である。以上で示された。
+\end{proof}
 
 以上より$\Lambda(\R)$は全ての有限直積を持ち、従って\CC であることが示された。
+次節では$\Lambda$が関連圏からデカルト圏を得る普遍的な方法であることを示す。
 
 \newpage
 
@@ -1458,19 +1465,19 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     $F(X)\to F(A\tensor Y)\simeq F(A)\times F(Y)\to F(Y)$.
 
     $\bar{F}$のwell-defined性を示す。
-    $(A,f),(B,g):X\to Y \rmin \calLambda(\R)$と$k:(A,f)\to (B,g)$を任意に取る。
+    $(A,f),(B,g):\bar{X}\to \bar{Y} \rmin \calLambda(\R)$と$k:(A,f)\to (B,g)$を任意に取る。
     $\bar{F}([A,f])=\bar{F}([B,g])$を示せばよい。
     %$F$は\Rf であったから、次の図式は可換である。
 
     まず、次の図式は可換である。
-    % https://q.uiver.app/#q=WzAsNixbMCwwLCJGKEEgXFx0ZW5zb3IgWSBcXHRlbnNvciBZKSJdLFswLDIsIkYoQVxcdGVuc29yIFkpIl0sWzIsMCwiRihBXFx0ZW5zb3IgWSlcXHRpbWVzIEYoWSkiXSxbNCwwLCJGKEEpXFx0aW1lcyBGKFkpXFx0aW1lcyBGKFkpIl0sWzQsMiwiRihBKVxcdGltZXMgRihZKSJdLFsyLDEsIkYoQSlcXHRpbWVzIEYoWVxcdGVuc29yIFkpIl0sWzEsMCwiRihBXFx0ZW5zb3IgXFxEZWx0YV9ZKSJdLFsyLDAsIlxcbXVfe0FcXHRlbnNvciBZLCBZfSIsMl0sWzMsMiwiXFxtdV97QSxZfVxcdGVuc29yIEYoWSkiLDJdLFs0LDMsIkYoQSlcXHRpbWVzIFxcRGVsdGFfe0YoWSl9IiwyXSxbNCwxLCJcXG11X3tBLFl9Il0sWzUsMCwiXFxtdV97QSxZXFx0ZW5zb3IgWX0iXSxbNCw1LCJGKEEpXFx0aW1lcyBGKFxcRGVsdGFfWSkiLDJdLFszLDUsIkYoQSlcXHRpbWVzIFxcbXVfe1ksWX0iXV0=
+    % https://q.uiver.app/#q=WzAsNixbMCwwLCJGKEEgXFx0ZW5zb3IgWSBcXHRlbnNvciBZKSJdLFswLDIsIkYoQVxcdGVuc29yIFkpIl0sWzIsMCwiRihBXFx0ZW5zb3IgWSlcXHRpbWVzIEYoWSkiXSxbNCwwLCJGKEEpXFx0aW1lcyBGKFkpXFx0aW1lcyBGKFkpIl0sWzQsMiwiRihBKVxcdGltZXMgRihZKSJdLFsyLDEsIkYoQSlcXHRpbWVzIEYoWVxcdGVuc29yIFkpIl0sWzEsMCwiRihBXFx0ZW5zb3IgXFxEZWx0YV9ZKSJdLFsyLDAsIlxcbXVfe0FcXHRlbnNvciBZLCBZfSIsMl0sWzMsMiwiXFxtdV97QSxZfVxcdGltZXMgRihZKSIsMl0sWzQsMywiRihBKVxcdGltZXMgXFxEZWx0YV97RihZKX0iLDJdLFs0LDEsIlxcbXVfe0EsWX0iXSxbNSwwLCJcXG11X3tBLFlcXHRlbnNvciBZfSJdLFs0LDUsIkYoQSlcXHRpbWVzIEYoXFxEZWx0YV9ZKSIsMl0sWzMsNSwiRihBKVxcdGltZXMgXFxtdV97WSxZfSJdXQ==
     \[\begin{tikzcd}
         {F(A \tensor Y \tensor Y)} && {F(A\tensor Y)\times F(Y)} && {F(A)\times F(Y)\times F(Y)} \\
         && {F(A)\times F(Y\tensor Y)} \\
         {F(A\tensor Y)} &&&& {F(A)\times F(Y)}
         \arrow["{F(A\tensor \Delta_Y)}", from=3-1, to=1-1]
         \arrow["{\mu_{A\tensor Y, Y}}"', from=1-3, to=1-1]
-        \arrow["{\mu_{A,Y}\tensor F(Y)}"', from=1-5, to=1-3]
+        \arrow["{\mu_{A,Y}\times F(Y)}"', from=1-5, to=1-3]
         \arrow["{F(A)\times \Delta_{F(Y)}}"', from=3-5, to=1-5]
         \arrow["{\mu_{A,Y}}", from=3-5, to=3-1]
         \arrow["{\mu_{A,Y\tensor Y}}", from=2-3, to=1-1]
