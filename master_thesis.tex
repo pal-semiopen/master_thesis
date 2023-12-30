@@ -216,6 +216,7 @@
 \newcommand{\CCs}{デカルト圏}
 \newcommand{\bCC}{\mathbf{CC}}
 \newcommand{\calLambda}{\mathcal{B}}
+\newcommand{\LambdaR}{{{\Lambda[\R]}}}
 \newcommand{\mono}{{\mathrm{mono}}}
 %\newcommand{   }{}
 %\newcommand{   }{}
@@ -226,6 +227,9 @@
 \renewcommand{\baselinestretch}{1.4}
 %%ここまでこの論文中でのみ使うコマンド
 
+%ココカラfigure環境の設定
+\renewcommand{\figurename}{図}
+%ココマデfigure環境の設定
 
 %ココカラamsthmの設定
 \newcommand{\definitionword}{定義}
@@ -334,8 +338,8 @@ arbitrary relevance category $\R$\\
 arbitrary cartesian category $\C, \D$\\
 object $X,Y$ of $\R$\\
 morphism $f$ of $\R$\\
-object $X,Y$ of $\Lambda(\R)$\\
-morphism $[A,f], [B,g]$ of $\Lambda(\R)$\\
+object $X,Y$ of ${\Lambda[\R]}$\\
+morphism $[A,f], [B,g]$ of ${\Lambda[\R]}$\\
 \newpage
 \end{comment}
 
@@ -382,24 +386,26 @@ morphism $[A,f], [B,g]$ of $\Lambda(\R)$\\
 \topic{これら中間構造を調べることは対称モノイド圏と\CC の関係性を調べるのに有用である。}
 例えば、与えられた対称モノイド圏 $\M$から普遍的な\CC $CC[\M]$を構成する問題(直積を付加する問題)は、
 与えられた対称モノイド圏 $\M$から普遍的な\RC $RC[\M]$を構成する問題(複製を付加する問題)と与えられた\RC $\R$から普遍的な\CC $CC[\R]$を構成する問題(削除を付加する問題)とに分割できる。
-実際\AC については、アフィン論理への関心も相まって多くの研究がある(\cite{JacobsConvex}, \cite{HS19})。
+実際\AC については、アフィン論理への関心も相まって多くの研究がある(\cite{JacobsConvex}, \cite{HS19}, \cite{Andr_s_Mart_nez_2023})。
 しかし、\RC についてはまだ調べられてこなかった。
 
-
-% https://q.uiver.app/?q=WzAsNCxbMywwLCJcXHRleHR7XFxTTUMgfSJdLFszLDIsIlxcdGV4dHtcXFJDIH0iXSxbMCwyLCJcXHRleHR7XFxDQ30iXSxbMCwwLCJcXHRleHR7XFxBQyB9Il0sWzEsMCwiXFx0ZXh0e+WvvuinkuWwhOOCkuW/mOWNtH0iLDJdLFsyLDEsIlxcdGV4dHvntYLlr77osaHjgpLlv5jljbR9IiwyXSxbMiwzLCJcXHRleHR75a++6KeS5bCE44KS5b+Y5Y20fSJdLFszLDAsIlxcdGV4dHvntYLlr77osaHjgpLlv5jljbR9IiwyXSxbMSwyLCJcXExhbWJkYSIsMix7ImN1cnZlIjozfV0sWzAsMywiTCIsMix7ImN1cnZlIjozfV0sWzgsNSwiIiwxLHsibGV2ZWwiOjEsInN0eWxlIjp7Im5hbWUiOiJhZGp1bmN0aW9uIn19XSxbOSw3LCIiLDIseyJsZXZlbCI6MSwic3R5bGUiOnsibmFtZSI6ImFkanVuY3Rpb24ifX1dXQ==
-\[\begin{tikzcd}
-	{\text{\AC }} &&& {\text{\SMC }} \\
-	\\
-	{\text{\CC}} &&& {\text{\RC }}\\
-	\arrow["{\text{複製を忘却}}"', from=3-4, to=1-4]
-	\arrow[""{name=0, anchor=center, inner sep=0}, "{\text{削除を忘却}}"', from=3-1, to=3-4]
-	\arrow["{\text{複製を忘却}}", from=3-1, to=1-1]
-	\arrow[""{name=1, anchor=center, inner sep=0}, "{\text{削除を忘却}}"', from=1-1, to=1-4]
-	\arrow[""{name=2, anchor=center, inner sep=0}, "\Lambda"', curve={height=18pt}, from=3-4, to=3-1]
-	\arrow[""{name=3, anchor=center, inner sep=0}, "L"', curve={height=18pt}, from=1-4, to=1-1]
-	\arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=2, to=0]
-	\arrow["\dashv"{anchor=center, rotate=-92}, draw=none, from=3, to=1]
-\end{tikzcd}\]
+\begin{figure}[H]
+    % https://q.uiver.app/?q=WzAsNCxbMywwLCJcXHRleHR7XFxTTUMgfSJdLFszLDIsIlxcdGV4dHtcXFJDIH0iXSxbMCwyLCJcXHRleHR7XFxDQ30iXSxbMCwwLCJcXHRleHR7XFxBQyB9Il0sWzEsMCwiXFx0ZXh0e+WvvuinkuWwhOOCkuW/mOWNtH0iLDJdLFsyLDEsIlxcdGV4dHvntYLlr77osaHjgpLlv5jljbR9IiwyXSxbMiwzLCJcXHRleHR75a++6KeS5bCE44KS5b+Y5Y20fSJdLFszLDAsIlxcdGV4dHvntYLlr77osaHjgpLlv5jljbR9IiwyXSxbMSwyLCJcXExhbWJkYSIsMix7ImN1cnZlIjozfV0sWzAsMywiTCIsMix7ImN1cnZlIjozfV0sWzgsNSwiIiwxLHsibGV2ZWwiOjEsInN0eWxlIjp7Im5hbWUiOiJhZGp1bmN0aW9uIn19XSxbOSw3LCIiLDIseyJsZXZlbCI6MSwic3R5bGUiOnsibmFtZSI6ImFkanVuY3Rpb24ifX1dXQ==
+    \[\begin{tikzcd}
+        {\text{\AC }} &&& {\text{\SMC }} \\
+        \\
+        {\text{\CC}} &&& {\text{\RC }}
+        \arrow["{\text{複製を忘却}}"', from=3-4, to=1-4]
+        \arrow[""{name=0, anchor=center, inner sep=0}, "{\text{削除を忘却}}"', from=3-1, to=3-4]
+        \arrow["{\text{複製を忘却}}", from=3-1, to=1-1]
+        \arrow[""{name=1, anchor=center, inner sep=0}, "{\text{削除を忘却}}"', from=1-1, to=1-4]
+        \arrow[""{name=2, anchor=center, inner sep=0}, "\Lambda"', curve={height=18pt}, from=3-4, to=3-1]
+        \arrow[""{name=3, anchor=center, inner sep=0}, "L"', curve={height=18pt}, from=1-4, to=1-1]
+        \arrow["\dashv"{anchor=center, rotate=-90}, draw=none, from=2, to=0]
+        \arrow["\dashv"{anchor=center, rotate=-92}, draw=none, from=3, to=1]
+    \end{tikzcd}\]
+    \caption{４つの圏のクラスの関係性}
+\end{figure}
 
 \topic{本論文では、\RC について調べる足掛かりとして、\CC との関係を調べることを試みた。}
 具体的には、\RC がしばしば\CC の\subRC として構成されることに着目し、逆に与えられた\RC がどのような\CC のよい\subRC となるのかを調べた。
@@ -409,9 +415,9 @@ morphism $[A,f], [B,g]$ of $\Lambda(\R)$\\
 
 \topic{本論文で主に扱うのは、与えられた\RC からそれをよい\subRC に持ちうる\CC を構成する操作$\Lambda$である。}
 操作$\Lambda$は、あらゆる\RC $\R$に対して
-    \CC $\Lambda(\R)$ 及び函手$\Eta_{\R}:\R \to \Lambda(\R)$の組$(\Lambda(\R), \Eta_{\R})$を１つずつ返すものである。
+    \CC ${\Lambda[\R]}$ 及び函手$\Eta_{\R}:\R \to {\Lambda[\R]}$の組$({\Lambda[\R]}, \Eta_{\R})$を１つずつ返すものである。
 この$\Eta_{\R}$は必ずしも単射的(即ち忠実かつ対象上本質的に単射)であるとは限らないが、
-    もしも$\R$が何か\CC $\C$のよい\subRC として構成されているときには、必ず$\Lambda(\R)\simeq \C$である。
+    もしも$\R$が何か\CC $\C$のよい\subRC として構成されているときには、必ず${\Lambda[\R]}\simeq \C$である。
 特に、$\R$をよい\subRC に持つ\CC $\C$は同型を除いて一意的であることが従う。
 
 \topic{さらにこの操作$\Lambda$は、\RC から\CC を構成する方法として普遍的である。}
@@ -425,21 +431,21 @@ morphism $[A,f], [B,g]$ of $\Lambda(\R)$\\
 \RC から\CC を作る方法は「削除を追加する」ものであるはずだから、\SMC から\AC を作る方法に一致するか少なくとも類似するはずである。後者は実際に知られていて、
 \topic{対称モノイド圏から、\AC を作る(左)普遍的な構成が
 \cite{HT12}の系として得られている(\cite{HT12}, \cite{HS19})。}
-この普遍的な構成、L-construction(named by \cite{HS19})は、与えられた対称モノイド圏の射を余分に増やしたのち適切な同値関係で割る構成である。
+この普遍的な構成、構成$L$(named by \cite{Andr_s_Mart_nez_2023})は、与えられた対称モノイド圏の射を余分に増やしたのち適切な同値関係で割る構成である。
 特にモノイド単位対象への射を全て同一視するような同値関係で割るので、モノイド単位対象が終対象になる。標語的に言えば、L-constructionは「対称モノイド圏の単位対象を終対象にする構成」である。
 %\topic{relevance categoryに施せば「複製と終対象を備えた圏」即ちcartesian categoryになると期待される。}
 \topic{L-constructionは\RC に施しても一般には\CC にはならない}。
 例えば$\Set^{\mono}$は素朴な方法で\RC の構造を持ち
 、$\Set^{\mono}$にL-constructionを施して得られる圏$L(\Set^{\mono})$は$\Set$と非同型であるが、
 $\Lambda(\Set^{\mono})\simeq\Set$である。
-$L\-$construction及び$\Lambda\-$constructionの普遍性を踏まえれば、$L(\Set^{\mono})$は\CC ではないことがわかる。
+構成$L$及び構成$\Lambda$の普遍性を踏まえれば、$L(\Set^{\mono})$は\CC ではないことがわかる。
 $L(\Set^{\mono})$はTennent category(\cite{tennent1990semantical})と等しい(\cite{HT12},Thm4.4)ことが分かっている。
 
 構成Lは\SMC のモノイド単位対象を終対象にするものであったが、上に述べたようにテンソル積を直積にするものではなかった。
 これに対して 構成$\Lambda$は、\RC を受け取り、そのモノイド単位対象を終対象に、テンソル積を直積にするものである。
 
 \begin{comment}
-\topic{\RC から左普遍的な \CC を得る方法は複数考えられるが、他の方法では今回のように実際の挙動を計算することは難しい。}
+\topic{\RC から左普遍的な\CC を得る方法は複数考えられるが、他の方法では今回のように実際の挙動を計算することは難しい。}
 \RC や\CC は等式的な形式体系を用いた定義をされていると考えられるから、
     例えば\cite{Lambek72}のように必要な対象と射をすべて追加したのちに適切な同値関係で割るという構成を考えることができる。
 しかしこの方法では対象や射の形は非常に複雑になるため、具体例での振る舞いを計算することは難しい。
@@ -638,9 +644,9 @@ $\C$の分裂モノ射は恒等射しかないので、分裂モノ射の全体�
 \section{構成 \texorpdfstring{$\Lambda$}{Lambda}の定義}
 本節では構成 $\Lambda$の定義を述べる。$\Lambda$は、与えられた\RC から\CC を構成する普遍的な操作である。
 以下、$\R=(\R,\tensor,I,\alpha,\lambda,\rho,\gamma,\Delta)$を\RC とする。
-これから本節全体を通して、デカルト圏$\Lambda(\R)$を定義する。
-圏$\Lambda(\R)$を定義した後に $\Lambda(\R)$が持つ素朴なモノイド構造がデカルト積を与えることを示す。
-圏$\Lambda(\R)$を構成するに当たって、まず双圏様の中間構造 $\calLambda(\R)$を構成し、その後 $\Lambda(\R)$を作る。
+これから本節全体を通して、デカルト圏${\Lambda[\R]}$を定義する。
+圏${\Lambda[\R]}$を定義した後に ${\Lambda[\R]}$が持つ素朴なモノイド構造がデカルト積を与えることを示す。
+圏${\Lambda[\R]}$を構成するに当たって、まず双圏様の中間構造 $\calLambda(\R)$を構成し、その後 ${\Lambda[\R]}$を作る。
 
 
 
@@ -684,8 +690,8 @@ $f:X\to X\times Y$と$g:Y\to Y\times Z$の安直な合成は$\compose{f}{(X\time
 
 本節では、上記第二案の構成の詳細及びwell-defined性の証明を述べる。
 \S\ref{subsection:calLambda} で構成の第一段階として双圏様の中間構造を定義し、
-\S\ref{subsection:Lambda(R)} でその商として$\Lambda[\R]$を定義し、そのwell-defined性を証明する。
-\S\ref{subsection:cartesian_structure_of_Lambda(R)}では構成した圏$\Lambda[\R]$が\CC になっていることを証明する。
+\S\ref{subsection:Lambda(R)} でその商として${\Lambda[\R]}$を定義し、そのwell-defined性を証明する。
+\S\ref{subsection:cartesian_structure_of_Lambda(R)}では構成した圏${\Lambda[\R]}$が\CC になっていることを証明する。
 
 %一点注意しておく。
 本稿における$\Lambda$の構成は、\cite{HT12}の構成が大きなヒントになっているが、重大な違いがある。
@@ -701,7 +707,7 @@ $f:X\to X\times Y$と$g:Y\to Y\times Z$の安直な合成は$\compose{f}{(X\time
 
 \subsection{中間構造 \texorpdfstring{$\calLambda(\R)$}{Lambda(R)}の構成}
 \label{subsection:calLambda}
-本\S\thesubsection 節では、圏$\Lambda(\R)$を定義する前準備として、中間構造$\calLambda(\R)$を構成する。
+本\S\thesubsection 節では、圏${\Lambda[\R]}$を定義する前準備として、中間構造$\calLambda(\R)$を構成する。
 
 $\calLambda(\R)$は、双圏に似た次の４つの構造を持っている：\\
 (1) 対象の集まり $\Ob{\calLambda(\R)}$\\
@@ -713,18 +719,18 @@ $\calLambda(\R)$は、双圏に似た次の４つの構造を持っている：\
 
 
 \begin{comment}
-これから定義される$\Lambda(\R)$の対象は、ちょうど$\R$の対象とする予定である。\\
-本節では$\Lambda(\R)$を定義する前準備をする。\\
+これから定義される${\Lambda[\R]}$の対象は、ちょうど$\R$の対象とする予定である。\\
+本節では${\Lambda[\R]}$を定義する前準備をする。\\
 各$X,Y\in\R$に対し、
-我々はこれから射の集合$\Lambda(\R)(X,Y)$を定義するわけだが、
+我々はこれから射の集合${\Lambda[\R]}(X,Y)$を定義するわけだが、
 まず始めに圏$\calLambda(\R)(X,Y)$を定義し、
-その連結成分の集合として$\Lambda(\R)(X,Y)$を定義する。\\
+その連結成分の集合として${\Lambda[\R]}(X,Y)$を定義する。\\
 連結成分を取る操作に関するwell-definednessが非自明な部分は次節\S \arabic{section}.3 に回し、本節では中間構造$\calLambda(\R)(X,Y)$を定義する。\\
 \end{comment}
 
-$\calLambda(\R)$は$\Lambda(\R)$の定義に用いる。
-$\calLambda(\R)$の対象は$\Lambda(\R)$の対象に対応し、$\calLambda(\R)$の1-射の同値類が$\Lambda(\R)$の射に対応する。
-$\calLambda(\R)$の2-射は、$\calLambda(\R)$の1-射から$\Lambda(\R)$の射をつくるための同値関係として機能する。
+$\calLambda(\R)$は${\Lambda[\R]}$の定義に用いる。
+$\calLambda(\R)$の対象は${\Lambda[\R]}$の対象に対応し、$\calLambda(\R)$の1-射の同値類が${\Lambda[\R]}$の射に対応する。
+$\calLambda(\R)$の2-射は、$\calLambda(\R)$の1-射から${\Lambda[\R]}$の射をつくるための同値関係として機能する。
 
 
 以下、$\calLambda(\R)$を定義する。
@@ -739,7 +745,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     $A\in\R$と$\R$の射$f:X\to A\tensor Y$ の組$(A,f)$のことである。
 \end{definitionsub}
 
-このように定めた$\calLambda(\R)$の1-射の同値類が$\Lambda(\R)$の射となる。
+このように定めた$\calLambda(\R)$の1-射の同値類が${\Lambda[\R]}$の射となる。
 同値関係として「有限個の2-射で結ばれていること」を用いる。その2-射は下記のとおり定義する。
 
 \begin{definitionsub}[$\calLambda(\R)$の2-射]
@@ -897,23 +903,23 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     この図式に$A\tensor -$を施せば、求める図式の可換性を得る。\\
 \end{proof}
 
-以上で中間構造$\calLambda(\R)$の定義が完了した。次節で圏 $\Lambda(\R)$を定義し、次々節でそのデカルト構造を示す。
+以上で中間構造$\calLambda(\R)$の定義が完了した。次節で圏 ${\Lambda[\R]}$を定義し、次々節でそのデカルト構造を示す。
 
 
-\subsection{圏\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}の構成}
+\subsection{圏\texorpdfstring{${\Lambda[\R]}$}{Lambda(R)}の構成}
 \label{subsection:Lambda(R)}
-本節では圏$\Lambda(\R)$の定義を完成する。
-まず前述の通り$\Lambda(\R)$の射を$\calLambda(\R)$の1-射の同値類として定義する。
+本節では圏${\Lambda[\R]}$の定義を完成する。
+まず前述の通り${\Lambda[\R]}$の射を$\calLambda(\R)$の1-射の同値類として定義する。
 次に合成を$\calLambda(\R)$の1-射の合成から誘導されるものとして定義するが、これのwell-defined性は非自明であるから、これを示す。
 
-%\paragraph{Definition \arabic{section}.\arabic{subsection}.1：\ $\Lambda(\R)$の対象}\ \\
-\begin{definitionsub}[$\Lambda(\R)$の対象]
+%\paragraph{Definition \arabic{section}.\arabic{subsection}.1：\ ${\Lambda[\R]}$の対象}\ \\
+\begin{definitionsub}[${\Lambda[\R]}$の対象]
     \label{def:object_of_Lambda(R)}
-    $\Ob{\Lambda(\R)}:= \Ob{\calLambda(\R)} \ (=\set{\bar{X} \ | \ X\in\Ob{\R}})$とする。
+    $\Ob{{\Lambda[\R]}}:= \Ob{\calLambda(\R)} \ (=\set{\bar{X} \ | \ X\in\Ob{\R}})$とする。
 \end{definitionsub}
 
-%\paragraph{Definition \arabic{section}.\arabic{subsection}.2：\ $\Lambda(\R)$の射}\ \\
-\begin{definitionsub}[$\Lambda(\R)$の射]
+%\paragraph{Definition \arabic{section}.\arabic{subsection}.2：\ ${\Lambda[\R]}$の射}\ \\
+\begin{definitionsub}[${\Lambda[\R]}$の射]
     \label{def:morphism_of_Lambda(R)}
     $\calLambda(\R)(\bar{X},\bar{Y})$上の同値関係$\sim$を二項関係「2-射で繋がれている」が生成する同値関係とする。
     すなわち、２つの2-射$(A,f),(B,g):\bar{X}\to \bar{Y}$が$(A,f)\sim (B,g)$であるのは、有限個の2-射
@@ -921,8 +927,8 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
         $k_{2i+1}:(C_{2i+2},h_{2i+2})\to (C_{2i+1},h_{2i+1}) \ \ (i=0,..,n-1)$
         が存在して、
         $(C_0,h_0)=(A,f), (C_{2n}, h_{2n})=(B,g)$であるときである。
-    この$\sim$を用いて$\Lambda(\R)(\bar{X},\bar{Y}):=\calLambda(\R)(\bar{X},\bar{Y})/\sim$と定義する。
-    即ち、$\Lambda(\R)(\bar{X},\bar{Y})$は$\calLambda(\R)(\bar{X},\bar{Y})$の連結成分全体の集合である。
+    この$\sim$を用いて${\Lambda[\R]}(\bar{X},\bar{Y}):=\calLambda(\R)(\bar{X},\bar{Y})/\sim$と定義する。
+    即ち、${\Lambda[\R]}(\bar{X},\bar{Y})$は$\calLambda(\R)(\bar{X},\bar{Y})$の連結成分全体の集合である。
 \end{definitionsub}
 
 
@@ -936,8 +942,8 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
     ($\Lambda[\Set^{\mono}]$の射として)同一であるべきだ。
 \reflem{lem:graph_is_same_as_original}はまさしくこれを主張するものである。
 
-%\paragraph{Lemma \arabic{section}.3.3：\ $\R$の射のグラフは$\Lambda(\R)$ではもとの $\R$の射と同じ}\ \\
-\begin{lemmasub}[$\R$の射のグラフは$\Lambda(\R)$ではもとの $\R$の射と同じ]
+%\paragraph{Lemma \arabic{section}.3.3：\ $\R$の射のグラフは${\Lambda[\R]}$ではもとの $\R$の射と同じ}\ \\
+\begin{lemmasub}[$\R$の射のグラフは${\Lambda[\R]}$ではもとの $\R$の射と同じ]
     \label{lem:graph_is_same_as_original}
     $(A,f):\bar{X} \to \bar{Y} \rmin\calLambda(\R)$ に対し、
     $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
@@ -1053,8 +1059,8 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 \end{proof}
 
 
-%\paragraph{Lemma \arabic{section}.3.4：\ $\Lambda(\R)$の射の合成のwell-defined性}\ \\
-\begin{lemmasub}[$\Lambda(\R)$の射の合成のwell-defined性]
+%\paragraph{Lemma \arabic{section}.3.4：\ ${\Lambda[\R]}$の射の合成のwell-defined性}\ \\
+\begin{lemmasub}[${\Lambda[\R]}$の射の合成のwell-defined性]
     \label{lem:composition_of_Lambda(R)_is_well-defined}
     $\bar{X},\bar{Y},\bar{Z}\in\calLambda(\R)$とする。
     任意の$(A_1,f_1),(A_2,f_2)\in\calLambda(\R)(\bar{X},\bar{Y}),\ (B_1,g_1),(B_2,g_2) \in\calLambda(\R)(\bar{Y},\bar{Z})$に対し、
@@ -1162,44 +1168,44 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 \end{proof}
 
 
-%\paragraph{Definition \arabic{section}.\arabic{subsection}.5：\ $\Lambda(\R)$の射の合成}\ \\
-\begin{definitionsub}[$\Lambda(\R)$の射の合成]
+%\paragraph{Definition \arabic{section}.\arabic{subsection}.5：\ ${\Lambda[\R]}$の射の合成}\ \\
+\begin{definitionsub}[${\Lambda[\R]}$の射の合成]
     \label{def:composition_of_Lambda(R)}
-    $\bar{X},\bar{Y},\bar{Z}\in\Lambda(\R), [A,f]\in\Lambda(\R)(\bar{X},\bar{Y}), [B,g]\in\Lambda(\R)(\bar{Y},\bar{Z})$とする。
+    $\bar{X},\bar{Y},\bar{Z}\in{\Lambda[\R]}, [A,f]\in{\Lambda[\R]}(\bar{X},\bar{Y}), [B,g]\in{\Lambda[\R]}(\bar{Y},\bar{Z})$とする。
     これらの合成を$[A,f]\comp[B,g]:=[(A,f)\comp(B,g)]$で定める。
     これは\reflem{lem:composition_of_Lambda(R)_is_well-defined} よりwell-definedである。
 \end{definitionsub}
 
 
-%\paragraph{Definition \arabic{section}.\arabic{subsection}.6：\ $\Lambda(\R)$の恒等射}\ \\
-\begin{definitionsub}[$\Lambda(\R)$の恒等射]
+%\paragraph{Definition \arabic{section}.\arabic{subsection}.6：\ ${\Lambda[\R]}$の恒等射}\ \\
+\begin{definitionsub}[${\Lambda[\R]}$の恒等射]
     \label{def:identity_of_Lambda(R)}
-    各$\bar{X}\in\Lambda(\R)$に対し、$id_{\bar{X}}:=[I,\rho_X^{-1}]$と定める。
+    各$\bar{X}\in{\Lambda[\R]}$に対し、$id_{\bar{X}}:=[I,\rho_X^{-1}]$と定める。
 \end{definitionsub}
 
-%\paragraph{Proposition \arabic{section}.\arabic{subsection}.7：\ $\Lambda(\R)$の結合則}\ \\
-\begin{propositionsub}[$\Lambda(\R)$の結合則]
+%\paragraph{Proposition \arabic{section}.\arabic{subsection}.7：\ ${\Lambda[\R]}$の結合則}\ \\
+\begin{propositionsub}[${\Lambda[\R]}$の結合則]
     \label{prop:associativity_of_Lambda(R)}
     上記合成は結合則を満たす。
     これは$\calLambda(\R)$で1-射の結合則が成り立っていたことから従う。
 \end{propositionsub}
 
-%\paragraph{Proposition \arabic{section}.\arabic{subsection}.8：\ $\Lambda(\R)$の単位律}\ \\
-\begin{propositionsub}[$\Lambda(\R)$の単位律]
+%\paragraph{Proposition \arabic{section}.\arabic{subsection}.8：\ ${\Lambda[\R]}$の単位律}\ \\
+\begin{propositionsub}[${\Lambda[\R]}$の単位律]
     \label{prop:unitlaw_of_Lambda(R)}
     上記合成と恒等射は単位律を満たす。
     これは$\calLambda(\R)$で1-射の単位律が成り立っていたことから従う。
 \end{propositionsub}
 
-%\paragraph{Definition \arabic{section}.\arabic{subsection}.9：\ 圏 $\Lambda(\R)$}\ \\
-\begin{definitionsub}[圏 $\Lambda(\R)$]
+%\paragraph{Definition \arabic{section}.\arabic{subsection}.9：\ 圏 ${\Lambda[\R]}$}\ \\
+\begin{definitionsub}[圏 ${\Lambda[\R]}$]
     %definition \arabic{section}.3.1, \arabic{section}.3.2, \arabic{section}.3.5, \arabic{section}.3.6 で与えられる構造達は、
     \refdef{def:object_of_Lambda(R)}, \refdef{def:morphism_of_Lambda(R)}, 
         \refdef{def:composition_of_Lambda(R)}, \refdef{def:identity_of_Lambda(R)}
         で与えられる構造達は、
     %proposition\arabic{section}.3.7, \arabic{section}.3.8より、圏を成す。
     \refprop{prop:associativity_of_Lambda(R)}, \refprop{prop:unitlaw_of_Lambda(R)}より、圏を成す。
-    この圏を$\Lambda(\R)$と書くことにする。\\
+    この圏を${\Lambda[\R]}$と書くことにする。\\
 \end{definitionsub}
 
 
@@ -1223,42 +1229,42 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
 
 \newpage
-\subsection{\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}のデカルト圏構造}
+\subsection{\texorpdfstring{${\Lambda[\R]}$}{Lambda(R)}のデカルト圏構造}
 \label{subsection:cartesian_structure_of_Lambda(R)}
-以上で定義した$\Lambda(\R)$が\CC になっていることを示す。
+以上で定義した${\Lambda[\R]}$が\CC になっていることを示す。
 $\R$から引き継ぐモノイド構造がそのまま直積となる。
 まずモノイド構造を引き継ぐことを示し、その後それが直積の普遍性を持つことを示す。
-%the category $\Lambda(\R)$ defined in previous sections, becomes cartesian category. In this section, we will find its cartesian structure and prove that.
+%the category ${\Lambda[\R]}$ defined in previous sections, becomes cartesian category. In this section, we will find its cartesian structure and prove that.
 
 
-%\paragraph{Definition \arabic{section}.4.1：\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}のモノイド構造}\ \\
-\begin{definitionsub}[$\Lambda(\R)$のモノイド構造]
+%\paragraph{Definition \arabic{section}.4.1：\texorpdfstring{${\Lambda[\R]}$}{Lambda(R)}のモノイド構造}\ \\
+\begin{definitionsub}[${\Lambda[\R]}$のモノイド構造]
     \label{def:monoidal_structure_of_Lambda(R)}
     $\R$を \RC とする。
-    $\Lambda(\R)$は、$\R$と同様にして\SMC となる。
+    ${\Lambda[\R]}$は、$\R$と同様にして\SMC となる。
     モノイド積の函手$\tensor'$と単位対象$I'$のみ明示する。
     まず$\tensor'$を次のように定める。
-    \fct{\tensor'}{\Lambda(\R)\times \Lambda(\R)}{\Lambda(\R)}{(\bar{X},\bar{Y})}{([A,f], [B,g])}{(\bar{X'},\bar{Y'})}{\bar{X\tensor Y}}{[A\tensor B, f\square g]}{\bar{X'\tensor Y'}}
+    \fct{\tensor'}{{\Lambda[\R]}\times {\Lambda[\R]}}{{\Lambda[\R]}}{(\bar{X},\bar{Y})}{([A,f], [B,g])}{(\bar{X'},\bar{Y'})}{\bar{X\tensor Y}}{[A\tensor B, f\square g]}{\bar{X'\tensor Y'}}
     ただし、$f\square g := (f\tensor g)\comp (A\tensor\gamma_{X,B}\tensor Y)$ である。
     このように定めた$\tensor'$は確かにwell-definedである。
     単位対象は $I':=I$で定める。
-%整合性の同型$\alpha', \lambda', \rho'$及び捻り同型$\gamma'$を素朴な方法で定めると、$(\Lambda(\R),\tensor')$
+%整合性の同型$\alpha', \lambda', \rho'$及び捻り同型$\gamma'$を素朴な方法で定めると、$({\Lambda[\R]},\tensor')$
 \end{definitionsub}
 
 
-%\paragraph{Proposition \arabic{section}.\arabic{subsection}.3：$\Lambda[\R]$の直積 }\ \\
+%\paragraph{Proposition \arabic{section}.\arabic{subsection}.3：${\Lambda[\R]}$の直積 }\ \\
 \begin{propositionsub}[$\Lambda{[\R]}$の直積]
     \label{prop:product_of_Lambda(R)}
-    簡単のため$\C:=\Lambda[\R]$とおく。
-    $\bar{X},\bar{Y}\in\C$に対し、$(\bar{X\tensor Y}, \pi_{\bar{X}}, \pi_{\bar{Y}})$は$\bar{X}$と$\bar{Y}$の直積である。
+    %簡単のため$\LambdaR:={\Lambda[\R]}$とおく。
+    $\bar{X},\bar{Y}\in\LambdaR$に対し、$(\bar{X\tensor Y}, \pi_{\bar{X}}, \pi_{\bar{Y}})$は$\bar{X}$と$\bar{Y}$の直積である。
     ただし、$\bar{Y}$への射影$\pi_{\bar{Y}}:\bar{X\tensor Y}\to \bar{Y}$は、$\pi_{\bar{Y}}:=[X,id_{X\tensor Y}]$で定める。
     $\bar{X}$への射影$\pi_{\bar{X}}:\bar{X\tensor Y}\to \bar{X}$は、$\pi_{\bar{X}}:=[Y,\gamma_{X,Y}]$で定める。
 \end{propositionsub}
 
 \begin{proof}
-    $\bar{Z}\in\C$を任意に取る。
+    $\bar{Z}\in\LambdaR$を任意に取る。
     対応
-    $\phi:\C(\bar{Z},\bar{X\tensor Y})\to \C(\bar{Z},\bar{X})\times\C(\bar{Z},\bar{Y})$を
+    $\phi:\LambdaR(\bar{Z},\bar{X\tensor Y})\to \LambdaR(\bar{Z},\bar{X})\times\LambdaR(\bar{Z},\bar{Y})$を
     $\phi([C,h]):=([C,h]\comp\pi_{\bar{X}}, [C,h]\comp\pi_{\bar{Y}})$で定める。
     $\phi$が全単射であることを示す。
     %TODO:自然性の証明
@@ -1412,14 +1418,14 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
 \end{proof}
 
 
-%\paragraph*{proposition \arabic{section}.\arabic{subsection}.4：\texorpdfstring{$\Lambda(\R)$}{Lambda(R)}の終対象}\ \\
-\begin{propositionsub}[$\Lambda(\R)$の終対象]
+%\paragraph*{proposition \arabic{section}.\arabic{subsection}.4：\texorpdfstring{${\Lambda[\R]}$}{Lambda(R)}の終対象}\ \\
+\begin{propositionsub}[${\Lambda[\R]}$の終対象]
     \label{prop:terminal_object_of_Lambda(R)}
-    $\Lambda(\R)$の単位対象$I$は終対象である。
+    ${\Lambda[\R]}$の単位対象$I$は終対象である。
 \end{propositionsub}
 
 \begin{proof}
-    任意に$\bar{X}\in\Lambda(\R)$を取り、$!_{\bar{X}}:=[X,\l_X]:\bar{X}\to I$と置く。
+    任意に$\bar{X}\in{\Lambda[\R]}$を取り、$!_{\bar{X}}:=[X,\l_X]:\bar{X}\to I$と置く。
     任意の$[A,f]:\bar{X}\to I$に対し、次のように$[A,f]=!_{\bar{X}}$であることを示す。
     $(A,f)~(X,\l_X)$であることを示せばよい。
 
@@ -1432,7 +1438,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     である。以上で示された。
 \end{proof}
 
-以上より$\Lambda(\R)$は全ての有限直積を持ち、従って\CC であることが示された。
+以上より${\Lambda[\R]}$は全ての有限直積を持ち、従って\CC であることが示された。
 次節では$\Lambda$が関連圏からデカルト圏を得る普遍的な方法であることを示す。
 
 \newpage
@@ -1442,12 +1448,12 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
 \section{構成\texorpdfstring{$\Lambda$}{Lambda}の普遍性}
 前節で定義した構成$\Lambda$は、関連圏からデカルト圏を得る普遍的な方法になっている。
 今節ではこの普遍性を示す。
-まず、$\R$から$\Lambda(\R)$への普遍的な函手を定める。
+まず、$\R$から${\Lambda[\R]}$への普遍的な函手を定める。
 
 %\paragraph{Definition \arabic{section}.1：ユニット函手 $\Eta_{\R}$}\ \\
 \begin{definition}[ユニット函手 $\Eta_{\R}$]
-    函手 $\Eta_{\R}:\R\to\Lambda[\R]$を次で定める。
-    \fct{\Eta_{\R}}{\R}{\Lambda(\R)}{X}{f}{Y}{\bar{X}}{[I,f\comp\rho_Y]}{\bar{Y}}
+    函手 $\Eta_{\R}:\R\to{\Lambda[\R]}$を次で定める。
+    \fct{\Eta_{\R}}{\R}{{\Lambda[\R]}}{X}{f}{Y}{\bar{X}}{[I,f\comp\rho_Y]}{\bar{Y}}
     $\Eta_{\R}$は\Rf になる。
     $\Eta_{\R}$の関連函手としての構造の同型$m_{X,Y}:\Eta_\R(X)\tensor\Eta_\R(Y)\to\Eta_\R(X\tensor Y)$と
     $e:I\to\Eta_\R(I)$を次で定める。
@@ -1463,9 +1469,9 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
 %\paragraph{proposition \arabic{section}.2:\ universality of $\Lambda$}\ \\
 \begin{proposition}[$\Lambda$の普遍性]
     $\R$を\RC とし、
-    \CC \ $\C:=\Lambda[\R]$及び\Rf $\Eta_{\R}:\R \to \C$を上で定めたものとする。
+    \CC \ $\LambdaR$及び\Rf $\Eta_{\R}:\R \to \LambdaR$を上で定めたものとする。
     このとき、任意の\CC \ $\D$ 及び\Rf $F=(F,\mu, \epsilon):\R \to \D$に対し、
-    次を満たす（強）モノイド函手 $\bar{F}:\C\to\D$が一意に存在する：
+    次を満たす（強）モノイド函手 $\bar{F}:\LambdaR\to\D$が一意に存在する：
     
     $F = \Eta_{\R}\comp \bar{F}$
 \end{proposition}
@@ -1480,80 +1486,102 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     \noindent
     (i) ($\bar{F}$の構成とwell-defined性の証明)\\
     \Rf $F=(F,\mu, \epsilon):\R \to \D$に対し
-    （強）モノイド函手 $\bar{F} = (\bar{F}, \bar{\mu}, \bar{\epsilon}):\C\to\D$
+    （強）モノイド函手 $\bar{F} = (\bar{F}, \bar{\mu}, \bar{\epsilon}):\LambdaR\to\D$
     を対応させる操作$\bar{(-)}$を次で定める：
     \begin{itemize}
-        \item 各$\bar{X}\in\C$に対し、$\bar{F}(\bar{X}):=F(X)$とする
-        \item 各$[A,f]:\bar{X}\to \bar{Y}\ \text{in}\ \C$に対し、$\bar{F}([A,f])$を
+        \item 各$\bar{X}\in\LambdaR$に対し、$\bar{F}(\bar{X}):=F(X)$とする
+        \item 各$[A,f]:\bar{X}\to \bar{Y}\ \text{in}\ \LambdaR$に対し、$\bar{F}([A,f])$を
         $\bar{F}([A,f]):=F(f)\comp\mu_{A,Y}^{-1}\comp\pi_{2, F(A),F(Y)}$とする。
     \end{itemize}
     ただし、$\mu_{A,Y}:F(A)\times F(Y) \to F(A\tensor Y)$はFのモノイド函手としての構造の同型であり、
     $\pi_{2, F(A), F(Y)}$はデカルト圏$\D$における第二射影である。
-    分かりやすさのために追記する。$F(f)$は下の列の合成である：\par
-    $F(X)\to F(A\tensor Y)\simeq F(A)\times F(Y)\to F(Y)$.
+    分かりやすさのために追記する。$F(f)$は下の列の合成である：
+    % https://q.uiver.app/#q=WzAsNCxbMCwwLCJGKFgpIl0sWzEsMCwiRihBXFx0ZW5zb3IgWSkiXSxbMiwwLCJGKEEpXFx0aW1lcyBGKFkpIl0sWzMsMCwiRihZKS4iXSxbMCwxLCJGKGYpIl0sWzIsMSwiXFxtdV97QSxZfSIsMl0sWzIsMSwiXFxzaW1lcSJdLFsyLDMsIlxccGlfMiJdXQ==
+    \[\begin{tikzcd}
+        {F(X)} & {F(A\tensor Y)} & {F(A)\times F(Y)} & {F(Y).}
+        \arrow["{F(f)}", from=1-1, to=1-2]
+        \arrow["{\mu_{A,Y}}"', from=1-3, to=1-2]
+        \arrow["\simeq", from=1-3, to=1-2]
+        \arrow["{\pi_2}", from=1-3, to=1-4]
+    \end{tikzcd}\]
+    
 
     $\bar{F}$のwell-defined性を示す。
     $(A,f),(B,g):\bar{X}\to \bar{Y} \rmin \calLambda(\R)$と$k:(A,f)\to (B,g)$を任意に取る。
     $\bar{F}([A,f])=\bar{F}([B,g])$を示せばよい。
     %$F$は\Rf であったから、次の図式は可換である。
 
-    まず、次の図式は可換である。
-    % https://q.uiver.app/#q=WzAsNixbMCwwLCJGKEEgXFx0ZW5zb3IgWSBcXHRlbnNvciBZKSJdLFswLDIsIkYoQVxcdGVuc29yIFkpIl0sWzIsMCwiRihBXFx0ZW5zb3IgWSlcXHRpbWVzIEYoWSkiXSxbNCwwLCJGKEEpXFx0aW1lcyBGKFkpXFx0aW1lcyBGKFkpIl0sWzQsMiwiRihBKVxcdGltZXMgRihZKSJdLFsyLDEsIkYoQSlcXHRpbWVzIEYoWVxcdGVuc29yIFkpIl0sWzEsMCwiRihBXFx0ZW5zb3IgXFxEZWx0YV9ZKSJdLFsyLDAsIlxcbXVfe0FcXHRlbnNvciBZLCBZfSIsMl0sWzMsMiwiXFxtdV97QSxZfVxcdGltZXMgRihZKSIsMl0sWzQsMywiRihBKVxcdGltZXMgXFxEZWx0YV97RihZKX0iLDJdLFs0LDEsIlxcbXVfe0EsWX0iXSxbNSwwLCJcXG11X3tBLFlcXHRlbnNvciBZfSJdLFs0LDUsIkYoQSlcXHRpbWVzIEYoXFxEZWx0YV9ZKSIsMl0sWzMsNSwiRihBKVxcdGltZXMgXFxtdV97WSxZfSJdXQ==
-    \[\begin{tikzcd}
-        {F(A \tensor Y \tensor Y)} && {F(A\tensor Y)\times F(Y)} && {F(A)\times F(Y)\times F(Y)} \\
-        && {F(A)\times F(Y\tensor Y)} \\
-        {F(A\tensor Y)} &&&& {F(A)\times F(Y)}
-        \arrow["{F(A\tensor \Delta_Y)}", from=3-1, to=1-1]
-        \arrow["{\mu_{A\tensor Y, Y}}"', from=1-3, to=1-1]
-        \arrow["{\mu_{A,Y}\times F(Y)}"', from=1-5, to=1-3]
-        \arrow["{F(A)\times \Delta_{F(Y)}}"', from=3-5, to=1-5]
-        \arrow["{\mu_{A,Y}}", from=3-5, to=3-1]
-        \arrow["{\mu_{A,Y\tensor Y}}", from=2-3, to=1-1]
-        \arrow["{F(A)\times F(\Delta_Y)}"', from=3-5, to=2-3]
-        \arrow["{F(A)\times \mu_{Y,Y}}", from=1-5, to=2-3]
-    \end{tikzcd}\]
-    この図式の外側の五角形が可換であることが分かる。
-    すると、次の図式も可換であることが分かる。
-    \[
-    \adjustbox{scale=0.7, center}{
-        % https://q.uiver.app/#q=WzAsMTIsWzMsMCwiRihBXFx0ZW5zb3IgWVxcdGVuc29yIFkpIl0sWzUsMCwiRihBXFx0ZW5zb3IgWSlcXHRpbWVzIEYoWSkiXSxbNywwLCJGKEEpXFx0aW1lcyBGKFkpXFx0aW1lcyBGKFkpIl0sWzIsMSwiRihBXFx0ZW5zb3IgWSkiXSxbNiwxLCJGKEEpXFx0aW1lcyBGKFkpIl0sWzAsMiwiRihYKSJdLFszLDIsIkYoQlxcdGVuc29yIFlcXHRlbnNvciBZKSJdLFs1LDIsIkYoQlxcdGVuc29yIFkpXFx0aW1lcyBGKFkpIl0sWzcsMiwiRihCKVxcdGltZXMgRihZKVxcdGltZXMgRihZKSJdLFs5LDIsIkYoWSkiXSxbMiwzLCJGKEJcXHRlbnNvciBZKSJdLFs2LDMsIkYoQilcXHRpbWVzIEYoWSkiXSxbNSwzLCJ7RihmKX0iXSxbNSwxMCwie0YoZyl9IiwyXSxbMywxMCwie0Yoayl9Il0sWzMsMCwiXFxEZWx0YSJdLFsxLDAsIlxcbXVfe0FcXHRlbnNvciBZLCBZfSIsMl0sWzEwLDYsIlxcRGVsdGEiXSxbMCw2LCJ7RihrXFx0ZW5zb3IgWSl9IiwwLHsibGFiZWxfcG9zaXRpb24iOjMwfV0sWzcsNiwiXFxzaW1lcSIsMl0sWzEsNywie0YoaylcXHRpbWVzIEYoWSl9IiwwLHsibGFiZWxfcG9zaXRpb24iOjMwfV0sWzQsMywiXFxzaW1lcSJdLFsxMSwxMCwiXFxzaW1lcSIsMl0sWzIsMSwiXFxzaW1lcSJdLFs4LDcsIlxcc2ltZXEiLDJdLFs0LDksIlxccGlfMiIsMV0sWzExLDksIlxccGlfMiIsMV0sWzQsMiwiRihBKVxcdGltZXNcXERlbHRhX3tGKFkpfSIsMix7ImxhYmVsX3Bvc2l0aW9uIjo5MH1dLFsxMSw4XSxbMiw5LCJcXHBpXzMiLDFdLFs4LDksIlxccGlfMyIsMV0sWzEsMCwiXFxzaW1lcSJdLFs0LDMsIlxcbXVfe0EsWX0iLDJdLFsyLDEsIlxcbXVfe0EsWX1cXHRpbWVzIEYoWSkiLDJdXQ==
-        \begin{tikzcd}
-            &&& {F(A\tensor Y\tensor Y)} && {F(A\tensor Y)\times F(Y)} && {F(A)\times F(Y)\times F(Y)} \\
-            && {F(A\tensor Y)} &&&& {F(A)\times F(Y)} \\
-            {F(X)} &&& {F(B\tensor Y\tensor Y)} && {F(B\tensor Y)\times F(Y)} && {F(B)\times F(Y)\times F(Y)} && {F(Y)} \\
-            && {F(B\tensor Y)} &&&& {F(B)\times F(Y)}
-            \arrow["{{F(f)}}", from=3-1, to=2-3]
-            \arrow["{{F(g)}}"', from=3-1, to=4-3]
-            \arrow["{{F(k)}}", from=2-3, to=4-3]
-            \arrow["\Delta", from=2-3, to=1-4]
-            \arrow["{\mu_{A\tensor Y, Y}}"', from=1-6, to=1-4]
-            \arrow["\Delta", from=4-3, to=3-4]
-            \arrow["{{F(k\tensor Y)}}"{pos=0.3}, from=1-4, to=3-4]
-            \arrow["\simeq"', from=3-6, to=3-4]
-            \arrow["{{F(k)\times F(Y)}}"{pos=0.3}, from=1-6, to=3-6]
-            \arrow["\simeq", from=2-7, to=2-3]
-            \arrow["\simeq"', from=4-7, to=4-3]
-            \arrow["\simeq", from=1-8, to=1-6]
-            \arrow["\simeq"', from=3-8, to=3-6]
-            \arrow["{\pi_2}"{description}, from=2-7, to=3-10]
-            \arrow["{\pi_2}"{description}, from=4-7, to=3-10]
-            \arrow["{F(A)\times\Delta_{F(Y)}}"'{pos=0.6}, from=2-7, to=1-8]
-            \arrow[from=4-7, to=3-8]
-            \arrow["{\pi_3}"{description}, from=1-8, to=3-10]
-            \arrow["{\pi_3}"{description}, from=3-8, to=3-10]
-            \arrow["\simeq", from=1-6, to=1-4]
-            \arrow["{\mu_{A,Y}}"', from=2-7, to=2-3]
-            \arrow["{\mu_{A,Y}\times F(Y)}"', from=1-8, to=1-6]
-        \end{tikzcd}
-    }
-    \]
-    この図式の手前上辺と手前下辺は等しいことが分かるので、$\bar{F}([A,f])=\bar{F}([B,g])$である。
+    
+    次の図式３の可換性を示せば、$\bar{F}([A,f])=\bar{F}([B,g])$であることが分かる。
+    この図式の手前上辺が$\bar{F}([A,f])$, 手前下辺が$\bar{F}([B,g])$である。
+    \begin{figure}[H]
+        \[
+        \adjustbox{scale=0.7, center}{
+            % https://q.uiver.app/#q=WzAsMTIsWzMsMCwiRihBXFx0ZW5zb3IgWVxcdGVuc29yIFkpIl0sWzUsMCwiRihBXFx0ZW5zb3IgWSlcXHRpbWVzIEYoWSkiXSxbNywwLCJGKEEpXFx0aW1lcyBGKFkpXFx0aW1lcyBGKFkpIl0sWzIsMSwiRihBXFx0ZW5zb3IgWSkiXSxbNiwxLCJGKEEpXFx0aW1lcyBGKFkpIl0sWzAsMiwiRihYKSJdLFszLDIsIkYoQlxcdGVuc29yIFlcXHRlbnNvciBZKSJdLFs1LDIsIkYoQlxcdGVuc29yIFkpXFx0aW1lcyBGKFkpIl0sWzcsMiwiRihCKVxcdGltZXMgRihZKVxcdGltZXMgRihZKSJdLFs5LDIsIkYoWSkiXSxbMiwzLCJGKEJcXHRlbnNvciBZKSJdLFs2LDMsIkYoQilcXHRpbWVzIEYoWSkiXSxbNSwzLCJ7RihmKX0iXSxbNSwxMCwie0YoZyl9IiwyXSxbMywxMCwie0Yoayl9Il0sWzMsMCwiXFxEZWx0YSJdLFsxLDAsIlxcbXVfe0FcXHRlbnNvciBZLCBZfSIsMl0sWzEwLDYsIlxcRGVsdGEiXSxbMCw2LCJ7RihrXFx0ZW5zb3IgWSl9IiwwLHsibGFiZWxfcG9zaXRpb24iOjMwfV0sWzcsNiwiXFxzaW1lcSIsMl0sWzEsNywie0YoaylcXHRpbWVzIEYoWSl9IiwwLHsibGFiZWxfcG9zaXRpb24iOjMwfV0sWzQsMywiXFxzaW1lcSJdLFsxMSwxMCwiXFxzaW1lcSIsMl0sWzIsMSwiXFxzaW1lcSJdLFs4LDcsIlxcc2ltZXEiLDJdLFs0LDksIlxccGlfMiIsMV0sWzExLDksIlxccGlfMiIsMV0sWzQsMiwiRihBKVxcdGltZXNcXERlbHRhX3tGKFkpfSIsMix7ImxhYmVsX3Bvc2l0aW9uIjo5MH1dLFsxMSw4XSxbMiw5LCJcXHBpXzMiLDFdLFs4LDksIlxccGlfMyIsMV0sWzEsMCwiXFxzaW1lcSJdLFs0LDMsIlxcbXVfe0EsWX0iLDJdLFsyLDEsIlxcbXVfe0EsWX1cXHRpbWVzIEYoWSkiLDJdXQ==
+            \begin{tikzcd}
+                &&& {F(A\tensor Y\tensor Y)} && {F(A\tensor Y)\times F(Y)} && {F(A)\times F(Y)\times F(Y)} \\
+                && {F(A\tensor Y)} &&&& {F(A)\times F(Y)} \\
+                {F(X)} &&& {F(B\tensor Y\tensor Y)} && {F(B\tensor Y)\times F(Y)} && {F(B)\times F(Y)\times F(Y)} && {F(Y)} \\
+                && {F(B\tensor Y)} &&&& {F(B)\times F(Y)}
+                \arrow["{{F(f)}}", from=3-1, to=2-3]
+                \arrow["{{F(g)}}"', from=3-1, to=4-3]
+                \arrow["{{F(k)}}", from=2-3, to=4-3]
+                \arrow["\Delta", from=2-3, to=1-4]
+                \arrow["{\mu_{A\tensor Y, Y}}"', from=1-6, to=1-4]
+                \arrow["\Delta", from=4-3, to=3-4]
+                \arrow["{{F(k\tensor Y)}}"{pos=0.3}, from=1-4, to=3-4]
+                \arrow["\simeq"', from=3-6, to=3-4]
+                \arrow["{{F(k)\times F(Y)}}"{pos=0.3}, from=1-6, to=3-6]
+                \arrow["\simeq", from=2-7, to=2-3]
+                \arrow["\simeq"', from=4-7, to=4-3]
+                \arrow["\simeq", from=1-8, to=1-6]
+                \arrow["\simeq"', from=3-8, to=3-6]
+                \arrow["{\pi_2}"{description}, from=2-7, to=3-10]
+                \arrow["{\pi_2}"{description}, from=4-7, to=3-10]
+                \arrow["{F(A)\times\Delta_{F(Y)}}"'{pos=0.6}, from=2-7, to=1-8]
+                \arrow[from=4-7, to=3-8]
+                \arrow["{\pi_3}"{description}, from=1-8, to=3-10]
+                \arrow["{\pi_3}"{description}, from=3-8, to=3-10]
+                \arrow["\simeq", from=1-6, to=1-4]
+                \arrow["{\mu_{A,Y}}"', from=2-7, to=2-3]
+                \arrow["{\mu_{A,Y}\times F(Y)}"', from=1-8, to=1-6]
+            \end{tikzcd}
+        }
+        \]
+        \caption{{$\bar{F}([A,f])=\bar{F}([B,g])$}を証明する図式}
+    \end{figure}
+    この図式の最左の三角形、及び左面の四角形は、$k$が$(A,f)$から$(B,g)$への2-射であったから可換である。
+    奥面左の四角形は、$F$が\Rf であることから可換である。
+    奥面右の五角形は、各項の最右の$F(Y)$成分を操作していないため可換である。
+    上面右の三角形、下面右の三角形についても同様。
+    上面左の五角形の可換性は、以下の図式より従う。
+    \begin{figure}[H]
+        % https://q.uiver.app/#q=WzAsNixbMCwwLCJGKEEgXFx0ZW5zb3IgWSBcXHRlbnNvciBZKSJdLFswLDIsIkYoQVxcdGVuc29yIFkpIl0sWzIsMCwiRihBXFx0ZW5zb3IgWSlcXHRpbWVzIEYoWSkiXSxbNCwwLCJGKEEpXFx0aW1lcyBGKFkpXFx0aW1lcyBGKFkpIl0sWzQsMiwiRihBKVxcdGltZXMgRihZKSJdLFsyLDEsIkYoQSlcXHRpbWVzIEYoWVxcdGVuc29yIFkpIl0sWzEsMCwiRihBXFx0ZW5zb3IgXFxEZWx0YV9ZKSJdLFsyLDAsIlxcbXVfe0FcXHRlbnNvciBZLCBZfSIsMl0sWzMsMiwiXFxtdV97QSxZfVxcdGltZXMgRihZKSIsMl0sWzQsMywiRihBKVxcdGltZXMgXFxEZWx0YV97RihZKX0iLDJdLFs0LDEsIlxcbXVfe0EsWX0iXSxbNSwwLCJcXG11X3tBLFlcXHRlbnNvciBZfSJdLFs0LDUsIkYoQSlcXHRpbWVzIEYoXFxEZWx0YV9ZKSIsMl0sWzMsNSwiRihBKVxcdGltZXMgXFxtdV97WSxZfSJdXQ==
+        \[\begin{tikzcd}
+            {F(A \tensor Y \tensor Y)} && {F(A\tensor Y)\times F(Y)} && {F(A)\times F(Y)\times F(Y)} \\
+            && {F(A)\times F(Y\tensor Y)} \\
+            {F(A\tensor Y)} &&&& {F(A)\times F(Y)}
+            \arrow["{F(A\tensor \Delta_Y)}", from=3-1, to=1-1]
+            \arrow["{\mu_{A\tensor Y, Y}}"', from=1-3, to=1-1]
+            \arrow["{\mu_{A,Y}\times F(Y)}"', from=1-5, to=1-3]
+            \arrow["{F(A)\times \Delta_{F(Y)}}"', from=3-5, to=1-5]
+            \arrow["{\mu_{A,Y}}", from=3-5, to=3-1]
+            \arrow["{\mu_{A,Y\tensor Y}}", from=2-3, to=1-1]
+            \arrow["{F(A)\times F(\Delta_Y)}"', from=3-5, to=2-3]
+            \arrow["{F(A)\times \mu_{Y,Y}}", from=1-5, to=2-3]
+        \end{tikzcd}\]
+    \end{figure}
+    この図式の内部の三角形及び四角形はそれぞれ可換であるから、外側の五角形が可換であることが分かる。
+    これで図式３の上面五角形の可換性が示された。
+    下面左の五角形の可換性も同様に示される。
+    以上を以て図式３の手前以外の全ての面の可換性が示されたので、手前面の可換性が従う。
+    従って$\bar{F}([A,f])=\bar{F}([B,g])$であることが示された。
     これで函手$\bar{F}$のwell-defined性が示された。
 
     また$\bar{F}$のモノイド函手としての構造の同型
     $\bar{\mu}_{\bar{F}(\bar{X}),\bar{F}(\bar{Y})}:\bar{F}(\bar{X})\times\bar{F}(\bar{Y})\to \bar{F}(\bar{X}\tensor\bar{Y})$と
     $\bar{\epsilon}:1\to \bar{F}(\bar{I})$を
-    $\bar{\mu}_{\bar{F}(\bar{X}),\bar{F}(\bar{Y})}:=\mu_{F(X),F(Y)}$、
+    $\bar{\mu}_{\bar{F}(\bar{X}),\bar{F}(\bar{Y})}:=\mu_{F(X),F(Y)}$,
     $\bar{\epsilon}:=\epsilon$と定める。
     すると$(\bar{F},\bar{\mu},\bar{\epsilon})$は確かに強モノイド函手である。\\
     %ほぼ自明なので特に説明しない
@@ -1593,13 +1621,13 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
         \arrow["{!\times F(Y)}", from=1-5, to=2-5]
     \end{tikzcd}\]
 
-    (iii) （強）モノイド函手 $G=(G,\nu, \zeta):\C\to\D$に対し、$\bar{\Eta_{\R}\comp G}=G$であることを示す。
+    (iii) （強）モノイド函手 $G=(G,\nu, \zeta):\LambdaR\to\D$に対し、$\bar{\Eta_{\R}\comp G}=G$であることを示す。
     $\Eta_\R\comp -$も$\bar{-}$も対象上何も操作しないので、対象の対応が等しいことは直ちに分かる。
     よって射の対応だけ見ればよい。
     $\Eta_{\R}\comp G =: (\Eta_{\R}\comp G, \mu, \epsilon)$と置く。
     $\mu_{X,Y}=\nu_{\Eta(X),\Eta(Y)}\comp G(\bar{\mu}_{X,Y})$, $\epsilon = G(e)\comp\zeta$である。
 
-    $[A,f]:\bar{X}\to \bar{Y} \rmin \C$を１つ取り固定する。$\bar{\Eta_{\R}\comp G}([A,f]) = G([A,f])$を示す。
+    $[A,f]:\bar{X}\to \bar{Y} \rmin \LambdaR$を１つ取り固定する。$\bar{\Eta_{\R}\comp G}([A,f]) = G([A,f])$を示す。
     \begin{align*}
         &\bar{\Eta_{\R}\comp G}([A,f])\\ 
         =&\ (\Eta_{\R}\comp G)(f)\comp\mu_{X,Y}\comp\pi\\
@@ -1639,7 +1667,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
         \arrow["{[1,f']}", from=1-1, to=1-3]
         \arrow["\pi", from=1-3, to=1-5]
     \end{tikzcd}\]
-    これは $\Lambda(\R)$における射影の定義を見れば直ちに分かる。
+    これは ${\Lambda[\R]}$における射影の定義を見れば直ちに分かる。
 \end{proof}
 
 
@@ -1651,7 +1679,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
 \section{モノ射の成す関連圏からの復元}
 構成$\Lambda$を考えたもともとの動機は、\CC $\C$に対し、$\Lambda[\C^{\mono}]\simeq \C$であろう、という直感であった。
 本節ではこれを示す。
-より一般に、\CC $\C$に対し、$\C$の「よい関連部分圏」に対し$\Lambda[\R]\simeq \C$となることの証明を与える。
+より一般に、\CC $\C$に対し、$\C$の「よい関連部分圏」に対し${\Lambda[\R]}\simeq \C$となることの証明を与える。
 まずは「よい関連部分圏」を定義する。よい関連部分圏とは、全てのグラフを持つような関連部分圏のことである。
 
 \begin{definition}[よい関連部分圏]
@@ -1661,28 +1689,28 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
         $\C$の任意の射$f:X\to Y$に対し、$f$のグラフ$(id_X,f):X\to X\times Y$が$\R$に属することをいう。
 \end{definition}
 
-%\paragraph{thm 6.1.1 :  $\Lambda[\R]\simeq \C$ }\ \par
-\begin{theorem}[{$\Lambda[\R]\simeq \C$}]
+%\paragraph{thm 6.1.1 :  ${\Lambda[\R]}\simeq \C$ }\ \par
+\begin{theorem}[よい関連部分圏からの復元]
     \label{thm:よい関連部分圏からの復元}
     $\C$を\CC とし、$\R$を$\C$のよい関連部分圏とする。
-    このとき、$\Lambda[\R]\simeq \C$である。
-    包含函手$i:\R\to\C$から$\Lambda$の普遍性により誘導される函手$\bar{i}:\Lambda[\R]\to\C$は圏同型である。    
+    このとき、${\Lambda[\R]}\simeq \C$である。
+    包含函手$i:\R\to\C$から$\Lambda$の普遍性により誘導される函手$\bar{i}:{\Lambda[\R]}\to\C$は圏同型である。    
 \end{theorem}
 
 \begin{proof}
-    \newcommand{\cL}{\Lambda}
-    簡単のため、$\cL:=\Lambda[\R]$と置く。
+    \newcommand{\cL}{\LambdaR}
+    %簡単のため、$\cL:={\Lambda[\R]}$と置く。
     誘導される函手$\bar{i}$が対象上全単射であることは、$i$がそうであることと$\bar{i}$の定義から明らか。\
     よって$\bar{i}$が忠実充満であることを示せばよい。
 
     $X,Y\in\C$を取る。
-    $(\bar{i})_{X,Y}:\cL(X,Y)\to\C(X,Y)$が全単射であることを示す。
+    $(\bar{i})_{X,Y}:\cL(\bar{X},\bar{Y})\to\C(X,Y)$が全単射であることを示す。
     ３ステップに分けて示す。\\
-    (i) 逆写像となるべき写像$\psi:\C(X,Y)\to\cL(X,Y)$を構成する。\\
+    (i) 逆写像となるべき写像$\psi:\C(X,Y)\to\cL(\bar{X},\bar{Y})$を構成する。\\
     (ii) $\psi\comp(\bar{i})_{X,Y} = id$であることを示す。\\
     (iii) $(\bar{i})_{X,Y} \comp\psi = id$であることを示す。\\
 
-    (i) 逆写像となるべき写像$\psi:\C(X,Y)\to\cL(X,Y)$を構成する。
+    (i) 逆写像となるべき写像$\psi:\C(X,Y)\to\cL(\bar{X},\bar{Y})$を構成する。
     $\psi(f):=[X, (id_X,f)]$と置く。これが逆であることを示す。\\
     
     (ii) $\psi\comp(\bar{i})_{X,Y} = id$であることを示す。
@@ -1697,7 +1725,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     以上で示された。
     
     (iii) $(\bar{i})_{X,Y} \comp\psi = id$であることを示す。
-    $[A,f]:X\to Y \ \mathrm{in}\ \cL$を取り固定する。
+    $[A,f]:\bar{X}\to \bar{Y} \ \mathrm{in}\ \cL$を取り固定する。
     $\psi(\bar{i}_{X,Y}([A,f])) = [A,f] \ \rmin \cL$であることを示す。
     
     \begin{align*}
@@ -1715,7 +1743,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     以上で示された。
 \end{proof}
 
-このように、デカルト圏$\C$の全てのグラフを持つ$\C$の関連部分圏$\R$は、必ず$\Lambda[\R]\simeq \C$となる。
+このように、デカルト圏$\C$の全てのグラフを持つ$\C$の関連部分圏$\R$は、必ず${\Lambda[\R]}\simeq \C$となる。
 冒頭で述べた$\Lambda[\C^{\mono}]\simeq \C$であることは、ここから直ちに従う。
 %\paragraph{cor 6.1.2 :  $\Lambda[\C^{\mono}]\simeq \C$ }\ \par
 \begin{corollary}[{$\Lambda[\C^{\mono}]\simeq \C$}]

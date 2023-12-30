@@ -5,7 +5,12 @@
   \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
 }
 \providecommand{\href}[2]{#2}
-\begin{thebibliography}{Lam72}
+\begin{thebibliography}{AHK23}
+
+\bibitem[AHK23]{Andr_s_Mart_nez_2023}
+Pablo {Andr^^c3^^a9s-Mart{\'i}nez}, Chris Heunen, and Robin Kaarsgaard,
+  \emph{Universal properties of partial quantum maps}, Electronic Proceedings
+  in Theoretical Computer Science \textbf{394} (2023), 192--207.
 
 \bibitem[BW90]{barr1990category}
 Michael Barr and Charles Wells, \emph{Category theory for computing science},

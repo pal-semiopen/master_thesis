@@ -5,46 +5,46 @@ The style file: amsalpha.bst
 Database file #1: Bibliography_Master_Thesis.bib
 Warning--missing pages in HS19
 Warning--missing pages in maclane1963natural
-You've used 10 entries,
+You've used 11 entries,
             2624 wiz_defined-function locations,
-            638 strings with 5901 characters,
-and the built_in function-call counts, 3615 in all, are:
-= -- 334
-> -- 121
+            647 strings with 6155 characters,
+and the built_in function-call counts, 4051 in all, are:
+= -- 374
+> -- 146
 < -- 9
-+ -- 34
-- -- 34
-* -- 306
-:= -- 573
-add.period$ -- 10
-call.type$ -- 10
-change.case$ -- 53
-chr.to.int$ -- 10
-cite$ -- 12
-duplicate$ -- 169
-empty$ -- 305
-format.name$ -- 51
-if$ -- 741
++ -- 43
+- -- 43
+* -- 347
+:= -- 647
+add.period$ -- 11
+call.type$ -- 11
+change.case$ -- 60
+chr.to.int$ -- 11
+cite$ -- 13
+duplicate$ -- 183
+empty$ -- 336
+format.name$ -- 61
+if$ -- 828
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 21
-newline$ -- 40
-num.names$ -- 32
-pop$ -- 58
+missing$ -- 23
+newline$ -- 43
+num.names$ -- 35
+pop$ -- 65
 preamble$ -- 1
-purify$ -- 63
+purify$ -- 71
 quote$ -- 0
-skip$ -- 118
+skip$ -- 127
 stack$ -- 0
-substring$ -- 218
-swap$ -- 26
+substring$ -- 246
+swap$ -- 27
 text.length$ -- 9
 text.prefix$ -- 7
 top$ -- 0
-type$ -- 76
+type$ -- 84
 warning$ -- 2
-while$ -- 38
-width$ -- 13
-write$ -- 120
+while$ -- 42
+width$ -- 15
+write$ -- 130
 is.kanji.str$ -- 0
 (There were 2 warnings)
