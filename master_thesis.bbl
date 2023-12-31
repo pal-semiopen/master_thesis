@@ -29,6 +29,10 @@ C.~Hermida and R.D. Tennent, \emph{Monoidal indeterminates and categories of
   possible worlds}, Theoretical Computer Science \textbf{430} (2012), 3--22,
   Mathematical Foundations of Programming Semantics (MFPS XXV).
 
+\bibitem[HV19]{heunen2019categories}
+Chris Heunen and Jamie Vicary, \emph{Categories for quantum theory: an
+  introduction}, Oxford University Press, 2019.
+
 \bibitem[Jac94]{JACOBS199473}
 Bart Jacobs, \emph{Semantics of weakening and contraction}, Annals of Pure and
   Applied Logic \textbf{69} (1994), no.~1, 73--106.
