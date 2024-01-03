@@ -376,7 +376,7 @@ morphism $[A,f], [B,g]$ of ${\Lambda[\R]}$\\
 そもそもデカルト圏とはどのような構造であったかというと、
     対称モノイド圏$\C$と自然同型$\phi_{X,Y}:\C(-,X)\times\C(-,Y)\simeq\C(-,X\tensor Y)$であって
     モノイド構造と整合的なものの組$(\C,\phi)$である。
-この普遍性を用いた定義は、次のような定義と等価であることが知られている(\cite{Fox76}, \cite{heunen2019categories}, Thm4.28)。
+この普遍性を用いた定義は、次のような定義と等価であることが知られている(\cite{Fox76}, \cite{heunen2019categories}のThm4.28)。
 すなわち、デカルト圏とは対称モノイド圏$\C$及び２つの自然変換「複製」$\Delta_X:X\to X\tensor X$と「削除」$!_X:X\to I$
     の組$(\C,\Delta,!)$であって整合性の条件を満たすものである。
 ここで$I$は$\C$の単位対象である。
@@ -425,7 +425,7 @@ morphism $[A,f], [B,g]$ of ${\Lambda[\R]}$\\
 操作$\Lambda$は、あらゆる\RC $\R$に対して
     \CC ${\Lambda[\R]}$ 及び函手$\Eta_{\R}:\R \to {\Lambda[\R]}$の組$({\Lambda[\R]}, \Eta_{\R})$を１つずつ返すものである。
 この$\Eta_{\R}$は必ずしも単射的(即ち忠実かつ対象上本質的に単射)であるとは限らないが、
-    もしも$\R$が何か\CC $\C$のよい\subRC として構成されているときには、必ず${\Lambda[\R]}\simeq \C$である。
+    もしも$\R$が何か\CC $\C$のよい\subRC として構成されているならば、必ず${\Lambda[\R]}\simeq \C$である。
 特に、$\R$をよい\subRC に持つ\CC $\C$は同型を除いて一意的であることが従う。
 
 \topic{さらにこの操作$\Lambda$は、\RC から\CC を構成する方法として普遍的である。}
@@ -435,21 +435,22 @@ morphism $[A,f], [B,g]$ of ${\Lambda[\R]}$\\
 しかし$\Lambda$は非常に具体的かつ有限的に定義されるため、
     $\Lambda$は\RC から\CC を得る左普遍的な方法の計算結果を与えていると言える。
 
-\topic{$\Lambda\-$constructionの着想の説明をする。}
+\topic{構成$\Lambda$の着想の説明をする。}
 \RC から\CC を作る方法は「削除を追加する」ものであるはずだから、\SMC から\AC を作る方法に一致するか少なくとも類似するはずである。後者は実際に知られていて、
 \topic{対称モノイド圏から、\AC を作る(左)普遍的な構成が
 \cite{HT12}の系として得られている(\cite{HT12}, \cite{HS19})。}
-この普遍的な構成、構成$L$(named by \cite{Andr_s_Mart_nez_2023})は、与えられた対称モノイド圏の射を余分に増やしたのち適切な同値関係で割る構成である。
-特にモノイド単位対象への射を全て同一視するような同値関係で割るので、モノイド単位対象が終対象になる。標語的に言えば、L-constructionは「対称モノイド圏の単位対象を終対象にする構成」である。
+この普遍的な構成、構成$L$(呼称は\cite{Andr_s_Mart_nez_2023}による)は、与えられた対称モノイド圏の射を余分に増やしたのち適切な同値関係で割る構成である。
+特にモノイド単位対象への射を全て同一視するような同値関係で割るので、モノイド単位対象が終対象になる。
+標語的に言えば、構成$L$は「対称モノイド圏の単位対象を終対象にする構成」である。
 %\topic{relevance categoryに施せば「複製と終対象を備えた圏」即ちcartesian categoryになると期待される。}
-\topic{L-constructionは\RC に施しても一般には\CC にはならない}。
-例えば$\Set^{\mono}$は素朴な方法で\RC の構造を持ち
-、$\Set^{\mono}$にL-constructionを施して得られる圏$L(\Set^{\mono})$は$\Set$と非同型であるが、
-$\Lambda(\Set^{\mono})\simeq\Set$である。
+\topic{構成Lは\RC に施しても一般には\CC にはならない}。
+例えば$\Set^{\mono}$は素朴な方法で\RC の構造を持ち、
+$\Set^{\mono}$に構成$L$を施して得られる圏$L(\Set^{\mono})$は$\Set$と同型ではなく、
+Tennent category(\cite{tennent1990semantical})と等しい(\cite{HT12},Thm4.4)ことが分かっている。
+$\Lambda(\Set^{\mono})\simeq\Set$であることが後にわかるから、
 構成$L$及び構成$\Lambda$の普遍性を踏まえれば、$L(\Set^{\mono})$は\CC ではないことがわかる。
-$L(\Set^{\mono})$はTennent category(\cite{tennent1990semantical})と等しい(\cite{HT12},Thm4.4)ことが分かっている。
 
-構成Lは\SMC のモノイド単位対象を終対象にするものであったが、上に述べたようにテンソル積を直積にするものではなかった。
+構成$L$は\SMC のモノイド単位対象を終対象にするものであったが、上に述べたようにテンソル積を直積にするものではなかった。
 これに対して 構成$\Lambda$は、\RC を受け取り、そのモノイド単位対象を終対象に、テンソル積を直積にするものである。
 
 \begin{comment}
@@ -470,7 +471,7 @@ $L(\Set^{\mono})$はTennent category(\cite{tennent1990semantical})と等しい(\
 
 
 
-\topic{本論文では、\RC (relevance category)の定義及び基本的な例を述べたのち、\RC の「\CC 化」操作である構成$\Lambda$を記述
+\topic{本論文では、\RC の定義及び基本的な例を述べたのち、\RC の「\CC 化」操作である構成$\Lambda$を記述
 %し、そのwell-defined性を証明
 し、$\Lambda$の普遍性、及び$\Lambda$が$\Set^{\mono}$から$\Set$を復元する性質を持つことを証明する。}
 
@@ -532,14 +533,14 @@ $AB\tensor f \tensor DE$のように記述する。
 
 \section{\RC}
 序論で述べたように、\RC とは対称モノイド圏$\R$に「複製」$\set{\Delta_X:X\to X\tensor X}_{X\in\R}$を付加した構造である。
+\RC は{\cite{JACOBS199473}}でmonoidal structure with diagonalsとして定義されたのが初出と思われる。
 \RC は対応$\R(Z,X)\times\R(Z,Y)\to\R(Z,X\tensor Y);(f,g)\mapsto \Delta_Z\comp(f\tensor g)$を伴うから、
 \RC は対称モノイド圏$\R$に自然変換$\set{\R(-,X)\times\R(-,Y)\to\R(-,X\tensor Y)}_{X,Y\in\R}$を付加した構造を持つ。
 逆に、よい自然変換$\set{\phi_{X,Y}:\R(-,X)\times\R(-,Y)\to\R(-,X\tensor Y)}_{X,Y\in\R}$があれば
-複製$\Delta_X:=\phi_{X,X,X}(id_X,id_X):X\to X\tensor X$が得られるので、
+複製$\Delta_X:=\phi_{X,X}(id_X,id_X):X\to X\tensor X$が得られるので、
 \RC は対称モノイド圏$\R$に自然変換$\set{\R(-,X)\times\R(-,Y)\to\R(-,X\tensor Y)}_{X,Y\in\R}$を付加した構造に他ならないと言える。
 \CC は対称モノイド圏$\C$によい自然同型$\set{\C(-,X)\times\C(-,Y)\simeq\C(-,X\tensor Y)}_{X,Y\in\C}$を付加した構造であったから、
 \RC はlax-\CC とも呼ぶべきものである。
-\RC は{\cite{JACOBS199473}}でmonoidal structure with diagonalsとして定義されたのが初出と思われる。
 
 本節では、\RC とその周辺概念の定義、及び基本的な例を記述する。
 
@@ -652,10 +653,24 @@ $\C$の分裂モノ射は恒等射しかないので、分裂モノ射の全体�
 %(式とDiagram と String Diagramを書く)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \newpageForSection
 \section{構成 \texorpdfstring{$\Lambda$}{Lambda}の定義}
 本節では構成 $\Lambda$の定義を述べる。$\Lambda$は、与えられた\RC から\CC を構成する普遍的な操作である。
-以下、$\R=(\R,\tensor,I,\alpha,\lambda,\rho,\gamma,\Delta)$を\RC とする。
+以下、$\R=(\R,\tensor,I,\alpha,\lambda,\rho,\gamma,\Delta)$を\RC とする（記号の濫用により、関連圏とその台となる圏を同一視する）。
 これから本節全体を通して、デカルト圏${\Lambda[\R]}$を定義する。
 圏${\Lambda[\R]}$を定義した後に ${\Lambda[\R]}$が持つ素朴なモノイド構造がデカルト積を与えることを示す。
 圏${\Lambda[\R]}$を構成するに当たって、まず双圏様の中間構造 $\calLambda(\R)$を構成し、その後 ${\Lambda[\R]}$を作る。
@@ -1456,7 +1471,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
         \comp(C\tensor\gamma_{CX,Y}\tensor XY)\ \ \ 
         (\text{by coherence})\\
         = &\ (\Delta_{C}\tensor\Delta_{XY})
-        \comp(C\tensor\gamma_{CX,Y}\tensor XY)]\ \ \ 
+        \comp(C\tensor\gamma_{CX,Y}\tensor XY)\ \ \ 
         (\text{by monoidality of}\ \Delta)
     \end{align*}
     上式中の(by coherence)と書かれた部分は六角形公理及び函手性・自然性のみから導かれる主張である。
@@ -1474,7 +1489,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
 \begin{proof}
     任意に$\bar{X}\in{\Lambda[\R]}$を取り、$!_{\bar{X}}:=[X,\l_X]:\bar{X}\to I$と置く。
     任意の$[A,f]:\bar{X}\to I$に対し、次のように$[A,f]=!_{\bar{X}}$であることを示す。
-    $(A,f)~(X,\l_X)$であることを示せばよい。
+    $(A,f)\sim(X,\l_X)$であることを示せばよい。
 
     $f':X\to A$を$f':=(-\tensor I)^{-1}(f\comp\l_X)$と定めると、
     \begin{align*}
@@ -1511,7 +1526,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
 \end{definition}
 
 
-そして$\Lambda$は次の普遍性を満たす（煩雑な議論を避けるため、2-圏論的主張を1-圏論的主張に弱めている）。
+そして$\Lambda$は次の普遍性を満たす。ただし、煩雑な議論を避けるため、2-圏論的主張を1-圏論的主張に弱めている。
 
 %\paragraph{proposition \arabic{section}.2:\ universality of $\Lambda$}\ \\
 \begin{proposition}[$\Lambda$の普遍性]
@@ -1531,7 +1546,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     (iii) $\bar{-}$が$\Eta_{\R}\comp - $の右逆であることの証明\\
 
     \noindent
-    (i) ($\bar{F}$の構成とwell-defined性の証明)\\
+    (i) ($\bar{F}$の構成とwell-defined性の証明)\par
     \Rf $F=(F,\mu, \epsilon):\R \to \D$に対し
     （強）モノイド函手 $\bar{F} = (\bar{F}, \bar{\mu}, \bar{\epsilon}):\LambdaR\to\D$
     を対応させる操作$\bar{(-)}$を次で定める：
@@ -1556,10 +1571,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     $\bar{F}$のwell-defined性を示す。
     $(A,f),(B,g):\bar{X}\to \bar{Y} \rmin \calLambda(\R)$と$k:(A,f)\to (B,g)$を任意に取る。
     $\bar{F}([A,f])=\bar{F}([B,g])$を示せばよい。
-    %$F$は\Rf であったから、次の図式は可換である。
-
-    
-    次の図式３の可換性を示せば、$\bar{F}([A,f])=\bar{F}([B,g])$であることが分かる。
+    次の図式\ref{fig:proof_of_well-definedness_of_barF}の可換性を示せば、$\bar{F}([A,f])=\bar{F}([B,g])$であることが分かる。
     この図式の手前上辺が$\bar{F}([A,f])$, 手前下辺が$\bar{F}([B,g])$である。
     \begin{figure}[H]
         \[
@@ -1596,6 +1608,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
         }
         \]
         \caption{{$\bar{F}([A,f])=\bar{F}([B,g])$}を証明する図式}
+        \label{fig:proof_of_well-definedness_of_bar{F}}
     \end{figure}
     この図式の最左の三角形、及び左面の四角形は、$k$が$(A,f)$から$(B,g)$への2-射であったから可換である。
     奥面左の四角形は、$F$が\Rf であることから可換である。
@@ -1634,12 +1647,32 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     %ほぼ自明なので特に説明しない
 
 
-    (ii)%操作 $\bar{(-)}$と $\Eta_{\R}\comp-$が互いに逆であることを示す。\\
+    \noindent
+    (ii) ($\bar{-}$が$\Eta_{\R}\comp - $の左逆であることの証明)\par
     \Rf $F:\R\to\D$に対し、$\Eta_{\R}\comp\bar{F}=F$であることを示す。
     $\Eta_\R\comp -$も$\bar{-}$も対象上何も操作しないので、対象の対応が等しいことは直ちに分かる。
     よって射の対応だけ見ればよい。
     $f:X\to Y \rmin \R$を１つ取り固定する。
     $(\Eta_{\R}\comp\bar{F})(f)$と$F(f)$が等しいことを示す。
+    \begin{figure}
+        % https://q.uiver.app/#q=WzAsNixbMCwwLCJGKFgpIl0sWzIsMCwiRihJXFx0ZW5zb3IgWSkiXSxbNCwwLCJGKEkpXFx0aW1lcyBGKFkpIl0sWzYsMCwiRihZKSJdLFsyLDEsIkYoWSkiXSxbNCwxLCIxXFx0aW1lcyBGKFkpIl0sWzAsMSwiRihmJykiXSxbMiwxLCJcXG11X3sxLFl9IiwyXSxbMiwzLCJcXHBpX3tGKEkpLEYoWSl9Il0sWzAsNCwiRihmKSIsMl0sWzEsNCwiRihcXHJob19ZKSIsMl0sWzUsMiwiXFxlcHNpbG9uXFx0aW1lcyBGKFkpIiwwLHsib2Zmc2V0IjotM31dLFs1LDMsIlxccmhvX3tGKFkpfSIsMl0sWzUsNCwiXFxyaG9fe0YoWSl9IiwyXSxbMiw1LCIhXFx0aW1lcyBGKFkpIl1d
+        \[\begin{tikzcd}
+            {F(X)} && {F(I\tensor Y)} && {F(I)\times F(Y)} && {F(Y)} \\
+            && {F(Y)} && {1\times F(Y)}
+            \arrow["{F(f')}", from=1-1, to=1-3]
+            \arrow["{\mu_{1,Y}}"', from=1-5, to=1-3]
+            \arrow["{\pi_{F(I),F(Y)}}", from=1-5, to=1-7]
+            \arrow["{F(f)}"', from=1-1, to=2-3]
+            \arrow["{F(\rho_Y)}"', from=1-3, to=2-3]
+            \arrow["{\epsilon\times F(Y)}", shift left=3, from=2-5, to=1-5]
+            \arrow["{\rho_{F(Y)}}"', from=2-5, to=1-7]
+            \arrow["{\rho_{F(Y)}}"', from=2-5, to=2-3]
+            \arrow["{!\times F(Y)}", from=1-5, to=2-5]
+        \end{tikzcd}\]
+        \caption{$(\Eta_{\R}\comp\bar{F})(f)=F(f)$を証明する図式}
+        \label{fig:proof_of_EtaR_barF(f)_is_F(f)}
+    \end{figure}
+    上の図式\ref{fig:proof_of_EtaR_barF(f)_is_F(f)}を辿れば、
     \begin{align*}
         &(\Eta_{\R}\comp\bar{F})(f)\\
         =& \bar{F}(\Eta_{\R}(f))\\
@@ -1651,24 +1684,12 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
         =& F(f)\comp\rho_{F(Y)}^{-1}\comp\rho_{F(Y)}\\
         =& F(f)
     \end{align*}
-    である（下記図式参照）。これで示された。
+    である。これで示された。
 
-    % https://q.uiver.app/#q=WzAsNixbMCwwLCJGKFgpIl0sWzIsMCwiRihJXFx0ZW5zb3IgWSkiXSxbNCwwLCJGKEkpXFx0aW1lcyBGKFkpIl0sWzYsMCwiRihZKSJdLFsyLDEsIkYoWSkiXSxbNCwxLCIxXFx0aW1lcyBGKFkpIl0sWzAsMSwiRihmJykiXSxbMiwxLCJcXG11X3sxLFl9IiwyXSxbMiwzLCJcXHBpX3tGKEkpLEYoWSl9Il0sWzAsNCwiRihmKSIsMl0sWzEsNCwiRihcXHJob19ZKSIsMl0sWzUsMiwiXFxlcHNpbG9uXFx0aW1lcyBGKFkpIiwwLHsib2Zmc2V0IjotM31dLFs1LDMsIlxccmhvX3tGKFkpfSIsMl0sWzUsNCwiXFxyaG9fe0YoWSl9IiwyXSxbMiw1LCIhXFx0aW1lcyBGKFkpIl1d
-    \[\begin{tikzcd}
-        {F(X)} && {F(I\tensor Y)} && {F(I)\times F(Y)} && {F(Y)} \\
-        && {F(Y)} && {1\times F(Y)}
-        \arrow["{F(f')}", from=1-1, to=1-3]
-        \arrow["{\mu_{1,Y}}"', from=1-5, to=1-3]
-        \arrow["{\pi_{F(I),F(Y)}}", from=1-5, to=1-7]
-        \arrow["{F(f)}"', from=1-1, to=2-3]
-        \arrow["{F(\rho_Y)}"', from=1-3, to=2-3]
-        \arrow["{\epsilon\times F(Y)}", shift left=3, from=2-5, to=1-5]
-        \arrow["{\rho_{F(Y)}}"', from=2-5, to=1-7]
-        \arrow["{\rho_{F(Y)}}"', from=2-5, to=2-3]
-        \arrow["{!\times F(Y)}", from=1-5, to=2-5]
-    \end{tikzcd}\]
 
-    (iii) （強）モノイド函手 $G=(G,\nu, \zeta):\LambdaR\to\D$に対し、$\bar{\Eta_{\R}\comp G}=G$であることを示す。
+    \noindent
+    (iii) ($\bar{-}$が$\Eta_{\R}\comp - $の右逆であることの証明)\par
+    （強）モノイド函手 $G=(G,\nu, \zeta):\LambdaR\to\D$に対し、$\bar{\Eta_{\R}\comp G}=G$であることを示す。
     $\Eta_\R\comp -$も$\bar{-}$も対象上何も操作しないので、対象の対応が等しいことは直ちに分かる。
     よって射の対応だけ見ればよい。
     $\Eta_{\R}\comp G =: (\Eta_{\R}\comp G, \mu, \epsilon)$と置く。
@@ -1751,7 +1772,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
 
 
 \section{モノ射の成す関連圏からの復元}
-構成$\Lambda$を考えたもともとの動機は、\CC $\C$に対し、$\Lambda[\C^{\mono}]\simeq \C$であろう、という直感であった。
+構成$\Lambda$を考えたもともとの動機は、\CC $\C$に対し、$\Lambda[\C^{\mono}]\simeq \C$となる$\Lambda$をつくることであった。
 本節ではこれを示す。
 より一般に、\CC $\C$に対し、$\C$の「よい関連部分圏」に対し${\Lambda[\R]}\simeq \C$となることの証明を与える。
 まずは「よい関連部分圏」を定義する。よい関連部分圏とは、全てのグラフを持つような関連部分圏のことである。
@@ -1780,14 +1801,17 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     $X,Y\in\C$を取る。
     $(\bar{i})_{X,Y}:\cL(\bar{X},\bar{Y})\to\C(X,Y)$が全単射であることを示す。
     ３ステップに分けて示す。\\
-    (i) 逆写像となるべき写像$\psi:\C(X,Y)\to\cL(\bar{X},\bar{Y})$を構成する。\\
-    (ii) $\psi\comp(\bar{i})_{X,Y} = id$であることを示す。\\
-    (iii) $(\bar{i})_{X,Y} \comp\psi = id$であることを示す。\\
-
-    (i) 逆写像となるべき写像$\psi:\C(X,Y)\to\cL(\bar{X},\bar{Y})$を構成する。
-    $\psi(f):=[X, (id_X,f)]$と置く。これが逆であることを示す。\\
+    (i) 逆写像となるべき写像$\psi:\C(X,Y)\to\cL(\bar{X},\bar{Y})$の構成\\
+    (ii) $\psi$が$(\bar{i})_{X,Y}$の左逆であることの証明\\
+    (iii) $\psi$が$(\bar{i})_{X,Y}$の右逆であることの証明\\
     
-    (ii) $\psi\comp(\bar{i})_{X,Y} = id$であることを示す。
+    \noindent
+    (i) (逆写像となるべき写像$\psi:\C(X,Y)\to\cL(\bar{X},\bar{Y})$の構成)\par
+    $\psi(f):=[X, (id_X,f)]$と置く。これが$\phi$の逆であることを示せばよい。\\
+    
+    \noindent
+    (ii) ($\psi$が$(\bar{i})_{X,Y}$の左逆であることの証明)\par
+    $\psi\comp(\bar{i})_{X,Y} = id$であることを示す。
     $f:X\to Y \ \mathrm{in}\ \C$を取り固定する。
     $(\bar{i})_{X,Y}(\psi(f)) = f \ \rmin \C$であることを示す。
     \begin{align*}
@@ -1798,7 +1822,9 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     \end{align*}
     以上で示された。
     
-    (iii) $(\bar{i})_{X,Y} \comp\psi = id$であることを示す。
+    \noindent
+    (iii) ($\psi$が$(\bar{i})_{X,Y}$の右逆であることの証明)\par
+    $(\bar{i})_{X,Y} \comp\psi = id$であることを示す。
     $[A,f]:\bar{X}\to \bar{Y} \ \mathrm{in}\ \cL$を取り固定する。
     $\psi(\bar{i}_{X,Y}([A,f])) = [A,f] \ \rmin \cL$であることを示す。
     
