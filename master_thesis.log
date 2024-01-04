@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  4 JAN 2024 09:56
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  4 JAN 2024 10:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -983,6 +983,14 @@ LaTeX Font Info:    Kanji font shape `JY1/mc/m/it' undefined
 LaTeX Warning: Reference `fig:proof_of_well-definedness_of_barF' on page 21 und
 efined on input line 1576.
 
+
+LaTeX Warning: Reference `fig:proof_of_well-definedness_of_barF' on page 21 und
+efined on input line 1637.
+
+
+LaTeX Warning: Reference `fig:proof_of_well-definedness_of_barF' on page 21 und
+efined on input line 1639.
+
 [21] [22]
 Overfull \hbox (99.61745pt too wide) detected at line 1738
 []
@@ -1037,10 +1045,10 @@ Package rerunfilecheck Info: File `master_thesis.out' has not changed.
 Here is how much of TeX's memory you used:
  26941 strings out of 474925
  523759 string characters out of 5765769
- 1971403 words of memory out of 5000000
+ 1965403 words of memory out of 5000000
  48668 multiletter control sequences out of 15000+600000
  616312 words of font info for 131 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  98i,19n,107p,3857b,1317s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master_thesis.dvi (27 pages, 384788 bytes).
+Output written on master_thesis.dvi (27 pages, 384804 bytes).
