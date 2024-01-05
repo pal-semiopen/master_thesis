@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  5 JAN 2024 20:01
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  5 JAN 2024 20:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1034,35 +1034,34 @@ bmp)
 File: graphics/15_f2_comp_a2_tens_g.png Graphic file (type bmp)
 <graphics/15_f2_comp_a2_tens_g.png>
 [15] [16] [17] [18]
-Overfull \hbox (2.55727pt too wide) detected at line 1476
+Overfull \hbox (2.55727pt too wide) detected at line 1467
 []
  []
 
-
-Overfull \hbox (156.603pt too wide) detected at line 1586
+[19]
+Overfull \hbox (156.603pt too wide) detected at line 1611
 []
  []
 
-[19] [20]
-
-LaTeX Warning: Reference `fig:proof_of_well-definedness_of_barF' on page 21 und
-efined on input line 1684.
-
-[21]
+[20] [21]
 
 LaTeX Warning: Reference `fig:proof_of_well-definedness_of_barF' on page 22 und
-efined on input line 1745.
+efined on input line 1709.
 
 
 LaTeX Warning: Reference `fig:proof_of_well-definedness_of_barF' on page 22 und
-efined on input line 1747.
+efined on input line 1770.
 
-[22]
-Overfull \hbox (99.61745pt too wide) detected at line 1846
+
+LaTeX Warning: Reference `fig:proof_of_well-definedness_of_barF' on page 22 und
+efined on input line 1772.
+
+[22] [23]
+Overfull \hbox (99.61745pt too wide) detected at line 1871
 []
  []
 
-[23] Excluding 'comment' comment. [24] [25] Excluding 'comment' comment.
+Excluding 'comment' comment. [24] [25] Excluding 'comment' comment. [26]
 (./master_thesis.bbl
 LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <10> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 12.
@@ -1072,7 +1071,7 @@ LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <10> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 12.
- [26]) [27] (./master_thesis.aux)
+ [27]) [28] (./master_thesis.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-11-01>
@@ -1088,10 +1087,10 @@ Package rerunfilecheck Info: File `master_thesis.out' has not changed.
 Here is how much of TeX's memory you used:
  27249 strings out of 474925
  529247 string characters out of 5765769
- 1969403 words of memory out of 5000000
+ 1965403 words of memory out of 5000000
  48955 multiletter control sequences out of 15000+600000
  621590 words of font info for 158 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  98i,19n,107p,3857b,1384s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master_thesis.dvi (27 pages, 391548 bytes).
+Output written on master_thesis.dvi (28 pages, 393108 bytes).

@@ -1431,27 +1431,31 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     \begin{align*}
         &\ (C\tensor Y\tensor C\tensor X, \ (h\comp(C\tensor\gamma_{X,Y}))\boxdot h)\\
         = &\ (C\tensor Y\tensor C\tensor X,\  
-            \Delta_Z\comp((h\comp(C\tensor\gamma_{X,Y}))\tensor h)
+            h\comp\Delta_{CXY}\comp(C\tensor\gamma_{X,Y}\tensor CXY)
             \comp(CY\tensor\gamma_{X,CX}\tensor Y))
-            \ \ (\text{$\boxdot$の定義より})\\
+            \ \ (\text{後述(*1)より})\\
+        \sim &\ (C\tensor C\tensor Y\tensor X,\  
+            h\comp\Delta_{CXY}\comp(C\tensor\gamma_{XY,C}\tensor XY)
+            \comp(CC\tensor\gamma_{X,YX}\tensor Y))
+            \ \ (\text{後述(*2)より})\\
+        \sim &\ (C\tensor Y\tensor X,\
+            h\comp(C\tensor\Delta_{XY})
+            \comp(C\tensor\gamma_{X,XY}\tensor Y))
+            \ \ (\text{後述(*3)より})\\
+        \sim &\ (C\tensor X\tensor Y,\  h\comp(C\tensor\Delta_{XY}))
+            \ \ (\text{後述(*4)より})\\
+        \sim &\ (C,\  h)
+            \ \ (\text{\refprop{prop:diagonal_2-morphism} と \refprop{prop:left_whiskering}より})
+    \end{align*}
+    である。
+    ただし、上式中の$(*1), (*2), (*3), (*4)$の部分は以下に示す。
+    まず$(*1)$は次のように示される。
+    \begin{align*}
+        &\ (C\tensor Y\tensor C\tensor X, \ (h\comp(C\tensor\gamma_{X,Y}))\boxdot h)\\
         = &\ (C\tensor Y\tensor C\tensor X,\  
             \Delta_Z\comp((h\comp(C\tensor\gamma_{X,Y}))\tensor h)
             \comp(CY\tensor\gamma_{X,CX}\tensor Y))
             \ \ (\text{$\boxdot$の定義より})\\
-        \sim &\ (C\tensor Y\tensor X,\
-            h\comp(C\tensor\Delta_{XY})
-            \comp(C\tensor\gamma_{X,XY}\tensor Y))
-            \ \ (\text{後述(*1)より})\\
-        \sim &\ (C\tensor X\tensor Y,\  h\comp(C\tensor\Delta_{XY}))
-            \ \ (\text{後述(*2)より})\\
-        \sim &\ (C,\  h)
-            \ \ (\text{\refprop{prop:diagonal_2-morphism} と \refprop{prop:left_whiskering}より})
-    \end{align*}
-    である。ただし、上式中の$(*1), (*2)$の部分は以下に示す。まず$(*1)$は次のように示される。
-    \begin{align*}
-        &\ (C\tensor Y\tensor C\tensor X,\  
-            \Delta_Z\comp((h\comp(C\tensor\gamma_{X,Y}))\tensor h)
-            \comp(CY\tensor\gamma_{X,CX}\tensor Y))\\
         = &\ (C\tensor Y\tensor C\tensor X,\  
             \Delta_Z\comp(h\tensor h) \comp(C\tensor\gamma_{X,Y}\tensor CXY)
             \comp(CY\tensor\gamma_{X,CX}\tensor Y))
@@ -1460,10 +1464,24 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
             h\comp\Delta_{CXY}\comp(C\tensor\gamma_{X,Y}\tensor CXY)
             \comp(CY\tensor\gamma_{X,CX}\tensor Y))
             \ \ (\text{$\Delta$の自然性より})\\
+    \end{align*}
+    である。これで$(*1)$が示された。
+    続いて$(*2)$を示す。
+    \begin{align*}
+        = &\ (C\tensor Y\tensor C\tensor X,\  
+            h\comp\Delta_{CXY}\comp(C\tensor\gamma_{X,Y}\tensor CXY)
+            \comp(CY\tensor\gamma_{X,CX}\tensor Y))\\
         \sim &\ (C\tensor C\tensor Y\tensor X,\  
-            h\comp(\Delta_{CXY})\comp(C\tensor\gamma_{XY,C}\tensor XY)
+            h\comp\Delta_{CXY}\comp(C\tensor\gamma_{XY,C}\tensor XY)
             \comp(CC\tensor\gamma_{X,YX}\tensor Y))
-            \ \ (\text{後述(*3)より})\\
+            \ \ (\text{より})\\
+    \end{align*}
+    である。これで$(*2)$が示された。
+    続いて$(*3)$を示す。
+    \begin{align*}
+        &\ (C\tensor C\tensor Y\tensor X,\  
+            h\comp(\Delta_{CXY})\comp(C\tensor\gamma_{XY,C}\tensor XY)
+            \comp(CC\tensor\gamma_{X,YX}\tensor Y))\\
         = &\ (C\tensor C\tensor Y\tensor X,\
             h\comp(\Delta_{C}\tensor\Delta_{XY})
             \comp(CC\tensor\gamma_{X,XY}\tensor Y))
@@ -1478,9 +1496,8 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
             \comp(C\tensor\gamma_{X,XY}\tensor Y))
             \ \ (\text{\refprop{prop:diagonal_2-morphism}より})
     \end{align*}
-    である。これで$(*1)$が示された。
-    ただし、上式中の$(*3)$の部分は後に示す。
-    続いて$(*2)$を示す。
+    である。これで$(*3)$が示された。
+    続いて$(*4)$を示す。
     \refprop{prop:left_whiskering}と$\tensor$の函手性より、
     $(Y\tensor X,\
         \Delta_{XY}\comp(\gamma_{X,XY}\tensor Y))
@@ -1514,7 +1531,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
             \Delta_{XY})
             \ \ (\text{$\because\Delta$はモノイド自然変換})
     \end{align*}
-    である。これで$(*2)$が示された。
+    である。これで$(*4)$が示された。
     続いて$(*3)$を示す。
     \refprop{prop:left_whiskering}と$\tensor$の函手性より、
     $(Y\tensor C\tensor X,\  
@@ -1541,6 +1558,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     以上で$[C,h]=\psi(\phi([C,h]))$であることの証明が完了した。
 
 
+    
 
 
 
