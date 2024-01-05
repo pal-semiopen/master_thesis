@@ -1,4 +1,4 @@
-\documentclass[10pt, dvipdfmx]{article}
+\documentclass[10pt, dvipdfmx]{jsarticle}
 \usepackage[utf8]{inputenc}
 
 \usepackage{color}
@@ -224,12 +224,8 @@
 \renewcommand{\simeq}{\cong}
 \newcommand{\Ob}[1]{\mathrm{Ob}(#1)}
 \newcommand{\compose}[2]{#1 \comp #2}
-\renewcommand{\baselinestretch}{1.4}
+%\renewcommand{\baselinestretch}{1.1}
 %%ここまでこの論文中でのみ使うコマンド
-
-%ココカラfigure環境の設定
-\renewcommand{\figurename}{図}
-%ココマデfigure環境の設定
 
 %ココカラamsthmの設定
 \newcommand{\definitionword}{定義}
@@ -484,7 +480,7 @@ $f\comp g := g\o f$である。すなわち、この記法では射の合成を�
 また、モノイド圏の図式の記述に際して、煩雑さを避けるため、
 結合律の同型$\alpha$によって結ばれる対象同士は記号の濫用によって同一視し、$\alpha$は明示しない。
 
-加えて、図式中の射の表示に際しては、簡単のため
+加えて、モノイド圏の射の表示に際しては、簡単のため
 $id_A\tensor id_B \tensor f \tensor id_D \tensor id_E$を
 $AB\tensor f \tensor DE$のように記述する。
 
@@ -887,6 +883,8 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
 %\paragraph{Definition \arabic{section}.\arabic{subsection}.7: 恒等1-射}\ \\
 \begin{definitionsub}[恒等1-射]
+    $X\in\R$とする。
+    $\bar{X}$から$\bar{X}$への$\calLambda(\R)$の1-射$id_{\bar{X}}$を $(I, \rho_{X})$と定める。
     この恒等射と上記合成は整合性の同型の違いを除いて単位律を満たす。
 \end{definitionsub}
 
@@ -1228,6 +1226,22 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
         \end{tikzcd}\]
         \caption{図式的表示による証明}
         \label{fig:compose_diagram}
+    \end{figure}
+
+    \begin{figure}[H]
+        \begin{align*}
+            &\includegraphics[keepaspectratio, width=0.3\linewidth]{11_f1_comp_a1_tens_g.png}\\
+            \overset{\text{\reflem{lem:graph_is_same_as_original}}}{\sim}
+                &\includegraphics[keepaspectratio, width=0.3\linewidth, valign=c]{12_f1_comp_a1_tens_delta_comp_a1y_tens_g.png}\\
+            \overset{\text{\refprop{prop:trivial_2-morphism}}}{\sim}
+                &\includegraphics[keepaspectratio, width=0.3\linewidth, valign=c]{13_f1_comp_a1_tens_delta_comp_k_tens_g.png}\\
+            \overset{\text{$k$は2-射}}{=}
+                &\includegraphics[keepaspectratio, width=0.3\linewidth, valign=c]{14_f2_comp_a2_tens_delta_comp_a2y_tens_g.png}\\
+            \overset{\text{\reflem{lem:graph_is_same_as_original}}}{\sim}
+                &\includegraphics[keepaspectratio, width=0.3\linewidth, valign=c]{15_f2_comp_a2_tens_g.png}
+        \end{align*}
+        \caption{string diagramによる証明}
+        \label{fig:compose_string}
     \end{figure}
 \end{proof}
 
@@ -1697,7 +1711,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     $\Eta_{\R}\comp G =: (\Eta_{\R}\comp G, \mu, \epsilon)$と置く。
     $\mu_{X,Y}=\nu_{\Eta(X),\Eta(Y)}\comp G(\bar{\mu}_{X,Y})$, $\epsilon = G(e)\comp\zeta$である。
 
-    $[A,f]:\bar{X}\to \bar{Y} \rmin \LambdaR$を１つ取り固定する。$\bar{\Eta_{\R}\comp G}([A,f]) = G([A,f])$を示す。
+    $[A,f]:\bar{X}\to \bar{Y} \rmin \LambdaR$を１つ取り固定する。$\bar{\Eta_{\R}\comp G}([A,f]) = G([A,f])$であることを示す。
     \begin{align*}
         &\bar{\Eta_{\R}\comp G}([A,f])\\ 
         =\ & (\Eta_{\R}\comp G)(f)\comp\mu_{A,Y}^{-1}\comp\pi_2\\
@@ -1774,6 +1788,23 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
 \end{comment}
 
 \end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \newpageForSection
@@ -1937,7 +1968,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
 
 
 
-\section{Reference}
+\section{参考文献}
 
 %[Pet02] Petrić, Z. Coherence in Substructural Categories. Studia Logica 70, 271–296 (2002). https://doi.org/10.1023/A:1015186718090\\
 

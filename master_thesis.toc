@@ -4,9 +4,9 @@
 \contentsline {section}{\numberline {3}構成 $\Lambda $の定義}{7}{section.3}%
 \contentsline {subsection}{\numberline {3.1}中間構造 $\mathcal {B}(\mathcal {R})$の構成}{8}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}圏${\Lambda [\mathcal {R}]}$の構成}{11}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}${\Lambda [\mathcal {R}]}$のデカルト圏構造}{16}{subsection.3.3}%
-\contentsline {section}{\numberline {4}構成$\Lambda $の普遍性}{19}{section.4}%
+\contentsline {subsection}{\numberline {3.3}${\Lambda [\mathcal {R}]}$のデカルト圏構造}{17}{subsection.3.3}%
+\contentsline {section}{\numberline {4}構成$\Lambda $の普遍性}{20}{section.4}%
 \contentsline {section}{\numberline {5}モノ射の成す関連圏からの復元}{23}{section.5}%
 \contentsline {section}{\numberline {6}まとめと今後の課題}{25}{section.6}%
-\contentsline {section}{\numberline {7}謝辞}{26}{section.7}%
-\contentsline {section}{\numberline {8}Reference}{26}{section.8}%
+\contentsline {section}{\numberline {7}謝辞}{25}{section.7}%
+\contentsline {section}{\numberline {8}参考文献}{26}{section.8}%
