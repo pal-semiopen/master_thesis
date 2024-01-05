@@ -1431,8 +1431,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     \begin{align*}
         &\ (C\tensor Y\tensor C\tensor X, \ (h\comp(C\tensor\gamma_{X,Y}))\boxdot h)\\
         = &\ (C\tensor Y\tensor C\tensor X,\  
-            h\comp\Delta_{CXY}\comp(C\tensor\gamma_{X,Y}\tensor CXY)
-            \comp(CY\tensor\gamma_{X,CX}\tensor Y))
+            h\comp\Delta_{CXY}\comp(C\tensor\gamma_{X,YCX}\tensor Y)
             \ \ (\text{後述(*1)より})\\
         \sim &\ (C\tensor C\tensor Y\tensor X,\  
             h\comp\Delta_{CXY}\comp(C\tensor\gamma_{XY,C}\tensor XY)
@@ -1463,33 +1462,56 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
         = &\ (C\tensor Y\tensor C\tensor X,\  
             h\comp\Delta_{CXY}\comp(C\tensor\gamma_{X,Y}\tensor CXY)
             \comp(CY\tensor\gamma_{X,CX}\tensor Y))
-            \ \ (\text{$\Delta$の自然性より})
+            \ \ (\text{$\Delta$の自然性より})\\
+        = &\ (C\tensor Y\tensor C\tensor X,\  
+            h\comp\Delta_{CXY}\comp(C\tensor\gamma_{X,YCX}\tensor Y)
+            \ \ (\text{$\gamma$の整合性より})
     \end{align*}
     である。これで$(*1)$が示された。
     続いて$(*2)$を示す。
     \refprop{prop:left_whiskering}と$\tensor$の函手性より、
     $(Y\tensor C\tensor X,\  
-        \gamma_{X,Y}\tensor CXY
-        \comp(Y\tensor\gamma_{X,CX}\tensor Y))
+        \gamma_{X,YCX}))
     \sim (C\tensor Y\tensor X,\  
-        (\gamma_{XY,C}\tensor XY)
-        \comp(C\tensor\gamma_{X,YX}\tensor Y))$
+        (\gamma_{XY,C}\tensor X)
+        \comp(C\tensor\gamma_{X,YX}))$
     であることを示せばよい。
     \begin{align*}
         &\ (Y\tensor C\tensor X,\  
-            \gamma_{X,Y}\tensor CXY
-            \comp(Y\tensor\gamma_{X,CX}\tensor Y))\\
-        &\ (Y\tensor C\tensor X,\  
-            \gamma_{X,Y}\tensor CXY
-            \comp(Y\tensor\gamma_{X,CX}\tensor Y))\\
-        \sim &\ (C\tensor Y\tensor X,\ 
-            (\gamma_{XY,C}\tensor XY)
-            \comp(C\tensor\gamma_{X,YX}\tensor Y))
-            \ \ (\text{より})
+            \gamma_{X,YCX})\\
+        = &\ (Y\tensor C\tensor X,\  
+            (\gamma_{X,YC}\tensor X)
+            \comp(YC\tensor\gamma_{X,X}))
+            \ \ (\text{$\gamma$の整合性より})\\
+        \sim &\ (C\tensor Y\tensor X,\  
+            (\gamma_{X,YC}\tensor X)
+            \comp(YC\tensor\gamma_{X,X})
+            \comp(\gamma_{Y,C}\tensor XX))
+            \ \ (\text{\refprop{prop:trivial_2-morphism} と \refprop{prop:left_whiskering}より})\\
+        = &\ (C\tensor Y\tensor X,\  
+            (\gamma_{X,YC}\tensor X)
+            \comp(\gamma_{Y,C}\tensor XX)
+            \comp(YC\tensor\gamma_{X,X}))
+            \ \ (\text{$\tensor$の函手性より})\\
+        = &\ (C\tensor Y\tensor X,\  
+            (X\tensor\gamma_{Y,C}\tensor X)
+            \comp(\gamma_{X,CY}\tensor X)
+            \comp(YC\tensor\gamma_{X,X}))
+            \ \ (\text{$\gamma$の自然性より})\\
+        = &\ (C\tensor Y\tensor X,\  
+            (X\tensor\gamma_{Y,C}\tensor X)
+            \comp(\gamma_{X,C}\tensor YX)
+            \comp(C\tensor \gamma_{X,Y}\tensor X)
+            \comp(YC\tensor\gamma_{X,X}))
+            \ \ (\text{$\gamma$の整合性より})\\
+        = &\ (C\tensor Y\tensor X,\ 
+            (\gamma_{XY,C}\tensor X)
+            \comp(C\tensor\gamma_{X,YX}))
+            \ \ (\text{$\gamma$の整合性より})
     \end{align*}
     である。これで$(*2)$が示された。
     続いて$(*3)$を示す。
-    \refprop{prop:left_whiskering}とより、
+    \refprop{prop:left_whiskering}より、
     $(C\tensor C\tensor Y\tensor X,\  
         \Delta_{CXY}\comp(C\tensor\gamma_{XY,C}\tensor XY)
         \comp(CC\tensor\gamma_{X,YX}\tensor Y))

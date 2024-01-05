@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  5 JAN 2024 21:40
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  5 JAN 2024 22:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1034,26 +1034,31 @@ bmp)
 File: graphics/15_f2_comp_a2_tens_g.png Graphic file (type bmp)
 <graphics/15_f2_comp_a2_tens_g.png>
 [15] [16] [17] [18]
-Overfull \hbox (2.55727pt too wide) detected at line 1467
+Overfull \hbox (2.55727pt too wide) detected at line 1469
+[]
+ []
+
+
+Overfull \hbox (19.58366pt too wide) detected at line 1511
 []
  []
 
 [19] [20]
 
 LaTeX Warning: Reference `fig:proof_of_well-definedness_of_barF' on page 21 und
-efined on input line 1651.
+efined on input line 1673.
 
 [21]
 
 LaTeX Warning: Reference `fig:proof_of_well-definedness_of_barF' on page 22 und
-efined on input line 1712.
+efined on input line 1734.
 
 
 LaTeX Warning: Reference `fig:proof_of_well-definedness_of_barF' on page 22 und
-efined on input line 1714.
+efined on input line 1736.
 
 [22]
-Overfull \hbox (99.61745pt too wide) detected at line 1813
+Overfull \hbox (99.61745pt too wide) detected at line 1835
 []
  []
 
@@ -1083,10 +1088,10 @@ Package rerunfilecheck Info: File `master_thesis.out' has not changed.
 Here is how much of TeX's memory you used:
  27249 strings out of 474925
  529247 string characters out of 5765769
- 1965403 words of memory out of 5000000
+ 1968403 words of memory out of 5000000
  48955 multiletter control sequences out of 15000+600000
  621590 words of font info for 158 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  98i,19n,107p,3857b,1384s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master_thesis.dvi (27 pages, 389880 bytes).
+Output written on master_thesis.dvi (27 pages, 391196 bytes).
