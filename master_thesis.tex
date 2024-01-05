@@ -1434,6 +1434,10 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
             \Delta_Z\comp((h\comp(C\tensor\gamma_{X,Y}))\tensor h)
             \comp(CY\tensor\gamma_{X,CX}\tensor Y))
             \ \ (\text{$\boxdot$の定義より})\\
+        = &\ (C\tensor Y\tensor C\tensor X,\  
+            \Delta_Z\comp((h\comp(C\tensor\gamma_{X,Y}))\tensor h)
+            \comp(CY\tensor\gamma_{X,CX}\tensor Y))
+            \ \ (\text{$\boxdot$の定義より})\\
         \sim &\ (C\tensor Y\tensor X,\
             h\comp(C\tensor\Delta_{XY})
             \comp(C\tensor\gamma_{X,XY}\tensor Y))
@@ -1496,7 +1500,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
             \comp(X\tensor\gamma_{Y,X}\tensor Y)
             \comp(\gamma_{X,X}\tensor YY)
             \comp(X\tensor\gamma_{X,Y}\tensor Y))
-            \ \ (\text{整合性より})\\
+            \ \ (\text{$\gamma$の整合性より})\\
         = &\ (X\tensor Y,\
             (\Delta_{X}\tensor\Delta_{Y})
             \comp(\gamma_{X,X}\tensor YY)
@@ -1505,7 +1509,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
         = &\ (X\tensor Y,\
             (\Delta_{X}\tensor\Delta_{Y})
             \comp(X\tensor\gamma_{X,Y}\tensor Y))
-            \ \ (\text{$\because\Delta$の可換性})\\
+            \ \ (\text{$\Delta$の可換性より})\\
         = &\ (X\tensor Y,\
             \Delta_{XY})
             \ \ (\text{$\because\Delta$はモノイド自然変換})
@@ -1524,7 +1528,10 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
         &\ (Y\tensor C\tensor X,\  
             \gamma_{X,Y}\tensor CXY
             \comp(Y\tensor\gamma_{X,CX}\tensor Y))\\
-        \sim &\ (C\tensor Y\tensor X,\  
+        &\ (Y\tensor C\tensor X,\  
+            \gamma_{X,Y}\tensor CXY
+            \comp(Y\tensor\gamma_{X,CX}\tensor Y))\\
+        \sim &\ (C\tensor Y\tensor X,\ 
             (\gamma_{XY,C}\tensor XY)
             \comp(C\tensor\gamma_{X,YX}\tensor Y))
             \ \ (\text{より})
