@@ -1415,6 +1415,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
 
     \newpageForSection
     （続き：$[C,h]=\psi(\phi([C,h]))$であることの証明）
+    まず、
     \begin{align*}
         &\psi(\phi([C,h]))\\
         = &\ \psi([C,h]\comp\pi_X, [C,h]\comp\pi_Y)
@@ -1422,73 +1423,166 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
         = &\ \psi([C\tensor Y,h\comp(C\tensor\gamma_{X,Y})], [C\tensor X,h])
             \ \ (\text{$\comp$の定義より})\\
         = &\ [C\tensor Y\tensor C\tensor X, \ (h\comp(C\tensor\gamma_{X,Y}))\boxdot h]
-            \ \ (\text{$\phi$の定義より})\\
-        = &\ [C\tensor Y\tensor C\tensor X,\  
-            \Delta_Z\comp((h\comp(C\tensor\gamma_{X,Y}))\tensor h) \comp(CY\tensor\gamma_{X,CX}\tensor Y)]
-            \ \ (\text{$\boxdot$の定義より})\\
-        = &\ [C\tensor Y\tensor C\tensor X,\  
-            \Delta_Z\comp(h\tensor h) \comp(C\tensor\gamma_{X,Y}\tensor CXY)\comp(CY\tensor\gamma_{X,CX}\tensor Y)]
-            \ \ (\text{$\tensor$の函手性より})\\
-        = &\ [C\tensor Y\tensor C\tensor X,\  
-            h\comp\Delta_{CXY}\comp(C\tensor\gamma_{X,Y}\tensor CXY)\comp(CY\tensor\gamma_{X,CX}\tensor Y)]
-            \ \ (\text{$\Delta$の自然性より})\\
-        = &\ [C\tensor Y\tensor C\tensor X,\  
-            h\comp(\Delta_{C}\tensor\Delta_{XY})\comp(C\tensor\gamma_{CX,Y}\tensor XY)]
-            \ \ (*)\\
-        = &\ [C\tensor C\tensor X\tensor Y,\  h\comp(\Delta_C\tensor\Delta_{XY})]
-            \ \ (\text{\refprop{prop:trivial_2-morphism}})\\
-        = &\ [C\tensor X\tensor Y,\  h\comp(C\tensor\Delta_{XY})]
-            \ \ (\text{\refprop{prop:trivial_2-morphism}})\\
-        = &\ [C,\  h]
-            \ \ (\text{\refprop{prop:diagonal_2-morphism} and \refprop{prop:left_whiskering}})
+            \ \ (\text{$\phi$の定義より})
     \end{align*}
+    である。
+    $[C,h] = [C\tensor Y\tensor C\tensor X, \ (h\comp(C\tensor\gamma_{X,Y}))\boxdot h]$であることを示す。
+    $(C,h) \sim (C\tensor Y\tensor C\tensor X, \ (h\comp(C\tensor\gamma_{X,Y}))\boxdot h)$であることを示せばよい。
+    \begin{align*}
+        &\ (C\tensor Y\tensor C\tensor X, \ (h\comp(C\tensor\gamma_{X,Y}))\boxdot h)\\
+        = &\ (C\tensor Y\tensor C\tensor X,\  
+            \Delta_Z\comp((h\comp(C\tensor\gamma_{X,Y}))\tensor h)
+            \comp(CY\tensor\gamma_{X,CX}\tensor Y))
+            \ \ (\text{$\boxdot$の定義より})\\
+        \sim &\ (C\tensor Y\tensor X,\
+            h\comp(C\tensor\Delta_{XY})
+            \comp(C\tensor\gamma_{X,XY}\tensor Y))
+            \ \ (\text{後述(*1)より})\\
+        \sim &\ (C\tensor X\tensor Y,\  h\comp(C\tensor\Delta_{XY}))
+            \ \ (\text{後述(*2)より})\\
+        \sim &\ (C,\  h)
+            \ \ (\text{\refprop{prop:diagonal_2-morphism} と \refprop{prop:left_whiskering}より})
+    \end{align*}
+    である。ただし、上式中の$(*1), (*2)$の部分は以下に示す。まず$(*1)$は次のように示される。
+    \begin{align*}
+        &\ (C\tensor Y\tensor C\tensor X,\  
+            \Delta_Z\comp((h\comp(C\tensor\gamma_{X,Y}))\tensor h)
+            \comp(CY\tensor\gamma_{X,CX}\tensor Y))\\
+        = &\ (C\tensor Y\tensor C\tensor X,\  
+            \Delta_Z\comp(h\tensor h) \comp(C\tensor\gamma_{X,Y}\tensor CXY)
+            \comp(CY\tensor\gamma_{X,CX}\tensor Y))
+            \ \ (\text{$\tensor$の函手性より})\\
+        = &\ (C\tensor Y\tensor C\tensor X,\  
+            h\comp\Delta_{CXY}\comp(C\tensor\gamma_{X,Y}\tensor CXY)
+            \comp(CY\tensor\gamma_{X,CX}\tensor Y))
+            \ \ (\text{$\Delta$の自然性より})\\
+        \sim &\ (C\tensor C\tensor Y\tensor X,\  
+            h\comp(\Delta_{CXY})\comp(C\tensor\gamma_{XY,C}\tensor XY)
+            \comp(CC\tensor\gamma_{X,YX}\tensor Y))
+            \ \ (\text{後述(*3)より})\\
+        = &\ (C\tensor C\tensor Y\tensor X,\
+            h\comp(\Delta_{C}\tensor\Delta_{XY})
+            \comp(CC\tensor\gamma_{X,XY}\tensor Y))
+            \ \ (\text{$\because\Delta$はモノイド自然変換})\\
+        = &\ (C\tensor C\tensor Y\tensor X,\
+            h\comp(C\tensor\Delta_{XY})
+            \comp(C\tensor\gamma_{X,XY}\tensor Y))
+            \comp(\Delta_{C}\tensor YXXY)
+            \ \ (\text{$\because\tensor$の函手性})\\
+        \sim &\ (C\tensor Y\tensor X,\
+            h\comp(C\tensor\Delta_{XY})
+            \comp(C\tensor\gamma_{X,XY}\tensor Y))
+            \ \ (\text{\refprop{prop:diagonal_2-morphism}より})
+    \end{align*}
+    である。これで$(*1)$が示された。
+    ただし、上式中の$(*3)$の部分は後に示す。
+    続いて$(*2)$を示す。
+    \refprop{prop:left_whiskering}と$\tensor$の函手性より、
+    $(Y\tensor X,\
+        \Delta_{XY}\comp(\gamma_{X,XY}\tensor Y))
+    \sim (X\tensor Y,\  \Delta_{XY})$
+    であることを示せばよい。
+    \begin{align*}
+        &\ (Y\tensor X,\
+            (\Delta_{XY})
+            \comp(\gamma_{X,XY}\tensor Y))\\
+        \sim &\ (X\tensor Y,\
+            (\Delta_{XY})
+            \comp(\gamma_{X,XY}\tensor Y)
+            \comp(\gamma_{Y,X}\tensor XY))
+            \ \ (\text{\refprop{prop:trivial_2-morphism}より})\\
+        = &\ (X\tensor Y,\
+            (\Delta_{XY})
+            \comp(X\tensor\gamma_{Y,X}\tensor Y)
+            \comp(\gamma_{X,X}\tensor YY)
+            \comp(X\tensor\gamma_{X,Y}\tensor Y))
+            \ \ (\text{整合性より})\\
+        = &\ (X\tensor Y,\
+            (\Delta_{X}\tensor\Delta_{Y})
+            \comp(\gamma_{X,X}\tensor YY)
+            \comp(X\tensor\gamma_{X,Y}\tensor Y))
+            \ \ (\text{$\because\Delta$はモノイド自然変換})\\
+        = &\ (X\tensor Y,\
+            (\Delta_{X}\tensor\Delta_{Y})
+            \comp(X\tensor\gamma_{X,Y}\tensor Y))
+            \ \ (\text{$\because\Delta$の可換性})\\
+        = &\ (X\tensor Y,\
+            \Delta_{XY})
+            \ \ (\text{$\because\Delta$はモノイド自然変換})
+    \end{align*}
+    である。これで$(*2)$が示された。
+    続いて$(*3)$を示す。
+    \refprop{prop:left_whiskering}と$\tensor$の函手性より、
+    $(Y\tensor C\tensor X,\  
+        \gamma_{X,Y}\tensor CXY
+        \comp(Y\tensor\gamma_{X,CX}\tensor Y))
+    \sim (C\tensor Y\tensor X,\  
+        (\gamma_{XY,C}\tensor XY)
+        \comp(C\tensor\gamma_{X,YX}\tensor Y))$
+    であることを示せばよい。
+    \begin{align*}
+        &\ (Y\tensor C\tensor X,\  
+            \gamma_{X,Y}\tensor CXY
+            \comp(Y\tensor\gamma_{X,CX}\tensor Y))\\
+        \sim &\ (C\tensor Y\tensor X,\  
+            (\gamma_{XY,C}\tensor XY)
+            \comp(C\tensor\gamma_{X,YX}\tensor Y))
+            \ \ (\text{より})
+    \end{align*}
+    である。これで$(*3)$が示された。
+    これで$(C,h) \sim (C\tensor Y\tensor C\tensor X, \ (h\comp(C\tensor\gamma_{X,Y}))\boxdot h)$の証明が完了した。
+    以上で$[C,h]=\psi(\phi([C,h]))$であることの証明が完了した。
 
-    上式中の$(*)$の部分は下のように示される。
+
+
+
+
+    ただし、上式中の$(*)$の部分は下のように示される。
     \begin{align*}
         &\ \Delta_{CXY}
-        \comp(C\tensor\gamma_{X,Y}\tensor CXY)
-        \comp(CY\tensor\gamma_{X,CX}\tensor Y)\\
+            \comp(C\tensor\gamma_{X,Y}\tensor CXY)
+            \comp(CY\tensor\gamma_{X,CX}\tensor Y)\\
         = &\ (\Delta_{C}\tensor\Delta_{XY})
-        \comp(C\tensor\gamma_{C,XY}\tensor XY)
-        \comp(C\tensor\gamma_{X,Y}\tensor CXY)
-        \comp(CY\tensor\gamma_{X,CX}\tensor Y)\ \ \ 
-        (\text{by monoidality of\ $\Delta$})\\
+            \comp(C\tensor\gamma_{C,XY}\tensor XY)
+            \comp(C\tensor\gamma_{X,Y}\tensor CXY)
+            \comp(CY\tensor\gamma_{X,CX}\tensor Y)
+            \ \ \ (\text{by monoidality of\ $\Delta$})\\
         = &\ (\Delta_{C}\tensor\Delta_{X}\tensor\Delta_{Y})
-        \comp(CCX\tensor\gamma_{X,Y}\tensor Y)
-        \comp(C\tensor\gamma_{C,XY}\tensor XY)
-        \comp(C\tensor\gamma_{X,Y}\tensor CXY)
-        \comp(CY\tensor\gamma_{X,CX}\tensor Y)\ \ \ 
-        (\text{by monoidality of\ $\Delta$})\\
+            \comp(CCX\tensor\gamma_{X,Y}\tensor Y)
+            \comp(C\tensor\gamma_{C,XY}\tensor XY)
+            \comp(C\tensor\gamma_{X,Y}\tensor CXY)
+            \comp(CY\tensor\gamma_{X,CX}\tensor Y)
+            \ \ \ (\text{by monoidality of\ $\Delta$})\\
         = &\ (\Delta_{C}\tensor\Delta_{X}\tensor\Delta_{Y})
-        \comp(CCX\tensor\gamma_{X,Y}\tensor Y)
-        \comp(CC\tensor\gamma_{X,Y}\tensor XY)
-        \comp(C\tensor\gamma_{C,YX}\tensor XY)
-        \comp(CY\tensor\gamma_{X,CX}\tensor Y)\ \ \
-        (\text{by coherence})\\
+            \comp(CCX\tensor\gamma_{X,Y}\tensor Y)
+            \comp(CC\tensor\gamma_{X,Y}\tensor XY)
+            \comp(C\tensor\gamma_{C,YX}\tensor XY)
+            \comp(CY\tensor\gamma_{X,CX}\tensor Y)
+            \ \ \ (\text{by coherence})\\
         = &\ (\Delta_{C}\tensor\Delta_{X}\tensor\Delta_{Y})
-        \comp(CCX\tensor\gamma_{X,Y}\tensor Y)
-        \comp(CC\tensor\gamma_{X,Y}\tensor XY)
-        \comp(C\tensor\gamma_{C,Y}\tensor XY)
-        \comp(CY\tensor\gamma_{X,X}\tensor Y)\ \ \
-        (\text{by coherence})\\
+            \comp(CCX\tensor\gamma_{X,Y}\tensor Y)
+            \comp(CC\tensor\gamma_{X,Y}\tensor XY)
+            \comp(C\tensor\gamma_{C,Y}\tensor XY)
+            \comp(CY\tensor\gamma_{X,X}\tensor Y)
+            \ \ \ (\text{by coherence})\\
         = &\ (\Delta_{C}\tensor\Delta_{X}\tensor\Delta_{Y})
-        \comp(C\tensor\gamma_{CXX,Y}\tensor Y)
-        \comp(CY\tensor\gamma_{X,X}\tensor CY)\ \ \
-        (\text{by coherence})\\
+            \comp(C\tensor\gamma_{CXX,Y}\tensor Y)
+            \comp(CY\tensor\gamma_{X,X}\tensor CY)
+            \ \ \ (\text{by coherence})\\
         = &\ (\Delta_{C}\tensor\Delta_{X}\tensor\Delta_{Y})
-        \comp(CC\tensor\gamma_{X,X}\tensor YY)
-        \comp(C\tensor\gamma_{CXX,Y}\tensor Y)\ \ \ 
-        (\text{by coherence})\\
-        = &\ (\Delta_{C}\tensor\Delta_{X}\tensor\Delta_{Y})\ \ \ \ 
-        \comp(C\tensor\gamma_{CXX,Y}\tensor Y)\ \ \ 
-        (\text{by commutativity of}\ \Delta_X)\\
+            \comp(CC\tensor\gamma_{X,X}\tensor YY)
+            \comp(C\tensor\gamma_{CXX,Y}\tensor Y)
+            \ \ \ (\text{by coherence})\\
         = &\ (\Delta_{C}\tensor\Delta_{X}\tensor\Delta_{Y})
-        \comp(CCX\tensor\gamma_{X,Y}\tensor Y)
-        \comp(C\tensor\gamma_{CX,Y}\tensor XY)\ \ \ 
-        (\text{by coherence})\\
+            \comp(C\tensor\gamma_{CXX,Y}\tensor Y)
+            \ \ \ (\text{by commutativity of}\ \Delta_X)\\
+        = &\ (\Delta_{C}\tensor\Delta_{X}\tensor\Delta_{Y})
+            \comp(CCX\tensor\gamma_{X,Y}\tensor Y)
+            \comp(C\tensor\gamma_{CX,Y}\tensor XY)
+            \ \ \ (\text{by coherence})\\
         = &\ (\Delta_{C}\tensor\Delta_{XY})
-        \comp(C\tensor\gamma_{CX,Y}\tensor XY)\ \ \ 
-        (\text{by monoidality of}\ \Delta)
+            \comp(C\tensor\gamma_{CX,Y}\tensor XY)
+            \ \ \ (\text{by monoidality of}\ \Delta)
     \end{align*}
     上式中の(by coherence)と書かれた部分は六角形公理及び函手性・自然性のみから導かれる主張である。
     
