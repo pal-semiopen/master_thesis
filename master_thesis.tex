@@ -884,7 +884,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 %\paragraph{Definition \arabic{section}.\arabic{subsection}.7: 恒等1-射}\ \\
 \begin{definitionsub}[恒等1-射]
     $X\in\R$とする。
-    $\bar{X}$から$\bar{X}$への$\calLambda(\R)$の1-射$id_{\bar{X}}$を $(I, \rho_{X})$と定める。
+    $\bar{X}$から$\bar{X}$への$\calLambda(\R)$の1-射$id_{\bar{X}}$を $id_{\bar{X}}:=(I, {\lambda_{X}}^{-1})$と定める。
     この恒等射と上記合成は整合性の同型の違いを除いて単位律を満たす。
 \end{definitionsub}
 
@@ -973,18 +973,16 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 \begin{lemmasub}[$\R$の射のグラフは${\Lambda[\R]}$ではもとの $\R$の射と同じ]
     \label{lem:graph_is_same_as_original}
     $(A,f):\bar{X} \to \bar{Y} \rmin\calLambda(\R)$ に対し、
-    $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。\\
-    % https://q.uiver.app/#q=WzAsMixbMCwwLCIoWCJdLFsyLDAsIkFcXHRlbnNvciBZKSJdLFswLDEsImYiXV0=
+    $(A,f)\sim (X\tensor A, \Delta_X\comp(X\tensor f))$である。
+    分かりやすさのために図示すれば以下のよう：
+    % https://q.uiver.app/#q=WzAsNixbMSwwLCIoWCJdLFszLDAsIkFcXHRlbnNvciBZKSJdLFswLDFdLFsxLDEsIihYIl0sWzMsMSwiWFxcdGVuc29yIFgiXSxbNSwxLCJYXFx0ZW5zb3IgQSBcXHRlbnNvciBZKSJdLFswLDEsImYiXSxbMyw0LCJcXERlbHRhX1giXSxbNCw1LCJYXFx0ZW5zb3IgZiJdLFsyLDMsIlxcc2ltIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
     \[\begin{tikzcd}
-        {(X} && {A\tensor Y)}
-        \arrow["f", from=1-1, to=1-3]
-    \end{tikzcd}\]
-
-    % https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHNpbVxcIChYIl0sWzEsMCwiWFxcdGVuc29yIFgiXSxbMiwwXSxbMywwLCJYXFx0ZW5zb3IgQVxcdGVuc29yIFkgKSJdLFswLDEsIlxcRGVsdGFfWCJdLFsxLDMsIlhcXHRlbnNvciBmIl1d
-    \[\begin{tikzcd}
-        {\sim\ (X} & {X\tensor X} & {} & {X\tensor A\tensor Y )}
-        \arrow["{\Delta_X}", from=1-1, to=1-2]
-        \arrow["{X\tensor f}", from=1-2, to=1-4]
+        & {(X} && {A\tensor Y)} \\
+        {} & {(X} && {X\tensor X} && {X\tensor A \tensor Y).}
+        \arrow["f", from=1-2, to=1-4]
+        \arrow["{\Delta_X}", from=2-2, to=2-4]
+        \arrow["{X\tensor f}", from=2-4, to=2-6]
+        \arrow["\sim"{description}, draw=none, from=2-1, to=2-2]
     \end{tikzcd}\]
 \end{lemmasub}
 
@@ -1258,7 +1256,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 %\paragraph{Definition \arabic{section}.\arabic{subsection}.6：\ ${\Lambda[\R]}$の恒等射}\ \\
 \begin{definitionsub}[${\Lambda[\R]}$の恒等射]
     \label{def:identity_of_Lambda(R)}
-    各$\bar{X}\in{\Lambda[\R]}$に対し、$id_{\bar{X}}:=[I,\rho_X^{-1}]$と定める。
+    各$\bar{X}\in{\Lambda[\R]}$に対し、$id_{\bar{X}}:=[id_{\bar{X}}] (=[I,\lambda_X^{-1}])$と定める。
 \end{definitionsub}
 
 %\paragraph{Proposition \arabic{section}.\arabic{subsection}.7：\ ${\Lambda[\R]}$の結合則}\ \\
@@ -1614,13 +1612,13 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
 %\paragraph{Definition \arabic{section}.1：ユニット函手 $\Eta_{\R}$}\ \\
 \begin{definition}[ユニット函手 $\Eta_{\R}$]
     函手 $\Eta_{\R}:\R\to{\Lambda[\R]}$を次で定める。
-    \fct{\Eta_{\R}}{\R}{{\Lambda[\R]}}{X}{f}{Y}{\bar{X}}{[I,f\comp\rho_Y]}{\bar{Y}}
+    \fct{\Eta_{\R}}{\R}{{\Lambda[\R]}}{X}{f}{Y}{\bar{X}}{[I,f\comp(\lambda_Y)^{-1}]}{\bar{Y}}
     $\Eta_{\R}$は\Rf になる。
     $\Eta_{\R}$の関連函手としての構造の同型$m_{X,Y}:\Eta_\R(X)\tensor\Eta_\R(Y)\to\Eta_\R(X\tensor Y)$と
     $e:I\to\Eta_\R(I)$を次で定める。
     \begin{align*}
-        m_{X,Y} &:= [I,\rho_{X\tensor Y}^{-1}]\\
-        e &:= [I,\rho_I^{-1}]
+        m_{X,Y} &:= [I,\lambda_{X\tensor Y}^{-1}]\\
+        e &:= [I,\lambda_I^{-1}]
     \end{align*}
 \end{definition}
 
@@ -1762,10 +1760,10 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
             \arrow["{\mu_{1,Y}}"', from=1-5, to=1-3]
             \arrow["{\pi_{F(I),F(Y)}}", from=1-5, to=1-7]
             \arrow["{F(f)}"', from=1-1, to=2-3]
-            \arrow["{F(\rho_Y)}"', from=1-3, to=2-3]
+            \arrow["{F(\lambda_Y)}"', from=1-3, to=2-3]
             \arrow["{\epsilon\times F(Y)}", shift left=3, from=2-5, to=1-5]
-            \arrow["{\rho_{F(Y)}}"', from=2-5, to=1-7]
-            \arrow["{\rho_{F(Y)}}"', from=2-5, to=2-3]
+            \arrow["{\lambda_{F(Y)}}"', from=2-5, to=1-7]
+            \arrow["{\lambda_{F(Y)}}"', from=2-5, to=2-3]
             \arrow["{!\times F(Y)}", from=1-5, to=2-5]
         \end{tikzcd}\]
         \caption{$(\Eta_{\R}\comp\bar{F})(f)=F(f)$を証明する図式}
@@ -1777,10 +1775,10 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
         =\ & \bar{F}(\Eta_{\R}(f))\\
         =\ & \bar{F}([1,f'])\\
         =\ & F(f')\comp\mu_{I,Y}^{-1}\comp\pi_{F(I),F(Y)}\\
-        =\ & F(f')\comp\mu_{I,Y}^{-1}\comp(!_{F(I)}\times F(Y))\comp\rho_{F(Y)}\\
-        =\ & F(f')\comp\mu_{I,Y}^{-1}\comp(\epsilon\times F(Y))^{-1}\comp\rho_{F(Y)}\\
-        =\ & F(f')\comp F(\rho_Y)\comp\rho_{F(Y)}^{-1}\comp\rho_{F(Y)}\\
-        =\ & F(f)\comp\rho_{F(Y)}^{-1}\comp\rho_{F(Y)}\\
+        =\ & F(f')\comp\mu_{I,Y}^{-1}\comp(!_{F(I)}\times F(Y))\comp\lambda_{F(Y)}\\
+        =\ & F(f')\comp\mu_{I,Y}^{-1}\comp(\epsilon\times F(Y))^{-1}\comp\lambda_{F(Y)}\\
+        =\ & F(f')\comp F(\lambda_Y)\comp\lambda_{F(Y)}^{-1}\comp\lambda_{F(Y)}\\
+        =\ & F(f)\comp\lambda_{F(Y)}^{-1}\comp\lambda_{F(Y)}\\
         =\ & F(f)
     \end{align*}
     である。これで示された。
@@ -1800,10 +1798,10 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
         =\ & (\Eta_{\R}\comp G)(f)\comp\mu_{A,Y}^{-1}\comp\pi_2\\
         =\ & (\Eta_{\R}\comp G)(f)\comp(\nu_{\Eta_{\R}(X),\Eta_{\R}(Y)}\comp G(m_{A,Y}))^{-1}\comp\pi_2\\
         =\ & (\Eta_{\R}\comp G)(f)\comp G(m_{A,Y})^{-1}\comp\nu_{\Eta_{\R}(X),\Eta_{\R}(Y)}^{-1}\comp\pi_2\\
-        =\ & G([I,f\comp\rho_Y])\comp G(m_{A,Y})^{-1}\comp\nu_{\Eta_{\R}(X),\Eta_{\R}(Y)}^{-1}\comp\pi_2\\
-        =\ & G([I,f\comp\rho_Y])\comp G(m_{A,Y})^{-1}\comp G(\pi_2)\\
-        =\ & G([I,f\comp\rho_Y]\comp (m_{A,Y})^{-1}\comp \pi_2)\\
-        =\ & G([A,f\comp\rho_Y\comp {\rho_Y}^{-1}])\\
+        =\ & G([I,f\comp\lambda_Y])\comp G(m_{A,Y})^{-1}\comp\nu_{\Eta_{\R}(X),\Eta_{\R}(Y)}^{-1}\comp\pi_2\\
+        =\ & G([I,f\comp\lambda_Y])\comp G(m_{A,Y})^{-1}\comp G(\pi_2)\\
+        =\ & G([I,f\comp\lambda_Y]\comp (m_{A,Y})^{-1}\comp \pi_2)\\
+        =\ & G([A,f\comp\lambda_Y\comp {\lambda_Y}^{-1}])\\
         =\ & G([A,f])\\
     \end{align*}
     以上で示された。分かりやすさのために、同じ式変形の図式的表示を付す。
@@ -2033,7 +2031,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
 本研究室の山本雄太氏、洞龍弥氏には、
     研究室のセミナーを始め研究及び論文執筆の過程で多大な助言をいただいた。
     深く感謝する。
-同大学院工学系研究科精密工学専攻箕浦有希也氏には、
+同大学院工学系研究科精密工学専攻医用精密工学研究室箕浦有希也氏には、
     論文の推敲に多大な助言をいただいた。
     深く感謝する。
 同大学院情報理工学系研究科システム情報学専攻奈良研究室大澤悠一氏には、

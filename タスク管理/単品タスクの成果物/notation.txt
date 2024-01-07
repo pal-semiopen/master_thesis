@@ -17,3 +17,6 @@ f,g,k,j:\Rの射
 (A,f), (B,f):\B[\R]の1-射
 k,j:\B[\R]の2-射
 [A,f], [B,g]:Λ[\R]の射
+
+\lambda_X: I⊗X → X
+\rho_X: X⊗I → X
