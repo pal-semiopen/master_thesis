@@ -1807,31 +1807,38 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     \end{align*}
     以上で示された。分かりやすさのために、同じ式変形の図式的表示を付す。
 
-    % https://q.uiver.app/#q=WzAsMjEsWzEsMCwiKChcXGJhcntcXEV0YV97XFxSfVxcY29tcCBHfSkoWCkiXSxbMywwLCIoXFxiYXJ7XFxFdGFfe1xcUn1cXGNvbXAgR30pKFkpKSJdLFswLDFdLFsxLDEsIigoXFxFdGFfXFxSXFxjb21wIEcpKFgpIl0sWzIsMSwiKFxcRXRhX3tcXFJ9XFxjb21wIEcpKEFcXHRlbnNvciBZKSJdLFszLDEsIihcXEV0YV97XFxSfVxcY29tcCBHKShBKVxcdGltZXMoXFxFdGFfe1xcUn1cXGNvbXAgRykoWSkiXSxbNCwxLCIoXFxFdGFfe1xcUn1cXGNvbXAgRykoWSkpIl0sWzEsMiwiKEcoXFxiYXJ7WH0pIl0sWzIsMiwiRyhcXGJhcntBXFx0ZW5zb3IgWX0pIl0sWzMsMiwiRyhcXGJhcntBfVxcdGVuc29yJyBcXGJhcntZfSkiXSxbNCwyLCJHKFxcYmFye0F9KVxcdGltZXMgRyhcXGJhcntZfSkiXSxbNSwyLCJHKFxcYmFye1l9KSkiXSxbMCwyXSxbMCwzXSxbMSwzLCIoRyhcXGJhcntYfSkiXSxbMiwzLCJHKFxcYmFye0FcXHRlbnNvciBZfSkiXSxbMywzLCJHKFxcYmFye0F9XFx0ZW5zb3InXFxiYXJ7WX0pIl0sWzQsMywiRyhZKSkiXSxbMSw0LCIoRyhcXGJhcntYfSkiXSxbMiw0LCJHKFxcYmFye1l9KSkiXSxbMCw0XSxbMCwxLCIoXFxiYXJ7XFxFdGFfe1xcUn1cXGNvbXAgR30pKFtBLGZdKSJdLFsyLDMsIj0iLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMyw0LCIoXFxFdGFfe1xcUn1cXGNvbXAgRykoZikiXSxbNSw0LCJcXG11X3tBLFl9IiwyXSxbNSw2LCJcXHBpXzIiXSxbNyw4LCJHKFtJLGYnXSkiXSxbOSw4LCJHKG1fe0EsWX0pIiwyXSxbMTAsOSwiXFxudV97XFxiYXJ7QX0sIFxcYmFye1l9fSIsMl0sWzEwLDExLCJcXHBpXzIiXSxbMTIsNywiPSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMywxNCwiPSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxNCwxNSwiRyhbSSxmJ10pIl0sWzE2LDE1LCJHKG1fe0EsWX0pIiwyXSxbMTYsMTcsIkcoXFxwaV8yKSJdLFsxOCwxOSwiRyhbQSxmXSkiXSxbMjAsMTgsIj0iLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMjAsMTgsIigqKSIsMCx7Im9mZnNldCI6LTEsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
-    \[\begin{tikzcd}
-        & {((\bar{\Eta_{\R}\comp G})(X)} && {(\bar{\Eta_{\R}\comp G})(Y))} \\
-        {} & {((\Eta_\R\comp G)(X)} & {(\Eta_{\R}\comp G)(A\tensor Y)} & {(\Eta_{\R}\comp G)(A)\times(\Eta_{\R}\comp G)(Y)} & {(\Eta_{\R}\comp G)(Y))} \\
-        {} & {(G(\bar{X})} & {G(\bar{A\tensor Y})} & {G(\bar{A}\tensor' \bar{Y})} & {G(\bar{A})\times G(\bar{Y})} & {G(\bar{Y}))} \\
-        {} & {(G(\bar{X})} & {G(\bar{A\tensor Y})} & {G(\bar{A}\tensor'\bar{Y})} & {G(Y))} \\
-        {} & {(G(\bar{X})} & {G(\bar{Y}))}
-        \arrow["{(\bar{\Eta_{\R}\comp G})([A,f])}", from=1-2, to=1-4]
-        \arrow["{=}"{description}, draw=none, from=2-1, to=2-2]
-        \arrow["{(\Eta_{\R}\comp G)(f)}", from=2-2, to=2-3]
-        \arrow["{\mu_{A,Y}}"', from=2-4, to=2-3]
-        \arrow["{\pi_2}", from=2-4, to=2-5]
-        \arrow["{G([I,f'])}", from=3-2, to=3-3]
-        \arrow["{G(m_{A,Y})}"', from=3-4, to=3-3]
-        \arrow["{\nu_{\bar{A}, \bar{Y}}}"', from=3-5, to=3-4]
-        \arrow["{\pi_2}", from=3-5, to=3-6]
-        \arrow["{=}"{description}, draw=none, from=3-1, to=3-2]
-        \arrow["{=}"{description}, draw=none, from=4-1, to=4-2]
-        \arrow["{G([I,f'])}", from=4-2, to=4-3]
-        \arrow["{G(m_{A,Y})}"', from=4-4, to=4-3]
-        \arrow["{G(\pi_2)}", from=4-4, to=4-5]
-        \arrow["{G([A,f])}", from=5-2, to=5-3]
-        \arrow["{=}"{description}, draw=none, from=5-1, to=5-2]
-        %\arrow["{(*)}", shift left, draw=none, from=5-1, to=5-2]
-    \end{tikzcd}\]
+    
+    \begin{figure}[H]
+    \[
+        \adjustbox{scale=0.9, center}{
+            % https://q.uiver.app/#q=WzAsMjEsWzEsMCwiKChcXGJhcntcXEV0YV97XFxSfVxcY29tcCBHfSkoWCkiXSxbMywwLCIoXFxiYXJ7XFxFdGFfe1xcUn1cXGNvbXAgR30pKFkpKSJdLFswLDFdLFsxLDEsIigoXFxFdGFfXFxSXFxjb21wIEcpKFgpIl0sWzIsMSwiKFxcRXRhX3tcXFJ9XFxjb21wIEcpKEFcXHRlbnNvciBZKSJdLFszLDEsIihcXEV0YV97XFxSfVxcY29tcCBHKShBKVxcdGltZXMoXFxFdGFfe1xcUn1cXGNvbXAgRykoWSkiXSxbNCwxLCIoXFxFdGFfe1xcUn1cXGNvbXAgRykoWSkpIl0sWzEsMiwiKEcoXFxiYXJ7WH0pIl0sWzIsMiwiRyhcXGJhcntBXFx0ZW5zb3IgWX0pIl0sWzMsMiwiRyhcXGJhcntBfVxcdGVuc29yJyBcXGJhcntZfSkiXSxbNCwyLCJHKFxcYmFye0F9KVxcdGltZXMgRyhcXGJhcntZfSkiXSxbNSwyLCJHKFxcYmFye1l9KSkiXSxbMCwyXSxbMCwzXSxbMSwzLCIoRyhcXGJhcntYfSkiXSxbMiwzLCJHKFxcYmFye0FcXHRlbnNvciBZfSkiXSxbMywzLCJHKFxcYmFye0F9XFx0ZW5zb3InXFxiYXJ7WX0pIl0sWzQsMywiRyhZKSkiXSxbMSw0LCIoRyhcXGJhcntYfSkiXSxbMiw0LCJHKFxcYmFye1l9KSkiXSxbMCw0XSxbMCwxLCIoXFxiYXJ7XFxFdGFfe1xcUn1cXGNvbXAgR30pKFtBLGZdKSJdLFsyLDMsIj0iLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMyw0LCIoXFxFdGFfe1xcUn1cXGNvbXAgRykoZikiXSxbNSw0LCJcXG11X3tBLFl9IiwyXSxbNSw2LCJcXHBpXzIiXSxbNyw4LCJHKFtJLGYnXSkiXSxbOSw4LCJHKG1fe0EsWX0pIiwyXSxbMTAsOSwiXFxudV97XFxiYXJ7QX0sIFxcYmFye1l9fSIsMl0sWzEwLDExLCJcXHBpXzIiXSxbMTIsNywiPSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMywxNCwiPSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxNCwxNSwiRyhbSSxmJ10pIl0sWzE2LDE1LCJHKG1fe0EsWX0pIiwyXSxbMTYsMTcsIkcoXFxwaV8yKSJdLFsxOCwxOSwiRyhbQSxmXSkiXSxbMjAsMTgsIj0iLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMjAsMTgsIigqKSIsMCx7Im9mZnNldCI6LTEsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+            \begin{tikzcd}
+                & {((\bar{\Eta_{\R}\comp G})(X)} && {(\bar{\Eta_{\R}\comp G})(Y))} \\
+                {} & {((\Eta_\R\comp G)(X)} & {(\Eta_{\R}\comp G)(A\tensor Y)} & {(\Eta_{\R}\comp G)(A)\times(\Eta_{\R}\comp G)(Y)} & {(\Eta_{\R}\comp G)(Y))} \\
+                {} & {(G(\bar{X})} & {G(\bar{A\tensor Y})} & {G(\bar{A}\tensor' \bar{Y})} & {G(\bar{A})\times G(\bar{Y})} & {G(\bar{Y}))} \\
+                {} & {(G(\bar{X})} & {G(\bar{A\tensor Y})} & {G(\bar{A}\tensor'\bar{Y})} & {G(Y))} \\
+                {} & {(G(\bar{X})} & {G(\bar{Y}))}
+                \arrow["{(\bar{\Eta_{\R}\comp G})([A,f])}", from=1-2, to=1-4]
+                \arrow["{=}"{description}, draw=none, from=2-1, to=2-2]
+                \arrow["{(\Eta_{\R}\comp G)(f)}", from=2-2, to=2-3]
+                \arrow["{\mu_{A,Y}}"', from=2-4, to=2-3]
+                \arrow["{\pi_2}", from=2-4, to=2-5]
+                \arrow["{G([I,f'])}", from=3-2, to=3-3]
+                \arrow["{G(m_{A,Y})}"', from=3-4, to=3-3]
+                \arrow["{\nu_{\bar{A}, \bar{Y}}}"', from=3-5, to=3-4]
+                \arrow["{\pi_2}", from=3-5, to=3-6]
+                \arrow["{=}"{description}, draw=none, from=3-1, to=3-2]
+                \arrow["{=}"{description}, draw=none, from=4-1, to=4-2]
+                \arrow["{G([I,f'])}", from=4-2, to=4-3]
+                \arrow["{G(m_{A,Y})}"', from=4-4, to=4-3]
+                \arrow["{G(\pi_2)}", from=4-4, to=4-5]
+                \arrow["{G([A,f])}", from=5-2, to=5-3]
+                \arrow["{=}"{description}, draw=none, from=5-1, to=5-2]
+                %\arrow["{(*)}", shift left, draw=none, from=5-1, to=5-2]
+            \end{tikzcd}
+        }
+    \]
+    \end{figure}
     %$(*)$の等号は次の$\Lambda[\R]$での等式から従う。
 
 \begin{comment}

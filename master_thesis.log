@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  7 JAN 2024 15:54
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  7 JAN 2024 16:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1043,13 +1043,8 @@ Overfull \hbox (19.58366pt too wide) detected at line 1509
 []
  []
 
-[19] [20] [21] [22]
-Overfull \hbox (99.61745pt too wide) detected at line 1834
-[]
- []
-
-[23] Excluding 'comment' comment. [24] [25] Excluding 'comment' comment.
-(./master_thesis.bbl
+[19] [20] [21] [22] [23] Excluding 'comment' comment. [24] [25]
+Excluding 'comment' comment. (./master_thesis.bbl
 LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <10> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
@@ -1058,7 +1053,8 @@ LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <10> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 12.
- [26]) [27] (./master_thesis.aux)
+ [26]) [27]
+(./master_thesis.aux)
  ***********
 pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-11-01>
@@ -1074,6 +1070,6 @@ Here is how much of TeX's memory you used:
  48948 multiletter control sequences out of 15000+600000
  621590 words of font info for 158 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 98i,19n,107p,3857b,1387s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,20n,107p,3857b,1387s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master_thesis.dvi (27 pages, 392216 bytes).
+Output written on master_thesis.dvi (27 pages, 392392 bytes).
