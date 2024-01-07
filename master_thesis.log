@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  7 JAN 2024 14:55
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  7 JAN 2024 15:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1043,21 +1043,7 @@ Overfull \hbox (19.58366pt too wide) detected at line 1509
 []
  []
 
-[19] [20]
-
-LaTeX Warning: Reference `fig:proof_of_well-definedness_of_barF' on page 21 und
-efined on input line 1671.
-
-[21]
-
-LaTeX Warning: Reference `fig:proof_of_well-definedness_of_barF' on page 22 und
-efined on input line 1732.
-
-
-LaTeX Warning: Reference `fig:proof_of_well-definedness_of_barF' on page 22 und
-efined on input line 1734.
-
-[22]
+[19] [20] [21] [22]
 Overfull \hbox (99.61745pt too wide) detected at line 1834
 []
  []
@@ -1078,20 +1064,16 @@ pLaTeX2e <2023-02-14>+1, based on
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `master_thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 65B8A96C502B8E214FE8C0B697218440;1582.
  ) 
 Here is how much of TeX's memory you used:
- 27243 strings out of 474925
- 529132 string characters out of 5765769
+ 27242 strings out of 474925
+ 529091 string characters out of 5765769
  1968403 words of memory out of 5000000
- 48949 multiletter control sequences out of 15000+600000
+ 48948 multiletter control sequences out of 15000+600000
  621590 words of font info for 158 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 98i,19n,107p,3857b,1384s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 98i,19n,107p,3857b,1387s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master_thesis.dvi (27 pages, 391808 bytes).
+Output written on master_thesis.dvi (27 pages, 392216 bytes).
