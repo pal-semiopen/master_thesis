@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  7 JAN 2024 16:25
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2023.11.24)  7 JAN 2024 17:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -939,37 +939,37 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 \openout6 = `master_thesis.toc'.
 
 
-[2] Excluding 'comment' comment.
+[2] Excluding 'comment' comment. [3]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 399.
+(Font)              scaled to size 6.72699pt on input line 425.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 399.
+(Font)              scaled to size 4.805pt on input line 425.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 411.
+(Font)              scaled to size 8.64899pt on input line 437.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 411.
- [3] Excluding 'comment' comment.
+(Font)              scaled to size 8.64899pt on input line 437.
+ [4] Excluding 'comment' comment.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 475.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 501.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 475.
+(Font)              scaled to size 11.53198pt on input line 501.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 475.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 501.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 475.
- [4] [5]
+(Font)              scaled to size 11.53198pt on input line 501.
+ [5]
 [6] [7]
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 733.
+(Font)              scaled to size 5.76599pt on input line 759.
  Excluding 'comment' comment. [8]
 LaTeX Font Info:    Font shape `JT1/mc/m/it' in size <10> not available
-(Font)              Font shape `JT1/mc/m/n' tried instead on input line 810.
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 836.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 810.
+(Font)              scaled to size 9.60999pt on input line 836.
 LaTeX Font Info:    Font shape `JY1/mc/m/it' in size <10> not available
-(Font)              Font shape `JY1/mc/m/n' tried instead on input line 810.
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 836.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 810.
+(Font)              scaled to size 9.60999pt on input line 836.
  [9] [10] [11] [12]
 Excluding 'comment' comment.
 File: graphics/02_f.png Graphic file (type bmp)
@@ -1003,7 +1003,7 @@ File: graphics/07_delta_comp_f_tens_f.png Graphic file (type bmp)
 File: graphics/08_delta_comp_x_tens_f.png Graphic file (type bmp)
 <graphics/08_delta_comp_x_tens_f.png>
  [13] [14]
-Overfull \hbox (22.76303pt too wide) detected at line 1224
+Overfull \hbox (22.76303pt too wide) detected at line 1250
 []
  []
 
@@ -1034,12 +1034,12 @@ bmp)
 File: graphics/15_f2_comp_a2_tens_g.png Graphic file (type bmp)
 <graphics/15_f2_comp_a2_tens_g.png>
 [15] [16] [17] [18]
-Overfull \hbox (2.55727pt too wide) detected at line 1467
+Overfull \hbox (2.55727pt too wide) detected at line 1493
 []
  []
 
 
-Overfull \hbox (19.58366pt too wide) detected at line 1509
+Overfull \hbox (19.58366pt too wide) detected at line 1535
 []
  []
 
@@ -1066,10 +1066,10 @@ Package rerunfilecheck Info: File `master_thesis.out' has not changed.
 Here is how much of TeX's memory you used:
  27242 strings out of 474925
  529091 string characters out of 5765769
- 1968403 words of memory out of 5000000
+ 1967403 words of memory out of 5000000
  48948 multiletter control sequences out of 15000+600000
  621590 words of font info for 158 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  98i,20n,107p,3857b,1387s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on master_thesis.dvi (27 pages, 392392 bytes).
+Output written on master_thesis.dvi (27 pages, 396304 bytes).

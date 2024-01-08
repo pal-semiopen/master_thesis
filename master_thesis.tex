@@ -393,6 +393,32 @@ morphism $[A,f], [B,g]$ of ${\Lambda[\R]}$\\
 実際\AC については、アフィン論理への関心も相まって多くの研究がある(\cite{JacobsConvex}, \cite{HS19}, \cite{Andr_s_Mart_nez_2023})。
 しかし、\RC についてはまだ調べられてこなかった。
 
+
+\topic{関連圏は、それ自体興味深い数学的対象である。}
+関連圏は豊かな例を持つ。
+例えば、デカルト圏$\C$に対し、そのモノ射の全体の成す圏$\C^{\mono}$は関連圏である。
+モノ射の全体の成す構造は、単なる圏以上の構造を見出されにくく
+
+
+
+\topic{関連圏の研究には、[\cite{HT12}]をはじめとするアフィン圏の研究が役立つ。}
+\RC から\CC を作る方法は「削除を追加する」ものであるはずだから、\SMC から\AC を作る方法に一致するか少なくとも類似するはずである。後者は実際に知られていて、
+\topic{対称モノイド圏から、\AC を作る(左)普遍的な構成が
+\cite{HT12}の系として得られている(\cite{HT12}, \cite{HS19})。}
+この普遍的な構成、構成$L$(呼称は\cite{Andr_s_Mart_nez_2023}による)は、与えられた対称モノイド圏の射を余分に増やしたのち適切な同値関係で割る構成である。
+特にモノイド単位対象への射を全て同一視するような同値関係で割るので、モノイド単位対象が終対象になる。
+標語的に言えば、構成$L$は「対称モノイド圏の単位対象を終対象にする構成」である。
+%\topic{relevance categoryに施せば「複製と終対象を備えた圏」即ちcartesian categoryになると期待される。}
+\topic{構成Lは\RC に施しても一般には\CC にはならない}。
+例えば$\Set^{\mono}$は素朴な方法で\RC の構造を持ち、
+$\Set^{\mono}$に構成$L$を施して得られる圏$L(\Set^{\mono})$は$\Set$と同型ではなく、
+Tennent category(\cite{tennent1990semantical})と等しい(\cite{HT12},Thm4.4)ことが分かっている。
+$\Lambda(\Set^{\mono})\simeq\Set$であることが後にわかるから、
+構成$L$及び構成$\Lambda$の普遍性を踏まえれば、$L(\Set^{\mono})$は\CC ではないことがわかる。
+
+
+
+
 \begin{figure}[H]
     % https://q.uiver.app/?q=WzAsNCxbMywwLCJcXHRleHR7XFxTTUMgfSJdLFszLDIsIlxcdGV4dHtcXFJDIH0iXSxbMCwyLCJcXHRleHR7XFxDQ30iXSxbMCwwLCJcXHRleHR7XFxBQyB9Il0sWzEsMCwiXFx0ZXh0e+WvvuinkuWwhOOCkuW/mOWNtH0iLDJdLFsyLDEsIlxcdGV4dHvntYLlr77osaHjgpLlv5jljbR9IiwyXSxbMiwzLCJcXHRleHR75a++6KeS5bCE44KS5b+Y5Y20fSJdLFszLDAsIlxcdGV4dHvntYLlr77osaHjgpLlv5jljbR9IiwyXSxbMSwyLCJcXExhbWJkYSIsMix7ImN1cnZlIjozfV0sWzAsMywiTCIsMix7ImN1cnZlIjozfV0sWzgsNSwiIiwxLHsibGV2ZWwiOjEsInN0eWxlIjp7Im5hbWUiOiJhZGp1bmN0aW9uIn19XSxbOSw3LCIiLDIseyJsZXZlbCI6MSwic3R5bGUiOnsibmFtZSI6ImFkanVuY3Rpb24ifX1dXQ==
     \[\begin{tikzcd}
