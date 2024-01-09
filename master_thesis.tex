@@ -440,7 +440,7 @@ morphism $[A,f], [B,g]$ of ${\Lambda[\R]}$\\
 標語的に言えば、構成$L$は「対称モノイド圏の単位対象を終対象にする構成」である。
 %\topic{relevance categoryに施せば「複製と終対象を備えた圏」即ちcartesian categoryになると期待される。}
 \topic{構成Lは\RC に施しても一般には\CC にはならない}。
-例えば$\Set^{\mono}$は素朴な方法で\RC の構造を持ち、
+例えば$\Set^{\mono}$は自然な方法で\RC の構造を持ち、
 $\Set^{\mono}$に構成$L$を施して得られる圏$L(\Set^{\mono})$は$\Set$と同型ではなく、
 Tennent category(\cite{tennent1990semantical})と等しい(\cite{HT12},Thm4.4)ことが分かっている。
 $\Lambda(\Set^{\mono})\simeq\Set$であることが後にわかるから、
@@ -615,14 +615,14 @@ $AB\tensor f \tensor DE$のように記述する。
 
 
 %\subsection{Examples of \RC}
-集合と単射の圏$\Set^{\mono}$は素朴な方法で\RC とみなせるのであった。
+集合と単射の圏$\Set^{\mono}$は自然な方法で\RC とみなせるのであった。
 この事実は次の２つから従うことだと理解できる。
-まず、全ての\CC は素朴な方法で\RC とみなせる。
+まず、全ての\CC は自然な方法で\RC とみなせる。
 また、\CC のモノ射は直積で閉じていて複製はモノ射なので、モノ射の全体は「\subRC 」 になる。
 
     
 \begin{example}[\CC]
-    全ての\CC は素朴な方法で\RC とみなせる。特に、$\Set$は\RC である。%また全てのbounded semi-lattice も\RC である。    
+    全ての\CC は自然な方法で\RC とみなせる。特に、$\Set$は\RC である。%また全てのbounded semi-lattice も\RC である。    
 \end{example}
 
 \begin{definition}[\subRC]
@@ -668,7 +668,7 @@ $\C$の分裂モノ射は恒等射しかないので、分裂モノ射の全体�
 本節では構成 $\Lambda$の定義を述べる。$\Lambda$は、与えられた\RC から\CC を構成する普遍的な操作である。
 以下、$\R=(\R,\tensor,I,\alpha,\lambda,\rho,\gamma,\Delta)$を\RC とする（記号の濫用により、関連圏とその台となる圏を同一視する）。
 これから本節全体を通して、デカルト圏${\Lambda[\R]}$を定義する。
-圏${\Lambda[\R]}$を定義した後に ${\Lambda[\R]}$が持つ素朴なモノイド構造がデカルト積を与えることを示す。
+圏${\Lambda[\R]}$を定義した後に ${\Lambda[\R]}$が持つ自然なモノイド構造がデカルト積を与えることを示す。
 %圏${\Lambda[\R]}$を構成するに当たって、まず双圏様の中間構造 $\calLambda(\R)$を構成し、その後 ${\Lambda[\R]}$を作る。
 
 
@@ -964,7 +964,7 @@ $\calLambda(\R)$の対象は$\R$の対象とする。
 
 \reflem{lem:graph_is_same_as_original}に先んじて、その意味を説明しておく。
 前述のとおり、$\Lambda[\Set^{\mono}]$の射は$\Set^{\mono}$の射をグラフとするようなものである。
-一方で、$\Set^{\mono}$の射はそれ自体素朴に$\Lambda[\Set^{\mono}]$の射だとみなせるべきである。
+一方で、$\Set^{\mono}$の射はそれ自体自然に$\Lambda[\Set^{\mono}]$の射だとみなせるべきである。
 即ち、単射写像$f:X\to Y$に対して、$f$自身を$\Lambda[\Set^{\mono}]$に埋め込んだ射$[1,f]$と$f$のグラフ$[X,(id_X,f)]$は、
     ($\Lambda[\Set^{\mono}]$の射として)同一であるべきだ。
 \reflem{lem:graph_is_same_as_original}はまさしくこれを主張するものである。
@@ -1324,7 +1324,7 @@ $\R$から引き継ぐモノイド構造がそのまま直積となる。
     ただし、$f\square g := (f\tensor g)\comp (A\tensor\gamma_{X,B}\tensor Y)$ である。
     このように定めた$\tensor'$は確かにwell-definedである。
     単位対象は $I':=I$で定める。
-%整合性の同型$\alpha', \lambda', \rho'$及び捻り同型$\gamma'$を素朴な方法で定めると、$({\Lambda[\R]},\tensor')$
+%整合性の同型$\alpha', \lambda', \rho'$及び捻り同型$\gamma'$を自然な方法で定めると、$({\Lambda[\R]},\tensor')$
 \end{definitionsub}
 
 
